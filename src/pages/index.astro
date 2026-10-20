@@ -37,6 +37,23 @@ const marquee = [
 ---
 
 <Base description={site.description} image={hero.cover}>
+  <div class="home-bg" aria-hidden="true">
+    <video
+      class="home-bg__video"
+      data-home-bg-video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="/uploads/videos/game-bg-poster.jpg"
+    >
+      <source src="/uploads/videos/game-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="home-bg__veil"></div>
+  </div>
+
+  <div class="home-content">
   <section class="hero wrap">
     <div class="hero__copy">
       <p class="hero__kicker">独立游戏开发者 · 插画 · 世界构建</p>
@@ -154,4 +171,41 @@ const marquee = [
       </div>
     </div>
   </section>
+  </div>
+
+  <button class="home-audio" type="button" data-home-audio aria-pressed="false" aria-label="开关首页背景音乐">
+    <span class="home-audio__dot" aria-hidden="true"></span>
+    <span data-home-audio-label>声音：关</span>
+  </button>
 </Base>
+
+<script>
+  const video = document.querySelector<HTMLVideoElement>('[data-home-bg-video]');
+  const button = document.querySelector<HTMLButtonElement>('[data-home-audio]');
+  const label = button?.querySelector<HTMLElement>('[data-home-audio-label]');
+
+  const sync = () => {
+    if (!video || !button || !label) return;
+    const on = !video.muted;
+    button.setAttribute('aria-pressed', String(on));
+    label.textContent = on ? '声音：开' : '声音：关';
+  };
+
+  if (video) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      video.pause();
+      video.removeAttribute('autoplay');
+    } else {
+      video.play().catch(() => {});
+    }
+  }
+
+  button?.addEventListener('click', () => {
+    if (!video) return;
+    video.muted = !video.muted;
+    if (video.paused) video.play().catch(() => {});
+    sync();
+  });
+
+  sync();
+</script>
