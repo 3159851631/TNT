@@ -1,0 +1,151 @@
+# ============================================================
+# EXPLODINGTNT 内容管理配置
+# ------------------------------------------------------------
+# ⚠️ 上线前把下面的 repo 改成你自己的 GitHub 用户名/仓库名，
+#    例如：yourname/explodingtnt-site
+# 登录方式：打开 /admin/，点 “Sign In with Token”，
+#    按提示生成 GitHub Token 并粘贴即可（只需一次）。
+# ============================================================
+
+backend:
+  name: github
+  repo: EXPLODINGTNT/explodingtnt-site
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+locale: zh_Hans
+site_url: https://explodingtnt.pages.dev
+display_url: https://explodingtnt.pages.dev
+logo_url: /favicon.svg
+
+collections:
+  - name: site
+    label: 站点设置
+    files:
+      - name: site
+        label: 基本信息
+        file: src/data/site.json
+        fields:
+          - { label: 站名, name: name, widget: string }
+          - { label: 中文简称, name: cn, widget: string }
+          - { label: 副标题, name: tagline, widget: string }
+          - { label: 站点描述, name: description, widget: text }
+          - { label: 首页介绍, name: intro, widget: text }
+          - { label: 首页大字, name: statement, widget: string }
+          - { label: 邮箱, name: email, widget: string, required: false }
+          - { label: 所在地, name: location, widget: string }
+          - label: 社交链接
+            name: socials
+            widget: list
+            fields:
+              - { label: 名称, name: label, widget: string }
+              - { label: 缩写, name: short, widget: string }
+              - { label: 链接, name: url, widget: string }
+              - { label: 账号, name: handle, widget: string }
+
+  - name: works
+    label: 作品
+    files:
+      - name: works
+        label: 作品列表
+        file: src/data/works.json
+        fields:
+          - label: 作品
+            name: works
+            widget: list
+            summary: "{{fields.title}} · {{fields.year}}"
+            fields:
+              - { label: Slug（网址用，英文小写）, name: slug, widget: string }
+              - { label: 标题, name: title, widget: string }
+              - { label: 英文名, name: en, widget: string, required: false }
+              - { label: 年份, name: year, widget: string }
+              - label: 分类
+                name: category
+                widget: select
+                options: [场景, 角色, 游戏美术, 3D, 插画]
+              - { label: 封面图, name: cover, widget: image }
+              - label: 显示比例
+                name: aspect
+                widget: select
+                default: "4/3"
+                options: ["16/9", "16/10", "4/3", "3/4", "4/5", "1/1"]
+              - { label: 首页推荐, name: featured, widget: boolean, default: false }
+              - { label: 排序（越小越前）, name: order, widget: number, value_type: int, default: 0 }
+              - { label: 一句话描述, name: description, widget: text }
+              - { label: 媒介, name: medium, widget: string }
+              - { label: 使用工具, name: tools, widget: list, required: false }
+              - label: 附加图
+                name: gallery
+                widget: list
+                required: false
+                field: { label: 图片, name: image, widget: image }
+
+  - name: projects
+    label: 项目
+    files:
+      - name: projects
+        label: 项目列表
+        file: src/data/projects.json
+        fields:
+          - label: 项目
+            name: projects
+            widget: list
+            summary: "{{fields.title}} · {{fields.year}}"
+            fields:
+              - { label: Slug（网址用，英文小写）, name: slug, widget: string }
+              - { label: 标题, name: title, widget: string }
+              - { label: 英文名, name: en, widget: string, required: false }
+              - { label: 年份, name: year, widget: string }
+              - { label: 周期, name: period, widget: string }
+              - label: 状态
+                name: status
+                widget: select
+                options: [开发中, 原型, 作品集项目]
+              - { label: 职责, name: role, widget: string }
+              - { label: 类型, name: genre, widget: string }
+              - { label: 引擎, name: engine, widget: string }
+              - { label: 封面图, name: cover, widget: image }
+              - label: 封面样式
+                name: coverMode
+                widget: select
+                default: image
+                options: [image, pixel, mood]
+              - { label: 首页推荐, name: featured, widget: boolean, default: false }
+              - { label: 排序（越小越前）, name: order, widget: number, value_type: int, default: 0 }
+              - { label: 一句话简介, name: summary, widget: text }
+              - label: 正文段落
+                name: body
+                widget: list
+                field: { label: 段落, name: paragraph, widget: text }
+              - label: 项目图
+                name: gallery
+                widget: list
+                required: false
+                field: { label: 图片, name: image, widget: image }
+
+  - name: videos
+    label: 视频
+    files:
+      - name: videos
+        label: 视频列表
+        file: src/data/videos.json
+        fields:
+          - label: 视频
+            name: videos
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Slug, name: slug, widget: string }
+              - { label: 标题, name: title, widget: string }
+              - { label: 英文名, name: en, widget: string, required: false }
+              - { label: 年份, name: year, widget: string }
+              - { label: 时长, name: duration, widget: string, required: false }
+              - label: B 站 BV 号
+                name: bvid
+                widget: string
+                required: false
+                hint: 例如 BV1xx411c7mD。填了之后封面会变成可播放的 B 站播放器。
+              - { label: 封面图, name: cover, widget: image }
+              - { label: 描述, name: description, widget: text }

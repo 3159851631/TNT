@@ -1,0 +1,40 @@
+---
+import site from '../data/site.json';
+import SocialLinks from './SocialLinks.astro';
+
+const year = new Date().getFullYear();
+const nav = [
+  ['/works/', '作品'],
+  ['/projects/', '项目'],
+  ['/videos/', '视频'],
+  ['/codex/', '图鉴'],
+  ['/about/', '关于'],
+  ['/resume/', '简历'],
+];
+---
+
+<footer class="footer">
+  <div class="footer__mark" aria-hidden="true">EXPLODINGTNT</div>
+
+  <div class="footer__row">
+    <div>
+      <p class="kicker" style="margin-bottom: 14px">{site.tagline}</p>
+      <SocialLinks />
+    </div>
+    <nav class="footer__nav" aria-label="页脚导航">
+      {nav.map(([href, label]) => <a href={href}>{label}</a>)}
+      <a href="/admin/">管理</a>
+    </nav>
+  </div>
+
+  <div class="footer__row" style="padding-top: 18px; margin-top: 18px">
+    <div class="footer__meta">
+      <span>© {year} {site.name}</span>
+      <span>保留所有权利</span>
+    </div>
+    <div class="footer__meta">
+      <span>{site.location}</span>
+      <span>由 Astro 构建</span>
+    </div>
+  </div>
+</footer>

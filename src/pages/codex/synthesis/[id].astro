@@ -1,0 +1,146 @@
+---
+import Base from '../../../layouts/Base.astro';
+import galgame from '../../../data/galgame-items.json';
+
+const items = [...galgame.items].sort((a, b) => Number(a.id) - Number(b.id));
+const byName = new Map(items.map((entry) => [entry.name, entry]));
+
+export function getStaticPaths() {
+  const allItems = [...galgame.items].sort((a, b) => Number(a.id) - Number(b.id));
+  return allItems.map((item, index) => ({
+    params: { id: item.id },
+    props: {
+      item,
+      prev: index > 0 ? allItems[index - 1] : null,
+      next: index < allItems.length - 1 ? allItems[index + 1] : null,
+    },
+  }));
+}
+
+const { item, prev, next } = Astro.props;
+const materials = item.materials.map((material) => ({
+  ...material,
+  entry: byName.get(material.name) || null,
+}));
+const usedIn = item.usedIn
+  .map((name) => byName.get(name))
+  .filter((entry): entry is (typeof items)[number] => Boolean(entry));
+---
+
+<Base title={`${item.name} — 物品图鉴`} description={item.note || `《魔物娘合成乐园》物品：${item.name}`}>
+  <div class="wrap">
+    <p class="page-head__kicker" style="padding-top: 40px">
+      <a href="/codex/" style="color: var(--muted)">CODEX</a> /
+      <a href="/codex/synthesis/" style="color: var(--muted)">合成乐园 · 物品</a> / #{item.id}
+    </p>
+
+    <div class="item-hero">
+      <div class="item-hero__icon">
+        {item.icon ? <img src={item.icon} alt={item.name} /> : <span>NO ICON</span>}
+      </div>
+      <div>
+        <p class="item-hero__kicker">
+          {item.category} · {item.craftable ? '可合成' : '基础素材'}
+        </p>
+        <h1 class="item-hero__title">{item.name}</h1>
+        <div class="item-hero__tags">
+          <span class="tag tag--rose">{item.craftable ? '可合成' : '基础素材'}</span>
+          {item.station && <span class="tag">{item.station}</span>}
+          {item.tier && <span class="tag">层级 {item.tier}</span>}
+          <span class="tag">#{item.id}</span>
+        </div>
+        <p class="item-hero__note">
+          {item.note || '这件物品还没有写说明。等游戏里的描述补上后，这里会自动更新。'}
+        </p>
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-body prose">
+        {item.craftable && materials.length > 0 && (
+          <section>
+            <h2>配方</h2>
+            <div class="recipe-list">
+              {materials.map((material) => (
+                <div class="recipe-row">
+                  {material.entry?.icon ? (
+                    <img src={material.entry.icon} alt="" loading="lazy" decoding="async" />
+                  ) : (
+                    <span class="recipe-row__icon">{material.name.slice(0, 1)}</span>
+                  )}
+                  <span class="recipe-row__name">
+                    {material.entry ? (
+                      <a href={`/codex/synthesis/${material.entry.id}/`}>{material.name}</a>
+                    ) : (
+                      material.name
+                    )}
+                  </span>
+                  <span class="recipe-row__qty">×{material.qty}</span>
+                </div>
+              ))}
+            </div>
+            <p style="margin-top: 14px; font-size: 13px" class="muted">
+              制作站：{item.station || '手工（不需要制作站）'}
+              {item.output && item.output > 1 ? ` · 一次产出 ${item.output} 个` : ''}
+            </p>
+          </section>
+        )}
+
+        {usedIn.length > 0 && (
+          <section style="margin-top: 34px">
+            <h2>用于合成</h2>
+            <div class="used-list">
+              {usedIn.map((entry) => (
+                <a href={`/codex/synthesis/${entry.id}/`}>
+                  {entry.icon && <img src={entry.icon} alt="" loading="lazy" decoding="async" />}
+                  {entry.name}
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {!item.craftable && (
+          <section style="margin-top: 34px">
+            <h2>获取方式</h2>
+            <p>
+              {item.note || '这件物品没有配方，属于基础素材：靠采集、掉落或拾取获得。'}
+            </p>
+          </section>
+        )}
+      </div>
+
+      <aside>
+        <dl class="meta-list">
+          <div><dt>物品 ID</dt><dd>#{item.id}</dd></div>
+          <div><dt>分类</dt><dd>{item.category}</dd></div>
+          <div><dt>类型</dt><dd>{item.craftable ? '可合成' : '基础素材'}</dd></div>
+          {item.station && <div><dt>制作站</dt><dd>{item.station}</dd></div>}
+          {item.tier && <div><dt>层级</dt><dd>{item.tier}</dd></div>}
+          {item.output && <div><dt>产出</dt><dd>{item.output}</dd></div>}
+          <div><dt>售价</dt><dd>{item.price > 0 ? item.price : '—'}</dd></div>
+          <div><dt>图标</dt><dd>{item.icon ? '占位图' : '缺失'}</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="detail-nav" aria-label="物品翻页">
+      {prev ? (
+        <a href={`/codex/synthesis/${prev.id}/`}>
+          <span>上一个物品</span>
+          {prev.name}
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {next ? (
+        <a href={`/codex/synthesis/${next.id}/`}>
+          <span>下一个物品</span>
+          {next.name}
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </div>
+</Base>

@@ -1,0 +1,50 @@
+---
+interface Project {
+  slug: string;
+  title: string;
+  en?: string;
+  year: string;
+  status: string;
+  genre: string;
+  cover: string;
+  coverMode?: string;
+  summary: string;
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const isPixel = project.coverMode === 'pixel';
+const statusEn =
+  project.status === '开发中' ? 'IN DEVELOPMENT' : project.status === '原型' ? 'PROTOTYPE' : 'SELECTED WORK';
+---
+
+<a
+  class:list={['dev-card', isPixel && 'dev-card--pixel']}
+  href={`/projects/${project.slug}/`}
+  aria-label={`查看项目：${project.title}`}
+  data-reveal
+>
+  <div class="dev-card__media">
+    <img src={project.cover} alt="" loading="lazy" decoding="async" />
+  </div>
+  {isPixel && <img class="dev-card__sprite" src="/uploads/projects/galgame-hero.webp" alt="" loading="lazy" decoding="async" />}
+
+  <div class="dev-card__top">
+    <span class="tag tag--rose">{project.status}</span>
+    <span class="kicker">{project.year}</span>
+  </div>
+
+  <div class="dev-card__content">
+    <div class="dev-card__status">{statusEn}</div>
+    <h3 class="dev-card__title">{project.title}</h3>
+    {project.en && <p class="dev-card__en">{project.en}</p>}
+    <p class="dev-card__summary">{project.summary}</p>
+    <div class="dev-card__foot">
+      <span class="link-arrow">进入项目</span>
+      <span class="tag">{project.genre}</span>
+    </div>
+  </div>
+</a>

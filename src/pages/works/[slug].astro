@@ -1,0 +1,104 @@
+---
+import Base from '../../layouts/Base.astro';
+import worksData from '../../data/works.json';
+
+const sorted = [...worksData.works].sort((a, b) => a.order - b.order);
+
+export function getStaticPaths() {
+  const allWorks = [...worksData.works].sort((a, b) => a.order - b.order);
+  return allWorks.map((work, index) => ({
+    params: { slug: work.slug },
+    props: {
+      work,
+      prev: index > 0 ? allWorks[index - 1] : null,
+      next: index < allWorks.length - 1 ? allWorks[index + 1] : null,
+    },
+  }));
+}
+
+const { work, prev, next } = Astro.props;
+const gallery = [work.cover, ...(work.gallery || [])].filter(
+  (src, index, all) => all.indexOf(src) === index
+);
+const notes: Record<string, string> = {
+  场景: '先定光，再定构图，最后才是细节。这张主要在试黄昏的色温和空气感。',
+  角色: '从剪影开始，先把轮廓做对，再往里加材质和表情。',
+  游戏美术: 'UI 和视觉一起做，保证在游戏里能读、在画面上也好看。',
+  '3D': '中途截图和最终渲染放在一起看，方便比较。',
+  插画: '草稿、线稿、上色分阶段推进，保留一点手绘的毛边。',
+};
+---
+
+<Base title={work.title} description={work.description} image={work.cover}>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">
+        <a href="/works/" style="color: var(--muted)">WORKS</a> / {work.category}
+      </p>
+      <h1 class="page-head__title">{work.title} <em>{work.en}</em></h1>
+      <p class="page-head__lead">{work.description}</p>
+      <div class="page-head__meta">
+        <span><b>年份</b> {work.year}</span>
+        <span><b>类型</b> {work.category}</span>
+        <span><b>媒介</b> {work.medium}</span>
+        {work.tools && work.tools.length > 0 && <span><b>工具</b> {work.tools.join(' / ')}</span>}
+      </div>
+    </header>
+
+    <figure class="detail-hero">
+      <img src={work.cover} alt={work.title} />
+      <figcaption class="detail-hero__caption">
+        <span>PLATE {String(work.order ?? 0).padStart(2, '0')}</span>
+        <span>{work.year} / {work.category}</span>
+      </figcaption>
+    </figure>
+
+    {gallery.length > 1 && (
+      <div class="detail-gallery">
+        {gallery.slice(1).map((src) => (
+          <img src={src} alt={`${work.title} — 附加图`} loading="lazy" decoding="async" />
+        ))}
+      </div>
+    )}
+
+    <div class="detail-grid">
+      <div class="detail-body">
+        <p class="lead">{work.description}</p>
+        <p>{notes[work.category] || '一张图一个阶段，保留当时最想试的东西。'}</p>
+        {work.tools && work.tools.length > 0 && (
+          <p class="muted" style="font-size: 13px">使用工具：{work.tools.join(' · ')}</p>
+        )}
+      </div>
+      <aside>
+        <dl class="meta-list">
+          <div><dt>编号</dt><dd>NO.{String(work.order ?? 0).padStart(2, '0')}</dd></div>
+          <div><dt>年份</dt><dd>{work.year}</dd></div>
+          <div><dt>类型</dt><dd>{work.category}</dd></div>
+          <div><dt>媒介</dt><dd>{work.medium}</dd></div>
+          {work.tools && work.tools.length > 0 && (
+            <div><dt>工具</dt><dd>{work.tools.join(' / ')}</dd></div>
+          )}
+        </dl>
+      </aside>
+    </div>
+
+    <nav class="detail-nav" aria-label="作品翻页">
+      {prev ? (
+        <a href={`/works/${prev.slug}/`}>
+          <span>上一件</span>
+          {prev.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {next ? (
+        <a href={`/works/${next.slug}/`}>
+          <span>下一件</span>
+          {next.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </div>
+</Base>

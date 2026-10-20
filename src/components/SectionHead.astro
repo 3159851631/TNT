@@ -1,0 +1,21 @@
+---
+interface Props {
+  index: string;
+  en: string;
+  title: string;
+  titleHtml?: string;
+  link?: string;
+  linkLabel?: string;
+}
+
+const { index, en, title, titleHtml, link, linkLabel } = Astro.props;
+---
+
+<div class="section-head">
+  <div class="section-head__meta">
+    <span class="section-head__index">{index}</span>
+    <span class="section-head__en">{en}</span>
+  </div>
+  <h2 class="section-head__title" set:html={titleHtml || title} />
+  {link && <a class="link-arrow section-head__link" href={link}>{linkLabel || '查看全部'}</a>}
+</div>

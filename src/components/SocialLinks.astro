@@ -1,0 +1,17 @@
+---
+import site from '../data/site.json';
+---
+
+<div class="social-row">
+  {site.socials.map((social) => (
+    <a
+      class="social-link"
+      href={social.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`${social.label} — ${social.handle}`}
+    >
+      <b>{social.short}</b>{social.label}
+    </a>
+  ))}
+</div>

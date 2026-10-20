@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import projectsData from '../../data/projects.json';
+
+const projects = [...projectsData.projects].sort((a, b) => a.order - b.order);
+const years = Array.from(new Set(projects.map((project) => project.year))).sort((a, b) =>
+  b.localeCompare(a)
+);
+const groups = years.map((year) => ({
+  year,
+  items: projects.filter((project) => project.year === year),
+}));
+---
+
+<Base title="项目" description="EXPLODINGTNT 的游戏与视觉项目：从场景、角色到独立游戏。">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">PROJECTS / 项目</p>
+      <h1 class="page-head__title">项目 <em>TIMELINE</em></h1>
+      <p class="page-head__lead">
+        从以前到现在，做过的游戏、场景和视觉项目。正在做的放在最上面，做完的往下排。
+      </p>
+      <div class="page-head__meta">
+        <span><b>{projects.length}</b> 个项目</span>
+        <span>2025 — 2026</span>
+        <span>点开看项目详情</span>
+      </div>
+    </header>
+
+    <div class="timeline">
+      {groups.map((group) => (
+        <section class="timeline__group">
+          <div class="timeline__year">
+            {group.year}
+            <span>{group.items.length} PROJECTS</span>
+          </div>
+          <div class="timeline__items">
+            {group.items.map((project) => (
+              <a class="timeline__card" href={`/projects/${project.slug}/`}>
+                <div class:list={['timeline__thumb', project.coverMode === 'pixel' && 'is-pixel']}>
+                  <img src={project.cover} alt={project.title} loading="lazy" decoding="async" />
+                </div>
+                <div>
+                  <h2 class="timeline__title">{project.title}</h2>
+                  <p class="timeline__sub">{project.en} · {project.genre}</p>
+                  <p class="timeline__desc">{project.summary}</p>
+                </div>
+                <span class="tag timeline__status">{project.status}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,40 @@
+---
+interface Item {
+  id: string;
+  name: string;
+  category: string;
+  craftable: boolean;
+  station?: string | null;
+  icon?: string | null;
+}
+
+interface Props {
+  item: Item;
+}
+
+const { item } = Astro.props;
+---
+
+<a
+  class="item-card"
+  href={`/codex/synthesis/${item.id}/`}
+  data-name={item.name}
+  data-id={item.id}
+  data-category={item.category}
+  data-craftable={item.craftable ? '1' : '0'}
+>
+  <div class="item-card__top">
+    {item.icon ? (
+      <img class="item-card__icon" src={item.icon} alt="" loading="lazy" decoding="async" />
+    ) : (
+      <span class="item-card__icon item-card__icon--empty">—</span>
+    )}
+    <span class="item-card__id">#{item.id}</span>
+  </div>
+  <span class="item-card__name">{item.name}</span>
+  <span class="item-card__meta">
+    <span>{item.category}</span>
+    {item.station && <span>· {item.station}</span>}
+  </span>
+  {item.craftable && <span class="item-card__badge">可合成</span>}
+</a>

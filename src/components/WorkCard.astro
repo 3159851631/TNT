@@ -1,0 +1,39 @@
+---
+interface Work {
+  slug: string;
+  title: string;
+  en?: string;
+  year: string;
+  category: string;
+  cover: string;
+  aspect?: string;
+  order?: number;
+}
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const num = String(work.order ?? 0).padStart(2, '0');
+const aspect = work.aspect || '4 / 3';
+---
+
+<article class="work-card" data-category={work.category} data-reveal>
+  <a href={`/works/${work.slug}/`} aria-label={`查看作品：${work.title}`}>
+    <div class="work-card__media" style={`--ar:${aspect}`}>
+      <img src={work.cover} alt={work.title} loading="lazy" decoding="async" />
+      <span class="work-card__index">NO.{num}</span>
+    </div>
+    <div class="work-card__body">
+      <div>
+        <h3 class="work-card__title">{work.title}</h3>
+        {work.en && <p class="work-card__en">{work.en}</p>}
+      </div>
+      <div class="work-card__meta">
+        <span>{work.year}</span>
+        <span>{work.category}</span>
+      </div>
+    </div>
+  </a>
+</article>

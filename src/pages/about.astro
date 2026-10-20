@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import site from '../data/site.json';
+
+const now = [
+  ['2026', '做《魔物娘合身乐园》的生存系统和完整 wiki；整理《魔物娘合成乐园》的物品图鉴。'],
+  ['2025', '完成 3D 场景、角色与 UI 作品集；做了《天空垃圾佬》《夏日泡浮》《情绪戳手》。'],
+  ['2024', '开始系统做 3D 场景和角色；继续画插画、分镜和角色设定。'],
+  ['2023', '早期插画与角色练习，开始把画的东西做成小游戏。'],
+];
+---
+
+<Base
+  title="关于"
+  description="关于 EXPLODINGTNT：独立游戏开发者、画师、世界构建者。"
+  image="/uploads/works/head-study.webp"
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">ABOUT / 关于</p>
+      <h1 class="page-head__title">关于 <em>ME</em></h1>
+      <p class="page-head__lead">
+        独立游戏开发者、画师、世界构建者。白天画画，晚上搭世界。
+      </p>
+    </header>
+
+    <div class="about-grid">
+      <div class="prose">
+        <p class="lead">我是 EXPLODINGTNT。</p>
+        <p>
+          最早是画画的：先画角色，再画场景，后来开始做 3D、UI 和像素。
+          现在大部分时间都在做自己的游戏。
+        </p>
+        <p>
+          我不太想把「美术」和「程序」分开。一个世界要成立，画面、系统、文本得一起长出来。
+          所以我通常从一张画或一个想法开始，自己写玩法、搭场景、做界面，再把它做成能玩的东西。
+        </p>
+        <p>
+          现在在做《魔物娘合身乐园》——一个沙盒生存游戏；还有《魔物娘合成乐园》——一个 2D 像素 Galgame。
+          两个都在很认真地做。
+        </p>
+        <p>
+          这个网站是我的档案，也是我的工作台。作品、项目、设定集，和从以前到现在做过的所有东西，
+          都会慢慢放进来。
+        </p>
+        <div style="margin-top: 30px">
+          <SocialLinks />
+        </div>
+      </div>
+
+      <div>
+        <div class="about-portrait">
+          <div class="about-portrait__mono">TNT</div>
+          <div class="about-portrait__label">PORTRAIT / 照片或自画像待补</div>
+        </div>
+        <p class="muted" style="margin-top: 14px; font-size: 11.5px; line-height: 1.8">
+          这里之后会换成你的照片或自画像。现在先用 TNT 字标占位。
+        </p>
+      </div>
+    </div>
+
+    <section style="padding-top: 20px; padding-bottom: 60px">
+      <h2 class="subhead">在做 / <em>NOW</em></h2>
+      <div class="about-timeline">
+        {now.map(([year, text]) => (
+          <div class="about-timeline__row">
+            <div class="about-timeline__year">{year}</div>
+            <div class="about-timeline__text">{text}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section style="padding-bottom: 70px">
+      <h2 class="subhead">会做 / <em>SKILLS</em></h2>
+      <div class="skill-grid">
+        <div class="skill-cell">
+          <h3>场景 / 3D 环境</h3>
+          <p>UE5、Substance 3D Painter、构图与灯光。把空间做出空气感和故事。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>角色 / 怪物</h3>
+          <p>ZBrush、Photoshop、概念设定与三视图。从剪影开始，把角色做到能站起来。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>UI / 视觉</h3>
+          <p>游戏界面、图标、排版和动效。先保证能读，再保证好看。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>像素美术</h3>
+          <p>Aseprite、Spine、2D 角色与场景。做小尺寸里也能读清楚的形状。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>引擎 / 工具</h3>
+          <p>Unity、Unreal Engine 5、Godot、Git。能把美术资源接进游戏并跑起来。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>动画 / 叙事</h3>
+          <p>Spine 骨骼动画、分镜、Galgame 演出。让画面和文字一起推进。</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-bottom: 80px">
+      <h2 class="subhead">联系 / <em>CONTACT</em></h2>
+      <p style="font-size: 14px; line-height: 2; color: var(--ink-soft)">
+        合作、约稿、工作机会，欢迎通过 B 站、X 或 Patreon 私信。
+        {site.email && <span> 也可以发邮件到 <a href={`mailto:${site.email}`} style="color: var(--rose-bright)">{site.email}</a>。</span>}
+      </p>
+      <SocialLinks />
+    </section>
+  </div>
+</Base>

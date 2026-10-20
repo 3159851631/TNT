@@ -1,0 +1,136 @@
+---
+import Base from '../layouts/Base.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import site from '../data/site.json';
+import projectsData from '../data/projects.json';
+
+const projects = projectsData.projects.filter((project) =>
+  ['monster-girl-survival', 'monster-girl-synthesis', 'sky-garbage-man', 'summer-pop', 'thought-poker'].includes(
+    project.slug
+  )
+);
+const skills = [
+  '3D 场景',
+  '角色设计',
+  '怪物设计',
+  '游戏 UI',
+  '像素美术',
+  'Spine 动画',
+  'Unity',
+  'Unreal Engine 5',
+  'Godot',
+  'Substance 3D Painter',
+  'Photoshop',
+  'ZBrush',
+];
+---
+
+<Base
+  title="简历"
+  description="EXPLODINGTNT 的简历：游戏美术、3D 场景、角色、UI 与独立游戏开发。"
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">RESUME / 简历</p>
+      <h1 class="page-head__title">简历 <em>CV</em></h1>
+      <p class="page-head__lead">
+        美术出身，能独立完成 3D 场景、角色、UI 和像素美术，也能自己写游戏逻辑、把项目做出来。
+        需要 PDF 版的话，可以直接下载，或者点打印另存为 PDF。
+      </p>
+      <p class="no-print" style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px">
+        <a class="btn btn--primary" href="/resume.pdf" download>下载 PDF</a>
+        <button class="btn" type="button" data-print>打印 / 存为 PDF</button>
+      </p>
+    </header>
+
+    <article class="resume">
+      <div class="resume__head">
+        <div>
+          <h2 class="resume__name">EXPLODINGTNT</h2>
+          <p class="resume__role">独立游戏开发者 / 游戏美术 / 场景 · 角色 · UI</p>
+        </div>
+        <div class="resume__contact">
+          <span>{site.location}</span>
+          <span>Bilibili / X / Patreon / itch.io</span>
+          <span>在线作品站</span>
+        </div>
+      </div>
+
+      <section class="resume__section">
+        <div class="resume__label">简介 / PROFILE</div>
+        <div class="resume__content">
+          <p>
+            美术出身，能独立完成 3D 场景、角色、UI 和像素美术；也能自己写游戏逻辑，
+            把项目从想法做到能玩。现在主要做独立游戏，负责策划、美术和程序。
+          </p>
+        </div>
+      </section>
+
+      <section class="resume__section">
+        <div class="resume__label">技能 / SKILLS</div>
+        <div class="resume__content">
+          <div class="resume__skills">
+            {skills.map((skill) => <span>{skill}</span>)}
+          </div>
+        </div>
+      </section>
+
+      <section class="resume__section">
+        <div class="resume__label">项目 / PROJECTS</div>
+        <div class="resume__content">
+          {projects.map((project) => (
+            <div class="resume__item">
+              <div class="resume__item-head">
+                <h3 class="resume__item-title">{project.title}</h3>
+                <span class="resume__item-meta">{project.period} · {project.role}</span>
+              </div>
+              <p>{project.summary}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="resume__section">
+        <div class="resume__label">能力 / CAPABILITIES</div>
+        <div class="resume__content">
+          <div class="resume__item">
+            <div class="resume__item-head">
+              <h3 class="resume__item-title">美术</h3>
+              <span class="resume__item-meta">3D / 2D / UI</span>
+            </div>
+            <p>场景与环境、角色与怪物、游戏界面、像素美术、概念设定。</p>
+          </div>
+          <div class="resume__item">
+            <div class="resume__item-head">
+              <h3 class="resume__item-title">技术</h3>
+              <span class="resume__item-meta">ENGINE / TOOLS</span>
+            </div>
+            <p>Unity、Unreal Engine 5、Godot、Spine、Substance 3D Painter、Git。</p>
+          </div>
+          <div class="resume__item">
+            <div class="resume__item-head">
+              <h3 class="resume__item-title">独立开发</h3>
+              <span class="resume__item-meta">SOLO DEV</span>
+            </div>
+            <p>从原型、资源、界面到打包上线，一个人把项目做完。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume__section">
+        <div class="resume__label">联系 / CONTACT</div>
+        <div class="resume__content">
+          <p style="margin-bottom: 16px">
+            合作、约稿、工作机会，欢迎通过 B 站、X 或 Patreon 私信。
+            {site.email && <span> 邮件：{site.email}</span>}
+          </p>
+          <SocialLinks />
+        </div>
+      </section>
+    </article>
+  </div>
+</Base>
+
+<script>
+  document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+</script>

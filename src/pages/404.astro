@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="404">
+  <div class="wrap" style="min-height: 68vh; display: flex; flex-direction: column; justify-content: center">
+    <p class="page-head__kicker">404 / NOT FOUND</p>
+    <h1 class="page-head__title">走丢了 <em>LOST</em></h1>
+    <p class="page-head__lead">
+      这个页面不存在，或者已经被搬走了。你可以回首页，或者去图鉴里随便翻翻。
+    </p>
+    <p style="margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap">
+      <a class="btn btn--primary" href="/">回首页</a>
+      <a class="btn" href="/codex/">打开图鉴</a>
+    </p>
+  </div>
+</Base>

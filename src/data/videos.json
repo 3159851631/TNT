@@ -1,0 +1,34 @@
+{
+  "videos": [
+    {
+      "slug": "synthesis-devlog-01",
+      "title": "《魔物娘合成乐园》开发日志 01",
+      "en": "DEVLOG 01",
+      "year": "2026",
+      "duration": "—",
+      "bvid": "",
+      "cover": "/uploads/works/summer-pop.webp",
+      "description": "从一张物品表开始，把合成系统、背包和图鉴串起来。"
+    },
+    {
+      "slug": "ruins-breakdown",
+      "title": "废墟场景 Breakdown",
+      "en": "SCENE BREAKDOWN",
+      "year": "2025",
+      "duration": "—",
+      "bvid": "",
+      "cover": "/uploads/works/ruins-echo.webp",
+      "description": "从白模到成片：构图、打光、材质和最后的调色。"
+    },
+    {
+      "slug": "summer-pop-ui",
+      "title": "夏日泡浮 UI 动效",
+      "en": "SUMMER POP UI",
+      "year": "2025",
+      "duration": "—",
+      "bvid": "",
+      "cover": "/uploads/works/summer-pop.webp",
+      "description": "街机厅风格的界面动效与交互演示。"
+    }
+  ]
+}

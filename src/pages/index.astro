@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHead from '../components/SectionHead.astro';
+import WorkCard from '../components/WorkCard.astro';
+import DevCard from '../components/DevCard.astro';
+import VideoCard from '../components/VideoCard.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import site from '../data/site.json';
+import worksData from '../data/works.json';
+import projectsData from '../data/projects.json';
+import videosData from '../data/videos.json';
+import galgame from '../data/galgame-items.json';
+
+const works = worksData.works;
+const projects = projectsData.projects;
+const videos = videosData.videos;
+
+const hero = works.find((work) => work.slug === 'ruins-echo') || works[0];
+const featured = works.filter((work) => work.featured).slice(0, 5);
+const inDevelopment = projects.filter((project) => project.featured).slice(0, 2);
+
+const categoryCounts = galgame.categories
+  .map((name) => ({ name, count: galgame.items.filter((item) => item.category === name).length }))
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 8);
+
+const marquee = [
+  'GAME ART',
+  'WORLD BUILDING',
+  'ILLUSTRATION',
+  '3D ENVIRONMENT',
+  'CHARACTER DESIGN',
+  'UI',
+  'PIXEL ART',
+];
+---
+
+<Base description={site.description} image={hero.cover}>
+  <section class="hero wrap">
+    <div class="hero__copy">
+      <p class="hero__kicker">独立游戏开发者 · 插画 · 世界构建</p>
+      <h1 class="hero__title">
+        <span>EXPLODING</span>
+        <span><em>TNT</em></span>
+        <span class="hero__title-small">ARCHIVE / 2026</span>
+      </h1>
+      <p class="hero__lead">
+        <strong>{site.statement}</strong><br />
+        {site.intro}
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="/works/">查看作品</a>
+        <a class="btn" href="/about/">关于我</a>
+      </div>
+    </div>
+
+    <figure class="hero__plate">
+      <img src={hero.cover} alt={hero.title} fetchpriority="high" decoding="async" />
+      <figcaption class="hero__caption">
+        <span><b>{hero.title}</b>{hero.en}</span>
+        <span>{hero.year} / PLATE 001</span>
+      </figcaption>
+    </figure>
+
+    <div class="hero__scroll" aria-hidden="true">SCROLL</div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__inner">
+      {[0, 1].map(() => (
+        <div class="marquee__group">
+          {marquee.map((word) => (
+            <><span>{word}</span><i></i></>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <section class="section wrap" id="works">
+    <SectionHead index="01" en="SELECTED WORKS" title="作品" link="/works/" />
+    <div class="works-home">
+      {featured.map((work) => <WorkCard work={work} />)}
+    </div>
+  </section>
+
+  <section class="section wrap" id="projects">
+    <SectionHead index="02" en="IN DEVELOPMENT" title="在做的东西" link="/projects/" />
+    <div class="dev-grid">
+      {inDevelopment.map((project) => <DevCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="section wrap" id="videos">
+    <SectionHead index="03" en="MOTION / VIDEOS" title="视频" link="/videos/" />
+    <div class="video-grid">
+      {videos.slice(0, 2).map((video) => <VideoCard video={video} />)}
+    </div>
+  </section>
+
+  <section class="section wrap" id="codex">
+    <SectionHead index="04" en="CODEX / WIKI" title="图鉴与设定" link="/codex/" />
+    <div class="codex-teaser">
+      <div class="codex-teaser__body">
+        <p class="kicker">CODEX / 图鉴</p>
+        <h3 class="codex-teaser__title">
+          {galgame.count} 件物品，{galgame.craftableCount} 个配方，<br />
+          都能查到怎么来、能做什么。
+        </h3>
+        <p class="codex-teaser__text">
+          从《魔物娘合成乐园》的物品表直接导入。可以按分类浏览、搜名字，也能顺着配方一路查下去。
+          《魔物娘合身乐园》的生存百科正在从飞书 wiki 搬进来。
+        </p>
+        <div class="codex-teaser__stats">
+          <div class="codex-stat"><b>{galgame.count}</b><span>物品</span></div>
+          <div class="codex-stat"><b>{galgame.craftableCount}</b><span>配方</span></div>
+          <div class="codex-stat"><b>{galgame.categories.length}</b><span>分类</span></div>
+        </div>
+        <a class="link-arrow" href="/codex/">打开图鉴</a>
+      </div>
+      <div class="codex-teaser__index">
+        <p class="codex-teaser__index-title">按分类浏览 / BY CATEGORY</p>
+        {categoryCounts.map((cat) => (
+          <a class="codex-index-row" href="/codex/synthesis/">
+            <span>{cat.name}</span>
+            <b>{String(cat.count).padStart(2, '0')}</b>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="about">
+    <SectionHead index="05" en="ABOUT" title="关于" link="/about/" linkLabel="更多关于我" />
+    <div class="about-strip">
+      <blockquote class="about-strip__quote">
+        白天画画，<br />
+        晚上搭世界。<br />
+        <em>把想做的世界，<br />一个一个做出来。</em>
+      </blockquote>
+      <div class="about-strip__body">
+        <p>
+          我是 EXPLODINGTNT，独立游戏开发者，也是画师。做过 3D 场景、角色、UI 和像素美术，
+          现在把大部分时间花在自己的游戏上。
+        </p>
+        <p>
+          这个网站是我的档案：作品、项目、设定集，和从以前到现在做过的所有东西。
+        </p>
+        <SocialLinks />
+      </div>
+    </div>
+  </section>
+</Base>

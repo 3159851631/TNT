@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import VideoCard from '../components/VideoCard.astro';
+import videosData from '../data/videos.json';
+
+const videos = videosData.videos;
+---
+
+<Base
+  title="视频"
+  description="EXPLODINGTNT 的开发日志、场景 Breakdown 与游戏 UI 动效。"
+  image={videos[0]?.cover}
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">MOTION / 视频</p>
+      <h1 class="page-head__title">视频 <em>MOTION</em></h1>
+      <p class="page-head__lead">
+        开发日志、场景 Breakdown、UI 动效。长视频放在 B 站，网站里直接嵌播放器；不占网站空间，国内加载也快。
+      </p>
+      <div class="page-head__meta">
+        <span><b>{videos.length}</b> 个视频位</span>
+        <span>BILIBILI</span>
+        <span>点击封面播放</span>
+      </div>
+    </header>
+
+    <div class="video-grid">
+      {videos.map((video) => <VideoCard video={video} />)}
+    </div>
+
+    <div class="notice" style="margin-top: 36px">
+      <span>
+        <b>还没有接播放器？</b>
+        每张视频卡在后台有一个「B 站 BV 号」字段。把 BV 号填进去，封面就会自动变成可播放的 B 站播放器。
+      </span>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,43 @@
+---
+interface Video {
+  slug: string;
+  title: string;
+  en?: string;
+  year: string;
+  duration?: string;
+  bvid?: string;
+  cover: string;
+  description?: string;
+}
+
+interface Props {
+  video: Video;
+}
+
+const { video } = Astro.props;
+---
+
+<article class="video-card" data-reveal>
+  <div class="video-card__cover">
+    <img src={video.cover} alt={video.title} loading="lazy" decoding="async" />
+    {video.bvid ? (
+      <button
+        class="video-card__play"
+        type="button"
+        data-bvid={video.bvid}
+        data-title={video.title}
+        aria-label={`播放 ${video.title}`}
+      >
+        <span></span>
+      </button>
+    ) : (
+      <span class="video-card__hint-badge">B 站视频待接入</span>
+    )}
+  </div>
+  <div class="video-card__body">
+    <h3 class="video-card__title">{video.title}</h3>
+    {video.en && <p class="video-card__en">{video.en} · {video.year}</p>}
+    {video.description && <p class="video-card__desc">{video.description}</p>}
+    <p class="video-card__hint">{video.bvid ? '点击播放 · BILIBILI' : '在后台填入 BV 号后自动出现播放器'}</p>
+  </div>
+</article>

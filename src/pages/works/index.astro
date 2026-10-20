@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHead from '../../components/SectionHead.astro';
+import WorkCard from '../../components/WorkCard.astro';
+import VideoCard from '../../components/VideoCard.astro';
+import worksData from '../../data/works.json';
+import videosData from '../../data/videos.json';
+
+const works = [...worksData.works].sort((a, b) => a.order - b.order);
+const videos = videosData.videos;
+const categories = ['全部', ...Array.from(new Set(works.map((work) => work.category)))];
+---
+
+<Base
+  title="作品"
+  description="EXPLODINGTNT 的作品档案：场景、角色、游戏美术、3D 与插画。"
+  image={works[0]?.cover}
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">WORKS / 作品</p>
+      <h1 class="page-head__title">作品 <em>ARCHIVE</em></h1>
+      <p class="page-head__lead">
+        场景、角色、游戏美术和插画。按档案编号排，每一张都尽量保留当时的做法和想法。
+      </p>
+      <div class="page-head__meta">
+        <span><b>{works.length}</b> 件作品</span>
+        <span>2024 — 2026</span>
+        <span>点击图片查看单件</span>
+      </div>
+    </header>
+
+    <div class="filter-bar" data-filter-root>
+      <span class="filter-bar__label">FILTER</span>
+      {categories.map((category, index) => (
+        <button
+          class:list={['chip', index === 0 && 'is-active']}
+          type="button"
+          data-filter={category}
+        >
+          {category}
+        </button>
+      ))}
+      <span class="filter-count" data-count>{works.length} ITEMS</span>
+    </div>
+
+    <div class="works-masonry" data-works-grid>
+      {works.map((work) => <WorkCard work={work} />)}
+    </div>
+  </div>
+
+  <section class="section wrap" id="videos">
+    <SectionHead index="02" en="MOTION / VIDEOS" title="视频" />
+    <div class="video-grid">
+      {videos.map((video) => <VideoCard video={video} />)}
+    </div>
+    <p class="page-head__lead" style="margin-top: 26px; font-size: 12px; color: var(--faint)">
+      长视频放在 B 站，网站里只嵌播放器；几十秒的短片之后会直接放上来。
+    </p>
+  </section>
+</Base>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-filter-root]');
+  const grid = document.querySelector<HTMLElement>('[data-works-grid]');
+  const count = document.querySelector<HTMLElement>('[data-count]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.work-card'));
+
+  if (root && grid) {
+    let active = '全部';
+
+    const apply = () => {
+      let shown = 0;
+      cards.forEach((card) => {
+        const visible = active === '全部' || card.dataset.category === active;
+        card.style.display = visible ? '' : 'none';
+        if (visible) shown += 1;
+      });
+      if (count) count.textContent = `${shown} ITEMS`;
+    };
+
+    root.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((button) => {
+      button.addEventListener('click', () => {
+        root.querySelectorAll('[data-filter]').forEach((item) => item.classList.remove('is-active'));
+        button.classList.add('is-active');
+        active = button.dataset.filter || '全部';
+        apply();
+      });
+    });
+  }
+</script>

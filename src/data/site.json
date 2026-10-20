@@ -1,0 +1,17 @@
+{
+  "name": "EXPLODINGTNT",
+  "cn": "TNT",
+  "tagline": "独立游戏开发者 / 插画 / 世界构建",
+  "description": "EXPLODINGTNT 的个人作品档案：独立游戏、场景与角色美术、设定集与开发日志。",
+  "intro": "我是 EXPLODINGTNT，独立游戏开发者，也是画师。做 2D 像素、3D 场景、角色和 UI；现在在做《魔物娘合身乐园》和《魔物娘合成乐园》。",
+  "statement": "把想做的世界，一个一个做出来。",
+  "email": "",
+  "location": "中国",
+  "socials": [
+    { "label": "Bilibili", "short": "B", "url": "https://www.bilibili.com/", "handle": "EXPLODINGTNT" },
+    { "label": "YouTube", "short": "Y", "url": "https://www.youtube.com/", "handle": "EXPLODINGTNT" },
+    { "label": "X", "short": "X", "url": "https://x.com/", "handle": "EXPLODINGTNT" },
+    { "label": "Patreon", "short": "P", "url": "https://www.patreon.com/", "handle": "EXPLODINGTNT" },
+    { "label": "itch.io", "short": "I", "url": "https://itch.io/", "handle": "EXPLODINGTNT" }
+  ]
+}

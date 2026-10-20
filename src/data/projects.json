@@ -1,0 +1,180 @@
+{
+  "projects": [
+    {
+      "slug": "monster-girl-survival",
+      "title": "魔物娘合身乐园",
+      "en": "MONSTER GIRL: SURVIVAL PARADISE",
+      "year": "2026",
+      "period": "2026 — 现在",
+      "status": "开发中",
+      "role": "策划 / 美术 / 程序",
+      "genre": "沙盒生存",
+      "engine": "Unreal Engine 5",
+      "cover": "/uploads/projects/survival-mood.webp",
+      "coverMode": "mood",
+      "featured": true,
+      "order": 1,
+      "summary": "一款受《饥荒》《泰拉瑞亚》《星露谷物语》影响的沙盒生存游戏。采集、建造、种田、探索，在会呼吸的废墟里，和魔物娘一起把日子过下去。",
+      "body": [
+        "这是我现在投入最多精力的项目。它想做的不是「活得更久」，而是「活得更像生活」：白天砍树、挖矿、修房子，晚上点灯、做饭、听外面有什么在叫。",
+        "世界由若干个生态区组成，每个区域有自己的资源、天气和生物。你可以把废墟改造成据点，种下第一颗种子，也可以带着刚做好的武器往更深处走。",
+        "完整的图鉴与设定正在整理：物品、配方、生物、地形、作物、角色都会进入网站的 Codex。飞书里的 wiki 会作为第一版内容源。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/works/dark-forest.webp",
+        "/uploads/works/corridor.webp"
+      ]
+    },
+    {
+      "slug": "monster-girl-synthesis",
+      "title": "魔物娘合成乐园",
+      "en": "MONSTER GIRL: SYNTHESIS PARADISE",
+      "year": "2026",
+      "period": "2026 — 现在",
+      "status": "开发中",
+      "role": "策划 / 美术 / 程序",
+      "genre": "2D 像素 Galgame / 合成 / 战斗",
+      "engine": "Unity + Spine",
+      "cover": "/uploads/projects/galgame-bg.webp",
+      "coverMode": "pixel",
+      "featured": true,
+      "order": 2,
+      "summary": "2D 像素 Galgame。经营一座乐园，合成魔物娘，推进剧情，也打几场架。",
+      "body": [
+        "从《半神容器》开始的项目，后来改名《魔物娘合成乐园》。它是我做得最久、改动最多的一款游戏。",
+        "核心是「合成」：把不同的素材、角色和事件放进同一个系统里，看它们长出什么。战斗、剧情、背包、图鉴都围绕这个系统展开。",
+        "网站里的 456 件物品与 168 个配方，就是从游戏的物品表里直接导出的。图鉴里的每一条都能点开看配方和用途。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/projects/galgame-map.webp",
+        "/uploads/works/pixel-platformer.webp"
+      ]
+    },
+    {
+      "slug": "sky-garbage-man",
+      "title": "天空垃圾佬",
+      "en": "SKY GARBAGE MAN",
+      "year": "2025",
+      "period": "2025",
+      "status": "作品集项目",
+      "role": "场景 / 视觉开发",
+      "genre": "3D 场景",
+      "engine": "Unreal Engine 5",
+      "cover": "/uploads/works/sky-garbage.webp",
+      "coverMode": "image",
+      "featured": false,
+      "order": 3,
+      "summary": "在垃圾堆成的山上，捡回还能用的东西。一个关于废土、回收和孤独的场景项目。",
+      "body": [
+        "想做一个「虽然世界完了，但人还在好好过日子」的场景。垃圾山不是背景板，是有人生活过的痕迹。",
+        "从构图、灯光到材质都在往「安静」走：没有战斗，没有追逐，只有一个捡垃圾的人和他找到的东西。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/works/sky-garbage.webp",
+        "/uploads/works/survivors.webp"
+      ]
+    },
+    {
+      "slug": "summer-pop",
+      "title": "夏日泡浮",
+      "en": "SUMMER POP",
+      "year": "2025",
+      "period": "2025",
+      "status": "作品集项目",
+      "role": "UI / 视觉 / 角色",
+      "genre": "游戏 UI / 视觉设计",
+      "engine": "Unity",
+      "cover": "/uploads/works/summer-pop.webp",
+      "coverMode": "image",
+      "featured": false,
+      "order": 4,
+      "summary": "街机厅、汽水和夏天。一个把 90 年代游戏厅做成视觉主题的 UI 项目。",
+      "body": [
+        "从街机厅的塑料椅子、荧光灯和汽水机里找颜色。界面想做得像一张被太阳晒褪色的海报。",
+        "除了 UI，也画了角色和几张场景。整个项目的重点是「热」和「旧」：高饱和的颜色，加上一点噪点。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/works/summer-pop.webp",
+        "/uploads/works/classroom-ui.webp"
+      ]
+    },
+    {
+      "slug": "thought-poker",
+      "title": "情绪戳手",
+      "en": "THOUGHT POKER",
+      "year": "2025",
+      "period": "2025",
+      "status": "作品集项目",
+      "role": "UI / 角色 / 视觉",
+      "genre": "卡牌 / 叙事 UI",
+      "engine": "Unity",
+      "cover": "/uploads/works/thought-poker.webp",
+      "coverMode": "image",
+      "featured": false,
+      "order": 5,
+      "summary": "把「读心」做成卡牌对局。角色、卡面、对局界面和一点点心理学。",
+      "body": [
+        "一个把情绪当成牌来打的卡牌游戏。每种情绪有自己的颜色、形状和出牌方式。",
+        "UI 的重点是「读」：玩家的视线要能快速在角色表情、手牌和对方状态之间移动，所以留了很多空白和一条明确的对局轴线。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/works/thought-poker.webp",
+        "/uploads/works/thought-poker-cast.webp"
+      ]
+    },
+    {
+      "slug": "roguelike-prototype",
+      "title": "肉鸽小游戏",
+      "en": "ROGUELIKE PROTOTYPE",
+      "year": "2026",
+      "period": "2026",
+      "status": "原型",
+      "role": "策划 / 美术 / 程序",
+      "genre": "肉鸽 / 关卡制",
+      "engine": "Godot",
+      "cover": "/uploads/works/pixel-platformer.webp",
+      "coverMode": "image",
+      "featured": false,
+      "order": 6,
+      "summary": "60 关的肉鸽小原型。用来练手，也用来试「每一关都不一样」的手感。",
+      "body": [
+        "一个做得很轻的原型：60 个关卡，随机组合房间、敌人和奖励。目标不是做大，而是把「再来一把」的感觉调出来。",
+        "美术用了像素风，尽量让每一关在几秒钟内就能被读懂。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/works/pixel-platformer.webp"
+      ]
+    },
+    {
+      "slug": "backrooms",
+      "title": "The Backrooms",
+      "en": "THE BACKROOMS",
+      "year": "2026",
+      "period": "2026",
+      "status": "原型",
+      "role": "场景 / 蓝图",
+      "genre": "梦核恐怖",
+      "engine": "Unreal Engine 5",
+      "cover": "/uploads/works/corridor.webp",
+      "coverMode": "image",
+      "featured": false,
+      "order": 7,
+      "summary": "梦核恐怖原型。黄色墙纸、日光灯、走不完的走廊。",
+      "body": [
+        "一个还在起步阶段的恐怖原型。想做的不是 jump scare，而是「明知道不该往前走，但后面也没有路」的感觉。",
+        "目前主要在搭走廊和灯光，后面会加一些很小的、不确定是不是看错了的东西。"
+      ],
+      "links": [],
+      "gallery": [
+        "/uploads/works/corridor.webp",
+        "/uploads/works/mall.webp"
+      ]
+    }
+  ]
+}

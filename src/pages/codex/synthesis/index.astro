@@ -1,0 +1,109 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ItemCard from '../../../components/ItemCard.astro';
+import galgame from '../../../data/galgame-items.json';
+
+const items = galgame.items;
+const categories = galgame.categories;
+---
+
+<Base
+  title="合成乐园 · 物品库"
+  description="《魔物娘合成乐园》完整物品与配方图鉴：456 件物品、168 个配方。"
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">
+        <a href="/codex/" style="color: var(--muted)">CODEX</a> / 合成乐园
+      </p>
+      <h1 class="page-head__title">物品库 <em>456</em></h1>
+      <p class="page-head__lead">
+        数据直接来自游戏的物品表和配方表（2026-10-18 导出）。搜名字或 ID，
+        点开看配方、材料和用途。
+      </p>
+      <div class="codex-stats">
+        <div class="codex-stat"><b>{galgame.count}</b><span>物品</span></div>
+        <div class="codex-stat"><b>{galgame.craftableCount}</b><span>可合成</span></div>
+        <div class="codex-stat"><b>{galgame.count - galgame.craftableCount}</b><span>基础素材</span></div>
+        <div class="codex-stat"><b>{categories.length}</b><span>分类</span></div>
+      </div>
+    </header>
+
+    <div class="notice notice--gold">
+      <span>
+        <b>图标说明：</b>
+        目前显示的是游戏里的占位图标（带编号的色块）。等正式图标替换后，这里会自动更新，不需要改页面。
+      </span>
+    </div>
+
+    <div class="codex-toolbar">
+      <label class="codex-search">
+        <input type="search" placeholder="搜物品名 / ID / 分类…" data-search aria-label="搜索物品" />
+      </label>
+      <button class="chip" type="button" data-craftable-toggle aria-pressed="false">只看可合成</button>
+      <span class="filter-count" data-count>{items.length} ITEMS</span>
+    </div>
+
+    <div class="filter-bar" data-category-root>
+      <span class="filter-bar__label">分类</span>
+      <button class="chip is-active" type="button" data-category-filter="全部">全部</button>
+      {categories.map((category) => (
+        <button class="chip" type="button" data-category-filter={category}>{category}</button>
+      ))}
+    </div>
+
+    <div class="codex-grid" data-codex-grid>
+      {items.map((item) => <ItemCard item={item} />)}
+    </div>
+    <p class="codex-empty" data-empty>没有找到匹配的物品。换个关键词，或者点「全部」。</p>
+  </div>
+</Base>
+
+<script>
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.item-card'));
+  const search = document.querySelector<HTMLInputElement>('[data-search]');
+  const count = document.querySelector<HTMLElement>('[data-count]');
+  const empty = document.querySelector<HTMLElement>('[data-empty]');
+  const categoryRoot = document.querySelector<HTMLElement>('[data-category-root]');
+  const craftableToggle = document.querySelector<HTMLButtonElement>('[data-craftable-toggle]');
+
+  let category = '全部';
+  let craftableOnly = false;
+  let query = '';
+
+  const apply = () => {
+    let shown = 0;
+    cards.forEach((card) => {
+      const matchesCategory = category === '全部' || card.dataset.category === category;
+      const matchesCraftable = !craftableOnly || card.dataset.craftable === '1';
+      const haystack = `${card.dataset.name || ''} ${card.dataset.id || ''} ${card.dataset.category || ''}`.toLowerCase();
+      const matchesQuery = !query || haystack.includes(query);
+      const visible = matchesCategory && matchesCraftable && matchesQuery;
+      card.classList.toggle('is-hidden', !visible);
+      if (visible) shown += 1;
+    });
+    if (count) count.textContent = `${shown} ITEMS`;
+    if (empty) empty.classList.toggle('is-visible', shown === 0);
+  };
+
+  search?.addEventListener('input', () => {
+    query = search.value.trim().toLowerCase();
+    apply();
+  });
+
+  categoryRoot?.querySelectorAll<HTMLButtonElement>('[data-category-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      categoryRoot.querySelectorAll('[data-category-filter]').forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+      category = button.dataset.categoryFilter || '全部';
+      apply();
+    });
+  });
+
+  craftableToggle?.addEventListener('click', () => {
+    craftableOnly = !craftableOnly;
+    craftableToggle.classList.toggle('is-active', craftableOnly);
+    craftableToggle.setAttribute('aria-pressed', String(craftableOnly));
+    apply();
+  });
+</script>

@@ -1,0 +1,103 @@
+---
+import Base from '../../layouts/Base.astro';
+import projectsData from '../../data/projects.json';
+
+const sorted = [...projectsData.projects].sort((a, b) => a.order - b.order);
+
+export function getStaticPaths() {
+  const allProjects = [...projectsData.projects].sort((a, b) => a.order - b.order);
+  return allProjects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: {
+      project,
+      prev: index > 0 ? allProjects[index - 1] : null,
+      next: index < allProjects.length - 1 ? allProjects[index + 1] : null,
+    },
+  }));
+}
+
+const { project, prev, next } = Astro.props;
+const gallery = (project.gallery || []).filter((src) => src !== project.cover);
+const paragraphs = (project.body || []).map((paragraph: string | { paragraph?: string }) =>
+  typeof paragraph === 'string' ? paragraph : paragraph.paragraph || ''
+);
+const codexLink =
+  project.slug === 'monster-girl-survival'
+    ? '/codex/survival/'
+    : project.slug === 'monster-girl-synthesis'
+      ? '/codex/synthesis/'
+      : '';
+const codexLabel =
+  project.slug === 'monster-girl-survival' ? '打开生存百科' : '打开物品图鉴';
+---
+
+<Base title={project.title} description={project.summary} image={project.cover}>
+  <div class="wrap">
+    <p class="page-head__kicker" style="padding-top: 40px">
+      <a href="/projects/" style="color: var(--muted)">PROJECTS</a> / {project.year}
+    </p>
+
+    <section class:list={['project-cover', project.coverMode === 'pixel' && 'is-pixel']}>
+      <img src={project.cover} alt={project.title} />
+      <div class="project-cover__content">
+        <p class="project-cover__en">{project.en}</p>
+        <h1 class="project-cover__title">{project.title}</h1>
+        <p class="project-cover__summary">{project.summary}</p>
+      </div>
+    </section>
+
+    <dl class="project-meta">
+      <div><dt>年份</dt><dd>{project.period}</dd></div>
+      <div><dt>状态</dt><dd>{project.status}</dd></div>
+      <div><dt>类型</dt><dd>{project.genre}</dd></div>
+      <div><dt>引擎</dt><dd>{project.engine}</dd></div>
+    </dl>
+
+    <div class="detail-grid">
+      <div class="detail-body prose">
+        {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        {codexLink && (
+          <p style="margin-top: 30px">
+            <a class="btn" href={codexLink}>{codexLabel}</a>
+          </p>
+        )}
+      </div>
+      <aside>
+        <dl class="meta-list">
+          <div><dt>职责</dt><dd>{project.role}</dd></div>
+          <div><dt>周期</dt><dd>{project.period}</dd></div>
+          <div><dt>类型</dt><dd>{project.genre}</dd></div>
+          <div><dt>引擎</dt><dd>{project.engine}</dd></div>
+          <div><dt>状态</dt><dd>{project.status}</dd></div>
+        </dl>
+      </aside>
+    </div>
+
+    {gallery.length > 0 && (
+      <div class="detail-gallery">
+        {gallery.map((src) => (
+          <img src={src} alt={`${project.title} — 项目图`} loading="lazy" decoding="async" />
+        ))}
+      </div>
+    )}
+
+    <nav class="detail-nav" aria-label="项目翻页">
+      {prev ? (
+        <a href={`/projects/${prev.slug}/`}>
+          <span>上一个项目</span>
+          {prev.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+      {next ? (
+        <a href={`/projects/${next.slug}/`}>
+          <span>下一个项目</span>
+          {next.title}
+        </a>
+      ) : (
+        <span></span>
+      )}
+    </nav>
+  </div>
+</Base>
