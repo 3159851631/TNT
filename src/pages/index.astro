@@ -18,6 +18,7 @@ const homeVideos = [...videos.filter((video) => video.featured), ...videos.filte
 
 const hero = works.find((work) => work.slug === 'ruins-echo') || works[0];
 const featured = works.filter((work) => work.featured).slice(0, 5);
+const heroWorks = featured.length ? featured : [hero];
 const inDevelopment = projects.filter((project) => project.featured).slice(0, 2);
 
 const categoryCounts = galgame.categories
@@ -72,11 +73,26 @@ const marquee = [
       </div>
     </div>
 
-    <figure class="hero__plate">
-      <img src={hero.cover} alt={hero.title} fetchpriority="high" decoding="async" />
+    <figure class="hero__plate" data-hero-plate>
+      <a class="hero__plate-link" href={`/works/${heroWorks[0].slug}/`} data-hero-link aria-label={`查看作品：${heroWorks[0].title}`}>
+        {heroWorks.map((work, i) => (
+          <img
+            class={`hero__slide${i === 0 ? ' is-active' : ''}`}
+            src={work.cover}
+            alt={work.title}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
+            data-hero-slide
+            data-href={`/works/${work.slug}/`}
+            data-title={work.title}
+            data-en={work.en || ''}
+            data-year={work.year}
+          />
+        ))}
+      </a>
       <figcaption class="hero__caption">
-        <span><b>{hero.title}</b>{hero.en}</span>
-        <span>{hero.year} / PLATE 001</span>
+        <span><b data-hero-title>{heroWorks[0].title}</b><span data-hero-en>{heroWorks[0].en}</span></span>
+        <span><span data-hero-year>{heroWorks[0].year}</span> / PLATE 001</span>
       </figcaption>
     </figure>
 
@@ -208,4 +224,37 @@ const marquee = [
   });
 
   sync();
+</script>
+
+<script>
+  const heroSlides = Array.from(document.querySelectorAll<HTMLImageElement>('[data-hero-slide]'));
+  const heroLink = document.querySelector<HTMLAnchorElement>('[data-hero-link]');
+  const heroTitle = document.querySelector<HTMLElement>('[data-hero-title]');
+  const heroEn = document.querySelector<HTMLElement>('[data-hero-en]');
+  const heroYear = document.querySelector<HTMLElement>('[data-hero-year]');
+  const heroPlate = document.querySelector<HTMLElement>('[data-hero-plate]');
+  let heroIndex = 0;
+  let heroTimer: number | undefined;
+
+  const showHeroSlide = (index: number) => {
+    heroSlides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+    const slide = heroSlides[index];
+    if (!slide) return;
+    if (heroLink && slide.dataset.href) heroLink.href = slide.dataset.href;
+    if (heroTitle) heroTitle.textContent = slide.dataset.title || '';
+    if (heroEn) heroEn.textContent = slide.dataset.en || '';
+    if (heroYear) heroYear.textContent = slide.dataset.year || '';
+  };
+
+  const startHeroTimer = () => {
+    if (heroSlides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    heroTimer = window.setInterval(() => {
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      showHeroSlide(heroIndex);
+    }, 5000);
+  };
+
+  startHeroTimer();
+  heroPlate?.addEventListener('mouseenter', () => window.clearInterval(heroTimer));
+  heroPlate?.addEventListener('mouseleave', startHeroTimer);
 </script>
