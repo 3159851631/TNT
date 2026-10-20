@@ -11,6 +11,20 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
   description="王君 / EXPLODINGTNT 2014–2024 的全部早期绘画、练习、黑历史与项目图。"
   noindex
 >
+  <script is:inline>
+    (function () {
+      try {
+        if (localStorage.getItem('tnt-archive-age') === '1') {
+          document.documentElement.classList.remove('age-locked');
+        } else {
+          document.documentElement.classList.add('age-locked');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('age-locked');
+      }
+    })();
+  </script>
+
   <div class="age-gate" data-age-gate>
     <div class="age-gate__card">
       <p class="page-head__kicker">CONTENT NOTICE / 内容提示</p>
@@ -21,7 +35,7 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
       </p>
       <div class="age-gate__actions">
         <button class="btn btn--primary" type="button" data-age-enter>我已满 18 岁，进入</button>
-        <a class="btn" href="/works/">返回精选作品</a>
+        <a class="btn" href="/">未满 18 岁，离开</a>
       </div>
     </div>
   </div>
@@ -112,6 +126,7 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
   setGate(localStorage.getItem(AGE_KEY) === '1');
   document.querySelector('[data-age-enter]')?.addEventListener('click', () => {
     localStorage.setItem(AGE_KEY, '1');
+    document.documentElement.classList.remove('age-locked');
     setGate(true);
   });
 
