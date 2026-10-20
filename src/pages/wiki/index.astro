@@ -93,11 +93,14 @@ const heroSlides = meta.heroSlides?.length ? meta.heroSlides : (meta.hero ? [{ s
     <div class="wiki-avatar-grid">
       {characters.map((character) => (
         <a class="wiki-avatar" href={`/wiki/characters/${character.slug}/`} title={character.name} aria-label={character.name}>
-          {character.image ? (
-            <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
-          ) : (
-            <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
-          )}
+          <span class="wiki-avatar__pic">
+            {character.image ? (
+              <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
+            ) : (
+              <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+            )}
+          </span>
+          <span class="wiki-avatar__name">{character.name}</span>
         </a>
       ))}
     </div>
