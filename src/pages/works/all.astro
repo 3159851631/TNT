@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import archive from '../../data/archive.json';
 
-const items = archive.items;
+const items = archive.items.filter((item) => item.sub !== '漫画');
 const categories = Array.from(new Set(items.map((item) => item.category)));
 ---
 
@@ -32,6 +32,7 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
       <h1 class="page-head__title">全部作品 <em>EARLY ARCHIVE</em></h1>
       <p class="page-head__lead">
         2014–2024 的早期绘画、练习、黑历史、漫画和项目图。精选作品在「作品」里；这里是完整档案。
+        两部完整漫画已单独收录在漫画页。
       </p>
       <div class="page-head__meta">
         <span><b>{items.length}</b> 件</span>
@@ -39,6 +40,10 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
         <span>按创作时间</span>
       </div>
     </header>
+
+    <div class="archive-comics-link">
+      <a class="btn" href="/comics/">两部完整漫画 · 阿平外传 / 阿君正传 →</a>
+    </div>
 
     <div class="all-toolbar">
       <div class="filter-bar" data-filter-root>

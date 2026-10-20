@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import comicsData from '../../data/comics.json';
+
+const comics = comicsData.comics;
+const totalPages = comics.reduce((sum, comic) => sum + comic.pages.length, 0);
+---
+
+<Base
+  title="漫画"
+  description="王君 / EXPLODINGTNT 的两部早期漫画：《阿平外传》《阿君正传》，按页阅读。"
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">COMICS / 漫画</p>
+      <h1 class="page-head__title">漫画 <em>EARLY COMICS</em></h1>
+      <p class="page-head__lead">
+        两部早期漫画，按页排好。点开从第 1 页开始读，可以按页码或键盘方向键翻页。
+      </p>
+      <div class="page-head__meta">
+        <span><b>{comics.length}</b> 部</span>
+        <span>2022</span>
+        <span>共 {totalPages} 页</span>
+      </div>
+    </header>
+
+    <div class="comic-grid">
+      {comics.map((comic) => (
+        <a class="comic-card" href={`/comics/${comic.slug}/01/`}>
+          <img src={comic.cover} alt={comic.title} loading="lazy" decoding="async" />
+          <span class="comic-card__body">
+            <b>{comic.title}</b>
+            <span>{comic.en} · {comic.pages.length} 页</span>
+          </span>
+        </a>
+      ))}
+    </div>
+    <p class="muted" style="padding: 26px 0 70px; font-size: 11.5px; line-height: 1.8">
+      漫画页来自早期扫描/导出文件，按原文件名顺序排列。
+    </p>
+  </div>
+</Base>

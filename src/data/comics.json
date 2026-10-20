@@ -1,0 +1,456 @@
+{
+  "comics": [
+    {
+      "slug": "aping-waizhuan",
+      "title": "阿平外传",
+      "en": "APING SIDE STORY",
+      "year": "2022",
+      "cover": "/uploads/archive/archive-404.webp",
+      "pages": [
+        {
+          "page": 1,
+          "src": "/uploads/archive/archive-404.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 2,
+          "src": "/uploads/archive/archive-405.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 3,
+          "src": "/uploads/archive/archive-416.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 4,
+          "src": "/uploads/archive/archive-427.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 5,
+          "src": "/uploads/archive/archive-431.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 6,
+          "src": "/uploads/archive/archive-432.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 7,
+          "src": "/uploads/archive/archive-433.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 8,
+          "src": "/uploads/archive/archive-434.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 9,
+          "src": "/uploads/archive/archive-435.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 10,
+          "src": "/uploads/archive/archive-436.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 11,
+          "src": "/uploads/archive/archive-406.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 12,
+          "src": "/uploads/archive/archive-407.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 13,
+          "src": "/uploads/archive/archive-408.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 14,
+          "src": "/uploads/archive/archive-409.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 15,
+          "src": "/uploads/archive/archive-410.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 16,
+          "src": "/uploads/archive/archive-411.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 17,
+          "src": "/uploads/archive/archive-412.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 18,
+          "src": "/uploads/archive/archive-413.webp",
+          "w": 1600,
+          "h": 2134,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 19,
+          "src": "/uploads/archive/archive-414.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 20,
+          "src": "/uploads/archive/archive-415.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 21,
+          "src": "/uploads/archive/archive-417.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 22,
+          "src": "/uploads/archive/archive-418.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 23,
+          "src": "/uploads/archive/archive-419.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 24,
+          "src": "/uploads/archive/archive-420.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 25,
+          "src": "/uploads/archive/archive-421.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 26,
+          "src": "/uploads/archive/archive-422.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 27,
+          "src": "/uploads/archive/archive-423.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 28,
+          "src": "/uploads/archive/archive-424.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 29,
+          "src": "/uploads/archive/archive-425.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 30,
+          "src": "/uploads/archive/archive-426.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 31,
+          "src": "/uploads/archive/archive-428.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 32,
+          "src": "/uploads/archive/archive-429.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        },
+        {
+          "page": 33,
+          "src": "/uploads/archive/archive-430.webp",
+          "w": 1080,
+          "h": 1440,
+          "date": "2022-03-26"
+        }
+      ]
+    },
+    {
+      "slug": "ajun-zhengzhuan",
+      "title": "阿君正传",
+      "en": "AJUN",
+      "year": "2022",
+      "cover": "/uploads/archive/archive-005.webp",
+      "pages": [
+        {
+          "page": 1,
+          "src": "/uploads/archive/archive-005.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 2,
+          "src": "/uploads/archive/archive-016.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 3,
+          "src": "/uploads/archive/archive-027.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 4,
+          "src": "/uploads/archive/archive-028.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 5,
+          "src": "/uploads/archive/archive-029.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 6,
+          "src": "/uploads/archive/archive-030.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 7,
+          "src": "/uploads/archive/archive-031.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 8,
+          "src": "/uploads/archive/archive-032.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 9,
+          "src": "/uploads/archive/archive-033.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 10,
+          "src": "/uploads/archive/archive-006.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 11,
+          "src": "/uploads/archive/archive-007.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 12,
+          "src": "/uploads/archive/archive-008.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 13,
+          "src": "/uploads/archive/archive-009.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 14,
+          "src": "/uploads/archive/archive-010.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 15,
+          "src": "/uploads/archive/archive-011.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 16,
+          "src": "/uploads/archive/archive-012.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 17,
+          "src": "/uploads/archive/archive-013.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 18,
+          "src": "/uploads/archive/archive-014.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 19,
+          "src": "/uploads/archive/archive-015.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 20,
+          "src": "/uploads/archive/archive-017.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 21,
+          "src": "/uploads/archive/archive-018.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 22,
+          "src": "/uploads/archive/archive-019.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 23,
+          "src": "/uploads/archive/archive-020.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 24,
+          "src": "/uploads/archive/archive-021.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 25,
+          "src": "/uploads/archive/archive-022.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 26,
+          "src": "/uploads/archive/archive-023.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 27,
+          "src": "/uploads/archive/archive-024.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 28,
+          "src": "/uploads/archive/archive-025.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        },
+        {
+          "page": 29,
+          "src": "/uploads/archive/archive-026.webp",
+          "w": 3456,
+          "h": 4608,
+          "date": "2021-01-31"
+        }
+      ]
+    }
+  ]
+}

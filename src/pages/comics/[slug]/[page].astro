@@ -1,0 +1,80 @@
+---
+import Base from '../../../layouts/Base.astro';
+import comicsData from '../../../data/comics.json';
+
+export function getStaticPaths() {
+  return comicsData.comics.flatMap((comic) =>
+    comic.pages.map((page, index) => ({
+      params: {
+        slug: comic.slug,
+        page: String(page.page).padStart(2, '0'),
+      },
+      props: { comic, page, index },
+    })),
+  );
+}
+
+const { comic, page, index } = Astro.props;
+const prev = index > 0 ? comic.pages[index - 1] : null;
+const next = index < comic.pages.length - 1 ? comic.pages[index + 1] : null;
+const pageUrl = (target: { page: number }) =>
+  `/comics/${comic.slug}/${String(target.page).padStart(2, '0')}/`;
+---
+
+<Base
+  title={`${comic.title} · 第 ${page.page} 页`}
+  description={`${comic.title}（${comic.en}）第 ${page.page} 页，共 ${comic.pages.length} 页。`}
+>
+  <div class="wrap comic-reader">
+    <header class="comic-reader__head">
+      <a class="link-arrow" href="/comics/">← 全部漫画</a>
+      <div>
+        <p class="page-head__kicker">COMICS / 漫画</p>
+        <h1 class="comic-reader__title">{comic.title}</h1>
+        <p class="muted" style="font-size: 12px; letter-spacing: 0.08em">
+          {comic.en} · 第 {page.page} / {comic.pages.length} 页
+        </p>
+      </div>
+    </header>
+
+    <figure class="comic-reader__figure">
+      <img src={page.src} width={page.w} height={page.h} alt={`${comic.title} 第 ${page.page} 页`} />
+    </figure>
+
+    <nav class="comic-reader__nav" aria-label="漫画翻页">
+      {prev ? (
+        <a class="btn" href={pageUrl(prev)} data-prev>← 上一页</a>
+      ) : (
+        <span class="btn is-disabled" aria-disabled="true">← 上一页</span>
+      )}
+      <a class="btn" href={`/comics/${comic.slug}/01/`}>第 1 页</a>
+      {next ? (
+        <a class="btn btn--primary" href={pageUrl(next)} data-next>下一页 →</a>
+      ) : (
+        <span class="btn is-disabled" aria-disabled="true">下一页 →</span>
+      )}
+    </nav>
+
+    <div class="comic-pages" aria-label="页码">
+      {comic.pages.map((item) => (
+        <a
+          class:list={['comic-page-num', { 'is-active': item.page === page.page }]}
+          href={pageUrl(item)}
+          aria-current={item.page === page.page ? 'page' : undefined}
+        >
+          {String(item.page).padStart(2, '0')}
+        </a>
+      ))}
+    </div>
+    <p class="muted" style="text-align: center; padding-bottom: 60px; font-size: 10px; letter-spacing: 0.12em">
+      键盘 ← → 翻页
+    </p>
+  </div>
+</Base>
+
+<script>
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') document.querySelector<HTMLAnchorElement>('[data-prev]')?.click();
+    if (event.key === 'ArrowRight') document.querySelector<HTMLAnchorElement>('[data-next]')?.click();
+  });
+</script>

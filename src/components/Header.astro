@@ -2,13 +2,19 @@
 const path = Astro.url.pathname;
 const nav = [
   { href: '/works/', num: '01', label: '作品' },
-  { href: '/projects/', num: '02', label: '项目' },
-  { href: '/videos/', num: '03', label: '视频' },
-  { href: '/codex/', num: '04', label: '图鉴' },
-  { href: '/about/', num: '05', label: '关于' },
-  { href: '/resume/', num: '06', label: '简历' },
+  { href: '/works/all/', num: '02', label: '全部作品' },
+  { href: '/comics/', num: '03', label: '漫画' },
+  { href: '/projects/', num: '04', label: '项目' },
+  { href: '/videos/', num: '05', label: '视频' },
+  { href: '/codex/', num: '06', label: '图鉴' },
+  { href: '/about/', num: '07', label: '关于' },
+  { href: '/resume/', num: '08', label: '简历' },
 ];
-const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const isActive = (href: string) => {
+  if (href === '/') return path === '/';
+  if (href === '/works/') return path.startsWith('/works/') && !path.startsWith('/works/all/');
+  return path.startsWith(href);
+};
 ---
 
 <header class="topbar">
