@@ -6,6 +6,7 @@ import VideoCard from '../../components/VideoCard.astro';
 import worksData from '../../data/works.json';
 import videosData from '../../data/videos.json';
 import portfolioData from '../../data/portfolio.json';
+import archiveData from '../../data/archive.json';
 
 const works = [...worksData.works].sort((a, b) => a.order - b.order);
 const videos = videosData.videos;
@@ -60,8 +61,20 @@ const categories = ['全部', ...Array.from(new Set(works.map((work) => work.cat
     </p>
   </section>
 
+  <section class="section wrap" id="all-works">
+    <SectionHead index="03" en="ALL WORKS" title="全部作品" link="/works/all/" linkLabel="显示更多全部作品" />
+    <div class="portfolio-cta">
+      <p class="page-head__lead" style="max-width: 44em">
+        2014–2024 的早期绘画、练习、黑历史和项目图，共 {archiveData.items.length} 件。默认从旧到新，也可以切到最新优先。
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px">
+        <a class="btn btn--primary" href="/works/all/">显示更多全部作品</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section wrap" id="portfolio">
-    <SectionHead index="03" en="FULL PORTFOLIO" title="完整作品集" link="/portfolio/" linkLabel="打开档案" />
+    <SectionHead index="04" en="FULL PORTFOLIO" title="完整作品集" link="/portfolio/" linkLabel="打开档案" />
     <div class="portfolio-cta">
       <p class="page-head__lead" style="max-width: 44em">
         精选作品在上面；完整作品集收录了 2024–2025 的 {portfolioData.pages.length} 页原稿，包括排版页、过程图和更多作品。

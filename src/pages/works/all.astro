@@ -1,0 +1,181 @@
+---
+import Base from '../../layouts/Base.astro';
+import archive from '../../data/archive.json';
+
+const items = archive.items;
+const categories = Array.from(new Set(items.map((item) => item.category)));
+---
+
+<Base
+  title="全部作品"
+  description="王君 / EXPLODINGTNT 2014–2024 的全部早期绘画、练习、黑历史与项目图。"
+  noindex
+>
+  <div class="age-gate" data-age-gate>
+    <div class="age-gate__card">
+      <p class="page-head__kicker">CONTENT NOTICE / 内容提示</p>
+      <h1 class="age-gate__title">本页包含成人向绘画</h1>
+      <p>
+        全部作品档案里包含早期的人体练习和成人向作品，仅限 18 岁以上查看。
+        如果你不想看这部分，可以回到精选作品。
+      </p>
+      <div class="age-gate__actions">
+        <button class="btn btn--primary" type="button" data-age-enter>我已满 18 岁，进入</button>
+        <a class="btn" href="/works/">返回精选作品</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">ALL WORKS / 全部作品</p>
+      <h1 class="page-head__title">全部作品 <em>EARLY ARCHIVE</em></h1>
+      <p class="page-head__lead">
+        2014–2024 的早期绘画、练习、黑历史、漫画和项目图。精选作品在「作品」里；这里是完整档案。
+      </p>
+      <div class="page-head__meta">
+        <span><b>{items.length}</b> 件</span>
+        <span>2014 — 2024</span>
+        <span>按创作时间</span>
+      </div>
+    </header>
+
+    <div class="all-toolbar">
+      <div class="filter-bar" data-filter-root>
+        <span class="filter-bar__label">分类</span>
+        <button class="chip is-active" type="button" data-filter="全部">全部</button>
+        {categories.map((category) => (
+          <button class="chip" type="button" data-filter={category}>{category}</button>
+        ))}
+      </div>
+      <div class="all-sort">
+        <span class="filter-bar__label">排序</span>
+        <button class="sort-btn" type="button" data-sort="newest">最新优先</button>
+        <button class="sort-btn is-active" type="button" data-sort="oldest">从旧到新</button>
+        <button class="sort-btn" type="button" data-sort="name">按名称</button>
+      </div>
+      <span class="filter-count" data-count>{items.length} WORKS</span>
+    </div>
+
+    <div class="all-grid" data-all-grid>
+      {items.map((item) => (
+        <article
+          class="all-card"
+          data-category={item.category}
+          data-date={item.date}
+          data-title={item.title}
+        >
+          <button
+            class="all-card__button"
+            type="button"
+            data-src={item.src}
+            data-caption={`${item.title} · ${item.date} · ${item.category}`}
+            aria-label={`放大：${item.title}`}
+          >
+            <img src={item.src} alt={item.title} loading="lazy" decoding="async" />
+            <span class="all-card__caption">
+              <b>{item.title}</b>
+              <span>{item.date} · {item.category}</span>
+            </span>
+          </button>
+        </article>
+      ))}
+    </div>
+
+    <div class="all-load">
+      <button class="btn" type="button" data-load-more>加载更多</button>
+    </div>
+    <p class="muted" style="padding-bottom: 60px; font-size: 11px; line-height: 1.8">
+      作品按最后保存时间 / EXIF 时间排序。名字来自原文件，之后可以在后台修改。
+    </p>
+  </div>
+
+  <dialog class="lightbox" data-lightbox>
+    <button class="lightbox__close" type="button" data-close aria-label="关闭">×</button>
+    <img data-lightbox-img alt="" />
+    <p data-lightbox-caption></p>
+  </dialog>
+</Base>
+
+<script>
+  const AGE_KEY = 'tnt-archive-age';
+  const gate = document.querySelector<HTMLElement>('[data-age-gate]');
+  const setGate = (accepted: boolean) => {
+    gate?.classList.toggle('is-hidden', accepted);
+    document.body.classList.toggle('is-locked', !accepted);
+  };
+  setGate(localStorage.getItem(AGE_KEY) === '1');
+  document.querySelector('[data-age-enter]')?.addEventListener('click', () => {
+    localStorage.setItem(AGE_KEY, '1');
+    setGate(true);
+  });
+
+  const grid = document.querySelector<HTMLElement>('[data-all-grid]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.all-card'));
+  const count = document.querySelector<HTMLElement>('[data-count]');
+  const loadMore = document.querySelector<HTMLButtonElement>('[data-load-more]');
+  let category = '全部';
+  let sort = 'oldest';
+  let visible = 60;
+
+  const render = () => {
+    if (!grid) return;
+    const filtered = cards.filter((card) => category === '全部' || card.dataset.category === category);
+    filtered.sort((a, b) => {
+      if (sort === 'name') return (a.dataset.title || '').localeCompare(b.dataset.title || '', 'zh-Hans-CN');
+      if (sort === 'oldest') return (a.dataset.date || '').localeCompare(b.dataset.date || '');
+      return (b.dataset.date || '').localeCompare(a.dataset.date || '');
+    });
+    filtered.forEach((card) => grid.appendChild(card));
+    cards.forEach((card) => { card.style.display = 'none'; });
+    filtered.slice(0, visible).forEach((card) => { card.style.display = ''; });
+    if (count) count.textContent = `${filtered.length} WORKS`;
+    if (loadMore) loadMore.hidden = visible >= filtered.length;
+  };
+
+  document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('[data-filter]').forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+      category = button.dataset.filter || '全部';
+      visible = 60;
+      render();
+    });
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('[data-sort]').forEach((button) => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('[data-sort]').forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+      sort = button.dataset.sort || 'newest';
+      visible = 60;
+      render();
+    });
+  });
+
+  loadMore?.addEventListener('click', () => {
+    visible += 60;
+    render();
+  });
+
+  const dialog = document.querySelector<HTMLDialogElement>('[data-lightbox]');
+  const lightboxImage = dialog?.querySelector<HTMLImageElement>('[data-lightbox-img]');
+  const lightboxCaption = dialog?.querySelector<HTMLElement>('[data-lightbox-caption]');
+
+  document.querySelectorAll<HTMLButtonElement>('.all-card__button').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!dialog || !lightboxImage || !lightboxCaption) return;
+      lightboxImage.src = button.dataset.src || '';
+      lightboxImage.alt = button.dataset.caption || '';
+      lightboxCaption.textContent = button.dataset.caption || '';
+      dialog.showModal();
+    });
+  });
+
+  dialog?.querySelector('[data-close]')?.addEventListener('click', () => dialog.close());
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+
+  render();
+</script>

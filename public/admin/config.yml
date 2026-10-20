@@ -149,3 +149,24 @@ collections:
                 hint: 例如 BV1xx411c7mD。填了之后封面会变成可播放的 B 站播放器。
               - { label: 封面图, name: cover, widget: image }
               - { label: 描述, name: description, widget: text }
+
+  - name: archive
+    label: 全部作品
+    files:
+      - name: archive
+        label: 早期作品档案
+        file: src/data/archive.json
+        fields:
+          - label: 作品
+            name: items
+            widget: list
+            summary: "{{fields.title}} · {{fields.date}}"
+            fields:
+              - { label: 标题, name: title, widget: string }
+              - { label: 日期, name: date, widget: string }
+              - { label: 分类, name: category, widget: string }
+              - { label: 子分类, name: sub, widget: string, required: false }
+              - { label: 图片, name: src, widget: image }
+              - { label: 宽, name: w, widget: number, value_type: int }
+              - { label: 高, name: h, widget: number, value_type: int }
+              - { label: 比例, name: aspect, widget: string, required: false }

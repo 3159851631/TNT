@@ -626,6 +626,11 @@
       "label": "2024 作品集长图",
       "src": "/uploads/portfolio/portfolio-2024-long.jpg",
       "size": "3.5 MB"
+    },
+    {
+      "label": "2023 作品集 PDF",
+      "src": "/uploads/portfolio/portfolio-2023.pdf",
+      "size": "8.6 MB"
     }
   ]
 }
