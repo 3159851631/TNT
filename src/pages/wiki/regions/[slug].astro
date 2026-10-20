@@ -1,0 +1,141 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/regions.json';
+
+export function getStaticPaths() {
+  return data.regions.map((region) => ({ params: { slug: region.slug }, props: { region } }));
+}
+
+const { region } = Astro.props;
+const related = data.regions.filter((r) => r.slug !== region.slug).slice(0, 4);
+---
+
+<WikiLayout
+  title={region.name}
+  description={region.description}
+  active="regions"
+  breadcrumb={[{ label: '区域', href: '/wiki/regions/' }, { label: region.name }]}
+>
+  <div class="wiki-detail">
+    <div class="wiki-detail__main">
+      {region.image && (
+        <div class="wiki-detail__hero">
+          <img src={region.image} alt={region.name} loading="eager" decoding="async" />
+        </div>
+      )}
+
+      <header class="wiki-detail__head">
+        <p class="wiki-detail__kicker">REGION / 区域</p>
+        <h1 class="wiki-detail__title">{region.name}</h1>
+        <p class="wiki-detail__sub">{region.type} · 规模 {region.size} · {region.monsters.length + region.bosses.length} 种怪物 · {region.npcs.length} 位 NPC</p>
+        <p class="wiki-detail__desc">{region.description}</p>
+        <div class="wiki-detail__meta">
+          {region.bosses.length > 0 && <span class="wiki-tag wiki-tag--red">{region.bosses.length} BOSS</span>}
+          {region.story.length > 0 && <span class="wiki-tag wiki-tag--gold">{region.story.length} 篇剧情</span>}
+          <a class="wiki-tag wiki-tag--green" href="/wiki/map/">在世界地图中查看 ↗</a>
+        </div>
+      </header>
+
+      <article class="wiki-prose">
+        <h2>区域概况</h2>
+        <p>{region.description}</p>
+        <p>这个区域目前收录 {region.monsters.length + region.bosses.length} 种怪物、{region.npcs.length} 位 NPC、{region.story.length} 篇相关剧情。后续设定、掉落和支线会继续补进来。</p>
+
+        {region.story.length > 0 && (
+          <>
+            <h2>相关剧情</h2>
+            <ul>
+              {region.story.map((story) => (
+                <li><a href={`/wiki/story/${story.slug}/`}>{story.chapter} · {story.title}</a></li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        <h2>区域图集</h2>
+        {region.image ? (
+          <p><img src={region.image} alt={`${region.name} 区域图`} loading="lazy" /></p>
+        ) : (
+          <p class="wiki-empty">区域图待补充。你可以把这张地图/场景图发给我，我再加进来。</p>
+        )}
+      </article>
+
+      <div class="wiki-region-lists">
+        <section class="wiki-region-list">
+          <h2 class="wiki-region-list__title">NPC / 角色（{region.npcs.length}）</h2>
+          <div class="wiki-region-list__items">
+            {region.npcs.length === 0 && <span class="wiki-muted">暂无记录</span>}
+            {region.npcs.map((npc) => (
+              npc.slug ? <a class="wiki-region-list__item" href={`/wiki/characters/${npc.slug}/`}>{npc.name}</a>
+                : <span class="wiki-region-list__item">{npc.name}</span>
+            ))}
+          </div>
+        </section>
+
+        <section class="wiki-region-list">
+          <h2 class="wiki-region-list__title">BOSS（{region.bosses.length}）</h2>
+          <div class="wiki-region-list__items">
+            {region.bosses.length === 0 && <span class="wiki-muted">暂无 BOSS</span>}
+            {region.bosses.map((boss) => (
+              boss.slug ? <a class="wiki-region-list__item" href={`/wiki/monsters/${boss.slug}/`}>{boss.name}</a>
+                : <span class="wiki-region-list__item">{boss.name}</span>
+            ))}
+          </div>
+        </section>
+
+        <section class="wiki-region-list">
+          <h2 class="wiki-region-list__title">怪物（{region.monsters.length}）</h2>
+          <div class="wiki-region-list__items">
+            {region.monsters.length === 0 && <span class="wiki-muted">暂无怪物记录</span>}
+            {region.monsters.map((monster) => (
+              monster.slug ? <a class="wiki-region-list__item" href={`/wiki/monsters/${monster.slug}/`}>{monster.name} <small>{monster.type}</small></a>
+                : <span class="wiki-region-list__item">{monster.name} <small>{monster.type}</small></span>
+            ))}
+          </div>
+        </section>
+
+        <section class="wiki-region-list">
+          <h2 class="wiki-region-list__title">事件 / 特殊（{region.events.length}）</h2>
+          <div class="wiki-region-list__items">
+            {region.events.length === 0 && <span class="wiki-muted">暂无事件记录</span>}
+            {region.events.map((event) => <span class="wiki-region-list__item">{event.name}</span>)}
+          </div>
+        </section>
+      </div>
+
+      {related.length > 0 && (
+        <section class="wiki-related">
+          <h2>其他区域</h2>
+          <div class="wiki-related__grid">
+            {related.map((r) => <a class="wiki-related__link" href={`/wiki/regions/${r.slug}/`}>{r.name} <span class="wiki-mono">{r.type}</span></a>)}
+          </div>
+        </section>
+      )}
+    </div>
+
+    <aside class="wiki-detail__aside">
+      <div class="wiki-infobox">
+        <div class="wiki-infobox__image-wrap">
+          {region.image ? (
+            <img class="wiki-infobox__image" src={region.image} alt={region.name} />
+          ) : (
+            <div class="wiki-card__placeholder">{region.name.slice(0, 1)}</div>
+          )}
+        </div>
+        <h2 class="wiki-infobox__title">{region.name}</h2>
+        <p class="wiki-infobox__sub">REGION / {region.type}</p>
+        <div class="wiki-infobox__rows">
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">类型</span><span class="wiki-infobox__value">{region.type}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">规模</span><span class="wiki-infobox__value">{region.size}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">怪物</span><span class="wiki-infobox__value">{region.monsters.length + region.bosses.length} 种</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">NPC</span><span class="wiki-infobox__value">{region.npcs.length} 位</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">剧情</span><span class="wiki-infobox__value">{region.story.length} 篇</span></div>
+        </div>
+        <div class="wiki-infobox__badges">
+          <a class="wiki-btn" href="/wiki/regions/">← 全部区域</a>
+          <a class="wiki-btn" href="/wiki/map/">世界地图</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</WikiLayout>

@@ -1,0 +1,36 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import meta from '../../data/wiki/meta.json';
+import data from '../../data/wiki/regions.json';
+const regions = data.regions;
+---
+
+<WikiLayout
+  title="世界地图"
+  description="《魔物娘合成乐园》世界地图：鼠标滚轮缩放、拖动平移，按区域跳转。"
+  active="map"
+  breadcrumb={[{ label: '世界地图' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">WORLD MAP / 世界地图</p>
+    <h1 class="wiki-page-head__title">世界地图 <em>WORLD MAP</em></h1>
+    <p class="wiki-page-head__lead">滚轮缩放，按住拖动。右侧可以直接跳到区域页面。</p>
+  </header>
+
+  <div class="wiki-map-page">
+    <div class="wiki-map-viewer" data-wiki-map>
+      {meta.map && <img src={meta.map} alt="世界地图" />}
+      <span class="wiki-map-hint">SCROLL TO ZOOM · DRAG TO PAN / 滚轮缩放 · 拖动平移</span>
+      <div class="wiki-map-controls">
+        <button type="button" data-wiki-map-in aria-label="放大">+</button>
+        <button type="button" data-wiki-map-out aria-label="缩小">−</button>
+        <button type="button" data-wiki-map-reset aria-label="复位">复位</button>
+      </div>
+    </div>
+    <nav class="wiki-map-regions" aria-label="区域列表">
+      {regions.map((region) => (
+        <a href={`/wiki/regions/${region.slug}/`}>{region.name}<span>{region.type}</span></a>
+      ))}
+    </nav>
+  </div>
+</WikiLayout>

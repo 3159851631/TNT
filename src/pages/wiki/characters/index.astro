@@ -1,0 +1,67 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/characters.json';
+const characters = [...data.characters].sort((a, b) => Number(b.featured) - Number(a.featured) || a.order - b.order);
+const systems = Array.from(new Set(characters.map((c) => c.system).filter(Boolean))).slice(0, 12);
+---
+
+<WikiLayout
+  title="角色"
+  description="《魔物娘合成乐园》的角色：主角、NPC、魔物娘、BOSS 与他们的故事。"
+  active="characters"
+  breadcrumb={[{ label: '角色' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">CHARACTERS / 角色</p>
+    <h1 class="wiki-page-head__title">角色 <em>CHARACTERS</em></h1>
+    <p class="wiki-page-head__lead">
+      主角、NPC、魔物娘和各区域的 BOSS。每个角色都有独立页面，剧情、关系和立绘会继续补。
+    </p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{characters.length}</b><span>CHARACTERS / 角色</span></div>
+      <div class="wiki-stat"><b>{characters.filter((c) => c.image).length}</b><span>PORTRAITS / 已有立绘</span></div>
+      <div class="wiki-stat"><b>{characters.filter((c) => c.chapters.length > 0).length}</b><span>WITH STORY / 有剧情</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-list>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索角色 / 身份 / 区域…" data-wiki-search aria-label="搜索角色" />
+      </div>
+      <div class="wiki-chips">
+        <button class="wiki-chip is-active" type="button" data-wiki-chip="全部">全部</button>
+        {systems.map((system) => <button class="wiki-chip" type="button" data-wiki-chip={system}>{system}</button>)}
+      </div>
+      <span class="wiki-count" data-wiki-count>{characters.length} / {characters.length}</span>
+    </div>
+
+    <div class="wiki-grid wiki-grid--chars">
+      {characters.map((character) => (
+        <a
+          class="wiki-card"
+          href={`/wiki/characters/${character.slug}/`}
+          data-wiki-item
+          data-name={character.name}
+          data-type={character.system}
+        >
+          <div class="wiki-card__media">
+            {character.image ? (
+              <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
+            ) : (
+              <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+            )}
+          </div>
+          <div class="wiki-card__body">
+            <h2 class="wiki-card__title">{character.name}</h2>
+            <p class="wiki-card__meta">{character.identity || character.system}</p>
+            <div class="wiki-card__tags">
+              {character.region && <span class="wiki-tag">{character.region}</span>}
+              {character.chapters.length > 0 && <span class="wiki-tag wiki-tag--gold">{character.chapters.length} 剧情</span>}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</WikiLayout>

@@ -1,0 +1,68 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/regions.json';
+const regions = data.regions;
+const types = Array.from(new Set(regions.map((region) => region.type)));
+---
+
+<WikiLayout
+  title="区域"
+  description="《魔物娘合成乐园》的全部区域：森林、小镇、主城、火山、雪山、深海、沼泽、天空城、地牢与零界。"
+  active="regions"
+  breadcrumb={[{ label: '区域' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">REGIONS / 区域</p>
+    <h1 class="wiki-page-head__title">区域 <em>REGIONS</em></h1>
+    <p class="wiki-page-head__lead">
+      先从这里开始。每个区域都有独立的 NPC、怪物、BOSS、掉落和剧情；点进去能看完整区域页。
+    </p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{regions.length}</b><span>REGIONS / 区域</span></div>
+      <div class="wiki-stat"><b>{regions.reduce((n, r) => n + r.monsters.length + r.bosses.length, 0)}</b><span>MONSTERS / 怪物</span></div>
+      <div class="wiki-stat"><b>{regions.reduce((n, r) => n + r.npcs.length, 0)}</b><span>NPCS / 角色</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-list>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索区域 / 类型…" data-wiki-search aria-label="搜索区域" />
+      </div>
+      <div class="wiki-chips">
+        <button class="wiki-chip is-active" type="button" data-wiki-chip="全部">全部</button>
+        {types.map((type) => <button class="wiki-chip" type="button" data-wiki-chip={type}>{type}</button>)}
+      </div>
+      <span class="wiki-count" data-wiki-count>{regions.length} / {regions.length}</span>
+    </div>
+
+    <div class="wiki-grid wiki-grid--regions">
+      {regions.map((region) => (
+        <a
+          class="wiki-card"
+          href={`/wiki/regions/${region.slug}/`}
+          data-wiki-item
+          data-name={region.name}
+          data-type={region.type}
+        >
+          <div class="wiki-card__media">
+            {region.image ? (
+              <img src={region.image} alt={region.name} loading="lazy" decoding="async" />
+            ) : (
+              <div class="wiki-card__placeholder">{region.name.slice(0, 1)}</div>
+            )}
+          </div>
+          <div class="wiki-card__body">
+            <h2 class="wiki-card__title">{region.name}</h2>
+            <p class="wiki-card__meta">{region.type} · {region.size} · {region.monsters.length + region.bosses.length} 种怪物 · {region.npcs.length} 位 NPC</p>
+            <p class="wiki-card__desc">{region.description}</p>
+            <div class="wiki-card__tags">
+              {region.bosses.length > 0 && <span class="wiki-tag wiki-tag--red">{region.bosses.length} BOSS</span>}
+              {region.story.length > 0 && <span class="wiki-tag wiki-tag--gold">{region.story.length} 篇剧情</span>}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</WikiLayout>

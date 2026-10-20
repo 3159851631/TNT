@@ -1,0 +1,51 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/stories.json';
+import charactersData from '../../../data/wiki/characters.json';
+import regionsData from '../../../data/wiki/regions.json';
+
+export function getStaticPaths() {
+  return data.stories.map((story, index) => ({ params: { slug: story.slug }, props: { story, index } }));
+}
+
+const { story, index } = Astro.props;
+const prev = index > 0 ? data.stories[index - 1] : null;
+const next = index < data.stories.length - 1 ? data.stories[index + 1] : null;
+const relatedCharacters = charactersData.characters.filter((c) => story.characters.includes(c.name)).slice(0, 12);
+const region = regionsData.regions.find((r) => r.name === story.region);
+---
+
+<WikiLayout
+  title={story.title}
+  description={story.excerpt}
+  active="story"
+  breadcrumb={[{ label: '剧情', href: '/wiki/story/' }, { label: story.chapter }, { label: story.title }]}
+>
+  <article class="wiki-story-page">
+    <header class="wiki-detail__head">
+      <p class="wiki-detail__kicker">STORY / {story.chapter}</p>
+      <h1 class="wiki-detail__title">{story.title}</h1>
+      <div class="wiki-story-meta">
+        <span>{story.chapter}</span>
+        {region ? <a href={`/wiki/regions/${region.slug}/`}>{region.name}</a> : <span>{story.region}</span>}
+        <span>{story.characters.length} 位角色</span>
+      </div>
+    </header>
+
+    <div class="wiki-prose" set:html={story.html} />
+
+    {relatedCharacters.length > 0 && (
+      <section class="wiki-related">
+        <h2>本章角色</h2>
+        <div class="wiki-related__grid">
+          {relatedCharacters.map((c) => <a class="wiki-related__link" href={`/wiki/characters/${c.slug}/`}>{c.name} <span class="wiki-mono">{c.system}</span></a>)}
+        </div>
+      </section>
+    )}
+
+    <nav class="wiki-story-nav" aria-label="章节导航">
+      <span>{prev ? <a href={`/wiki/story/${prev.slug}/`}>← {prev.chapter} · {prev.title}</a> : <a href="/wiki/story/">← 全部剧情</a>}</span>
+      <span>{next ? <a href={`/wiki/story/${next.slug}/`}>{next.chapter} · {next.title} →</a> : <a href="/wiki/story/">全部剧情 →</a>}</span>
+    </nav>
+  </article>
+</WikiLayout>

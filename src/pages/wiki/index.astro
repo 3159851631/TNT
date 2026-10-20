@@ -1,0 +1,174 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import meta from '../../data/wiki/meta.json';
+import regionsData from '../../data/wiki/regions.json';
+import charactersData from '../../data/wiki/characters.json';
+import storiesData from '../../data/wiki/stories.json';
+
+const regions = regionsData.regions;
+const characters = charactersData.characters;
+const stories = storiesData.stories;
+const featuredCharacters = characters.filter((character) => character.featured).slice(0, 6);
+const latestStories = stories.slice(0, 6);
+const categories = meta.categories;
+const counts = meta.counts;
+---
+
+<WikiLayout title="游戏 Wiki" description={meta.tagline} active="home">
+  <section class="wiki-hero">
+    <div class="wiki-hero__copy">
+      <p class="wiki-kicker">GAME WIKI / 游戏图鉴</p>
+      {meta.logos.game && (
+        <div class="wiki-hero__logo-wrap">
+          <img class="wiki-hero__logo" src={meta.logos.game} alt={`${meta.gameName} LOGO`} />
+        </div>
+      )}
+      <h1 class="wiki-hero__title">{meta.gameName}</h1>
+      <p class="wiki-hero__en">{meta.gameEn}</p>
+      <p class="wiki-hero__tagline">
+        {meta.tagline}。从区域、角色、怪物、物品到合成、剧情和世界地图，这里收录整个游戏的设定。
+      </p>
+      <div class="wiki-hero__actions">
+        <a class="wiki-btn wiki-btn--primary" href="/wiki/regions/">从区域开始 →</a>
+        <a class="wiki-btn" href="/wiki/map/">打开世界地图</a>
+        <a class="wiki-btn" href="/wiki/characters/">全部角色</a>
+      </div>
+      <div class="wiki-hero__stats">
+        <div class="wiki-stat"><b>{counts.regions}</b><span>REGIONS / 区域</span></div>
+        <div class="wiki-stat"><b>{counts.characters}</b><span>CHARACTERS / 角色</span></div>
+        <div class="wiki-stat"><b>{counts.monsters}</b><span>MONSTERS / 怪物</span></div>
+        <div class="wiki-stat"><b>{counts.items}</b><span>ITEMS / 物品</span></div>
+        <div class="wiki-stat"><b>{counts.recipes}</b><span>RECIPES / 配方</span></div>
+        <div class="wiki-stat"><b>{counts.stories}</b><span>CHAPTERS / 剧情</span></div>
+      </div>
+    </div>
+    <div class="wiki-hero__art">
+      {meta.hero && <img src={meta.hero} alt="向导 / 游戏 CG" loading="eager" decoding="async" />}
+      <div class="wiki-hero__veil"></div>
+      <p class="wiki-hero__caption">KEY VISUAL / 向导 · 初始森林</p>
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">CATEGORIES / 分类</p>
+        <h2 class="wiki-section__title">从哪一部分开始？</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/search/">搜索全部条目 →</a>
+    </header>
+    <div class="wiki-cats">
+      {categories.map((category, index) => (
+        <a href={category.url} class:list={['wiki-cat', index < 3 && 'wiki-cat--featured']}>
+          <div class="wiki-cat__top">
+            <div>
+              <div class="wiki-cat__name">{category.name}</div>
+              <div class="wiki-cat__en">{category.en}</div>
+            </div>
+            <div class="wiki-cat__count">{category.count > 0 ? category.count : '—'}</div>
+          </div>
+          <p class="wiki-cat__desc">{category.desc}</p>
+          <span class="wiki-cat__arrow">OPEN ↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">WORLD MAP / 世界地图</p>
+        <h2 class="wiki-section__title">整个异世界，一张地图</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/map/">进去拖动 / 滚轮缩放 →</a>
+    </header>
+    <div class="wiki-map-panel">
+      <a class="wiki-map-panel__image" href="/wiki/map/" aria-label="打开世界地图">
+        {meta.map && <img src={meta.map} alt="世界地图" loading="lazy" />}
+      </a>
+      <div class="wiki-map-panel__veil"></div>
+      <div class="wiki-map-panel__body">
+        <h3>坐标位置 · 世界全图</h3>
+        <p>从初始森林到零界。点进去可以拖动地图、用鼠标滚轮缩放，再按区域跳转。</p>
+        <a class="wiki-btn wiki-btn--primary" href="/wiki/map/">打开世界地图</a>
+      </div>
+      <span class="wiki-map-panel__hint">SCROLL TO ZOOM / 滚轮缩放</span>
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">CHARACTERS / 角色</p>
+        <h2 class="wiki-section__title">会记得你的人</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/characters/">全部 {counts.characters} 位角色 →</a>
+    </header>
+    <div class="wiki-char-grid">
+      {featuredCharacters.map((character) => (
+        <a class="wiki-char-card" href={`/wiki/characters/${character.slug}/`}>
+          <div class="wiki-char-card__portrait">
+            {character.image ? (
+              <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
+            ) : (
+              <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+            )}
+          </div>
+          <div class="wiki-char-card__body">
+            <h3 class="wiki-char-card__name">{character.name}</h3>
+            <p class="wiki-char-card__meta">{character.identity || character.system}</p>
+            {character.region && <span class="wiki-char-card__region">{character.region}</span>}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">STORY / 剧情</p>
+        <h2 class="wiki-section__title">从囚笼到天空城</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/story/">全部 {counts.stories} 篇剧情 →</a>
+    </header>
+    <div class="wiki-story-grid">
+      {latestStories.map((story) => (
+        <a class="wiki-story-card" href={`/wiki/story/${story.slug}/`}>
+          <div class="wiki-story-card__chapter">{story.chapter}</div>
+          <h3 class="wiki-story-card__title">{story.title}</h3>
+          <p class="wiki-story-card__excerpt">{story.excerpt}</p>
+          <div class="wiki-story-card__region">{story.region} · READ ↗</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">START HERE / 推荐入口</p>
+        <h2 class="wiki-section__title">先看这三个区域</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/regions/">全部区域 →</a>
+    </header>
+    <div class="wiki-grid wiki-grid--regions">
+      {regions.slice(0, 3).map((region) => (
+        <a class="wiki-card" href={`/wiki/regions/${region.slug}/`}>
+          <div class="wiki-card__media">
+            {region.image ? (
+              <img src={region.image} alt={region.name} loading="lazy" />
+            ) : (
+              <div class="wiki-card__placeholder">{region.name.slice(0, 1)}</div>
+            )}
+          </div>
+          <div class="wiki-card__body">
+            <h3 class="wiki-card__title">{region.name}</h3>
+            <p class="wiki-card__meta">{region.type} · {region.size} · {region.monsters.length + region.bosses.length} 种怪物</p>
+            <p class="wiki-card__desc">{region.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</WikiLayout>

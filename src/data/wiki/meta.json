@@ -1,0 +1,117 @@
+{
+  "gameName": "魔物娘合成乐园",
+  "gameEn": "MONSTER GIRL: SYNTHESIS PARADISE",
+  "tagline": "异世界生存建造 × 魔物娘养成 × 半神容器",
+  "logos": {
+    "game": "/uploads/wiki/logos/game-logo.png",
+    "studio": "/uploads/wiki/logos/studio-logo.png"
+  },
+  "map": "/uploads/wiki/map/world-map.webp",
+  "hero": "/uploads/wiki/cg/guide.webp",
+  "counts": {
+    "regions": 19,
+    "characters": 205,
+    "monsters": 274,
+    "items": 456,
+    "recipes": 168,
+    "stories": 20
+  },
+  "featuredCharacters": [
+    "佐伊·维迦",
+    "卡德尔·维迦",
+    "埃莉",
+    "爱娜",
+    "阿葵",
+    "凛"
+  ],
+  "categories": [
+    {
+      "key": "regions",
+      "name": "区域",
+      "en": "REGIONS",
+      "url": "/wiki/regions/",
+      "count": 19,
+      "desc": "先从这里开始：每片区域的 NPC、怪物、BOSS、掉落与剧情。"
+    },
+    {
+      "key": "characters",
+      "name": "角色",
+      "en": "CHARACTERS",
+      "url": "/wiki/characters/",
+      "count": 205,
+      "desc": "NPC、主线角色、魔物娘与他们的故事。"
+    },
+    {
+      "key": "monsters",
+      "name": "怪物",
+      "en": "MONSTERS",
+      "url": "/wiki/monsters/",
+      "count": 274,
+      "desc": "小怪、精英、夜晚种、动物、事件与 BOSS。"
+    },
+    {
+      "key": "items",
+      "name": "物品",
+      "en": "ITEMS",
+      "url": "/wiki/items/",
+      "count": 456,
+      "desc": "456 件物品，168 个可合成配方。"
+    },
+    {
+      "key": "recipes",
+      "name": "合成",
+      "en": "CRAFTING",
+      "url": "/wiki/recipes/",
+      "count": 168,
+      "desc": "按制作站、材料、层级整理的完整合成表。"
+    },
+    {
+      "key": "story",
+      "name": "剧情",
+      "en": "STORY",
+      "url": "/wiki/story/",
+      "count": 20,
+      "desc": "序章到第八章，以及每个独立区域的故事。"
+    },
+    {
+      "key": "mechanics",
+      "name": "机制",
+      "en": "MECHANICS",
+      "url": "/wiki/mechanics/",
+      "count": 0,
+      "desc": "生命、仇恨、击退、日夜、成就、地图与玩家状态。"
+    },
+    {
+      "key": "business",
+      "name": "经营",
+      "en": "BUSINESS",
+      "url": "/wiki/business/",
+      "count": 0,
+      "desc": "房产、员工、资金、侦探社、进货、定价与店铺管理。"
+    },
+    {
+      "key": "music",
+      "name": "音乐",
+      "en": "AUDIO",
+      "url": "/wiki/music/",
+      "count": 0,
+      "desc": "环境分区、UI、战斗、横版模式与音效。"
+    },
+    {
+      "key": "save",
+      "name": "存档",
+      "en": "SAVE",
+      "url": "/wiki/save/",
+      "count": 0,
+      "desc": "存档内容、物品、时间和剧情标记。"
+    },
+    {
+      "key": "map",
+      "name": "地图",
+      "en": "WORLD MAP",
+      "url": "/wiki/map/",
+      "count": 0,
+      "desc": "世界地图，可用鼠标滚轮缩放和拖动。"
+    }
+  ]
+}

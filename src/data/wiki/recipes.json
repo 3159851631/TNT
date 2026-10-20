@@ -1,0 +1,4657 @@
+{
+  "recipes": [
+    {
+      "id": "403",
+      "name": "加强版火焰魔法书",
+      "category": "老武器 + 捕捉网",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "火晶",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/403.webp",
+      "iconSize": "1430×558",
+      "price": 0,
+      "note": "加强火焰书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/403/"
+    },
+    {
+      "id": "407",
+      "name": "凝胶发射器",
+      "category": "老武器 + 捕捉网",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "软黏块",
+          "qty": 4
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/407.webp",
+      "iconSize": "23×49",
+      "price": 0,
+      "note": "发射凝胶 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/407/"
+    },
+    {
+      "id": "408",
+      "name": "木弓",
+      "category": "老武器 + 捕捉网",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/408.webp",
+      "iconSize": "640×460",
+      "price": 0,
+      "note": "基础弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/408/"
+    },
+    {
+      "id": "409",
+      "name": "水泡",
+      "category": "老武器 + 捕捉网",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/409.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水泡法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/409/"
+    },
+    {
+      "id": "1003",
+      "name": "沙发",
+      "category": "老家俱",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "栗子",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": null,
+      "iconSize": "26×21",
+      "price": 40,
+      "note": "需要20个栗子",
+      "usedIn": [],
+      "url": "/wiki/items/1003/"
+    },
+    {
+      "id": "1004",
+      "name": "箱子",
+      "category": "老家俱",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "栗子",
+          "qty": 5
+        },
+        {
+          "name": "石头",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": null,
+      "iconSize": "24×28",
+      "price": 20,
+      "note": "箱子，可以存储容器",
+      "usedIn": [],
+      "url": "/wiki/items/1004/"
+    },
+    {
+      "id": "1100",
+      "name": "基础锻造台",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "木头",
+          "qty": 10
+        },
+        {
+          "name": "石头",
+          "qty": 10
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1100.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "基础工具/武器制作 · 获取：合成 · 区域：锻造类",
+      "usedIn": [],
+      "url": "/wiki/items/1100/"
+    },
+    {
+      "id": "1101",
+      "name": "金属锻造台",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 5
+        },
+        {
+          "name": "石头",
+          "qty": 20
+        },
+        {
+          "name": "木头",
+          "qty": 10
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1101.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "高级金属装备制作 · 获取：合成 · 区域：锻造类",
+      "usedIn": [],
+      "url": "/wiki/items/1101/"
+    },
+    {
+      "id": "1102",
+      "name": "魔法锻造台",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "魔力精华",
+          "qty": 5
+        },
+        {
+          "name": "灵木",
+          "qty": 5
+        },
+        {
+          "name": "木板",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1102.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "魔法属性装备制作 · 获取：合成 · 区域：锻造类",
+      "usedIn": [],
+      "url": "/wiki/items/1102/"
+    },
+    {
+      "id": "1103",
+      "name": "邪恶合成仪",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "暗影碎体",
+          "qty": 5
+        },
+        {
+          "name": "亡灵结晶",
+          "qty": 3
+        },
+        {
+          "name": "精炼铁",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1103.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗属性装备制作 · 获取：合成 · 区域：锻造类",
+      "usedIn": [],
+      "url": "/wiki/items/1103/"
+    },
+    {
+      "id": "1104",
+      "name": "异能锻造台",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "虚空碎晶",
+          "qty": 3
+        },
+        {
+          "name": "灵辉花瓣",
+          "qty": 5
+        },
+        {
+          "name": "精炼金",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1104.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "特殊属性装备制作 · 获取：合成 · 区域：锻造类",
+      "usedIn": [],
+      "url": "/wiki/items/1104/"
+    },
+    {
+      "id": "1105",
+      "name": "矿物精炼器",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "石头",
+          "qty": 20
+        },
+        {
+          "name": "燧石",
+          "qty": 5
+        },
+        {
+          "name": "木头",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1105.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "矿石精炼加工 · 获取：合成 · 区域：加工类",
+      "usedIn": [],
+      "url": "/wiki/items/1105/"
+    },
+    {
+      "id": "1106",
+      "name": "酿造台",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 5
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 3
+        },
+        {
+          "name": "木头",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1106.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "药水酿造 · 获取：合成 · 区域：加工类",
+      "usedIn": [],
+      "url": "/wiki/items/1106/"
+    },
+    {
+      "id": "1107",
+      "name": "魔物合成仪",
+      "category": "制作站",
+      "craftable": true,
+      "tier": 2,
+      "station": "异能锻造台",
+      "materials": [
+        {
+          "name": "魔力精华",
+          "qty": 10
+        },
+        {
+          "name": "混沌之心",
+          "qty": 1
+        },
+        {
+          "name": "精炼永暗晶",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/1107.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "特殊魔物/物品合成 · 获取：合成 · 区域：合成类",
+      "usedIn": [],
+      "url": "/wiki/items/1107/"
+    },
+    {
+      "id": "2001",
+      "name": "木板",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "木头",
+          "qty": 1
+        }
+      ],
+      "output": 4,
+      "icon": "/uploads/codex/galgame/2001.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "基础建材 · 获取：合成 · 区域：材料加工",
+      "usedIn": [
+        "中级魔法书",
+        "低级黑暗魔法书",
+        "冰焰魔法书",
+        "初学者魔法书",
+        "加强版火焰魔法书",
+        "日辉圣典→审判",
+        "暗焰魔法书",
+        "木剑",
+        "木棍",
+        "毒雨",
+        "海啸",
+        "酿造台",
+        "闪电魔法书",
+        "高级魔法书",
+        "高级黑暗魔法书",
+        "魔法锻造台"
+      ],
+      "url": "/wiki/items/2001/"
+    },
+    {
+      "id": "2002",
+      "name": "木棍",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 2,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 2
+        }
+      ],
+      "output": 4,
+      "icon": "/uploads/codex/galgame/2002.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "武器手柄材料 · 获取：合成",
+      "usedIn": [
+        "仙人掌法杖",
+        "冰刃",
+        "卡卡修战斧",
+        "大地弓箭",
+        "太阳石剑→闪光",
+        "寒冰弓",
+        "寒冰法杖",
+        "寒霜斧→冰川",
+        "幽冥双刀→暗裔",
+        "微型太阳",
+        "暗蚀猎魂弓→日落",
+        "木剑",
+        "木弓",
+        "枯木弓",
+        "枯木法杖",
+        "毒泡",
+        "毒疱弓",
+        "毒藤弯刀",
+        "水泡",
+        "水系法杖",
+        "水龙卷",
+        "波纹剑",
+        "潮流弓",
+        "潮鸣水刃→暗涌",
+        "激荡电流",
+        "火球法杖",
+        "灵木法杖",
+        "灼心炎刃→火山",
+        "炼狱弓",
+        "爆破法杖",
+        "石剑",
+        "砂铁之刃",
+        "老鼠夹",
+        "腐朽法杖",
+        "腐蚀之矛→蚀毒",
+        "草皮藤蔓弓箭",
+        "藤蔓法杖",
+        "辉光巨斧",
+        "逐日之弓→日出",
+        "金剑",
+        "金弓",
+        "铁剑",
+        "铜剑",
+        "铜弓",
+        "铜锤",
+        "长矛",
+        "雷之弓",
+        "雷电法杖→天罚",
+        "雷电锤→雷击",
+        "霜棱寒晶杖",
+        "风之魔法杖"
+      ],
+      "url": "/wiki/items/2002/"
+    },
+    {
+      "id": "2003",
+      "name": "石料",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "石头",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2003.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "基础建材 · 获取：合成",
+      "usedIn": [
+        "大地弓箭",
+        "石剑"
+      ],
+      "url": "/wiki/items/2003/"
+    },
+    {
+      "id": "2004",
+      "name": "燧石",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "石头",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2004.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "点火材料 · 获取：合成",
+      "usedIn": [
+        "矿物精炼器",
+        "自制雷管"
+      ],
+      "url": "/wiki/items/2004/"
+    },
+    {
+      "id": "2006",
+      "name": "精炼铜",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "铜矿",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2006.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "铜锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [
+        "行者之徽",
+        "铜剑",
+        "铜弓",
+        "铜锤"
+      ],
+      "url": "/wiki/items/2006/"
+    },
+    {
+      "id": "2008",
+      "name": "精炼铁",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "铁矿",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2008.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "铁锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [
+        "丢失的刀",
+        "冥月之弓",
+        "冰刃",
+        "冰棘陷阱",
+        "冰球发射器",
+        "凝胶发射器",
+        "卡卡修战斧",
+        "太阳石剑→闪光",
+        "寒霜斧→冰川",
+        "幽冥双刀→暗裔",
+        "星闪之剑",
+        "晨星祈光弓",
+        "暗影低语",
+        "毒藤弯刀",
+        "永冻之弦",
+        "波纹剑",
+        "海月之弓",
+        "深海鸣潮戟",
+        "深渊低语者",
+        "潮刃·碧浪之剑",
+        "潮汐回响",
+        "潮鸣水刃→暗涌",
+        "灼心炎刃→火山",
+        "炎杀号角",
+        "烈焰弓箭",
+        "熔火喷涌机关",
+        "猎魔人之刃",
+        "碧海流光弓",
+        "空辉·天穹之弓",
+        "老鼠夹",
+        "腐蚀之矛→蚀毒",
+        "荼毒·十字弩",
+        "虚无截断锯",
+        "被诅咒的刀",
+        "赤龙斩",
+        "轰雷感应地雷",
+        "辉光巨斧",
+        "辛哉·辉耀之剑",
+        "邪恶合成仪",
+        "金属锻造台",
+        "铁剑",
+        "长矛",
+        "阜岩火之刃",
+        "雷电锤→雷击",
+        "雷罚·天鸣之刃",
+        "雷霆裁决",
+        "霜月寒弓",
+        "鬼牙刀"
+      ],
+      "url": "/wiki/items/2008/"
+    },
+    {
+      "id": "2010",
+      "name": "精炼金",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "矿物精炼器",
+      "materials": [
+        {
+          "name": "金矿",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2010.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "金锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [
+        "光之护符",
+        "异能锻造台",
+        "无疲灵辉护符",
+        "极寒庇护戒",
+        "极炎庇护戒",
+        "炎霜双生吊坠",
+        "金剑",
+        "金弓"
+      ],
+      "url": "/wiki/items/2010/"
+    },
+    {
+      "id": "2012",
+      "name": "精炼砂铁",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "矿物精炼器",
+      "materials": [
+        {
+          "name": "砂铁",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2012.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "砂铁锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [
+        "砂铁之刃"
+      ],
+      "url": "/wiki/items/2012/"
+    },
+    {
+      "id": "2014",
+      "name": "精炼蓝晶",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "矿物精炼器",
+      "materials": [
+        {
+          "name": "蓝晶矿",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2014.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "蓝晶锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [
+        "卡奇大法师的魔法书"
+      ],
+      "url": "/wiki/items/2014/"
+    },
+    {
+      "id": "2016",
+      "name": "精炼绿脉魔矿",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "矿物精炼器",
+      "materials": [
+        {
+          "name": "绿脉魔矿",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2016.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "绿脉魔矿锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [],
+      "url": "/wiki/items/2016/"
+    },
+    {
+      "id": "2018",
+      "name": "精炼永暗晶",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "矿物精炼器",
+      "materials": [
+        {
+          "name": "永暗晶石",
+          "qty": 3
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2018.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "永暗晶锭 · 获取：合成 · 区域：金属精炼",
+      "usedIn": [
+        "魔物合成仪"
+      ],
+      "url": "/wiki/items/2018/"
+    },
+    {
+      "id": "2020",
+      "name": "丝绸",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "蜘蛛丝",
+          "qty": 4
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2020.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "高级织物 · 获取：合成 · 区域：材料加工",
+      "usedIn": [
+        "高级魔法书"
+      ],
+      "url": "/wiki/items/2020/"
+    },
+    {
+      "id": "2021",
+      "name": "灵丝织片",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2021.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "魔法织物 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2021/"
+    },
+    {
+      "id": "2023",
+      "name": "硬兽皮",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "兽皮",
+          "qty": 2
+        },
+        {
+          "name": "软毛",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2023.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "高级皮革 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/2023/"
+    },
+    {
+      "id": "2024",
+      "name": "轻薄兽皮",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "兽皮",
+          "qty": 1
+        },
+        {
+          "name": "软毛",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2024.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "轻甲材料 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/2024/"
+    },
+    {
+      "id": "2044",
+      "name": "冰焰石",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "霜晶甲片",
+          "qty": 2
+        },
+        {
+          "name": "火晶",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2044.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰火合成材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2044/"
+    },
+    {
+      "id": "2045",
+      "name": "烛心燃粉",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "火晶",
+          "qty": 2
+        },
+        {
+          "name": "煤炭",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2045.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火焰材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2045/"
+    },
+    {
+      "id": "2046",
+      "name": "腐孢催生球",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "腐毒腺",
+          "qty": 2
+        },
+        {
+          "name": "腐疫菌团",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2046.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "瘟疫材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2046/"
+    },
+    {
+      "id": "2047",
+      "name": "雷纹骨片",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "带电骨片",
+          "qty": 2
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2047.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷属性材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2047/"
+    },
+    {
+      "id": "2048",
+      "name": "虫牙充能骨片",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "虫壳",
+          "qty": 2
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2048.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "充能材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2048/"
+    },
+    {
+      "id": "2049",
+      "name": "暗电脉冲核心",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "暗影碎体",
+          "qty": 2
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2049.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗电核心 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2049/"
+    },
+    {
+      "id": "2050",
+      "name": "腐牙穿刺针",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "腐虫毒牙",
+          "qty": 2
+        },
+        {
+          "name": "骨刃碎片",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2050.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗属性材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2050/"
+    },
+    {
+      "id": "2051",
+      "name": "赤焰粒",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "火晶",
+          "qty": 2
+        },
+        {
+          "name": "灰烬",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2051.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火属性材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2051/"
+    },
+    {
+      "id": "2052",
+      "name": "潮珠",
+      "category": "通用材料",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "鲛人之泪",
+          "qty": 1
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/2052.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水属性材料 · 获取：合成 · 区域：材料加工",
+      "usedIn": [],
+      "url": "/wiki/items/2052/"
+    },
+    {
+      "id": "4000",
+      "name": "木剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "木板",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4000.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "最基础的剑，新手初始武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4000/"
+    },
+    {
+      "id": "4001",
+      "name": "石剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "手工（不需要制作站）",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "石料",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4001.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "石头打磨的剑，比木剑耐用 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4001/"
+    },
+    {
+      "id": "4002",
+      "name": "铜剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铜",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4002.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "铜制剑，基础金属武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4002/"
+    },
+    {
+      "id": "4003",
+      "name": "铁剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4003.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "铁制剑，中期主力武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4003/"
+    },
+    {
+      "id": "4004",
+      "name": "金剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼金",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4004.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "金制剑，稀有且华丽 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4004/"
+    },
+    {
+      "id": "4005",
+      "name": "长矛",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4005.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "攻击距离较长的近战武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4005/"
+    },
+    {
+      "id": "4006",
+      "name": "铜锤",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铜",
+          "qty": 4
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4006.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "攻速慢但伤害高 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4006/"
+    },
+    {
+      "id": "4007",
+      "name": "砂铁之刃",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼砂铁",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4007.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "沙漠风格武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4007/"
+    },
+    {
+      "id": "4008",
+      "name": "卡卡修战斧",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 4
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4008.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "来自山区的战斧 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4008/"
+    },
+    {
+      "id": "4036",
+      "name": "腐蚀之矛→蚀毒",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4036.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒属性长矛，可升级为蚀毒 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4036/"
+    },
+    {
+      "id": "4037",
+      "name": "丢失的刀",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 2
+        },
+        {
+          "name": "腐噬藤",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4037.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "被腐蚀的刀 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4037/"
+    },
+    {
+      "id": "4038",
+      "name": "毒藤弯刀",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "腐噬藤",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4038.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒藤缠绕的弯刀 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4038/"
+    },
+    {
+      "id": "4039",
+      "name": "灼心炎刃→火山",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "火晶",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4039.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火属性剑，可升级为火山 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4039/"
+    },
+    {
+      "id": "4041",
+      "name": "赤龙斩",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "龙血精粹",
+          "qty": 2
+        },
+        {
+          "name": "火晶",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4041.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "龙血锻造的火属性剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4041/"
+    },
+    {
+      "id": "4042",
+      "name": "阜岩火之刃",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "火耀岩",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4042.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火山岩石锻造的剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4042/"
+    },
+    {
+      "id": "4044",
+      "name": "寒霜斧→冰川",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4044.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰属性斧，可升级为冰川 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4044/"
+    },
+    {
+      "id": "4045",
+      "name": "冰刃",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        },
+        {
+          "name": "霜核苔",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4045.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰属性剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4045/"
+    },
+    {
+      "id": "4049",
+      "name": "潮鸣水刃→暗涌",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "潮汐鳞片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4049.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水属性剑，可升级为暗涌 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4049/"
+    },
+    {
+      "id": "4050",
+      "name": "波纹剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4050.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水波纹剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4050/"
+    },
+    {
+      "id": "4051",
+      "name": "潮刃·碧浪之剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "鲛人之泪",
+          "qty": 2
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4051.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "碧浪之剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4051/"
+    },
+    {
+      "id": "4052",
+      "name": "深海鸣潮戟",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 4
+        },
+        {
+          "name": "鲛人之泪",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4052.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "深海戟 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4052/"
+    },
+    {
+      "id": "4054",
+      "name": "雷电锤→雷击",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4054.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷属性锤，可升级为雷击 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4054/"
+    },
+    {
+      "id": "4055",
+      "name": "雷罚·天鸣之刃",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 2
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4055.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷罚之刃 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4055/"
+    },
+    {
+      "id": "4057",
+      "name": "太阳石剑→闪光",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "太阳石",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4057.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "光属性剑，可升级为闪光 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4057/"
+    },
+    {
+      "id": "4058",
+      "name": "辉光巨斧",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 4
+        },
+        {
+          "name": "太阳石",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4058.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "辉光巨斧 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4058/"
+    },
+    {
+      "id": "4059",
+      "name": "星闪之剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "太阳石",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4059.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "星闪之剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4059/"
+    },
+    {
+      "id": "4060",
+      "name": "辛哉·辉耀之剑",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "灵辉花瓣",
+          "qty": 2
+        },
+        {
+          "name": "太阳石",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4060.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "辉耀之剑 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4060/"
+    },
+    {
+      "id": "4061",
+      "name": "猎魔人之刃",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "圣辉裁决弹",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4061.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "猎魔人使用 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4061/"
+    },
+    {
+      "id": "4063",
+      "name": "幽冥双刀→暗裔",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4063.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗属性双刀，可升级为暗裔 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4063/"
+    },
+    {
+      "id": "4064",
+      "name": "被诅咒的刀",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "诅咒之书",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4064.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "被诅咒的刀 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4064/"
+    },
+    {
+      "id": "4065",
+      "name": "鬼牙刀",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 2
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4065.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "鬼牙刀 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4065/"
+    },
+    {
+      "id": "4066",
+      "name": "虚无截断锯",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "虚空碎晶",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4066.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "虚无锯 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4066/"
+    },
+    {
+      "id": "4200",
+      "name": "铜弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "精炼铜",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4200.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "铜弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4200/"
+    },
+    {
+      "id": "4201",
+      "name": "金弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "精炼金",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4201.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "金弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4201/"
+    },
+    {
+      "id": "4202",
+      "name": "枯木弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "枯木",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4202.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "枯木弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4202/"
+    },
+    {
+      "id": "4203",
+      "name": "草皮藤蔓弓箭",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "藤蔓",
+          "qty": 3
+        },
+        {
+          "name": "草",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4203.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "草皮弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4203/"
+    },
+    {
+      "id": "4207",
+      "name": "大地弓箭",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "石料",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4207.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "大地弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4207/"
+    },
+    {
+      "id": "4215",
+      "name": "毒疱弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4215.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒疱弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4215/"
+    },
+    {
+      "id": "4216",
+      "name": "荼毒·十字弩",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4216.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒十字弩 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4216/"
+    },
+    {
+      "id": "4217",
+      "name": "暗影低语",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 2
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4217.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗影低语弩 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4217/"
+    },
+    {
+      "id": "4219",
+      "name": "炼狱弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "火晶",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4219.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "炼狱弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4219/"
+    },
+    {
+      "id": "4220",
+      "name": "烈焰弓箭",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "火耀岩",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4220.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "烈焰弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4220/"
+    },
+    {
+      "id": "4221",
+      "name": "炎杀号角",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 2
+        },
+        {
+          "name": "火晶",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4221.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "炎杀号角 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4221/"
+    },
+    {
+      "id": "4222",
+      "name": "寒冰弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "霜核苔",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4222.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "寒冰弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4222/"
+    },
+    {
+      "id": "4223",
+      "name": "永冻之弦",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4223.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "永冻弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4223/"
+    },
+    {
+      "id": "4224",
+      "name": "霜月寒弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "永冻琥珀",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4224.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "霜月弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4224/"
+    },
+    {
+      "id": "4225",
+      "name": "潮流弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4225.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "潮流弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4225/"
+    },
+    {
+      "id": "4226",
+      "name": "海月之弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "潮汐鳞片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4226.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "海月弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4226/"
+    },
+    {
+      "id": "4227",
+      "name": "潮汐回响",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "鲛人之泪",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4227.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "潮汐回响 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4227/"
+    },
+    {
+      "id": "4228",
+      "name": "碧海流光弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4228.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "碧海弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4228/"
+    },
+    {
+      "id": "4229",
+      "name": "雷之弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4229.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷之弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4229/"
+    },
+    {
+      "id": "4230",
+      "name": "雷霆裁决",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4230.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷霆裁决 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4230/"
+    },
+    {
+      "id": "4232",
+      "name": "逐日之弓→日出",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "太阳石",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4232.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "逐日弓，可升级为日出 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4232/"
+    },
+    {
+      "id": "4233",
+      "name": "晨星祈光弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "灵辉花瓣",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4233.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "晨星弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4233/"
+    },
+    {
+      "id": "4234",
+      "name": "空辉·天穹之弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "太阳石",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4234.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "天穹弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4234/"
+    },
+    {
+      "id": "4236",
+      "name": "暗蚀猎魂弓→日落",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4236.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗蚀弓，可升级为日落 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4236/"
+    },
+    {
+      "id": "4237",
+      "name": "冥月之弓",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4237.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冥月弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4237/"
+    },
+    {
+      "id": "4238",
+      "name": "深渊低语者",
+      "category": "远程武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "虚空碎晶",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4238.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "深渊弓 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4238/"
+    },
+    {
+      "id": "4400",
+      "name": "灵木法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "灵木",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4400.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "基础法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4400/"
+    },
+    {
+      "id": "4401",
+      "name": "初学者魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4401.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "初学者魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4401/"
+    },
+    {
+      "id": "4402",
+      "name": "中级魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4402.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "中级魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4402/"
+    },
+    {
+      "id": "4403",
+      "name": "仙人掌法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "仙人掌",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4403.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "仙人掌法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4403/"
+    },
+    {
+      "id": "4404",
+      "name": "风之魔法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4404.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "风属性法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4404/"
+    },
+    {
+      "id": "4405",
+      "name": "高级魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "丝绸",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 4
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4405.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "高级魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4405/"
+    },
+    {
+      "id": "4406",
+      "name": "藤蔓法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "藤蔓",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4406.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "藤蔓法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4406/"
+    },
+    {
+      "id": "4407",
+      "name": "枯木法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "枯木",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4407.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "枯木法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4407/"
+    },
+    {
+      "id": "4421",
+      "name": "毒泡",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4421.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒泡法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4421/"
+    },
+    {
+      "id": "4422",
+      "name": "腐朽法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "腐噬藤",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4422.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "腐朽法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4422/"
+    },
+    {
+      "id": "4423",
+      "name": "毒雨",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4423.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒雨魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4423/"
+    },
+    {
+      "id": "4424",
+      "name": "爆破法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "火耀岩",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4424.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "爆破法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4424/"
+    },
+    {
+      "id": "4425",
+      "name": "火球法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "火晶",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4425.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火球法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4425/"
+    },
+    {
+      "id": "4426",
+      "name": "冰焰魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 2
+        },
+        {
+          "name": "火晶",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4426.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰焰魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4426/"
+    },
+    {
+      "id": "4427",
+      "name": "霜棱寒晶杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4427.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "霜棱法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4427/"
+    },
+    {
+      "id": "4428",
+      "name": "寒冰法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "霜核苔",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4428.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "寒冰法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4428/"
+    },
+    {
+      "id": "4429",
+      "name": "冰球发射器",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 3
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4429.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰球发射器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4429/"
+    },
+    {
+      "id": "4431",
+      "name": "海啸",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "鲛人之泪",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4431.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "海啸魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4431/"
+    },
+    {
+      "id": "4432",
+      "name": "水系法杖",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4432.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水系法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4432/"
+    },
+    {
+      "id": "4433",
+      "name": "水龙卷",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "潮汐鳞片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4433.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水龙卷法杖 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4433/"
+    },
+    {
+      "id": "4434",
+      "name": "卡奇大法师的魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "熔火烬心",
+          "qty": 1
+        },
+        {
+          "name": "卡奇大法师的魔法书",
+          "qty": 1
+        },
+        {
+          "name": "精炼蓝晶",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4434.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "卡奇魔法书 · 获取：击败卡奇获得",
+      "usedIn": [
+        "卡奇大法师的魔法书"
+      ],
+      "url": "/wiki/items/4434/"
+    },
+    {
+      "id": "4436",
+      "name": "雷电法杖→天罚",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4436.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷法杖，可升级为天罚 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4436/"
+    },
+    {
+      "id": "4437",
+      "name": "闪电魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4437.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "闪电魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4437/"
+    },
+    {
+      "id": "4438",
+      "name": "激荡电流",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4438.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "激荡电流 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4438/"
+    },
+    {
+      "id": "4439",
+      "name": "日辉圣典→审判",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "太阳石",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4439.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "日辉圣典，可升级为审判 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4439/"
+    },
+    {
+      "id": "4440",
+      "name": "微型太阳",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 3,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "太阳石",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4440.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "微型太阳 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4440/"
+    },
+    {
+      "id": "4444",
+      "name": "暗焰魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4444.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗焰魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4444/"
+    },
+    {
+      "id": "4445",
+      "name": "低级黑暗魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4445.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "低级暗魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4445/"
+    },
+    {
+      "id": "4446",
+      "name": "高级黑暗魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": 2,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 4
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4446.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "高级暗魔法书 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4446/"
+    },
+    {
+      "id": "4600",
+      "name": "自制雷管",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "燧石",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        },
+        {
+          "name": "火药",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4600.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "自制炸弹 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4600/"
+    },
+    {
+      "id": "4601",
+      "name": "南瓜炸弹",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "南瓜",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4601.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "南瓜炸弹 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4601/"
+    },
+    {
+      "id": "4606",
+      "name": "瘴毒扩散瓶",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4606.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒瓶 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4606/"
+    },
+    {
+      "id": "4609",
+      "name": "熔火燃烧瓶",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "火晶",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4609.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "燃烧瓶 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4609/"
+    },
+    {
+      "id": "4610",
+      "name": "爆炎火核",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "火晶",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4610.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "爆炎火核 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4610/"
+    },
+    {
+      "id": "4612",
+      "name": "寒霜冻结晶",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "霜晶甲片",
+          "qty": 3
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4612.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰晶瓶 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4612/"
+    },
+    {
+      "id": "4613",
+      "name": "冰棘爆裂弹",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "霜晶甲片",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4613.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰棘弹 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4613/"
+    },
+    {
+      "id": "4614",
+      "name": "深海涡旋弹",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "鲛人之泪",
+          "qty": 2
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4614.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "深海弹 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4614/"
+    },
+    {
+      "id": "4616",
+      "name": "雷鸣震荡球",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "带电骨片",
+          "qty": 3
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4616.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷震球 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4616/"
+    },
+    {
+      "id": "4617",
+      "name": "轰雷跳跃弹",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "带电骨片",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4617.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "轰雷弹 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4617/"
+    },
+    {
+      "id": "4619",
+      "name": "圣辉裁决弹",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "太阳石",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4619.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "圣辉弹 · 获取：合成",
+      "usedIn": [
+        "猎魔人之刃"
+      ],
+      "url": "/wiki/items/4619/"
+    },
+    {
+      "id": "4620",
+      "name": "影蚀虚空球",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "暗影碎体",
+          "qty": 3
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4620.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "影蚀球 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4620/"
+    },
+    {
+      "id": "4700",
+      "name": "老鼠夹",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 3,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "精炼铁",
+          "qty": 1
+        },
+        {
+          "name": "木棍",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4700.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "基础陷阱 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4700/"
+    },
+    {
+      "id": "4701",
+      "name": "瘴毒扩散阵",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "腐毒腺",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4701.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "毒法阵 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4701/"
+    },
+    {
+      "id": "4702",
+      "name": "爆炎焚烧阵",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "火晶",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4702.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火法阵 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4702/"
+    },
+    {
+      "id": "4703",
+      "name": "熔火喷涌机关",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "火耀岩",
+          "qty": 3
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4703.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "熔火机关 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4703/"
+    },
+    {
+      "id": "4704",
+      "name": "霜冻禁行阵",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "霜晶甲片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4704.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰法阵 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4704/"
+    },
+    {
+      "id": "4705",
+      "name": "冰棘陷阱",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "霜核苔",
+          "qty": 3
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4705.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰棘陷阱 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4705/"
+    },
+    {
+      "id": "4706",
+      "name": "潮汐束缚阵",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "异能珊瑚",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4706.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "水法阵 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4706/"
+    },
+    {
+      "id": "4707",
+      "name": "轰雷感应地雷",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 2,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "带电骨片",
+          "qty": 3
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4707.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "雷地雷 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4707/"
+    },
+    {
+      "id": "4708",
+      "name": "圣辉裁决阵",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "太阳石",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4708.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "光法阵 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4708/"
+    },
+    {
+      "id": "4709",
+      "name": "影噬禁域",
+      "category": "投掷 / 陷阱",
+      "craftable": true,
+      "tier": 1,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "暗影碎体",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4709.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "暗法阵 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4709/"
+    },
+    {
+      "id": "4800",
+      "name": "行者之徽",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "精炼铜",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4800.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "行者徽章 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4800/"
+    },
+    {
+      "id": "4801",
+      "name": "泡泡头",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 1,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "软黏块",
+          "qty": 4
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4801.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "泡泡头盔 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4801/"
+    },
+    {
+      "id": "4802",
+      "name": "炎霜双生吊坠",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "火晶",
+          "qty": 2
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 2
+        },
+        {
+          "name": "精炼金",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4802.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "双生吊坠 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4802/"
+    },
+    {
+      "id": "4803",
+      "name": "光之护符",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "太阳石",
+          "qty": 2
+        },
+        {
+          "name": "精炼金",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4803.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "光护符 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4803/"
+    },
+    {
+      "id": "4804",
+      "name": "极寒庇护戒",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "霜晶甲片",
+          "qty": 3
+        },
+        {
+          "name": "精炼金",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4804.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "冰戒 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4804/"
+    },
+    {
+      "id": "4805",
+      "name": "极炎庇护戒",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "火晶",
+          "qty": 3
+        },
+        {
+          "name": "精炼金",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4805.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "火戒 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4805/"
+    },
+    {
+      "id": "4806",
+      "name": "无疲灵辉护符",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 2,
+      "station": "基础锻造台",
+      "materials": [
+        {
+          "name": "灵辉花瓣",
+          "qty": 3
+        },
+        {
+          "name": "精炼金",
+          "qty": 1
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4806.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "灵辉护符 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4806/"
+    },
+    {
+      "id": "4807",
+      "name": "精灵公主的硬币",
+      "category": "饰品",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "沙灵珠",
+          "qty": 1
+        },
+        {
+          "name": "精灵公主的硬币",
+          "qty": 1
+        },
+        {
+          "name": "太阳石",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4807.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "精灵公主祝福 · 获取：合成",
+      "usedIn": [
+        "精灵公主的硬币"
+      ],
+      "url": "/wiki/items/4807/"
+    },
+    {
+      "id": "4900",
+      "name": "星云浮怪火焰魔法书",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "熔火烬心",
+          "qty": 1
+        },
+        {
+          "name": "火焰魔法书",
+          "qty": 1
+        },
+        {
+          "name": "火晶",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4900.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第一章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4900/"
+    },
+    {
+      "id": "4901",
+      "name": "炎虫·熔岩皇后（炎虫之剑）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "熔火烬心",
+          "qty": 1
+        },
+        {
+          "name": "炎虫之剑",
+          "qty": 1
+        },
+        {
+          "name": "火耀岩",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4901.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第三章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4901/"
+    },
+    {
+      "id": "4902",
+      "name": "新海神佩利伽（海神巨尺）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "深渊潮核",
+          "qty": 1
+        },
+        {
+          "name": "海神巨尺",
+          "qty": 1
+        },
+        {
+          "name": "鲛人之泪",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4902.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第四章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4902/"
+    },
+    {
+      "id": "4903",
+      "name": "巨型·蚀铁蟹咩咩（空气水压缩魔导球）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "金属锻造台",
+      "materials": [
+        {
+          "name": "沙灵珠",
+          "qty": 1
+        },
+        {
+          "name": "空气水压缩魔导球",
+          "qty": 1
+        },
+        {
+          "name": "异能珊瑚",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4903.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第四章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4903/"
+    },
+    {
+      "id": "4904",
+      "name": "罗拉斯·沙漠之神（太阳神的目录）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "沙暴核心",
+          "qty": 1
+        },
+        {
+          "name": "太阳神的目录",
+          "qty": 1
+        },
+        {
+          "name": "太阳石",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4904.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第五章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4904/"
+    },
+    {
+      "id": "4905",
+      "name": "冰晶女皇·雪女（冰晶之刃）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "极寒冰魄",
+          "qty": 1
+        },
+        {
+          "name": "冰晶之刃",
+          "qty": 1
+        },
+        {
+          "name": "霜晶甲片",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4905.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第六章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4905/"
+    },
+    {
+      "id": "4906",
+      "name": "巴哈姆特龙神之子（龙鳞项坠）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "龙炎魂晶",
+          "qty": 1
+        },
+        {
+          "name": "龙鳞项坠",
+          "qty": 1
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4906.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第七章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4906/"
+    },
+    {
+      "id": "4907",
+      "name": "瘟神（雷恩特）（渴望的弓弩）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "沼蚀毒核",
+          "qty": 1
+        },
+        {
+          "name": "渴望的弓弩",
+          "qty": 1
+        },
+        {
+          "name": "腐毒腺",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4907.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第八章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4907/"
+    },
+    {
+      "id": "4908",
+      "name": "腐朽之地猪王（叛逆之怒·弓）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "腐朽意志",
+          "qty": 1
+        },
+        {
+          "name": "叛逆之怒",
+          "qty": 1
+        },
+        {
+          "name": "带电骨片",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4908.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第九章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4908/"
+    },
+    {
+      "id": "4909",
+      "name": "巴尼尔山脉·伯爵（夺血鬼齿·无限）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "雷电核心",
+          "qty": 1
+        },
+        {
+          "name": "夺血鬼齿·无限",
+          "qty": 1
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4909.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第十章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4909/"
+    },
+    {
+      "id": "4910",
+      "name": "空中之神·翼天使（耀光）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "云翼核心",
+          "qty": 1
+        },
+        {
+          "name": "耀光·璀璨明珠",
+          "qty": 1
+        },
+        {
+          "name": "太阳石",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4910.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第十章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4910/"
+    },
+    {
+      "id": "4911",
+      "name": "邪神撒旦，佐伊·维迦（地下城黑血之刃）",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "邪恶合成仪",
+      "materials": [
+        {
+          "name": "无尽的邪恶",
+          "qty": 1
+        },
+        {
+          "name": "地下城黑血之刃",
+          "qty": 1
+        },
+        {
+          "name": "暗影碎体",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4911.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第十一章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4911/"
+    },
+    {
+      "id": "4912",
+      "name": "被遗迹的精灵王·弓",
+      "category": "毕业级武器",
+      "craftable": true,
+      "tier": 1,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "回灵藤",
+          "qty": 1
+        },
+        {
+          "name": "王·弓",
+          "qty": 1
+        },
+        {
+          "name": "灵辉花瓣",
+          "qty": 5
+        }
+      ],
+      "output": 1,
+      "icon": "/uploads/codex/galgame/4912.webp",
+      "iconSize": "64×64",
+      "price": 0,
+      "note": "第十二章毕业武器 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4912/"
+    }
+  ],
+  "count": 168
+}

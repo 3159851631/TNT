@@ -1,0 +1,102 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/items.json';
+
+export function getStaticPaths() {
+  return data.items.map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+
+const { item } = Astro.props;
+const related = data.items.filter((i) => i.id !== item.id && i.category === item.category).slice(0, 8);
+const usedInItems = data.items.filter((i) => item.usedIn.includes(i.name));
+---
+
+<WikiLayout
+  title={item.name}
+  description={`${item.name} · ${item.category}${item.craftable ? ' · 可合成' : ''}`}
+  active="items"
+  breadcrumb={[{ label: '物品', href: '/wiki/items/' }, { label: item.name }]}
+>
+  <div class="wiki-detail">
+    <div class="wiki-detail__main">
+      <header class="wiki-detail__head">
+        <p class="wiki-detail__kicker">ITEM / 物品</p>
+        <h1 class="wiki-detail__title">{item.name}</h1>
+        <p class="wiki-detail__sub">{item.category}{item.tier ? ` · 层级 ${item.tier}` : ''}{item.station ? ` · ${item.station}` : ''}</p>
+        <p class="wiki-detail__desc">{item.note || `${item.craftable ? '可以在制作站合成。' : '基础素材或拾取物。'}`}</p>
+        <div class="wiki-detail__meta">
+          {item.craftable ? <span class="wiki-tag wiki-tag--gold">可合成</span> : <span class="wiki-tag">素材 / 拾取</span>}
+          <span class="wiki-tag">{item.category}</span>
+          {item.station && <span class="wiki-tag">{item.station}</span>}
+        </div>
+      </header>
+
+      <article class="wiki-prose">
+        <h2>物品信息</h2>
+        <p>{item.note || '这个物品的详细说明还在补充。'}</p>
+
+        <h2>获取方式</h2>
+        {item.craftable ? (
+          <>
+            <p>在 <strong>{item.station || '制作站'}</strong> 合成：</p>
+            <ul>
+              {item.materials.length > 0 ? item.materials.map((material) => <li>{material}</li>) : <li class="wiki-muted">配方材料待补充</li>}
+            </ul>
+            <p>产出：{item.output || '1'} 个。</p>
+          </>
+        ) : (
+          <p>基础素材，通过采集、挖矿、怪物掉落或拾取获得。</p>
+        )}
+
+        {item.usedIn.length > 0 && (
+          <>
+            <h2>用于合成</h2>
+            <ul>
+              {item.usedIn.map((name) => {
+                const target = data.items.find((i) => i.name === name);
+                return <li>{target ? <a href={`/wiki/items/${target.id}/`}>{name}</a> : name}</li>;
+              })}
+            </ul>
+          </>
+        )}
+
+        <h2>说明</h2>
+        <p class="wiki-muted">{item.craftable ? '配方来自游戏物品表与合成表。数值和用途会随版本更新。' : '基础素材/拾取物，具体掉落来源会继续补。'}</p>
+      </article>
+
+      {related.length > 0 && (
+        <section class="wiki-related">
+          <h2>同类物品</h2>
+          <div class="wiki-related__grid">
+            {related.map((i) => <a class="wiki-related__link" href={`/wiki/items/${i.id}/`}>{i.name} <span class="wiki-mono">{i.category}</span></a>)}
+          </div>
+        </section>
+      )}
+    </div>
+
+    <aside class="wiki-detail__aside">
+      <div class="wiki-infobox">
+        <div class="wiki-infobox__image-wrap" style="display:flex;align-items:center;justify-content:center;min-height:180px">
+          {item.icon ? (
+            <img src={item.icon} alt={item.name} style="width:120px;height:120px;object-fit:contain" />
+          ) : (
+            <div class="wiki-card__placeholder" style="min-height:180px;width:100%">{item.name.slice(0, 1)}</div>
+          )}
+        </div>
+        <h2 class="wiki-infobox__title">{item.name}</h2>
+        <p class="wiki-infobox__sub">ITEM #{item.id}</p>
+        <div class="wiki-infobox__rows">
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">分类</span><span class="wiki-infobox__value">{item.category}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">可合成</span><span class="wiki-infobox__value">{item.craftable ? '是' : '否'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">制作站</span><span class="wiki-infobox__value">{item.station || '—'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">层级</span><span class="wiki-infobox__value">{item.tier || '—'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">售价</span><span class="wiki-infobox__value">{item.price || 0}</span></div>
+        </div>
+        <div class="wiki-infobox__badges">
+          <a class="wiki-btn" href="/wiki/items/">← 全部物品</a>
+          <a class="wiki-btn" href="/wiki/recipes/">合成表</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</WikiLayout>

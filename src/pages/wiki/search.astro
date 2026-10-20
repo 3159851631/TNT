@@ -1,0 +1,24 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+---
+
+<WikiLayout
+  title="搜索"
+  description="搜索《魔物娘合成乐园》Wiki 的区域、角色、怪物、物品和剧情。"
+  active=""
+  breadcrumb={[{ label: '搜索' }]}
+>
+  <div class="wiki-search-page" data-wiki-search-page>
+    <header class="wiki-page-head">
+      <p class="wiki-page-head__kicker">SEARCH / 搜索</p>
+      <h1 class="wiki-page-head__title">搜索 <em>SEARCH</em></h1>
+      <p class="wiki-page-head__lead">输入区域、角色、怪物、物品或剧情标题，结果会实时出现。</p>
+    </header>
+    <form class="wiki-search-page__form" role="search">
+      <input class="wiki-search-page__input" type="search" name="q" placeholder="例如：雪女、龙之岛、火焰魔法书…" aria-label="搜索 Wiki" autofocus />
+      <button class="wiki-btn wiki-btn--primary" type="submit">搜索</button>
+    </form>
+    <div class="wiki-search-results" data-wiki-results></div>
+    <p class="wiki-search-empty" data-wiki-empty>输入关键词，搜索区域、角色、怪物、物品和剧情。</p>
+  </div>
+</WikiLayout>

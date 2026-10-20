@@ -1,0 +1,59 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/recipes.json';
+const recipes = data.recipes;
+const stations = Array.from(new Set(recipes.map((r) => r.station).filter(Boolean)));
+---
+
+<WikiLayout
+  title="合成"
+  description="《魔物娘合成乐园》的合成表：168 个配方，按制作站、材料和层级整理。"
+  active="recipes"
+  breadcrumb={[{ label: '合成' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">CRAFTING / 合成</p>
+    <h1 class="wiki-page-head__title">合成 <em>CRAFTING</em></h1>
+    <p class="wiki-page-head__lead">
+      从基础材料到毕业武器。按制作站筛选，或者直接搜物品名、材料名。
+    </p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{recipes.length}</b><span>RECIPES / 配方</span></div>
+      <div class="wiki-stat"><b>{stations.length}</b><span>STATIONS / 制作站</span></div>
+      <div class="wiki-stat"><b>{recipes.filter((r) => r.tier).length}</b><span>TIERED / 有层级</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-list>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索产物 / 材料 / 制作站…" data-wiki-search aria-label="搜索配方" />
+      </div>
+      <div class="wiki-chips">
+        <button class="wiki-chip is-active" type="button" data-wiki-chip="全部">全部</button>
+        {stations.map((station) => <button class="wiki-chip" type="button" data-wiki-chip={station}>{station}</button>)}
+      </div>
+      <span class="wiki-count" data-wiki-count>{recipes.length} / {recipes.length}</span>
+    </div>
+
+    <div class="wiki-table-wrap">
+      <table class="wiki-table">
+        <thead>
+          <tr><th>产物</th><th>制作站</th><th>材料</th><th>产出</th><th>层级</th><th></th></tr>
+        </thead>
+        <tbody>
+          {recipes.map((recipe) => (
+            <tr data-wiki-item data-name={`${recipe.name} ${recipe.materials.join(' ')}`} data-type={recipe.station || ''}>
+              <td><a href={`/wiki/items/${recipe.id}/`}>{recipe.name}</a></td>
+              <td>{recipe.station || '手工'}</td>
+              <td>{recipe.materials.length > 0 ? recipe.materials.join(' + ') : '—'}</td>
+              <td>{recipe.output || '1'}</td>
+              <td>{recipe.tier ? `T${recipe.tier}` : '—'}</td>
+              <td><a class="wiki-mono" href={`/wiki/items/${recipe.id}/`}>查看 →</a></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</WikiLayout>

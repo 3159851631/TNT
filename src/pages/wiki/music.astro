@@ -1,0 +1,42 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+
+const areas = [
+  ['环境分区', '不同区域/生物群系的背景音乐与环境氛围'],
+  ['UI界面', '菜单、背包、任务、合成等界面的音乐'],
+  ['战斗', '普通战斗、精英战与 BOSS 战的音乐'],
+  ['横版模式', '横版场景/特殊玩法使用的音乐'],
+  ['UI音效', '点击、确认、取消、获得物品等界面音效'],
+  ['场景环境音效', '风声、水声、虫鸣、火焰、脚步等环境音'],
+  ['战斗音效', '攻击、受击、技能、怪物吼叫与死亡音效'],
+];
+---
+
+<WikiLayout
+  title="音乐与音效"
+  description="《魔物娘合成乐园》的音乐与音效：环境分区、UI、战斗、横版模式、UI音效、场景环境音和战斗音效。"
+  active="music"
+  breadcrumb={[{ label: '音乐' }]}
+>
+  <article class="wiki-article">
+    <header class="wiki-page-head">
+      <p class="wiki-page-head__kicker">AUDIO / 音乐与音效</p>
+      <h1 class="wiki-page-head__title">音乐 <em>AUDIO</em></h1>
+      <p class="wiki-page-head__lead">环境、UI、战斗和横版模式的音乐，以及场景与战斗音效。音频试听和曲目表会继续补。</p>
+    </header>
+    <div class="wiki-prose">
+      <h2>音频分区</h2>
+      <div class="wiki-mech-grid">
+        {areas.map(([name, desc]) => (
+          <div class="wiki-mech-cell"><b>{name}</b><span>{desc}</span></div>
+        ))}
+      </div>
+
+      <h2>曲目与音效表</h2>
+      <p class="wiki-empty">曲目列表、作曲/音源、循环点和试听还没有导入。后续会把音乐文件夹里的曲目整理成表，并给每首曲子做独立条目。</p>
+
+      <h2>制作说明</h2>
+      <p>游戏里的音乐和音效会按区域、界面和战斗场景分配。部分环境音会随昼夜、天气和区域变化。</p>
+    </div>
+  </article>
+</WikiLayout>

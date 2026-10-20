@@ -1,0 +1,61 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/stories.json';
+const stories = data.stories;
+const chapters = Array.from(new Set(stories.map((s) => s.chapter)));
+---
+
+<WikiLayout
+  title="剧情"
+  description="《魔物娘合成乐园》的完整剧情：序章、第一章到第八章，以及每个独立区域的故事。"
+  active="story"
+  breadcrumb={[{ label: '剧情' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">STORY / 剧情</p>
+    <h1 class="wiki-page-head__title">剧情 <em>STORY</em></h1>
+    <p class="wiki-page-head__lead">
+      序章到第八章，加上每个独立区域的故事。按章节阅读，或者从角色页跳进来。
+    </p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{stories.length}</b><span>CHAPTERS / 章节</span></div>
+      <div class="wiki-stat"><b>{stories.filter((s) => s.chapter === '独立区域').length}</b><span>INDEPENDENT / 独立区域</span></div>
+      <div class="wiki-stat"><b>{new Set(stories.map((s) => s.region)).size}</b><span>REGIONS / 涉及区域</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-list>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索章节 / 标题 / 区域…" data-wiki-search aria-label="搜索剧情" />
+      </div>
+      <div class="wiki-chips">
+        <button class="wiki-chip is-active" type="button" data-wiki-chip="全部">全部</button>
+        {chapters.map((chapter) => <button class="wiki-chip" type="button" data-wiki-chip={chapter}>{chapter}</button>)}
+      </div>
+      <span class="wiki-count" data-wiki-count>{stories.length} / {stories.length}</span>
+    </div>
+
+    <div class="wiki-grid wiki-grid--stories">
+      {stories.map((story) => (
+        <a
+          class="wiki-card"
+          href={`/wiki/story/${story.slug}/`}
+          data-wiki-item
+          data-name={`${story.title} ${story.region}`}
+          data-type={story.chapter}
+        >
+          <div class="wiki-card__body">
+            <p class="wiki-story-card__chapter">{story.chapter}</p>
+            <h2 class="wiki-card__title">{story.title}</h2>
+            <p class="wiki-card__desc">{story.excerpt}</p>
+            <div class="wiki-card__tags">
+              <span class="wiki-tag wiki-tag--gold">{story.region || '区域待补'}</span>
+              {story.characters.length > 0 && <span class="wiki-tag">{story.characters.length} 位角色</span>}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</WikiLayout>

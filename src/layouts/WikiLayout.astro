@@ -1,0 +1,119 @@
+---
+import meta from '../data/wiki/meta.json';
+import '../styles/wiki.css';
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string;
+  breadcrumb?: Crumb[];
+}
+
+const { title, description, active = '', breadcrumb = [] } = Astro.props;
+const pageTitle = title ? `${title} · ${meta.gameName} Wiki` : `${meta.gameName} · 游戏 Wiki`;
+const desc = description || meta.tagline;
+const categories = meta.categories;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt-game-site.pages.dev'));
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="theme-color" content="#0b0f0c" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="font" type="font/ttf" href="/fonts/jyhphy-2.ttf" crossorigin />
+  </head>
+  <body class="wiki-body">
+    <a class="wiki-skip" href="#wiki-main">跳到正文</a>
+
+    <header class="wiki-header">
+      <a class="wiki-brand" href="/wiki/" aria-label={`${meta.gameName} Wiki 首页`}>
+        {meta.logos.game && <img class="wiki-brand__logo" src={meta.logos.game} alt={`${meta.gameName} LOGO`} />}
+        <span class="wiki-brand__text">
+          <span class="wiki-brand__name">{meta.gameName}</span>
+          <span class="wiki-brand__en">{meta.gameEn}</span>
+        </span>
+      </a>
+
+      <nav class="wiki-nav" aria-label="Wiki 分类">
+        {categories.map((category) => (
+          <a
+            href={category.url}
+            class:list={['wiki-nav__link', active === category.key && 'is-active']}
+          >
+            {category.name}
+          </a>
+        ))}
+      </nav>
+
+      <div class="wiki-tools">
+        <form class="wiki-search" action="/wiki/search/" method="get" role="search">
+          <input type="search" name="q" placeholder="搜索区域 / 角色 / 怪物 / 物品…" aria-label="搜索 Wiki" />
+          <button type="submit" aria-label="搜索">搜索</button>
+        </form>
+        <a class="wiki-back" href="/">作品站 ↗</a>
+      </div>
+    </header>
+
+    {breadcrumb.length > 0 && (
+      <nav class="wiki-crumbs" aria-label="面包屑">
+        <a href="/wiki/">Wiki</a>
+        {breadcrumb.map((crumb) => (
+          <span class="wiki-crumbs__item">
+            <i>/</i>
+            {crumb.href ? <a href={crumb.href}>{crumb.label}</a> : <b>{crumb.label}</b>}
+          </span>
+        ))}
+      </nav>
+    )}
+
+    <main class="wiki-main" id="wiki-main">
+      <slot />
+    </main>
+
+    <footer class="wiki-footer">
+      <div class="wiki-footer__top">
+        <div class="wiki-footer__brand">
+          {meta.logos.studio && <img class="wiki-footer__studio" src={meta.logos.studio} alt="EXPLODINGTNT studio LOGO" />}
+          <div>
+            <p class="wiki-footer__game">{meta.gameName}</p>
+            <p class="wiki-footer__en">{meta.gameEn}</p>
+            <p class="wiki-footer__tagline">{meta.tagline}</p>
+          </div>
+        </div>
+        <div class="wiki-footer__cols">
+          <div class="wiki-footer__col">
+            <b>图鉴</b>
+            {categories.slice(0, 4).map((category) => <a href={category.url}>{category.name}</a>)}
+          </div>
+          <div class="wiki-footer__col">
+            <b>资料</b>
+            {categories.slice(4).map((category) => <a href={category.url}>{category.name}</a>)}
+          </div>
+          <div class="wiki-footer__col">
+            <b>站内</b>
+            <a href="/">作品站</a>
+            <a href="/works/">精选作品</a>
+            <a href="/videos/">视频</a>
+            <a href="/about/">关于</a>
+          </div>
+        </div>
+      </div>
+      <div class="wiki-footer__bottom">
+        <p>《{meta.gameName}》游戏 Wiki · 设定与素材 © EXPLODINGTNT</p>
+        <p>游戏仍在开发中，本 Wiki 会持续补充 · 内容以实际版本为准</p>
+      </div>
+    </footer>
+  <script src="/wiki.js" defer></script>
+</body>
+</html>

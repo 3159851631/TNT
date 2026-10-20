@@ -1,0 +1,3844 @@
+{
+  "monsters": [
+    {
+      "slug": "xia-shui-dao-fu-hua-bing-ju-shu",
+      "name": "下水道孵化病巨鼠",
+      "type": "BOSS",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 1
+    },
+    {
+      "slug": "bu-si-niao",
+      "name": "不死鸟",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 2
+    },
+    {
+      "slug": "shi-jie-hun-dun-de-hua-shen",
+      "name": "世界混沌的化身",
+      "type": "BOSS",
+      "regions": [
+        "无人区（垃圾堆沙漠）"
+      ],
+      "region": "无人区（垃圾堆沙漠）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 3
+    },
+    {
+      "slug": "shi-jie-hun-dun-de-hua-shen-chuang-shi-shen-mo-er-ke-chu-shi",
+      "name": "世界混沌的化身*创世神摩尔科初始",
+      "type": "BOSS",
+      "regions": [
+        "零界（虚无的空间）"
+      ],
+      "region": "零界（虚无的空间）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 4
+    },
+    {
+      "slug": "wu-mu-zhang-yu-niang",
+      "name": "乌姆(章鱼娘)",
+      "type": "BOSS",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 5
+    },
+    {
+      "slug": "wu-zong-zui",
+      "name": "五宗罪",
+      "type": "BOSS",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/wu-zong-zui.webp",
+      "order": 6
+    },
+    {
+      "slug": "ren-lei-guo-wang-a-er-ai-ding-bao-yan-shi-zhe-de-hua-shen",
+      "name": "人类国王-阿尔*爱丁堡岩噬者的化身",
+      "type": "BOSS",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 7
+    },
+    {
+      "slug": "ren-mian-hai-xing",
+      "name": "人面海星",
+      "type": "BOSS",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 8
+    },
+    {
+      "slug": "bo-jue",
+      "name": "伯爵",
+      "type": "BOSS",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 9
+    },
+    {
+      "slug": "bing-jing-nv-huang-shuang-ju-ren",
+      "name": "冰晶女皇·霜巨人",
+      "type": "BOSS",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 10
+    },
+    {
+      "slug": "ka-ka-lei-ta-shou-hu-zhe",
+      "name": "卡卡(雷塔守护者)",
+      "type": "BOSS",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 11
+    },
+    {
+      "slug": "ka-de-er-wei-jia",
+      "name": "卡德尔·维迦",
+      "type": "BOSS",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 12
+    },
+    {
+      "slug": "he-cheng-ren-pin-zhuang-ren-lei",
+      "name": "合成人(拼装人类)",
+      "type": "BOSS",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 13
+    },
+    {
+      "slug": "ji-yan-huo-tao-tie",
+      "name": "基岩火饕餮",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 14
+    },
+    {
+      "slug": "kui-niu",
+      "name": "奎牛",
+      "type": "BOSS",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 15
+    },
+    {
+      "slug": "shi-zu-da-xiang-jiao-ju-da-jiao",
+      "name": "始祖大象脚(巨大脚)",
+      "type": "BOSS",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 16
+    },
+    {
+      "slug": "shou-men-ren-kui-jia",
+      "name": "守门人盔甲",
+      "type": "BOSS",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 17
+    },
+    {
+      "slug": "shen-pan-zhe-quan-li-zhi-yan",
+      "name": "审判者(权利之眼)",
+      "type": "BOSS",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 18
+    },
+    {
+      "slug": "ju-xing-she-tou",
+      "name": "巨型蛇头",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 19
+    },
+    {
+      "slug": "ju-xing-pang-xie",
+      "name": "巨型螃蟹",
+      "type": "BOSS",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ju-xing-pang-xie.webp",
+      "order": 20
+    },
+    {
+      "slug": "ba-ha-mu-te-da-chao",
+      "name": "巴哈姆特(大巢)",
+      "type": "BOSS",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 21
+    },
+    {
+      "slug": "bang-long-ren-ru-qin-bang-long-qi-shi",
+      "name": "帮龙人入侵(帮龙骑士)",
+      "type": "BOSS",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 22
+    },
+    {
+      "slug": "huan-ying-ju-jing-sha-mo-shi-ti-jing-yu",
+      "name": "幻影巨鲸（沙漠尸体鲸鱼）",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 23
+    },
+    {
+      "slug": "you-long",
+      "name": "幼龙",
+      "type": "BOSS",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 24
+    },
+    {
+      "slug": "de-lei-ke-di-huang-shi-zi-shen",
+      "name": "德雷克帝皇狮子神",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 25
+    },
+    {
+      "slug": "yuan-hen-de-shao-nv-jing-di",
+      "name": "怨恨的少女(井底)",
+      "type": "BOSS",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 26
+    },
+    {
+      "slug": "e-lai-zhi-zi-jiao",
+      "name": "恶来之子(娇)",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 27
+    },
+    {
+      "slug": "sa-dan-de-hua-shen-yang-tou-e-mo",
+      "name": "撒旦的化身(羊头恶魔)",
+      "type": "BOSS",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 28
+    },
+    {
+      "slug": "jiao-huang-bo-er-zi",
+      "name": "教皇波尔兹",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 29
+    },
+    {
+      "slug": "xing-yun-fu-guai-ju-xing-shi-lai-mu",
+      "name": "星云浮怪(巨型史莱姆)",
+      "type": "BOSS",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 30
+    },
+    {
+      "slug": "an-ying-bian-fu",
+      "name": "暗影蝙蝠",
+      "type": "BOSS",
+      "regions": [
+        "山下小镇",
+        "永夜区（荒漠）"
+      ],
+      "region": "山下小镇",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 31
+    },
+    {
+      "slug": "shu-jing-die-yao",
+      "name": "树精蝶妖",
+      "type": "BOSS",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 32
+    },
+    {
+      "slug": "ge-lei-la-hai-guai-ren-lei-chuan-shuo-zhong-de-guai-wu",
+      "name": "格雷拉海怪(人类传说中的怪物)",
+      "type": "BOSS",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 33
+    },
+    {
+      "slug": "qiao-shang-de-shi-ju-ren",
+      "name": "桥上的石巨人",
+      "type": "BOSS",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 34
+    },
+    {
+      "slug": "meng-yan-nan-nan",
+      "name": "梦魇喃喃",
+      "type": "BOSS",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 35
+    },
+    {
+      "slug": "chen-shui-nv-ju-ren",
+      "name": "沉睡女巨人",
+      "type": "BOSS",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 36
+    },
+    {
+      "slug": "sha-bao-he-xin-sha-ba-zhi-wang",
+      "name": "沙暴核心·沙巴之王",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/sha-bao-he-xin-sha-ba-zhi-wang.webp",
+      "order": 37
+    },
+    {
+      "slug": "tai-tan-ge-lu",
+      "name": "泰坦格鲁",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 38
+    },
+    {
+      "slug": "hai-yao-mie-nai",
+      "name": "海妖(咩奈)",
+      "type": "BOSS",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 39
+    },
+    {
+      "slug": "shen-hai-sha-sha-ren-yu",
+      "name": "深海鲨鲨(人鱼)",
+      "type": "BOSS",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 40
+    },
+    {
+      "slug": "yan-tu-rong-yan-huang-hou",
+      "name": "炎土·熔岩皇后",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 41
+    },
+    {
+      "slug": "zhu-wang-boss-ai-wei-da",
+      "name": "猪王BOSS爱维达",
+      "type": "BOSS",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 42
+    },
+    {
+      "slug": "mao-tou-ren",
+      "name": "猫头人",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 43
+    },
+    {
+      "slug": "wen-shen-lei-en-te",
+      "name": "瘟神(雷恩特)",
+      "type": "BOSS",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 44
+    },
+    {
+      "slug": "bai-mao-ju-ren",
+      "name": "白毛巨人",
+      "type": "BOSS",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 45
+    },
+    {
+      "slug": "bai-hai-zhao-zhu-ba-li-te",
+      "name": "百骸沼主(巴利特)",
+      "type": "BOSS",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 46
+    },
+    {
+      "slug": "shi-sun-ju-chong",
+      "name": "石笋巨虫",
+      "type": "BOSS",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 47
+    },
+    {
+      "slug": "kong-zhong-zhi-shen-yi-tian-shi",
+      "name": "空中之神·翼天使",
+      "type": "BOSS",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 48
+    },
+    {
+      "slug": "kong-zhong-she-yao",
+      "name": "空中蛇妖",
+      "type": "BOSS",
+      "regions": [
+        "天空城（魔羽天城）",
+        "石谵山脉（山区）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 49
+    },
+    {
+      "slug": "hong-hai-xing-za-jiao-hai-xing-shui-mu",
+      "name": "红海星(杂交海星水母)",
+      "type": "BOSS",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 50
+    },
+    {
+      "slug": "hong-qun-yao-jing",
+      "name": "红裙妖精",
+      "type": "BOSS",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 51
+    },
+    {
+      "slug": "ai-lun-te-shang-jiang",
+      "name": "艾伦特上将",
+      "type": "BOSS",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 52
+    },
+    {
+      "slug": "shi-tie-xie",
+      "name": "蚀铁蟹",
+      "type": "BOSS",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 53
+    },
+    {
+      "slug": "jiao-jiao-nv",
+      "name": "蛟蛟女",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 54
+    },
+    {
+      "slug": "wu-gong-nv-wei-te-si",
+      "name": "蜈蚣女威特斯",
+      "type": "BOSS",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 55
+    },
+    {
+      "slug": "ru-dong-de-ju-chong-gu-shen",
+      "name": "蠕动的巨虫(古神)",
+      "type": "BOSS",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 56
+    },
+    {
+      "slug": "xue-yue-lang-ren-xue-shan-de-chuan-shuo",
+      "name": "血月狼人(雪山的传说)",
+      "type": "BOSS",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 57
+    },
+    {
+      "slug": "xue-guo-nv-bo-jue-ka-mi-la",
+      "name": "血果女伯爵卡米拉",
+      "type": "BOSS",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 58
+    },
+    {
+      "slug": "xue-xing-hua-shen-shi-shan",
+      "name": "血腥化身(尸山)",
+      "type": "BOSS",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 59
+    },
+    {
+      "slug": "mi-shi-jian-ke",
+      "name": "迷失剑客",
+      "type": "BOSS",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 60
+    },
+    {
+      "slug": "ye-man-zhu-ren-hong-wen",
+      "name": "野蛮猪人(红温)",
+      "type": "BOSS",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 61
+    },
+    {
+      "slug": "ding-zi-tou-fu-li-ci-ju-xing-ku-lou-bu-si-ren",
+      "name": "钉子头弗里茨(巨型骷髅不死人)",
+      "type": "BOSS",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 62
+    },
+    {
+      "slug": "xue-guai-chuan-wen-zhong-de-shen-ji-ju-ren",
+      "name": "雪怪(传闻中的神级巨人)",
+      "type": "BOSS",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 63
+    },
+    {
+      "slug": "xue-yang",
+      "name": "雪羊",
+      "type": "BOSS",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 64
+    },
+    {
+      "slug": "fei-tian-niao-yao",
+      "name": "飞天鸟妖",
+      "type": "BOSS",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 65
+    },
+    {
+      "slug": "fei-long-gu-wei-er",
+      "name": "飞龙(古薇尔)",
+      "type": "BOSS",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 66
+    },
+    {
+      "slug": "fei-long-ji-luo-te",
+      "name": "飞龙(吉罗特)",
+      "type": "BOSS",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 67
+    },
+    {
+      "slug": "shi-ren-yu-qun",
+      "name": "食人鱼群",
+      "type": "BOSS",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 68
+    },
+    {
+      "slug": "gu-hui-long-gu-sheng-ming-ti",
+      "name": "骨灰龙骨生命体",
+      "type": "BOSS",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 69
+    },
+    {
+      "slug": "mei-mo-ai-xia",
+      "name": "魅魔(艾夏)",
+      "type": "BOSS",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 70
+    },
+    {
+      "slug": "yu-tou-ren",
+      "name": "鱼头人",
+      "type": "BOSS",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "order": 71
+    },
+    {
+      "slug": "zhu-tian-shi-zhi-tian-shi",
+      "name": "主天使/智天使",
+      "type": "精英怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 72
+    },
+    {
+      "slug": "hui-fei-xing-de-tou-lu",
+      "name": "会飞行的头颅",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 73
+    },
+    {
+      "slug": "di-jie-tian-shi",
+      "name": "低阶天使",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 74
+    },
+    {
+      "slug": "jiang-shi",
+      "name": "僵尸",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 75
+    },
+    {
+      "slug": "tu-zi",
+      "name": "兔子",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 76
+    },
+    {
+      "slug": "shou-ren",
+      "name": "兽人",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 77
+    },
+    {
+      "slug": "bing-jing-zu",
+      "name": "冰晶族",
+      "type": "小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 78
+    },
+    {
+      "slug": "bing-jie-de-yi-gu",
+      "name": "冰结的遗骨",
+      "type": "精英怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 79
+    },
+    {
+      "slug": "bing-shuang-long-zu",
+      "name": "冰霜龙族",
+      "type": "精英怪",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 80
+    },
+    {
+      "slug": "jing-chen-zhi-zheng-guan",
+      "name": "净尘执政官",
+      "type": "精英怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 81
+    },
+    {
+      "slug": "ju-lie-feng-bao",
+      "name": "剧烈风暴",
+      "type": "事件",
+      "regions": [
+        "零界（虚无的空间）"
+      ],
+      "region": "零界（虚无的空间）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 82
+    },
+    {
+      "slug": "hua-shi-huo-hua-ti-yi-hai-pai-huai-zhe",
+      "name": "化石活化体·遗骸徘徊者",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 83
+    },
+    {
+      "slug": "bei-jing-ren-ru-qin",
+      "name": "北境人入侵",
+      "type": "事件",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 84
+    },
+    {
+      "slug": "ban-shou-ren",
+      "name": "半兽人",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 85
+    },
+    {
+      "slug": "shuang-zu-fei-long",
+      "name": "双足飞龙",
+      "type": "小怪",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 86
+    },
+    {
+      "slug": "bian-se-niao",
+      "name": "变色鸟",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 87
+    },
+    {
+      "slug": "gu-dai-shi-yan-ti",
+      "name": "古代实验体",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 88
+    },
+    {
+      "slug": "shi-lai-mu-qun-ru-qin",
+      "name": "史莱姆群入侵",
+      "type": "事件",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 89
+    },
+    {
+      "slug": "xi-xue-du-zhu",
+      "name": "吸血毒蛛",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 90
+    },
+    {
+      "slug": "ai-hao-fu-mu-yao",
+      "name": "哀嚎浮木妖",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 91
+    },
+    {
+      "slug": "ge-bu-lin-qun-ru-qin",
+      "name": "哥布林群入侵",
+      "type": "事件",
+      "regions": [
+        "腐荒王国（沼泽）",
+        "精灵族（丛林）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 92
+    },
+    {
+      "slug": "ge-bu-lin-sa-man",
+      "name": "哥布林萨满",
+      "type": "精英怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 93
+    },
+    {
+      "slug": "shi-xue-xie",
+      "name": "嗜血蝎",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 94
+    },
+    {
+      "slug": "shi-qin-zhe",
+      "name": "噬亲者",
+      "type": "精英怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 95
+    },
+    {
+      "slug": "shi-fa-guai",
+      "name": "噬法怪",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 96
+    },
+    {
+      "slug": "qiu-tu-bei-fu-de-yan-long-can-zhi",
+      "name": "囚徒·被缚的炎龙残肢",
+      "type": "小怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 97
+    },
+    {
+      "slug": "si-tong-zhou-wa",
+      "name": "四瞳咒蛙",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 98
+    },
+    {
+      "slug": "hui-xiang-mei-ying",
+      "name": "回响魅影",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 99
+    },
+    {
+      "slug": "hui-sheng-yao",
+      "name": "回声鳐",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 100
+    },
+    {
+      "slug": "guo-wang-jun-li-qian-dui",
+      "name": "国王军离遣队",
+      "type": "事件",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 101
+    },
+    {
+      "slug": "sheng-tu-xun-cha-zhe",
+      "name": "圣徒巡查者",
+      "type": "精英怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 102
+    },
+    {
+      "slug": "di-xia-ren",
+      "name": "地下人",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 103
+    },
+    {
+      "slug": "di-lao-chong-chao",
+      "name": "地牢虫巢",
+      "type": "事件",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 104
+    },
+    {
+      "slug": "di-lao-shi-ren-zu",
+      "name": "地牢食人族",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 105
+    },
+    {
+      "slug": "di-ku-tun-shi-zhe",
+      "name": "地窟吞噬者",
+      "type": "精英怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 106
+    },
+    {
+      "slug": "tan-suo-hai-xing",
+      "name": "坍缩海星",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 107
+    },
+    {
+      "slug": "da-xing-shu-yao",
+      "name": "大型树妖",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 108
+    },
+    {
+      "slug": "da-xing-shi-tou-guai",
+      "name": "大型石头怪",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 109
+    },
+    {
+      "slug": "da-xing-fu-rou-guai",
+      "name": "大型腐肉怪",
+      "type": "夜晚精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 110
+    },
+    {
+      "slug": "da-xing-zhi-zhu-guai",
+      "name": "大型蜘蛛怪",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 111
+    },
+    {
+      "slug": "da-xing-tie-kuang-guai",
+      "name": "大型铁矿怪",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 112
+    },
+    {
+      "slug": "da-xing-tong-kuang-guai",
+      "name": "大型铜矿怪",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 113
+    },
+    {
+      "slug": "da-wang-hua-guai",
+      "name": "大王花怪",
+      "type": "精英怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 114
+    },
+    {
+      "slug": "da-ru-chong",
+      "name": "大蠕虫",
+      "type": "精英怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 115
+    },
+    {
+      "slug": "tian-shi-zhen-cha-dui",
+      "name": "天使侦查队",
+      "type": "事件",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 116
+    },
+    {
+      "slug": "shi-bai-rong-he-ti",
+      "name": "失败融合体",
+      "type": "精英怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 117
+    },
+    {
+      "slug": "bao-xiang-guai",
+      "name": "宝箱怪",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 118
+    },
+    {
+      "slug": "feng-bi-shen-nie",
+      "name": "封闭神孽",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 119
+    },
+    {
+      "slug": "jiang-jun",
+      "name": "将军",
+      "type": "精英怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 120
+    },
+    {
+      "slug": "xiao-e-mo",
+      "name": "小恶魔",
+      "type": "小怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 121
+    },
+    {
+      "slug": "xiao-ying-huo-chong",
+      "name": "小萤火虫",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 122
+    },
+    {
+      "slug": "xiao-mei-mo",
+      "name": "小魅魔",
+      "type": "小怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 123
+    },
+    {
+      "slug": "lan-niao-lie-kong-sun",
+      "name": "岚鸟·裂空隼",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 124
+    },
+    {
+      "slug": "yan-kai-chuan-shan-shou",
+      "name": "岩铠穿山兽",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 125
+    },
+    {
+      "slug": "ju-xing-zhen-jun-guai",
+      "name": "巨型真菌怪",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 126
+    },
+    {
+      "slug": "ju-xing-zhang-yu",
+      "name": "巨型章鱼",
+      "type": "精英怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 127
+    },
+    {
+      "slug": "ju-xing-xi-yi-guai",
+      "name": "巨型蜥蜴怪",
+      "type": "精英怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 128
+    },
+    {
+      "slug": "ju-da-e-gou",
+      "name": "巨大恶狗",
+      "type": "小怪",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 129
+    },
+    {
+      "slug": "ju-da-lao-shu",
+      "name": "巨大老鼠",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 130
+    },
+    {
+      "slug": "ju-chui-bing",
+      "name": "巨锤兵",
+      "type": "小怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 131
+    },
+    {
+      "slug": "ju-mo",
+      "name": "巨魔",
+      "type": "小怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 132
+    },
+    {
+      "slug": "ju-mo-ren",
+      "name": "巨魔人",
+      "type": "小怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 133
+    },
+    {
+      "slug": "ju-shu",
+      "name": "巨鼠",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 134
+    },
+    {
+      "slug": "wu-yao",
+      "name": "巫妖",
+      "type": "精英怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 135
+    },
+    {
+      "slug": "huan-cai-shui-mu-ji",
+      "name": "幻彩水母姬",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 136
+    },
+    {
+      "slug": "huan-ying-shui-zhi",
+      "name": "幻影水蛭",
+      "type": "小怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 137
+    },
+    {
+      "slug": "you-guang-you-bu-zhe",
+      "name": "幽光诱捕者",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 138
+    },
+    {
+      "slug": "you-ling",
+      "name": "幽灵",
+      "type": "夜晚精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 139
+    },
+    {
+      "slug": "you-hun",
+      "name": "幽魂",
+      "type": "夜晚小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 140
+    },
+    {
+      "slug": "you-hun-kai-jia",
+      "name": "幽魂铠甲",
+      "type": "夜晚小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 141
+    },
+    {
+      "slug": "gui-xiang-ling",
+      "name": "归乡灵",
+      "type": "夜晚小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 142
+    },
+    {
+      "slug": "ying-tai-ge-bu-lin",
+      "name": "影苔哥布林",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 143
+    },
+    {
+      "slug": "bei-ming-nv-yao-ji-qun-xi-ji",
+      "name": "悲鸣女妖集群袭击",
+      "type": "事件",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 144
+    },
+    {
+      "slug": "niu-qu-gen-xu",
+      "name": "扭曲根须",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 145
+    },
+    {
+      "slug": "ni-xing-guai",
+      "name": "拟形怪",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 146
+    },
+    {
+      "slug": "lve-ji-long-man",
+      "name": "掠脊龙鳗",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 147
+    },
+    {
+      "slug": "jiao-tuan-ru-qin",
+      "name": "教团入侵",
+      "type": "事件",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 148
+    },
+    {
+      "slug": "jiao-tu-jiao-tu",
+      "name": "教徒*教徒",
+      "type": "小怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 149
+    },
+    {
+      "slug": "jiao-tu-jiao-tu-gao-ji-fa-shi",
+      "name": "教徒*教徒高级法师",
+      "type": "精英怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 150
+    },
+    {
+      "slug": "wu-tou-qi-shi",
+      "name": "无头骑士",
+      "type": "夜晚精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 151
+    },
+    {
+      "slug": "shi-wang-shou",
+      "name": "时忘兽",
+      "type": "小怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 152
+    },
+    {
+      "slug": "pu-tong-ge-bu-lin",
+      "name": "普通哥布林",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 153
+    },
+    {
+      "slug": "jing-bei-gui-tu",
+      "name": "晶背龟兔",
+      "type": "小怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 154
+    },
+    {
+      "slug": "bao-feng-xue",
+      "name": "暴风雪",
+      "type": "事件",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 155
+    },
+    {
+      "slug": "yue-lei-hai-xing",
+      "name": "月泪海星",
+      "type": "小怪",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 156
+    },
+    {
+      "slug": "mu-nai-yi",
+      "name": "木乃伊",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 157
+    },
+    {
+      "slug": "za-bing",
+      "name": "杂兵",
+      "type": "小怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 158
+    },
+    {
+      "slug": "quan-tian-shi-li-tian-shi",
+      "name": "权天使/力天使",
+      "type": "精英怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 159
+    },
+    {
+      "slug": "ji-su-shi-lai-mu",
+      "name": "极速史莱姆",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 160
+    },
+    {
+      "slug": "shu-yao",
+      "name": "树妖",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 161
+    },
+    {
+      "slug": "shu-ku-mo-ai-hao-fu-mu-yao",
+      "name": "树枯魔*哀嚎浮木妖",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 162
+    },
+    {
+      "slug": "meng-yan",
+      "name": "梦魇",
+      "type": "小怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 163
+    },
+    {
+      "slug": "meng-yan-mo",
+      "name": "梦魇魔",
+      "type": "夜晚精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 164
+    },
+    {
+      "slug": "ji-wei-e-long",
+      "name": "棘尾鳄龙",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）",
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 165
+    },
+    {
+      "slug": "si-wang-ru-chong",
+      "name": "死亡蠕虫",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 166
+    },
+    {
+      "slug": "du-xi-yi",
+      "name": "毒蜥蜴",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 167
+    },
+    {
+      "slug": "shui-jing-cu-ling-jing-ge-zhe",
+      "name": "水晶簇灵·晶歌者",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 168
+    },
+    {
+      "slug": "yong-ye-di-yu-zhe",
+      "name": "永夜低语者",
+      "type": "精英怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 169
+    },
+    {
+      "slug": "sha-qiu-mao",
+      "name": "沙丘猫",
+      "type": "动物",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 170
+    },
+    {
+      "slug": "sha-hou-qian-xing-zhe",
+      "name": "沙喉潜行者",
+      "type": "小怪",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 171
+    },
+    {
+      "slug": "sha-zi-di-xia-de-xie-zi-tou",
+      "name": "沙子底下的蟹子头",
+      "type": "小怪",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 172
+    },
+    {
+      "slug": "sha-chen-bao",
+      "name": "沙尘暴",
+      "type": "事件",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 173
+    },
+    {
+      "slug": "zhao-hou-nian",
+      "name": "沼喉鲶",
+      "type": "小怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 174
+    },
+    {
+      "slug": "zhao-ze-teng-wan-guai",
+      "name": "沼泽藤蔓怪",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 175
+    },
+    {
+      "slug": "qi-bao-ge-bu-lin",
+      "name": "泣孢哥布林",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 176
+    },
+    {
+      "slug": "ze-shi-long-hui",
+      "name": "泽噬龙虺",
+      "type": "精英怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 177
+    },
+    {
+      "slug": "liu-fang-zhe",
+      "name": "流放者",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 178
+    },
+    {
+      "slug": "liu-lang-de-mo-shen-luo-po-shen-ming",
+      "name": "流浪的魔神/落魄神明",
+      "type": "精英怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 179
+    },
+    {
+      "slug": "hai-xiao",
+      "name": "海啸",
+      "type": "事件",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 180
+    },
+    {
+      "slug": "hai-shi-shen-lou-ju-xiang",
+      "name": "海市蜃楼巨象",
+      "type": "精英怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 181
+    },
+    {
+      "slug": "shen-yuan-de-di-yu-zhe",
+      "name": "深渊的低语者",
+      "type": "精英怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 182
+    },
+    {
+      "slug": "yuan-hou-wu-yao",
+      "name": "渊喉巫妖",
+      "type": "精英怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 183
+    },
+    {
+      "slug": "ni-wang-zhe-de-hun-sha-cang-sha",
+      "name": "溺亡者的婚纱·苍纱",
+      "type": "精英怪",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 184
+    },
+    {
+      "slug": "huo-she-tang-lang-lie-yan-fu",
+      "name": "火蛇螳螂·烈焰蝠",
+      "type": "小怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 185
+    },
+    {
+      "slug": "yan-yu-xun-you-zhe",
+      "name": "炎狱巡游者",
+      "type": "精英怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 186
+    },
+    {
+      "slug": "pao-ta",
+      "name": "炮塔",
+      "type": "精英怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 187
+    },
+    {
+      "slug": "re-dai-sha-zhu",
+      "name": "热带沙蛛",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 188
+    },
+    {
+      "slug": "rong-yan-ji-sheng-chong",
+      "name": "熔岩寄生虫",
+      "type": "小怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 189
+    },
+    {
+      "slug": "zhao-wei-shou",
+      "name": "爪尾兽",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 190
+    },
+    {
+      "slug": "niu-tou-guai",
+      "name": "牛头怪",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 191
+    },
+    {
+      "slug": "lang-ren",
+      "name": "狼人",
+      "type": "小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 192
+    },
+    {
+      "slug": "zhu-ren",
+      "name": "猪人",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 193
+    },
+    {
+      "slug": "zhu-ren-kuang-zhan-shi",
+      "name": "猪人狂战士",
+      "type": "精英怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 194
+    },
+    {
+      "slug": "bai-mao-xue-ju-ren",
+      "name": "白毛雪巨人",
+      "type": "精英怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 195
+    },
+    {
+      "slug": "bai-cao-chong",
+      "name": "白草虫",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 196
+    },
+    {
+      "slug": "dun-bing",
+      "name": "盾兵",
+      "type": "小怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 197
+    },
+    {
+      "slug": "zhen-jun-guai",
+      "name": "真菌怪",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "蓝色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 198
+    },
+    {
+      "slug": "shi-gui-gui",
+      "name": "石傀鬼",
+      "type": "精英怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 199
+    },
+    {
+      "slug": "shi-tou-ren",
+      "name": "石头人",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 200
+    },
+    {
+      "slug": "shi-tou-guai",
+      "name": "石头怪",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 201
+    },
+    {
+      "slug": "shi-zhao-xiong-piao",
+      "name": "石爪熊漂",
+      "type": "精英怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 202
+    },
+    {
+      "slug": "kuang-keng-yuan-nian-ji-he-ti-shi-tie-ru-chong",
+      "name": "矿坑怨念集合体·噬铁蠕虫",
+      "type": "精英怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 203
+    },
+    {
+      "slug": "kuang-gong-wang-hun-de-qi-wu-jiao-hui-kui-lei",
+      "name": "矿工亡魂的器物·教会傀儡",
+      "type": "小怪",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 204
+    },
+    {
+      "slug": "shen-mi-huan-ying-bai-se-ying-zi-hui-you-kong-zhi-gong-ji",
+      "name": "神秘幻影(白色影子会有控制攻击)",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 205
+    },
+    {
+      "slug": "kong-zhong-de-fei-yu",
+      "name": "空中的飞鱼",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 206
+    },
+    {
+      "slug": "jing-ling-hun-po",
+      "name": "精灵魂魄",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 207
+    },
+    {
+      "slug": "zi-se-shi-lai-mu",
+      "name": "紫色史莱姆",
+      "type": "史莱姆系列",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 208
+    },
+    {
+      "slug": "fan-zhi-xia",
+      "name": "繁殖虾",
+      "type": "小怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 209
+    },
+    {
+      "slug": "hong-se-shi-lai-mu",
+      "name": "红色史莱姆",
+      "type": "史莱姆系列",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 210
+    },
+    {
+      "slug": "sha-bu-zhong-zi",
+      "name": "纱布种子",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 211
+    },
+    {
+      "slug": "zhi-meng-zhang-yu",
+      "name": "织梦章鱼",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 212
+    },
+    {
+      "slug": "beng-dai-gan-shi",
+      "name": "绷带干尸",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 213
+    },
+    {
+      "slug": "beng-dai-guai-qun",
+      "name": "绷带怪群",
+      "type": "事件",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 214
+    },
+    {
+      "slug": "lv-se-shi-lai-mu",
+      "name": "绿色史莱姆",
+      "type": "史莱姆系列",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 215
+    },
+    {
+      "slug": "feng-he-zeng-wu",
+      "name": "缝合憎恶",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 216
+    },
+    {
+      "slug": "yi-zu-da-nv-yao",
+      "name": "翼族(大女妖)",
+      "type": "精英怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 217
+    },
+    {
+      "slug": "yi-zu-nv-yao",
+      "name": "翼族(女妖)",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 218
+    },
+    {
+      "slug": "yi-zu-she-xing-nv-yao",
+      "name": "翼族蛇型(女妖)",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 219
+    },
+    {
+      "slug": "ye-meng-jia-de",
+      "name": "耶梦加得",
+      "type": "精英怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 220
+    },
+    {
+      "slug": "fei-pang-fu-rou",
+      "name": "肥胖腐肉",
+      "type": "夜晚精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 221
+    },
+    {
+      "slug": "tuo-shui-de-hai-luo-zhang-le-chu-shou",
+      "name": "脱水的海螺(长了触手)",
+      "type": "小怪",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 222
+    },
+    {
+      "slug": "fu-hua-shi-lai-mu",
+      "name": "腐化史莱姆",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 223
+    },
+    {
+      "slug": "fu-hua-zhe-wu-ya-bian-yi",
+      "name": "腐化者(乌鸦变异)",
+      "type": "精英怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 224
+    },
+    {
+      "slug": "fu-hua-sa-man-zu-er-jia",
+      "name": "腐化萨满·祖尔加",
+      "type": "精英怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 225
+    },
+    {
+      "slug": "fu-rou-guai",
+      "name": "腐肉怪",
+      "type": "夜晚小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 226
+    },
+    {
+      "slug": "zi-dong-kui-lei",
+      "name": "自动傀儡",
+      "type": "小怪",
+      "regions": [
+        "永夜区（荒漠）"
+      ],
+      "region": "永夜区（荒漠）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 227
+    },
+    {
+      "slug": "zi-lv-shou-wei",
+      "name": "自律守卫",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 228
+    },
+    {
+      "slug": "se-cai-long",
+      "name": "色彩龙",
+      "type": "小怪",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 229
+    },
+    {
+      "slug": "jing-ji-xing-jun-yi-qun",
+      "name": "荆棘行军蚁群",
+      "type": "事件",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 230
+    },
+    {
+      "slug": "cao-shi-lai-mu",
+      "name": "草史莱姆",
+      "type": "白天精英怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 231
+    },
+    {
+      "slug": "zang-shan-gu-hai",
+      "name": "葬山古骸",
+      "type": "精英怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 232
+    },
+    {
+      "slug": "lan-se-shi-lai-mu",
+      "name": "蓝色史莱姆",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 233
+    },
+    {
+      "slug": "chong-zi",
+      "name": "虫子",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 234
+    },
+    {
+      "slug": "she-fa-nv-yao",
+      "name": "蛇发女妖",
+      "type": "精英怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 235
+    },
+    {
+      "slug": "zhi-zhu-guai",
+      "name": "蜘蛛怪",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 236
+    },
+    {
+      "slug": "xi-yi-ren",
+      "name": "蜥蜴人",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 237
+    },
+    {
+      "slug": "xi-yi-guai",
+      "name": "蜥蜴怪",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 238
+    },
+    {
+      "slug": "xie-wei-shi",
+      "name": "蝎尾狮",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 239
+    },
+    {
+      "slug": "hu-die",
+      "name": "蝴蝶",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 240
+    },
+    {
+      "slug": "xie-ren-shang-an-qun-chao",
+      "name": "蟹人上岸群巢",
+      "type": "事件",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 241
+    },
+    {
+      "slug": "xue-zhao-wen-nv-huang",
+      "name": "血沼蚊女皇",
+      "type": "小怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 242
+    },
+    {
+      "slug": "xue-chong",
+      "name": "血虫",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 243
+    },
+    {
+      "slug": "bei-mo-fa-kong-zhi-de-luo-tuo",
+      "name": "被魔法控制的骆驼",
+      "type": "精英怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 244
+    },
+    {
+      "slug": "lie-tou-yu-pa-xing-guai",
+      "name": "裂头鱼(爬行怪)",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 245
+    },
+    {
+      "slug": "yuan-gu-shou-hu-zhe-yi-hai",
+      "name": "远古守护者遗骸",
+      "type": "精英怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 246
+    },
+    {
+      "slug": "yuan-gu-long",
+      "name": "远古龙",
+      "type": "精英怪",
+      "regions": [
+        "龙之岛（血腥地段）"
+      ],
+      "region": "龙之岛（血腥地段）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 247
+    },
+    {
+      "slug": "yuan-cheng-fa-shi",
+      "name": "远程/法师",
+      "type": "小怪",
+      "regions": [
+        "诺兰德主城"
+      ],
+      "region": "诺兰德主城",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 248
+    },
+    {
+      "slug": "mi-gong-xin-shou",
+      "name": "迷宫心兽",
+      "type": "精英怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 249
+    },
+    {
+      "slug": "yi-min-gong-sheng-ti",
+      "name": "遗民共生体",
+      "type": "小怪",
+      "regions": [
+        "海妖区（艾兰德里亚）"
+      ],
+      "region": "海妖区（艾兰德里亚）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 250
+    },
+    {
+      "slug": "ye-lang",
+      "name": "野狼",
+      "type": "小怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 251
+    },
+    {
+      "slug": "tie-kuang-guai",
+      "name": "铁矿怪",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 252
+    },
+    {
+      "slug": "tong-kuang-guai",
+      "name": "铜矿怪",
+      "type": "白天小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "红色背景",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 253
+    },
+    {
+      "slug": "xiu-kai-zhao-xing-xie",
+      "name": "锈铠沼行蟹",
+      "type": "精英怪",
+      "regions": [
+        "穹翼族（瘟疫之地）"
+      ],
+      "region": "穹翼族（瘟疫之地）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 254
+    },
+    {
+      "slug": "xue-yao-jing",
+      "name": "雪妖精",
+      "type": "小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 255
+    },
+    {
+      "slug": "xue-beng-chong-qun",
+      "name": "雪崩虫群",
+      "type": "小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 256
+    },
+    {
+      "slug": "lei-ji-mu-jing-mou-qi",
+      "name": "雷击木精·眸岐",
+      "type": "小怪",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 257
+    },
+    {
+      "slug": "shuang-hou-long",
+      "name": "霜喉龙",
+      "type": "小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 258
+    },
+    {
+      "slug": "shuang-ya-shou",
+      "name": "霜牙兽",
+      "type": "小怪",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 259
+    },
+    {
+      "slug": "shuang-long-ren-ru-qin-shuang-long-qi-shi",
+      "name": "霜龙人入侵(霜龙骑士)",
+      "type": "事件",
+      "regions": [
+        "霜脉族（雪山）"
+      ],
+      "region": "霜脉族（雪山）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 260
+    },
+    {
+      "slug": "qing-wa",
+      "name": "青蛙",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 261
+    },
+    {
+      "slug": "shi-ren-hua",
+      "name": "食人花",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 262
+    },
+    {
+      "slug": "shi-ren-yu",
+      "name": "食人鱼",
+      "type": "小怪",
+      "regions": [
+        "沙滩区（海洋）"
+      ],
+      "region": "沙滩区（海洋）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 263
+    },
+    {
+      "slug": "shi-ren-yu-guai",
+      "name": "食人鱼怪",
+      "type": "小怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 264
+    },
+    {
+      "slug": "shi-rou-chang",
+      "name": "食肉鲳",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 265
+    },
+    {
+      "slug": "shi-fu-quan",
+      "name": "食腐犬",
+      "type": "精英怪",
+      "regions": [
+        "腐荒王国（沼泽）"
+      ],
+      "region": "腐荒王国（沼泽）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 266
+    },
+    {
+      "slug": "gu-hai",
+      "name": "骨骸",
+      "type": "小怪",
+      "regions": [
+        "地牢（无限地下城）"
+      ],
+      "region": "地牢（无限地下城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 267
+    },
+    {
+      "slug": "ku-shi-xi",
+      "name": "骷石蜥",
+      "type": "小怪",
+      "regions": [
+        "沙漠（炎沙国）"
+      ],
+      "region": "沙漠（炎沙国）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 268
+    },
+    {
+      "slug": "ku-lou-guai",
+      "name": "骷髅怪",
+      "type": "夜晚小怪",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 269
+    },
+    {
+      "slug": "niao",
+      "name": "鸟",
+      "type": "动物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 270
+    },
+    {
+      "slug": "ying-shen-nv-yao",
+      "name": "鹰身女妖",
+      "type": "小怪",
+      "regions": [
+        "天空城（魔羽天城）"
+      ],
+      "region": "天空城（魔羽天城）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 271
+    },
+    {
+      "slug": "huang-se-shi-lai-mu",
+      "name": "黄色史莱姆",
+      "type": "史莱姆系列",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 272
+    },
+    {
+      "slug": "long-ji-feng",
+      "name": "龙脊风",
+      "type": "事件",
+      "regions": [
+        "石谵山脉（山区）"
+      ],
+      "region": "石谵山脉（山区）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": true,
+      "image": null,
+      "order": 273
+    },
+    {
+      "slug": "gui-guang-chong-zi-jing-ling-zhen-cha-guai",
+      "name": "龟光虫子(精灵侦察怪)",
+      "type": "小怪",
+      "regions": [
+        "精灵族（丛林）"
+      ],
+      "region": "精灵族（丛林）",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": null,
+      "order": 274
+    }
+  ]
+}

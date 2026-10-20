@@ -1,0 +1,44 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+---
+
+<WikiLayout
+  title="存档"
+  description="《魔物娘合成乐园》的存档系统：存档内容、物品、时间、位置与剧情标记。"
+  active="save"
+  breadcrumb={[{ label: '存档' }]}
+>
+  <article class="wiki-article">
+    <header class="wiki-page-head">
+      <p class="wiki-page-head__kicker">SAVE / 存档</p>
+      <h1 class="wiki-page-head__title">存档 <em>SAVE</em></h1>
+      <p class="wiki-page-head__lead">存档里记录了什么、在哪里存、死亡/重生怎么处理。具体字段会随版本补。</p>
+    </header>
+    <div class="wiki-prose">
+      <h2>存档内容</h2>
+      <p>存档会记录玩家的位置、状态、背包、任务、地图探索、经营数据和剧情进度。</p>
+
+      <div class="wiki-table-wrap">
+        <table class="wiki-table">
+          <thead>
+            <tr><th>标签名称</th><th>地图</th><th>物品</th><th>数量</th><th>时间</th><th>位置</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>生命/魔力/耐力</td><td>当前区域</td><td>—</td><td>—</td><td>存档时间</td><td>坐标</td><td>玩家状态</td></tr>
+            <tr><td>背包</td><td>—</td><td>物品 ID</td><td>数量</td><td>—</td><td>—</td><td>装备/消耗品/材料</td></tr>
+            <tr><td>地图探索</td><td>区域 ID</td><td>传送点</td><td>—</td><td>—</td><td>坐标</td><td>已解锁区域/复活点</td></tr>
+            <tr><td>任务</td><td>—</td><td>任务 ID</td><td>进度</td><td>—</td><td>—</td><td>主线/支线/日常</td></tr>
+            <tr><td>经营</td><td>主世界</td><td>房产/商品</td><td>资金</td><td>—</td><td>店铺</td><td>员工/库存/定价</td></tr>
+            <tr><td>剧情</td><td>—</td><td>章节</td><td>—</td><td>—</td><td>—</td><td>已看剧情/选择</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>存档与重生</h2>
+      <p>床、旅馆、复活点和部分检查点可以存档。死亡后会在最近解锁的复活点重生，具体惩罚以实际版本为准。</p>
+
+      <h2>待补充</h2>
+      <p class="wiki-empty">字段表、存档槽位、云存档和版本兼容还没有导入。后续会按存档系统单独补一页。</p>
+    </div>
+  </article>
+</WikiLayout>

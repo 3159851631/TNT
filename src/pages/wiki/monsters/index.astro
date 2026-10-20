@@ -1,0 +1,69 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/monsters.json';
+const monsters = data.monsters;
+const types = Array.from(new Set(monsters.map((m) => m.type)));
+---
+
+<WikiLayout
+  title="怪物"
+  description="《魔物娘合成乐园》的怪物、精英、夜晚种、动物、事件与 BOSS。"
+  active="monsters"
+  breadcrumb={[{ label: '怪物' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">MONSTERS / 怪物</p>
+    <h1 class="wiki-page-head__title">怪物 <em>MONSTERS</em></h1>
+    <p class="wiki-page-head__lead">
+      按区域整理的怪物、精英、夜晚种、动物、事件和 BOSS。掉落和战斗细节会继续补。
+    </p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{monsters.length}</b><span>MONSTERS / 怪物</span></div>
+      <div class="wiki-stat"><b>{monsters.filter((m) => m.isBoss).length}</b><span>BOSS</span></div>
+      <div class="wiki-stat"><b>{monsters.filter((m) => m.image).length}</b><span>PORTRAITS / 已有图</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-list>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索怪物 / 区域 / 类型…" data-wiki-search aria-label="搜索怪物" />
+      </div>
+      <div class="wiki-chips">
+        <button class="wiki-chip is-active" type="button" data-wiki-chip="全部">全部</button>
+        {types.map((type) => <button class="wiki-chip" type="button" data-wiki-chip={type}>{type}</button>)}
+      </div>
+      <span class="wiki-count" data-wiki-count>{monsters.length} / {monsters.length}</span>
+    </div>
+
+    <div class="wiki-grid wiki-grid--monsters">
+      {monsters.map((monster) => (
+        <a
+          class="wiki-card"
+          href={`/wiki/monsters/${monster.slug}/`}
+          data-wiki-item
+          data-name={monster.name}
+          data-type={monster.type}
+          data-region={monster.region}
+        >
+          <div class="wiki-card__media">
+            {monster.image ? (
+              <img src={monster.image} alt={monster.name} loading="lazy" decoding="async" />
+            ) : (
+              <div class="wiki-card__placeholder">{monster.name.slice(0, 1)}</div>
+            )}
+          </div>
+          <div class="wiki-card__body">
+            <h2 class="wiki-card__title">{monster.name}</h2>
+            <p class="wiki-card__meta">{monster.type}{monster.region ? ` · ${monster.region}` : ''}</p>
+            <div class="wiki-card__tags">
+              {monster.isBoss && <span class="wiki-tag wiki-tag--red">BOSS</span>}
+              {monster.isEvent && <span class="wiki-tag wiki-tag--gold">事件</span>}
+              {monster.regions.length > 1 && <span class="wiki-tag">{monster.regions.length} 个区域</span>}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</WikiLayout>

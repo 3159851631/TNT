@@ -1,0 +1,89 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/monsters.json';
+import regionsData from '../../../data/wiki/regions.json';
+
+export function getStaticPaths() {
+  return data.monsters.map((monster) => ({ params: { slug: monster.slug }, props: { monster } }));
+}
+
+const { monster } = Astro.props;
+const regions = regionsData.regions.filter((r) => monster.regions.includes(r.name));
+const related = data.monsters
+  .filter((m) => m.slug !== monster.slug && (m.isBoss === monster.isBoss || m.regions.some((r) => monster.regions.includes(r))))
+  .slice(0, 8);
+---
+
+<WikiLayout
+  title={monster.name}
+  description={`${monster.name} · ${monster.type} · ${monster.regions.join('、')}`}
+  active="monsters"
+  breadcrumb={[{ label: '怪物', href: '/wiki/monsters/' }, { label: monster.name }]}
+>
+  <div class="wiki-detail">
+    <div class="wiki-detail__main">
+      <header class="wiki-detail__head">
+        <p class="wiki-detail__kicker">MONSTER / 怪物</p>
+        <h1 class="wiki-detail__title">{monster.name}</h1>
+        <p class="wiki-detail__sub">{monster.type} · {monster.regions.join(' / ')}</p>
+        <p class="wiki-detail__desc">{monster.note || `出现在${monster.regions.join('、')}的${monster.type}。详细设定、战斗方式和掉落正在补完。`}</p>
+        <div class="wiki-detail__meta">
+          {monster.isBoss && <span class="wiki-tag wiki-tag--red">BOSS</span>}
+          {monster.isEvent && <span class="wiki-tag wiki-tag--gold">事件</span>}
+          {monster.regions.map((r) => {
+            const region = regionsData.regions.find((x) => x.name === r);
+            return region ? <a class="wiki-tag" href={`/wiki/regions/${region.slug}/`}>{r}</a> : <span class="wiki-tag">{r}</span>;
+          })}
+        </div>
+      </header>
+
+      <article class="wiki-prose">
+        <h2>怪物概况</h2>
+        <p>{monster.note || `这是${monster.regions.join('、')}的${monster.type}。`}</p>
+        {monster.note && <p>{monster.note}</p>}
+
+        <h2>出现区域</h2>
+        <ul>
+          {regions.length > 0 ? regions.map((region) => (
+            <li><a href={`/wiki/regions/${region.slug}/`}>{region.name}</a> · {region.type} · {region.size}</li>
+          )) : <li class="wiki-muted">区域待补充</li>}
+        </ul>
+
+        <h2>战斗与掉落</h2>
+        <p class="wiki-empty">战斗数值、掉落物和弱点还没有导入。后续会按区域和怪物表补全。</p>
+      </article>
+
+      {related.length > 0 && (
+        <section class="wiki-related">
+          <h2>相关怪物</h2>
+          <div class="wiki-related__grid">
+            {related.map((m) => <a class="wiki-related__link" href={`/wiki/monsters/${m.slug}/`}>{m.name} <span class="wiki-mono">{m.type}</span></a>)}
+          </div>
+        </section>
+      )}
+    </div>
+
+    <aside class="wiki-detail__aside">
+      <div class="wiki-infobox">
+        <div class="wiki-infobox__image-wrap">
+          {monster.image ? (
+            <img class="wiki-infobox__image" src={monster.image} alt={monster.name} />
+          ) : (
+            <div class="wiki-card__placeholder">{monster.name.slice(0, 1)}</div>
+          )}
+        </div>
+        <h2 class="wiki-infobox__title">{monster.name}</h2>
+        <p class="wiki-infobox__sub">{monster.type}</p>
+        <div class="wiki-infobox__rows">
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">分类</span><span class="wiki-infobox__value">{monster.type}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">区域</span><span class="wiki-infobox__value">{monster.regions.join('、') || '待补充'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">BOSS</span><span class="wiki-infobox__value">{monster.isBoss ? '是' : '否'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">事件</span><span class="wiki-infobox__value">{monster.isEvent ? '是' : '否'}</span></div>
+        </div>
+        <div class="wiki-infobox__badges">
+          <a class="wiki-btn" href="/wiki/monsters/">← 全部怪物</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</WikiLayout>

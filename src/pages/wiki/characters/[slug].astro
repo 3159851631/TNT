@@ -1,0 +1,100 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/characters.json';
+import regionsData from '../../../data/wiki/regions.json';
+
+export function getStaticPaths() {
+  return data.characters.map((character) => ({ params: { slug: character.slug }, props: { character } }));
+}
+
+const { character } = Astro.props;
+const region = regionsData.regions.find((r) => r.name === character.region);
+const related = data.characters
+  .filter((c) => c.slug !== character.slug && (c.region === character.region || c.system === character.system))
+  .slice(0, 8);
+---
+
+<WikiLayout
+  title={character.name}
+  description={character.identity || character.story || `${character.name} 的角色页`}
+  active="characters"
+  breadcrumb={[{ label: '角色', href: '/wiki/characters/' }, { label: character.name }]}
+>
+  <div class="wiki-detail">
+    <div class="wiki-detail__main">
+      <header class="wiki-detail__head">
+        <p class="wiki-detail__kicker">CHARACTER / 角色</p>
+        <h1 class="wiki-detail__title">{character.name}</h1>
+        <p class="wiki-detail__sub">{character.identity || character.system}{character.region ? ` · ${character.region}` : ''}</p>
+        <p class="wiki-detail__desc">{character.story || '这个角色的详细设定与故事正在补完。'}</p>
+        <div class="wiki-detail__meta">
+          {character.system && <span class="wiki-tag wiki-tag--gold">{character.system}</span>}
+          {character.region && <span class="wiki-tag">{character.region}</span>}
+          {character.image ? <span class="wiki-tag wiki-tag--green">已有立绘</span> : <span class="wiki-tag">立绘待补</span>}
+        </div>
+      </header>
+
+      <article class="wiki-prose">
+        <h2>角色故事</h2>
+        {character.story ? <p>{character.story}</p> : <p class="wiki-empty">这个角色的故事还没有导入。你可以在飞书/本地数文件里补充后，我再更新这一页。</p>}
+
+        {character.aliases.length > 1 && (
+          <>
+            <h2>其他称呼</h2>
+            <p>{character.aliases.join('、')}</p>
+          </>
+        )}
+
+        <h2>相关剧情</h2>
+        {character.chapters.length > 0 ? (
+          <ul>
+            {character.chapters.map((chapter) => (
+              <li><a href={`/wiki/story/${chapter.slug}/`}>{chapter.chapter} · {chapter.title}</a></li>
+            ))}
+          </ul>
+        ) : (
+          <p class="wiki-muted">暂未在剧情章节中找到这个角色的直接段落。后续会补。</p>
+        )}
+
+        {region && (
+          <>
+            <h2>所属区域</h2>
+            <p><a href={`/wiki/regions/${region.slug}/`}>{region.name}</a> · {region.type} · {region.size}</p>
+          </>
+        )}
+      </article>
+
+      {related.length > 0 && (
+        <section class="wiki-related">
+          <h2>相关角色</h2>
+          <div class="wiki-related__grid">
+            {related.map((c) => <a class="wiki-related__link" href={`/wiki/characters/${c.slug}/`}>{c.name} <span class="wiki-mono">{c.system}</span></a>)}
+          </div>
+        </section>
+      )}
+    </div>
+
+    <aside class="wiki-detail__aside">
+      <div class="wiki-infobox">
+        <div class="wiki-infobox__image-wrap">
+          {character.image ? (
+            <img class="wiki-infobox__image" src={character.image} alt={character.name} />
+          ) : (
+            <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+          )}
+        </div>
+        <h2 class="wiki-infobox__title">{character.name}</h2>
+        <p class="wiki-infobox__sub">{character.identity || character.system}</p>
+        <div class="wiki-infobox__rows">
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">身份</span><span class="wiki-infobox__value">{character.identity || '待补充'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">系统</span><span class="wiki-infobox__value">{character.system || '待补充'}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">区域</span><span class="wiki-infobox__value">{region ? <a href={`/wiki/regions/${region.slug}/`}>{region.name}</a> : (character.region || '待补充')}</span></div>
+          <div class="wiki-infobox__row"><span class="wiki-infobox__label">剧情</span><span class="wiki-infobox__value">{character.chapters.length} 篇</span></div>
+        </div>
+        <div class="wiki-infobox__badges">
+          <a class="wiki-btn" href="/wiki/characters/">← 全部角色</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</WikiLayout>
