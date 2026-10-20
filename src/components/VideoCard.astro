@@ -7,7 +7,8 @@ interface Video {
   duration?: string;
   bvid?: string;
   youtubeId?: string;
-  provider?: 'bilibili' | 'youtube';
+  localSrc?: string;
+  provider?: 'bilibili' | 'youtube' | 'local';
   account?: string;
   featured?: boolean;
   cover: string;
@@ -19,9 +20,9 @@ interface Props {
 }
 
 const { video } = Astro.props;
-const hasVideo = Boolean(video.bvid || video.youtubeId);
-const provider = video.provider || (video.youtubeId ? 'youtube' : 'bilibili');
-const providerLabel = provider === 'youtube' ? 'YOUTUBE' : 'BILIBILI';
+const hasVideo = Boolean(video.bvid || video.youtubeId || video.localSrc);
+const provider = video.provider || (video.youtubeId ? 'youtube' : video.localSrc ? 'local' : 'bilibili');
+const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' ? '游戏实机' : 'BILIBILI';
 ---
 
 <article class="video-card" data-reveal>
@@ -34,6 +35,7 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : 'BILIBILI';
         data-provider={provider}
         data-bvid={video.bvid || ''}
         data-youtube={video.youtubeId || ''}
+        data-local={video.localSrc || ''}
         data-title={video.title}
         aria-label={`播放 ${video.title}`}
       >
@@ -68,8 +70,23 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : 'BILIBILI';
       const provider = button.dataset.provider || 'bilibili';
       const bvid = button.dataset.bvid || '';
       const youtubeId = button.dataset.youtube || '';
+      const localSrc = button.dataset.local || '';
       if (provider === 'bilibili' && !bvid) return;
       if (provider === 'youtube' && !youtubeId) return;
+      if (provider === 'local' && !localSrc) return;
+
+      if (provider === 'local') {
+        const localVideo = document.createElement('video');
+        localVideo.className = 'video-card__local';
+        localVideo.controls = true;
+        localVideo.autoplay = true;
+        localVideo.playsInline = true;
+        localVideo.preload = 'metadata';
+        localVideo.src = localSrc;
+        cover.innerHTML = '';
+        cover.appendChild(localVideo);
+        return;
+      }
 
       const iframe = document.createElement('iframe');
       iframe.className = 'video-card__iframe';

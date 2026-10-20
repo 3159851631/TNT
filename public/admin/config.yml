@@ -165,9 +165,10 @@ collections:
               - label: 平台
                 name: provider
                 widget: select
-                options: [bilibili, youtube]
+                options: [bilibili, youtube, local]
                 default: bilibili
               - { label: YouTube ID, name: youtubeId, widget: string, required: false, hint: "YouTube 视频 ID；填了也会变成播放器" }
+              - { label: 本地视频路径, name: localSrc, widget: string, required: false, hint: "例如 /uploads/videos/local/game-01.mp4；填了用本地播放器" }
               - { label: 账号, name: account, widget: string, required: false, hint: "例如 B站主号 / B站小号 / YouTube" }
               - { label: 首页推荐, name: featured, widget: boolean, default: false }
               - { label: 封面图, name: cover, widget: image }

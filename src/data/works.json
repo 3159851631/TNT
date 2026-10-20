@@ -1,6 +1,57 @@
 {
   "works": [
     {
+      "slug": "jxyzy",
+      "title": "JXYZY",
+      "en": "JXYZY",
+      "year": "2025",
+      "category": "插画",
+      "cover": "/uploads/works/jxyzy.webp",
+      "aspect": "16/9",
+      "featured": true,
+      "order": -1,
+      "description": "插画 / 校园题材。",
+      "medium": "插画",
+      "tools": [
+        "Photoshop"
+      ],
+      "gallery": []
+    },
+    {
+      "slug": "dream-eyes",
+      "title": "梦之眼",
+      "en": "DREAM EYES",
+      "year": "2025",
+      "category": "游戏美术",
+      "cover": "/uploads/works/dream-eyes.webp",
+      "aspect": "16/9",
+      "featured": true,
+      "order": -2,
+      "description": "《梦之眼》项目视觉。梦境、眼睛和不太稳定的空间。",
+      "medium": "游戏美术 / 视觉设计",
+      "tools": [
+        "Photoshop"
+      ],
+      "gallery": []
+    },
+    {
+      "slug": "world-map",
+      "title": "地图",
+      "en": "WORLD MAP",
+      "year": "2025",
+      "category": "场景",
+      "cover": "/uploads/works/world-map.webp",
+      "aspect": "16/9",
+      "featured": true,
+      "order": -3,
+      "description": "游戏地图 / 世界设定。先把区域、路线和整体视觉基调定下来。",
+      "medium": "场景 / 地图设计",
+      "tools": [
+        "Photoshop"
+      ],
+      "gallery": []
+    },
+    {
       "slug": "ruins-echo",
       "title": "废墟余晖",
       "en": "RUINS AT DUSK",
@@ -12,7 +63,11 @@
       "order": 1,
       "description": "黄昏落在废弃街区。想把「世界已经结束，但光还在」这种感觉画出来。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5", "Substance 3D Painter", "Photoshop"],
+      "tools": [
+        "Unreal Engine 5",
+        "Substance 3D Painter",
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -27,7 +82,10 @@
       "order": 2,
       "description": "黄昏的站台、潮湿的铁轨，和一趟不知道还会不会来的车。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5", "Substance 3D Painter"],
+      "tools": [
+        "Unreal Engine 5",
+        "Substance 3D Painter"
+      ],
       "gallery": []
     },
     {
@@ -42,7 +100,10 @@
       "order": 3,
       "description": "雨后的霓虹和出租车灯。城市最吵，也最安静的时刻。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5", "Substance 3D Painter"],
+      "tools": [
+        "Unreal Engine 5",
+        "Substance 3D Painter"
+      ],
       "gallery": []
     },
     {
@@ -57,7 +118,10 @@
       "order": 4,
       "description": "一个关于街机厅、汽水和夏天的游戏视觉。",
       "medium": "游戏 UI / 视觉",
-      "tools": ["Photoshop", "Unity"],
+      "tools": [
+        "Photoshop",
+        "Unity"
+      ],
       "gallery": []
     },
     {
@@ -72,8 +136,13 @@
       "order": 5,
       "description": "把「读心」做成卡牌对局的 UI 与角色设计。",
       "medium": "游戏 UI / 角色",
-      "tools": ["Photoshop", "Unity"],
-      "gallery": ["/uploads/works/thought-poker.webp"]
+      "tools": [
+        "Photoshop",
+        "Unity"
+      ],
+      "gallery": [
+        "/uploads/works/thought-poker.webp"
+      ]
     },
     {
       "slug": "sky-garbage",
@@ -87,7 +156,10 @@
       "order": 6,
       "description": "在垃圾堆成的山上，捡回还能用的东西。",
       "medium": "游戏视觉 / 场景",
-      "tools": ["Unreal Engine 5", "Photoshop"],
+      "tools": [
+        "Unreal Engine 5",
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -102,7 +174,9 @@
       "order": 7,
       "description": "从高处看一座已经不再亮灯的城市。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -117,7 +191,9 @@
       "order": 8,
       "description": "树比人高，光只够照到下一步。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -132,7 +208,9 @@
       "order": 9,
       "description": "空车厢里的阳光，比外面更像梦。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -147,7 +225,11 @@
       "order": 10,
       "description": "三张脸，三种活法。",
       "medium": "3D 角色",
-      "tools": ["ZBrush", "Substance 3D Painter", "Marmoset Toolbag"],
+      "tools": [
+        "ZBrush",
+        "Substance 3D Painter",
+        "Marmoset Toolbag"
+      ],
       "gallery": []
     },
     {
@@ -162,7 +244,10 @@
       "order": 11,
       "description": "把怪物、幸存者和日常角色放在同一张纸上。",
       "medium": "角色设计 / 概念",
-      "tools": ["Photoshop", "ZBrush"],
+      "tools": [
+        "Photoshop",
+        "ZBrush"
+      ],
       "gallery": []
     },
     {
@@ -177,7 +262,9 @@
       "order": 12,
       "description": "黄色防护服、旧氧气瓶，和一个还想活下去的人。",
       "medium": "角色概念",
-      "tools": ["Photoshop"],
+      "tools": [
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -192,7 +279,10 @@
       "order": 13,
       "description": "皮肤、眼窝，和光线落在脸上的方式。",
       "medium": "3D 角色",
-      "tools": ["ZBrush", "Substance 3D Painter"],
+      "tools": [
+        "ZBrush",
+        "Substance 3D Painter"
+      ],
       "gallery": []
     },
     {
@@ -207,7 +297,9 @@
       "order": 14,
       "description": "灯管在闪，走廊尽头没有门。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -222,7 +314,9 @@
       "order": 15,
       "description": "三个角色，三种配色。",
       "medium": "插画 / 角色",
-      "tools": ["Photoshop"],
+      "tools": [
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -237,7 +331,9 @@
       "order": 16,
       "description": "货架还在，人已经不在了。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -252,7 +348,9 @@
       "order": 17,
       "description": "中庭的灯还亮着，像什么都没发生。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -267,7 +365,9 @@
       "order": 18,
       "description": "火是画面里唯一还在动的东西。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -282,7 +382,9 @@
       "order": 19,
       "description": "在房间里弹一首没人听的歌。",
       "medium": "插画",
-      "tools": ["Photoshop"],
+      "tools": [
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -297,7 +399,9 @@
       "order": 20,
       "description": "从黑里长出来的东西。",
       "medium": "角色 / 怪物设计",
-      "tools": ["Photoshop"],
+      "tools": [
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -312,7 +416,9 @@
       "order": 21,
       "description": "一辆红车停在不该停的地方。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     },
     {
@@ -327,7 +433,9 @@
       "order": 22,
       "description": "用蓝色线条做的分镜练习。",
       "medium": "线稿 / 分镜",
-      "tools": ["Photoshop"],
+      "tools": [
+        "Photoshop"
+      ],
       "gallery": []
     },
     {
@@ -342,7 +450,10 @@
       "order": 23,
       "description": "为一个小原型做的像素关卡。",
       "medium": "像素 / 关卡美术",
-      "tools": ["Aseprite", "Godot"],
+      "tools": [
+        "Aseprite",
+        "Godot"
+      ],
       "gallery": []
     },
     {
@@ -357,7 +468,9 @@
       "order": 24,
       "description": "给镜头练习做的山脉场景。",
       "medium": "实时场景 / UE5",
-      "tools": ["Unreal Engine 5"],
+      "tools": [
+        "Unreal Engine 5"
+      ],
       "gallery": []
     }
   ]
