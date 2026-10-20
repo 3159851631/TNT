@@ -36,6 +36,21 @@ collections:
           - { label: 首页大字, name: statement, widget: string }
           - { label: 邮箱, name: email, widget: string, required: false }
           - { label: 所在地, name: location, widget: string }
+          - { label: 出生日期, name: birthDate, widget: string, hint: "YYYY-MM-DD，用于自动计算年龄" }
+          - { label: 微信, name: wechat, widget: string, required: false }
+          - { label: QQ, name: qq, widget: string, required: false }
+          - label: 简介（每行一句）
+            name: bio
+            widget: text
+            required: false
+          - label: QQ 群
+            name: qqGroups
+            widget: list
+            required: false
+            fields:
+              - { label: 群号, name: number, widget: string }
+              - { label: 群名, name: name, widget: string, required: false }
+              - { label: 链接, name: url, widget: string, required: false }
           - label: 社交链接
             name: socials
             widget: list
@@ -147,6 +162,13 @@ collections:
                 widget: string
                 required: false
                 hint: 例如 BV1xx411c7mD。填了之后封面会变成可播放的 B 站播放器。
+              - label: 平台
+                name: provider
+                widget: select
+                options: [bilibili, youtube]
+                default: bilibili
+              - { label: YouTube ID, name: youtubeId, widget: string, required: false, hint: "YouTube 视频 ID；填了也会变成播放器" }
+              - { label: 账号, name: account, widget: string, required: false, hint: "例如 B站主号 / B站小号 / YouTube" }
               - { label: 封面图, name: cover, widget: image }
               - { label: 描述, name: description, widget: text }
 

@@ -6,6 +6,9 @@ interface Video {
   year: string;
   duration?: string;
   bvid?: string;
+  youtubeId?: string;
+  provider?: 'bilibili' | 'youtube';
+  account?: string;
   cover: string;
   description?: string;
 }
@@ -15,29 +18,71 @@ interface Props {
 }
 
 const { video } = Astro.props;
+const hasVideo = Boolean(video.bvid || video.youtubeId);
+const provider = video.provider || (video.youtubeId ? 'youtube' : 'bilibili');
+const providerLabel = provider === 'youtube' ? 'YOUTUBE' : 'BILIBILI';
 ---
 
 <article class="video-card" data-reveal>
   <div class="video-card__cover">
     <img src={video.cover} alt={video.title} loading="lazy" decoding="async" />
-    {video.bvid ? (
+    {hasVideo ? (
       <button
         class="video-card__play"
         type="button"
-        data-bvid={video.bvid}
+        data-provider={provider}
+        data-bvid={video.bvid || ''}
+        data-youtube={video.youtubeId || ''}
         data-title={video.title}
         aria-label={`播放 ${video.title}`}
       >
         <span></span>
       </button>
     ) : (
-      <span class="video-card__hint-badge">B 站视频待接入</span>
+      <span class="video-card__hint-badge">视频待接入</span>
     )}
   </div>
   <div class="video-card__body">
+    <div class="video-card__meta">
+      <span class="video-card__provider">{providerLabel}</span>
+      {video.account && <span class="video-card__account">{video.account}</span>}
+    </div>
     <h3 class="video-card__title">{video.title}</h3>
     {video.en && <p class="video-card__en">{video.en} · {video.year}</p>}
     {video.description && <p class="video-card__desc">{video.description}</p>}
-    <p class="video-card__hint">{video.bvid ? '点击播放 · BILIBILI' : '在后台填入 BV 号后自动出现播放器'}</p>
+    <p class="video-card__hint">
+      {hasVideo ? `点击播放 · ${providerLabel}` : '在后台填入 B 站 BV 号或 YouTube ID 后出现播放器'}
+    </p>
   </div>
 </article>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.video-card__play').forEach((button) => {
+    if (button.dataset.bound === '1') return;
+    button.dataset.bound = '1';
+    button.addEventListener('click', () => {
+      const cover = button.closest<HTMLElement>('.video-card__cover');
+      if (!cover) return;
+      const provider = button.dataset.provider || 'bilibili';
+      const bvid = button.dataset.bvid || '';
+      const youtubeId = button.dataset.youtube || '';
+      if (provider === 'bilibili' && !bvid) return;
+      if (provider === 'youtube' && !youtubeId) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'video-card__iframe';
+      iframe.loading = 'lazy';
+      iframe.title = button.dataset.title || '视频播放器';
+      iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; encrypted-media');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('scrolling', 'no');
+      iframe.src =
+        provider === 'youtube'
+          ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(youtubeId)}?autoplay=1&rel=0`
+          : `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bvid)}&page=1&high_quality=1&danmaku=0&autoplay=1`;
+      cover.innerHTML = '';
+      cover.appendChild(iframe);
+    });
+  });
+</script>

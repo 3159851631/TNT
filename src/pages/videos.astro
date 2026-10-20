@@ -1,14 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 import VideoCard from '../components/VideoCard.astro';
 import videosData from '../data/videos.json';
+import site from '../data/site.json';
 
 const videos = videosData.videos;
+const qqGroups = site.qqGroups as Array<{ number: string; name?: string; url?: string }>;
 ---
 
 <Base
   title="视频"
-  description="EXPLODINGTNT 的开发日志、场景 Breakdown 与游戏 UI 动效。"
+  description="王君 / EXPLODINGTNT 的开发日志、场景 Breakdown、游戏 UI 动效与游戏视频。"
   image={videos[0]?.cover}
 >
   <div class="wrap">
@@ -16,11 +19,12 @@ const videos = videosData.videos;
       <p class="page-head__kicker">MOTION / 视频</p>
       <h1 class="page-head__title">视频 <em>MOTION</em></h1>
       <p class="page-head__lead">
-        开发日志、场景 Breakdown、UI 动效。长视频放在 B 站，网站里直接嵌播放器；不占网站空间，国内加载也快。
+        开发日志、场景 Breakdown、UI 动效和游戏视频。B 站和 YouTube 的视频直接嵌在网站里播放，
+        不占网站空间。
       </p>
       <div class="page-head__meta">
-        <span><b>{videos.length}</b> 个视频位</span>
-        <span>BILIBILI</span>
+        <span><b>{videos.length}</b> 个视频</span>
+        <span>BILIBILI / YOUTUBE</span>
         <span>点击封面播放</span>
       </div>
     </header>
@@ -29,11 +33,62 @@ const videos = videosData.videos;
       {videos.map((video) => <VideoCard video={video} />)}
     </div>
 
-    <div class="notice" style="margin-top: 36px">
-      <span>
-        <b>还没有接播放器？</b>
-        每张视频卡在后台有一个「B 站 BV 号」字段。把 BV 号填进去，封面就会自动变成可播放的 B 站播放器。
-      </span>
-    </div>
+    {videos.length === 0 && (
+      <div class="notice" style="margin-top: 30px">
+        <span>
+          B 站视频正在批量导入。你可以先打开
+          <a href="https://space.bilibili.com/335700319" target="_blank" rel="noopener noreferrer">B站主号</a>
+          或
+          <a href="https://space.bilibili.com/425353868" target="_blank" rel="noopener noreferrer">B站小号</a>。
+          后台填入 BV 号后，这里会自动出现播放器。
+        </span>
+      </div>
+    )}
+
+    <section class="video-contact" id="contact">
+      <p class="page-head__kicker">CONTACT / 联系</p>
+      <h2 class="subhead">QQ 群 / 微信 / QQ</h2>
+      <p class="page-head__lead" style="max-width: 42em">
+        约稿、合作、游戏交流，欢迎来群里或直接私信。微信和 QQ 点一下可以复制。
+      </p>
+      <div class="contact-grid">
+        {qqGroups.map((group) => (
+          <a class="contact-card" href={group.url || '#'} target="_blank" rel="noopener noreferrer">
+            <b>QQ 群</b>
+            <span>{group.number}{group.name ? ` · ${group.name}` : ''}</span>
+          </a>
+        ))}
+        <button class="contact-card" type="button" data-copy={site.wechat}>
+          <b>微信</b>
+          <span>{site.wechat}</span>
+        </button>
+        <button class="contact-card" type="button" data-copy={site.qq}>
+          <b>QQ</b>
+          <span>{site.qq}</span>
+        </button>
+      </div>
+      <div style="margin-top: 26px">
+        <SocialLinks />
+      </div>
+    </section>
   </div>
 </Base>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const text = button.dataset.copy || '';
+      const label = button.querySelector('span');
+      const original = label?.textContent || '';
+      try {
+        await navigator.clipboard.writeText(text);
+        if (label) {
+          label.textContent = '已复制';
+          window.setTimeout(() => { label.textContent = original; }, 1200);
+        }
+      } catch {
+        window.prompt('复制这段号码：', text);
+      }
+    });
+  });
+</script>

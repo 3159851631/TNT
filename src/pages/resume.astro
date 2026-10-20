@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import SocialLinks from '../components/SocialLinks.astro';
+import Age from '../components/Age.astro';
 import projectsData from '../data/projects.json';
 
 const projects = projectsData.projects.filter((project) =>
@@ -90,7 +91,7 @@ const awards = [
           <p class="resume__role">EXPLODINGTNT · 游戏美术 / 视觉设计 / 独立游戏开发</p>
         </div>
         <div class="resume__contact">
-          <span>20 岁 · 江西赣州</span>
+          <span><Age /> · 江西赣州</span>
           <a href="tel:18879742281">18879742281</a>
           <a href="mailto:3159851631@qq.com">3159851631@qq.com</a>
           <span>B站主号 / B站小号 / YouTube / X / Patreon / itch.io</span>

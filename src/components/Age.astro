@@ -1,0 +1,30 @@
+---
+import site from '../data/site.json';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<span class={className} data-age data-birth={site.birthDate}>21 岁</span>
+
+<script>
+  const pad = (value: number) => String(value).padStart(2, '0');
+  document.querySelectorAll<HTMLElement>('[data-age]').forEach((element) => {
+    const birthDate = element.dataset.birth;
+    if (!birthDate) return;
+    const [year, month, day] = birthDate.split('-').map(Number);
+    if (!year || !month || !day) return;
+    const now = new Date();
+    const birthdayThisYear = new Date(now.getFullYear(), month - 1, day);
+    const hadBirthday = now >= birthdayThisYear;
+    const years = now.getFullYear() - year - (hadBirthday ? 0 : 1);
+    const lastBirthday = new Date(now.getFullYear() - (hadBirthday ? 0 : 1), month - 1, day);
+    const days = Math.max(0, Math.floor((now.getTime() - lastBirthday.getTime()) / 86400000));
+    const totalDays = Math.max(0, Math.floor((now.getTime() - new Date(year, month - 1, day).getTime()) / 86400000));
+    element.textContent = `${years} 岁 ${days} 天`;
+    element.setAttribute('title', `出生于 ${year}-${pad(month)}-${pad(day)}，共 ${totalDays} 天`);
+  });
+</script>

@@ -8,11 +8,52 @@
   "email": "3159851631@qq.com",
   "location": "中国 · 江西赣州",
   "socials": [
-    { "label": "B站主号", "short": "B1", "url": "https://space.bilibili.com/335700319", "handle": "335700319" },
-    { "label": "B站小号", "short": "B2", "url": "https://space.bilibili.com/425353868", "handle": "425353868" },
-    { "label": "YouTube", "short": "Y", "url": "https://www.youtube.com/@TNT-EXPLODINGTNT", "handle": "@TNT-EXPLODINGTNT" },
-    { "label": "X", "short": "X", "url": "https://x.com/TNT_TUONI", "handle": "@TNT_TUONI" },
-    { "label": "Patreon", "short": "P", "url": "https://www.patreon.com/cw/EXPLODINGTNT975", "handle": "EXPLODINGTNT975" },
-    { "label": "itch.io", "short": "I", "url": "https://tnt-monsterpark.itch.io/", "handle": "tnt-monsterpark" }
-  ]
+    {
+      "label": "B站主号",
+      "short": "B1",
+      "url": "https://space.bilibili.com/335700319",
+      "handle": "335700319"
+    },
+    {
+      "label": "B站小号",
+      "short": "B2",
+      "url": "https://space.bilibili.com/425353868",
+      "handle": "425353868"
+    },
+    {
+      "label": "YouTube",
+      "short": "Y",
+      "url": "https://www.youtube.com/@TNT-EXPLODINGTNT",
+      "handle": "@TNT-EXPLODINGTNT"
+    },
+    {
+      "label": "X",
+      "short": "X",
+      "url": "https://x.com/TNT_TUONI",
+      "handle": "@TNT_TUONI"
+    },
+    {
+      "label": "Patreon",
+      "short": "P",
+      "url": "https://www.patreon.com/cw/EXPLODINGTNT975",
+      "handle": "EXPLODINGTNT975"
+    },
+    {
+      "label": "itch.io",
+      "short": "I",
+      "url": "https://tnt-monsterpark.itch.io/",
+      "handle": "tnt-monsterpark"
+    },
+    {
+      "label": "小黑盒",
+      "short": "盒",
+      "url": "https://www.xiaoheihe.cn/",
+      "handle": "T酱の幻想时间"
+    }
+  ],
+  "birthDate": "2005-03-12",
+  "wechat": "wj18870775321",
+  "qq": "2381443649",
+  "qqGroups": [],
+  "bio": "游戏开发者，现在是单人开发者：美术 / 程序 / 音效 / 音乐全包。\n白天打工，下午开发，非常累。项目包容多元创意与喜好，欢迎交流。\n可接单，欢迎洽谈，直接私信联系。\nMaking a solo game. Working a full-time job, funds tight. Taking commissions."
 }
