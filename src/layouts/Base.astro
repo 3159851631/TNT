@@ -20,8 +20,9 @@ interface Props {
 const { title, description, image } = Astro.props;
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.tagline}`;
 const desc = description || site.description;
-const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(image || '/og-default.jpg', Astro.site);
+const siteBase = Astro.site ?? new URL('https://explodingtnt.pages.dev');
+const canonical = new URL(Astro.url.pathname, siteBase);
+const ogImage = new URL(image || '/og-default.jpg', siteBase);
 ---
 
 <!doctype html>
@@ -63,7 +64,7 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
         alternateName: site.cn,
         jobTitle: '独立游戏开发者 / 画师',
         description: site.description,
-        url: Astro.site?.href,
+        url: siteBase.href,
       })}
     />
 
