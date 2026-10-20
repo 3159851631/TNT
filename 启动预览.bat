@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-cd /d F:\web\personal-site
+cd /d F:\web\personal-site\TNT
 echo.
 echo 正在构建网站，请稍等...
 call npm run build
