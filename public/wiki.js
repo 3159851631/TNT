@@ -97,6 +97,19 @@
     });
   }
 
+  const hero = document.querySelector('[data-wiki-hero]');
+  if (hero) {
+    const slides = Array.from(hero.querySelectorAll('[data-wiki-hero-slide]'));
+    if (slides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let heroIndex = 0;
+      window.setInterval(() => {
+        slides[heroIndex].classList.remove('is-active');
+        heroIndex = (heroIndex + 1) % slides.length;
+        slides[heroIndex].classList.add('is-active');
+      }, 7000);
+    }
+  }
+
   const viewer = document.querySelector('[data-wiki-map]');
   if (viewer) {
     const image = viewer.querySelector('img');

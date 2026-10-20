@@ -1,6 +1,7 @@
 ---
 import site from '../data/site.json';
 import SocialLinks from './SocialLinks.astro';
+import LegalFooter from './LegalFooter.astro';
 
 const year = new Date().getFullYear();
 const nav = [
@@ -40,4 +41,6 @@ const nav = [
       <span>由 Astro 构建</span>
     </div>
   </div>
+
+  <LegalFooter />
 </footer>

@@ -1,0 +1,52 @@
+---
+import site from '../data/site.json';
+
+const year = new Date().getFullYear();
+const email = site.email || '3159851631@qq.com';
+const links = [
+  ['/terms/', '用户协议'],
+  ['/privacy/', '隐私政策'],
+  ['/children/', '儿童隐私政策'],
+  ['/discipline/', '自律公约'],
+  ['/care/', '成长关爱'],
+  ['/about/', '关于我们'],
+  ['/contact/', '联系我们'],
+];
+const socials = site.socials || [];
+---
+
+<div class="legal-footer">
+  <nav class="legal-footer__links" aria-label="网站法律信息">
+    {links.map(([href, label]) => <a href={href}>{label}</a>)}
+  </nav>
+
+  <p class="legal-footer__health">
+    健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+  </p>
+
+  <p class="legal-footer__copyright">
+    © {year} 王君 / EXPLODINGTNT（{site.name}）。保留所有权利。
+    本站所有作品、角色、设定、图片、文字、音乐与游戏内容，除特别注明外，著作权归王君（EXPLODINGTNT）所有；未经书面许可，禁止转载、复制、修改、商用或用于训练 AI。
+    第三方平台（Bilibili、YouTube、X、Patreon、itch.io、小黑盒等）的名称、商标与内容归其各自权利人所有。
+  </p>
+
+  <p class="legal-footer__disclaimer">
+    本站为个人作品集与游戏开发日志，不是商业官方网站；游戏仍在开发中，内容以实际版本为准。
+    站内部分链接指向第三方平台，其内容与隐私政策由对应平台负责。
+  </p>
+
+  <div class="legal-footer__contact">
+    <span><b>联系邮箱</b><a href={`mailto:${email}`}>{email}</a></span>
+    <span><b>微信</b>{site.wechat}</span>
+    <span><b>QQ</b>{site.qq}</span>
+    <span><b>所在地</b>{site.location}</span>
+  </div>
+
+  <div class="legal-footer__socials">
+    {socials.map((social) => (
+      <a href={social.url} target="_blank" rel="noopener noreferrer">{social.label} · {social.handle}</a>
+    ))}
+  </div>
+
+  <p class="legal-footer__meta">网站由 {site.name} 维护 · 使用 Astro 构建 · 托管于 Cloudflare Pages</p>
+</div>

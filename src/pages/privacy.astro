@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  ageGate={false}
+  title="隐私政策" description="EXPLODINGTNT 个人作品站的隐私政策：收集哪些数据、如何使用、第三方嵌入与你的权利。" noindex>
+  <div class="wrap legal-page">
+    <header class="page-head">
+      <p class="page-head__kicker">LEGAL / 隐私政策</p>
+      <h1 class="page-head__title">隐私政策 <em>PRIVACY</em></h1>
+      <p class="page-head__lead">本站不设账号系统，尽量少收集数据。以下是具体说明。</p>
+    </header>
+    <article class="legal-page__content">
+      <p class="legal-page__updated">最后更新：2026-10-20</p>
+
+      <h2>1. 本站收集什么</h2>
+      <p>本站是静态个人作品站，不提供注册、登录、评论或支付功能，不主动收集姓名、手机号、身份证号等个人身份信息。</p>
+      <p>在以下情况可能产生少量数据：</p>
+      <ul>
+        <li><strong>年龄确认</strong>：18+ 提示会把“已确认”状态保存在浏览器的 sessionStorage（关闭标签页后清除），不会上传到服务器；旧版“全部作品”页可能使用 localStorage 保存过确认状态。</li>
+        <li><strong>服务器日志</strong>：本站托管于 Cloudflare Pages，Cloudflare 可能按其隐私政策记录访问 IP、浏览器类型、访问时间等基础日志，用于安全与可用性。</li>
+        <li><strong>第三方嵌入</strong>：B 站、YouTube 播放器在加载时可能由对应平台设置 Cookie 或收集访问数据，适用其各自的隐私政策。</li>
+        <li><strong>主动联系</strong>：你通过邮箱、微信、QQ 或社交账号联系我时，我只会看到你主动提供的信息，并仅用于回复沟通。</li>
+      </ul>
+
+      <h2>2. 数据如何使用</h2>
+      <ul>
+        <li>维持网站正常运行与安全；</li>
+        <li>记住你的年龄确认状态，避免重复弹窗；</li>
+        <li>回复你的合作、授权或问题咨询；</li>
+        <li>统计访问情况时仅使用平台提供的聚合数据，不用于识别个人。</li>
+      </ul>
+
+      <h2>3. 数据共享</h2>
+      <p>本站不会出售、出租或交易你的个人信息。仅在以下情况可能共享：</p>
+      <ul>
+        <li>依据法律法规、司法或行政机关的合法要求；</li>
+        <li>为保护本站、用户或他人的合法权益所必需；</li>
+        <li>你明确同意的情况。</li>
+      </ul>
+
+      <h2>4. Cookie 与本地存储</h2>
+      <p>本站自身只使用必要的本地存储保存年龄确认状态。第三方嵌入（B 站、YouTube 等）可能设置其自己的 Cookie，你可以在浏览器中清除或限制 Cookie。</p>
+
+      <h2>5. 你的权利</h2>
+      <p>你可以随时清除浏览器中的本地存储与 Cookie，撤回年龄确认状态。若你曾通过邮件或社交账号联系我，可以要求查询、更正或删除你主动提供的相关信息。</p>
+
+      <h2>6. 未成年人</h2>
+      <p>本站包含成人向绘画与游戏内容，仅面向 18 岁以上用户。我们不会主动收集未成年人的个人信息；如你是未成年人，请勿使用本站或请在监护人陪同下离开。</p>
+
+      <h2>7. 政策更新</h2>
+      <p>本政策可能随网站功能或法律要求更新，更新后会在本页公布。重大变更会在首页或页脚提示。</p>
+
+      <h2>8. 联系方式</h2>
+      <p>隐私相关问题请联系：<a href="mailto:3159851631@qq.com">3159851631@qq.com</a>。</p>
+
+      <p class="legal-page__note">简而言之：本站不注册、不主动收集身份信息；年龄确认只存在你的浏览器里；B 站/YouTube 等第三方嵌入按其平台政策处理数据。</p>
+    </article>
+  </div>
+</Base>

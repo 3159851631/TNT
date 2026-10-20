@@ -2909,3 +2909,86 @@ html { scroll-behavior: smooth; }
   .social-link { border-color: #bbb !important; color: #333 !important; }
   .resume__skills span { border-color: #bbb !important; color: #333 !important; }
 }
+
+/* ================= legal footer + legal pages ================= */
+.legal-footer {
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+.legal-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 16px;
+  margin-bottom: 12px;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.legal-footer__links a:hover { color: var(--gold); }
+.legal-footer__health, .legal-footer__copyright, .legal-footer__disclaimer { margin: 0 0 8px; }
+.legal-footer__health { color: var(--ink-soft); }
+.legal-footer__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 20px;
+  margin-top: 12px;
+  font-size: 11px;
+}
+.legal-footer__contact b {
+  margin-right: 5px;
+  font-family: var(--display);
+  font-weight: 400;
+  color: var(--gold);
+}
+.legal-footer__contact a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.legal-footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 14px;
+  margin-top: 9px;
+  font-size: 10.5px;
+}
+.legal-footer__socials a { color: var(--muted); border-bottom: 1px solid var(--line); }
+.legal-footer__socials a:hover { color: var(--gold); }
+.legal-footer__meta {
+  margin: 12px 0 0;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .03em;
+  color: var(--faint);
+}
+
+.legal-page { max-width: 840px; margin: 0 auto; }
+.legal-page .page-head { padding-bottom: 24px; }
+.legal-page__content { color: var(--ink-soft); font-size: 13.5px; line-height: 1.95; }
+.legal-page__updated {
+  margin: 0 0 22px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.legal-page__content h2 {
+  margin: 30px 0 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.legal-page__content h3 { margin: 20px 0 7px; font-family: var(--display); font-size: 17px; font-weight: 400; color: var(--gold-2); }
+.legal-page__content p { margin: 0 0 11px; }
+.legal-page__content ul { margin: 0 0 13px; padding-left: 20px; }
+.legal-page__content li { margin-bottom: 4px; }
+.legal-page__content a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.legal-page__note {
+  margin: 18px 0;
+  padding: 12px 15px;
+  border-left: 2px solid var(--gold);
+  background: rgba(198,164,104,.06);
+  color: var(--ink-soft);
+}

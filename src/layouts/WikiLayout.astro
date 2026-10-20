@@ -1,5 +1,6 @@
 ---
 import meta from '../data/wiki/meta.json';
+import LegalFooter from '../components/LegalFooter.astro';
 import '../styles/wiki.css';
 
 interface Crumb {
@@ -113,6 +114,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt
         <p>《{meta.gameName}》游戏 Wiki · 设定与素材 © EXPLODINGTNT</p>
         <p>游戏仍在开发中，本 Wiki 会持续补充 · 内容以实际版本为准</p>
       </div>
+      <LegalFooter />
     </footer>
   <script src="/wiki.js" defer></script>
 </body>

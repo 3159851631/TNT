@@ -7,7 +7,7 @@
     "studio": "/uploads/wiki/logos/studio-logo.png"
   },
   "map": "/uploads/wiki/map/world-map.webp",
-  "hero": "/uploads/wiki/cg/guide.webp",
+  "hero": "/uploads/wiki/cg/hero-1.webp",
   "counts": {
     "regions": 19,
     "characters": 205,
@@ -113,5 +113,16 @@
       "count": 0,
       "desc": "世界地图，可用鼠标滚轮缩放和拖动。"
     }
+  ],
+  "heroSlides": [
+    "/uploads/wiki/cg/hero-1.webp",
+    "/uploads/wiki/cg/hero-2.webp",
+    "/uploads/wiki/cg/guide.webp",
+    "/uploads/wiki/cg/elf.webp",
+    "/uploads/wiki/cg/elf-2.webp",
+    "/uploads/wiki/cg/elf-3.webp",
+    "/uploads/wiki/cg/hero-7.webp",
+    "/uploads/wiki/cg/hero-8.webp",
+    "/uploads/wiki/cg/hero-9.webp"
   ]
 }

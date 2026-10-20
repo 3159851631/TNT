@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+---
+
+<Base
+  ageGate={false}
+  title="联系我们" description="联系王君 / EXPLODINGTNT：邮箱、微信、QQ 与全部社交账号。" noindex>
+  <div class="wrap legal-page">
+    <header class="page-head">
+      <p class="page-head__kicker">CONTACT / 联系我们</p>
+      <h1 class="page-head__title">联系我们 <em>CONTACT</em></h1>
+      <p class="page-head__lead">约稿、合作、授权、侵权投诉或只是想聊聊游戏，都可以直接联系。</p>
+    </header>
+    <article class="legal-page__content">
+      <p class="legal-page__updated">最后更新：2026-10-20</p>
+
+      <h2>邮箱</h2>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+
+      <h2>微信 / QQ</h2>
+      <p>微信：<strong>{site.wechat}</strong></p>
+      <p>QQ：<strong>{site.qq}</strong></p>
+
+      <h2>社交账号</h2>
+      <ul>
+        {site.socials.map((social) => (
+          <li><a href={social.url} target="_blank" rel="noopener noreferrer">{social.label}</a> · {social.handle}</li>
+        ))}
+      </ul>
+
+      <h2>合作 / 约稿</h2>
+      <p>可接游戏美术、角色/场景设计、UI、插画与视频相关合作。请在邮件中说明项目类型、周期、预算与参考方向，我会尽快回复。</p>
+
+      <h2>授权 / 转载</h2>
+      <p>站内作品版权归王君（EXPLODINGTNT）所有。需要转载、商用、二创授权或 AI 相关使用，请先通过邮箱取得书面许可。</p>
+
+      <h2>回复时间</h2>
+      <p>通常 1–3 个工作日内回复；白天有全职工作，晚上和周末处理合作与开发事务，回复可能稍慢，请见谅。</p>
+
+      <h2>侵权投诉</h2>
+      <p>如发现站内内容侵犯你的权利，请提供具体页面、权利证明与联系方式，发送到上方邮箱，我会核实后处理。</p>
+    </article>
+  </div>
+</Base>

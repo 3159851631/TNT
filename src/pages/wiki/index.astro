@@ -12,40 +12,47 @@ const featuredCharacters = characters.filter((character) => character.featured).
 const latestStories = stories.slice(0, 6);
 const categories = meta.categories;
 const counts = meta.counts;
+const heroSlides = meta.heroSlides?.length ? meta.heroSlides : [meta.hero].filter(Boolean);
 ---
 
 <WikiLayout title="游戏 Wiki" description={meta.tagline} active="home">
-  <section class="wiki-hero">
-    <div class="wiki-hero__copy">
-      <p class="wiki-kicker">GAME WIKI / 游戏图鉴</p>
-      {meta.logos.game && (
-        <div class="wiki-hero__logo-wrap">
-          <img class="wiki-hero__logo" src={meta.logos.game} alt={`${meta.gameName} LOGO`} />
-        </div>
-      )}
-      <h1 class="wiki-hero__title">{meta.gameName}</h1>
-      <p class="wiki-hero__en">{meta.gameEn}</p>
-      <p class="wiki-hero__tagline">
-        {meta.tagline}。从区域、角色、怪物、物品到合成、剧情和世界地图，这里收录整个游戏的设定。
-      </p>
-      <div class="wiki-hero__actions">
-        <a class="wiki-btn wiki-btn--primary" href="/wiki/regions/">从区域开始 →</a>
-        <a class="wiki-btn" href="/wiki/map/">打开世界地图</a>
-        <a class="wiki-btn" href="/wiki/characters/">全部角色</a>
-      </div>
-      <div class="wiki-hero__stats">
-        <div class="wiki-stat"><b>{counts.regions}</b><span>REGIONS / 区域</span></div>
-        <div class="wiki-stat"><b>{counts.characters}</b><span>CHARACTERS / 角色</span></div>
-        <div class="wiki-stat"><b>{counts.monsters}</b><span>MONSTERS / 怪物</span></div>
-        <div class="wiki-stat"><b>{counts.items}</b><span>ITEMS / 物品</span></div>
-        <div class="wiki-stat"><b>{counts.recipes}</b><span>RECIPES / 配方</span></div>
-        <div class="wiki-stat"><b>{counts.stories}</b><span>CHAPTERS / 剧情</span></div>
-      </div>
+  <section class="wiki-hero-full">
+    <div class="wiki-hero-full__bg" data-wiki-hero>
+      {heroSlides.map((src, index) => (
+        <img
+          class:list={['wiki-hero-full__slide', index === 0 && 'is-active']}
+          src={src}
+          alt={`${meta.gameName} CG ${index + 1}`}
+          loading={index === 0 ? 'eager' : 'lazy'}
+          decoding="async"
+          data-wiki-hero-slide
+        />
+      ))}
+      <div class="wiki-hero-full__veil"></div>
     </div>
-    <div class="wiki-hero__art">
-      {meta.hero && <img src={meta.hero} alt="向导 / 游戏 CG" loading="eager" decoding="async" />}
-      <div class="wiki-hero__veil"></div>
-      <p class="wiki-hero__caption">KEY VISUAL / 向导 · 初始森林</p>
+    <div class="wiki-hero-full__inner">
+      <div class="wiki-hero-full__copy">
+        <p class="wiki-kicker">GAME WIKI / 游戏图鉴</p>
+        {meta.logos.game && <img class="wiki-hero-full__logo" src={meta.logos.game} alt={`${meta.gameName} LOGO`} />}
+        <h1 class="wiki-hero-full__title">{meta.gameName}</h1>
+        <p class="wiki-hero-full__en">{meta.gameEn}</p>
+        <p class="wiki-hero-full__tagline">
+          {meta.tagline}。从区域、角色、怪物、物品到合成、剧情和世界地图，这里收录整个游戏的设定。
+        </p>
+        <div class="wiki-hero-full__actions">
+          <a class="wiki-btn wiki-btn--primary" href="/wiki/regions/">从区域开始 →</a>
+          <a class="wiki-btn" href="/wiki/map/">打开世界地图</a>
+          <a class="wiki-btn" href="/wiki/characters/">全部角色</a>
+        </div>
+        <div class="wiki-hero-full__stats">
+          <div class="wiki-stat"><b>{counts.regions}</b><span>REGIONS / 区域</span></div>
+          <div class="wiki-stat"><b>{counts.characters}</b><span>CHARACTERS / 角色</span></div>
+          <div class="wiki-stat"><b>{counts.monsters}</b><span>MONSTERS / 怪物</span></div>
+          <div class="wiki-stat"><b>{counts.items}</b><span>ITEMS / 物品</span></div>
+          <div class="wiki-stat"><b>{counts.recipes}</b><span>RECIPES / 配方</span></div>
+          <div class="wiki-stat"><b>{counts.stories}</b><span>CHAPTERS / 剧情</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -69,6 +76,28 @@ const counts = meta.counts;
           </div>
           <p class="wiki-cat__desc">{category.desc}</p>
           <span class="wiki-cat__arrow">OPEN ↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">ALL CHARACTERS / 全部角色</p>
+        <h2 class="wiki-section__title">所有人都在这里</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/characters/">全部 {counts.characters} 位角色 →</a>
+    </header>
+    <p class="wiki-section__note">点小头像直接进角色页。没有立绘的角色先用名字占位。</p>
+    <div class="wiki-avatar-grid">
+      {characters.map((character) => (
+        <a class="wiki-avatar" href={`/wiki/characters/${character.slug}/`} title={character.name} aria-label={character.name}>
+          {character.image ? (
+            <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
+          ) : (
+            <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+          )}
         </a>
       ))}
     </div>
