@@ -1,6 +1,8 @@
 ---
 import WikiLayout from '../../../layouts/WikiLayout.astro';
 import data from '../../../data/wiki/regions.json';
+import charactersData from '../../../data/wiki/characters.json';
+import monstersData from '../../../data/wiki/monsters.json';
 
 export function getStaticPaths() {
   return data.regions.map((region) => ({ params: { slug: region.slug }, props: { region } }));
@@ -52,6 +54,33 @@ const related = data.regions.filter((r) => r.slug !== region.slug).slice(0, 4);
           </>
         )}
 
+        {region.maps.length > 0 && (
+          <section class="wiki-region-maps">
+            <h2>区域地图</h2>
+            <div class="wiki-map-gallery">
+              {region.maps.map((map) => (
+                <a href={map} target="_blank" rel="noopener noreferrer">
+                  <img src={map} alt={`${region.name} 区域地图`} loading="lazy" decoding="async" />
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {region.subregions.length > 0 && (
+          <section class="wiki-subregions">
+            <h2>子区域 / 小地点（{region.subregions.length}）</h2>
+            <div class="wiki-subregions__grid">
+              {region.subregions.map((sub) => (
+                <div class="wiki-subregion">
+                  <h3>{sub.name}</h3>
+                  {sub.rooms.length > 0 && <p>{sub.rooms.join(' · ')}</p>}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <h2>区域图集</h2>
         {region.image ? (
           <p><img src={region.image} alt={`${region.name} 区域图`} loading="lazy" /></p>
@@ -65,10 +94,15 @@ const related = data.regions.filter((r) => r.slug !== region.slug).slice(0, 4);
           <h2 class="wiki-region-list__title">NPC / 角色（{region.npcs.length}）</h2>
           <div class="wiki-region-list__items">
             {region.npcs.length === 0 && <span class="wiki-muted">暂无记录</span>}
-            {region.npcs.map((npc) => (
-              npc.slug ? <a class="wiki-region-list__item" href={`/wiki/characters/${npc.slug}/`}>{npc.name}</a>
-                : <span class="wiki-region-list__item">{npc.name}</span>
-            ))}
+            {region.npcs.map((npc) => {
+              const character = charactersData.characters.find((c) => c.name === npc.name);
+              return npc.slug ? (
+                <a class="wiki-region-list__item" href={`/wiki/characters/${npc.slug}/`}>
+                  {character?.image && <img src={character.image} alt={npc.name} loading="lazy" />}
+                  {npc.name}
+                </a>
+              ) : <span class="wiki-region-list__item">{npc.name}</span>;
+            })}
           </div>
         </section>
 
@@ -87,10 +121,15 @@ const related = data.regions.filter((r) => r.slug !== region.slug).slice(0, 4);
           <h2 class="wiki-region-list__title">怪物（{region.monsters.length}）</h2>
           <div class="wiki-region-list__items">
             {region.monsters.length === 0 && <span class="wiki-muted">暂无怪物记录</span>}
-            {region.monsters.map((monster) => (
-              monster.slug ? <a class="wiki-region-list__item" href={`/wiki/monsters/${monster.slug}/`}>{monster.name} <small>{monster.type}</small></a>
-                : <span class="wiki-region-list__item">{monster.name} <small>{monster.type}</small></span>
-            ))}
+            {region.monsters.map((monster) => {
+              const monsterData = monstersData.monsters.find((m) => m.name === monster.name);
+              return monster.slug ? (
+                <a class="wiki-region-list__item" href={`/wiki/monsters/${monster.slug}/`}>
+                  {monsterData?.image && <img src={monsterData.image} alt={monster.name} loading="lazy" />}
+                  {monster.name} <small>{monster.type}</small>
+                </a>
+              ) : <span class="wiki-region-list__item">{monster.name} <small>{monster.type}</small></span>;
+            })}
           </div>
         </section>
 

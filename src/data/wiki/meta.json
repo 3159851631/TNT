@@ -9,7 +9,7 @@
   "map": "/uploads/wiki/map/world-map.webp",
   "hero": "/uploads/wiki/cg/hero-1.webp",
   "counts": {
-    "regions": 19,
+    "regions": 23,
     "characters": 205,
     "monsters": 274,
     "items": 456,

@@ -35,10 +35,21 @@ const region = regionsData.regions.find((r) => r.name === story.region);
     <div class="wiki-prose" set:html={story.html} />
 
     {relatedCharacters.length > 0 && (
-      <section class="wiki-related">
+      <section class="wiki-story-characters">
         <h2>本章角色</h2>
-        <div class="wiki-related__grid">
-          {relatedCharacters.map((c) => <a class="wiki-related__link" href={`/wiki/characters/${c.slug}/`}>{c.name} <span class="wiki-mono">{c.system}</span></a>)}
+        <div class="wiki-story-characters__grid">
+          {relatedCharacters.map((c) => (
+            <a class="wiki-story-character" href={`/wiki/characters/${c.slug}/`}>
+              <span class="wiki-story-character__pic">
+                {c.image ? (
+                  <img src={c.image} alt={c.name} loading="lazy" decoding="async" />
+                ) : (
+                  <span class="wiki-card__placeholder">{c.name.slice(0, 1)}</span>
+                )}
+              </span>
+              <span class="wiki-story-character__name">{c.name}</span>
+            </a>
+          ))}
         </div>
       </section>
     )}

@@ -328,7 +328,122 @@
           "chapter": "第八章"
         }
       ],
-      "order": 1
+      "order": 1,
+      "subregions": [
+        {
+          "name": "向导家",
+          "rooms": [
+            "主厅",
+            "房间",
+            "浴室",
+            "厨房",
+            "厕所",
+            "小路"
+          ]
+        },
+        {
+          "name": "被破坏教堂",
+          "rooms": [
+            "大厅"
+          ]
+        },
+        {
+          "name": "废弃冒险家营地",
+          "rooms": [
+            "营地",
+            "地下储藏室",
+            "木屋群"
+          ]
+        },
+        {
+          "name": "坟墓区",
+          "rooms": [
+            "石头房",
+            "巨型木屋",
+            "巨型木屋2层",
+            "巨型木屋3层",
+            "巨型木屋4层",
+            "院子",
+            "石碑群"
+          ]
+        },
+        {
+          "name": "钓鱼佬小破屋",
+          "rooms": [
+            "充满鱼猩味的木屋",
+            "木桥",
+            "次卧"
+          ]
+        },
+        {
+          "name": "后山被破坏的传送门",
+          "rooms": [
+            "传送门",
+            "巨大的树妖遗体"
+          ]
+        },
+        {
+          "name": "废弃灯塔",
+          "rooms": [
+            "五层阁楼",
+            "树妖遗体群"
+          ]
+        },
+        {
+          "name": "风车废弃小屋",
+          "rooms": [
+            "旋转的风车",
+            "悬崖的木质塔吊"
+          ]
+        },
+        {
+          "name": "被破坏的桥",
+          "rooms": [
+            "桥"
+          ]
+        },
+        {
+          "name": "山洞外",
+          "rooms": [
+            "石头群",
+            "青苔石头群",
+            "被破坏的石头"
+          ]
+        },
+        {
+          "name": "山后的丛林",
+          "rooms": [
+            "石头小路",
+            "丛林群"
+          ]
+        },
+        {
+          "name": "山里的小路",
+          "rooms": [
+            "石头地板",
+            "砖块地板",
+            "泥巴地块",
+            "青苔泥巴路"
+          ]
+        },
+        {
+          "name": "河",
+          "rooms": [
+            "河道",
+            "河边的围栏",
+            "木质走栏"
+          ]
+        },
+        {
+          "name": "回家的山路",
+          "rooms": [
+            "石碑群",
+            "被破坏的道路",
+            "山崖"
+          ]
+        }
+      ],
+      "maps": []
     },
     {
       "slug": "shan-xia-xiao-zhen",
@@ -387,7 +502,66 @@
           "chapter": "第一章"
         }
       ],
-      "order": 2
+      "order": 2,
+      "subregions": [
+        {
+          "name": "酒家",
+          "rooms": [
+            "饮酒区",
+            "一楼餐厅区",
+            "二楼住宿区",
+            "小隔间"
+          ]
+        },
+        {
+          "name": "图书馆",
+          "rooms": [
+            "书架区",
+            "桌凳"
+          ]
+        },
+        {
+          "name": "阿康温泉",
+          "rooms": [
+            "前台",
+            "温泉进门处",
+            "露天温泉（男，女）",
+            "温泉走廊",
+            "木厅"
+          ]
+        },
+        {
+          "name": "小镇区域块建筑",
+          "rooms": [
+            "瞭望塔",
+            "半城墙",
+            "石建筑",
+            "小巷子",
+            "小森林"
+          ]
+        },
+        {
+          "name": "女郎店",
+          "rooms": [
+            "陪同饮酒区"
+          ]
+        },
+        {
+          "name": "锯木厂",
+          "rooms": [
+            "锯木厅"
+          ]
+        },
+        {
+          "name": "小镇十字钟",
+          "rooms": [
+            "钟楼警备处"
+          ]
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/hill-town.webp"
+      ]
     },
     {
       "slug": "nuo-lan-de-zhu-cheng",
@@ -530,7 +704,97 @@
       ],
       "events": [],
       "story": [],
-      "order": 3
+      "order": 3,
+      "subregions": [
+        {
+          "name": "主城3环",
+          "rooms": [
+            "石建筑群",
+            "木建筑群",
+            "水井",
+            "酒家木桶群",
+            "圆形柱子塔建筑",
+            "木布风车",
+            "集市",
+            "平民摊贩",
+            "小商店群"
+          ]
+        },
+        {
+          "name": "主城2环",
+          "rooms": [
+            "贵族石建筑群",
+            "魔法师药水商店",
+            "武器炼金工房",
+            "高级餐厅",
+            "温泉馆"
+          ]
+        },
+        {
+          "name": "主城1环",
+          "rooms": [
+            "王城国家宫殿",
+            "皇族餐厅",
+            "宫殿大厅",
+            "皇家图书馆"
+          ]
+        },
+        {
+          "name": "海港区",
+          "rooms": [
+            "石地板",
+            "小渔船",
+            "鱼摊贩",
+            "守卫塔",
+            "小路（遇到魔王）"
+          ]
+        },
+        {
+          "name": "冒险者工会",
+          "rooms": [
+            "前台报名处",
+            "公告专栏",
+            "排行榜",
+            "桌凳群",
+            "酒吧处",
+            "酒桶群"
+          ]
+        },
+        {
+          "name": "决斗场",
+          "rooms": [
+            "观众席位",
+            "擂台（打斗场）",
+            "评委席位",
+            "贵族席位"
+          ]
+        },
+        {
+          "name": "奴隶市场",
+          "rooms": [
+            "奴隶售卖区",
+            "摊贩位",
+            "锁链群",
+            "二楼贵族休息室"
+          ]
+        },
+        {
+          "name": "王城学院",
+          "rooms": [
+            "大教堂（学堂1区）",
+            "学堂2区",
+            "操场（训练区）",
+            "学员宿舍",
+            "学院图书馆",
+            "学员宿舍（主角宿舍）",
+            "学院宿舍走廊区",
+            "学院特制决斗场"
+          ]
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/norland.webp"
+      ]
     },
     {
       "slug": "wang-cheng-xue-yuan",
@@ -592,7 +856,48 @@
           "chapter": "第七章"
         }
       ],
-      "order": 4
+      "order": 4,
+      "subregions": [
+        {
+          "name": "王城学院",
+          "rooms": []
+        },
+        {
+          "name": "大教堂（学堂1区）",
+          "rooms": []
+        },
+        {
+          "name": "学堂2区",
+          "rooms": []
+        },
+        {
+          "name": "操场（训练区）",
+          "rooms": []
+        },
+        {
+          "name": "学员宿舍",
+          "rooms": []
+        },
+        {
+          "name": "学院图书馆",
+          "rooms": []
+        },
+        {
+          "name": "学员宿舍（主角宿舍）",
+          "rooms": []
+        },
+        {
+          "name": "学院宿舍走廊区",
+          "rooms": []
+        },
+        {
+          "name": "学院特制决斗场",
+          "rooms": []
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/norland.webp"
+      ]
     },
     {
       "slug": "sha-mo-yan-sha-guo",
@@ -601,7 +906,7 @@
       "type": "沙漠",
       "size": "大",
       "description": "炎沙国的沙海。木乃伊、死亡蠕虫、沙暴，和沉在沙下的太阳神殿。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/desert.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -781,7 +1086,68 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 5
+      "order": 5,
+      "subregions": [
+        {
+          "name": "沙漠破旧的神庙",
+          "rooms": [
+            "宫殿大厅",
+            "室内走廊"
+          ]
+        },
+        {
+          "name": "金字塔",
+          "rooms": [
+            "金字塔内部",
+            "金字塔隐藏密室",
+            "魔物娘人面相"
+          ]
+        },
+        {
+          "name": "沙漠城区",
+          "rooms": [
+            "沙漠破旧城墙",
+            "仙人掌"
+          ]
+        },
+        {
+          "name": "岩石山嵌入神庙",
+          "rooms": [
+            "山洞地下宫殿大厅"
+          ]
+        },
+        {
+          "name": "沙漠之海",
+          "rooms": [
+            "海市蜃楼群",
+            "沙漠小镇",
+            "集市"
+          ]
+        },
+        {
+          "name": "消失的金身人雕像",
+          "rooms": []
+        },
+        {
+          "name": "沙漠旅人帐篷",
+          "rooms": [
+            "旅人群"
+          ]
+        },
+        {
+          "name": "破旧古堡",
+          "rooms": [
+            "废弃看守塔"
+          ]
+        },
+        {
+          "name": "沙漠馆酒家",
+          "rooms": []
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/desert.webp"
+      ]
     },
     {
       "slug": "sha-tan-qu-hai-yang",
@@ -790,7 +1156,7 @@
       "type": "沙滩",
       "size": "小",
       "description": "锈蚀港湾和废弃港口。海雾、灯塔、钓叟，以及一只巨型螃蟹。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/beach.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -900,7 +1266,44 @@
           "chapter": "第六章"
         }
       ],
-      "order": 6
+      "order": 6,
+      "subregions": [
+        {
+          "name": "沙滩岸上区",
+          "rooms": []
+        },
+        {
+          "name": "木制走廊",
+          "rooms": []
+        },
+        {
+          "name": "破旧船只",
+          "rooms": []
+        },
+        {
+          "name": "巨型海盗船",
+          "rooms": []
+        },
+        {
+          "name": "港口",
+          "rooms": [
+            "集市",
+            "帐篷群",
+            "被破坏的皇室建筑"
+          ]
+        },
+        {
+          "name": "奴隶市场",
+          "rooms": []
+        },
+        {
+          "name": "海底海苔基石群",
+          "rooms": []
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/beach.webp"
+      ]
     },
     {
       "slug": "hai-yao-qu-ai-lan-de-li-ya",
@@ -909,7 +1312,7 @@
       "type": "深海",
       "size": "大",
       "description": "海妖与深海遗民的地盘。珊瑚、潮汐和五百年守墓的海神。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/sea.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -1030,7 +1433,30 @@
         }
       ],
       "story": [],
-      "order": 7
+      "order": 7,
+      "subregions": [
+        {
+          "name": "海底海苔基石群",
+          "rooms": []
+        },
+        {
+          "name": "海底之花",
+          "rooms": []
+        },
+        {
+          "name": "巨型龟壳",
+          "rooms": [
+            "海底藤曼区"
+          ]
+        },
+        {
+          "name": "被破坏的皇室建筑",
+          "rooms": []
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/sea.webp"
+      ]
     },
     {
       "slug": "fu-huang-wang-guo-zhao-ze",
@@ -1039,7 +1465,7 @@
       "type": "沼泽",
       "size": "大",
       "description": "被诅咒的沼泽王国。猪人、蜥蜴族、五宗罪，和一位猪人公主。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/rotten-kingdom.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -1226,7 +1652,11 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 8
+      "order": 8,
+      "subregions": [],
+      "maps": [
+        "/uploads/wiki/region-maps/rotten-kingdom.webp"
+      ]
     },
     {
       "slug": "tian-kong-cheng-mo-yu-tian-cheng",
@@ -1347,7 +1777,9 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 9
+      "order": 9,
+      "subregions": [],
+      "maps": []
     },
     {
       "slug": "shuang-mai-zu-xue-shan",
@@ -1356,7 +1788,7 @@
       "type": "雪山",
       "size": "大",
       "description": "霜脉族的雪山。雪女、冰晶女皇、温泉旅店，和一个等了百年的故事。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/snow-mountain.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -1471,7 +1903,11 @@
         }
       ],
       "story": [],
-      "order": 10
+      "order": 10,
+      "subregions": [],
+      "maps": [
+        "/uploads/wiki/region-maps/snow-mountain.webp"
+      ]
     },
     {
       "slug": "huo-shi-ling",
@@ -1603,7 +2039,68 @@
         }
       ],
       "story": [],
-      "order": 11
+      "order": 11,
+      "subregions": [
+        {
+          "name": "营地",
+          "rooms": [
+            "帐篷群",
+            "桌凳群",
+            "木货推车",
+            "木栅栏群",
+            "石碓群",
+            "放哨塔",
+            "大本营",
+            "火堆"
+          ]
+        },
+        {
+          "name": "黑暗森林",
+          "rooms": [
+            "特殊巨型植物",
+            "巨型高松树",
+            "草类群",
+            "石类群",
+            "被烧焦的树",
+            "藤蔓",
+            "石墓碑",
+            "蜡烛群"
+          ]
+        },
+        {
+          "name": "小丛林",
+          "rooms": [
+            "沼泽群",
+            "卵巢群",
+            "巨型化石卵"
+          ]
+        },
+        {
+          "name": "快解体的半山",
+          "rooms": [
+            "被烧毁的木桥",
+            "悬崖枯树枝"
+          ]
+        },
+        {
+          "name": "废弃城堡",
+          "rooms": [
+            "石道路",
+            "被破坏的城墙",
+            "石建筑",
+            "巨型围墙",
+            "被烧焦的木炭群",
+            "木炭草群",
+            "岩浆",
+            "石洞龙卵巢",
+            "被破坏的石雕像群",
+            "被破坏的皇室建筑"
+          ]
+        }
+      ],
+      "maps": [
+        "/uploads/wiki/region-maps/volcano.webp"
+      ]
     },
     {
       "slug": "yong-ye-qu-huang-mo",
@@ -1711,7 +2208,9 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 12
+      "order": 12,
+      "subregions": [],
+      "maps": []
     },
     {
       "slug": "jing-ling-zu-cong-lin",
@@ -1836,7 +2335,9 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 13
+      "order": 13,
+      "subregions": [],
+      "maps": []
     },
     {
       "slug": "wu-ren-qu-la-ji-dui-sha-mo",
@@ -1858,7 +2359,9 @@
       ],
       "events": [],
       "story": [],
-      "order": 14
+      "order": 14,
+      "subregions": [],
+      "maps": []
     },
     {
       "slug": "long-zhi-dao-xue-xing-di-duan",
@@ -1867,7 +2370,7 @@
       "type": "岛屿",
       "size": "中",
       "description": "龙族的坟场。巴哈姆特、佩露、龙神，和斩下龙族王子的空中之神。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/dragon-island.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -1942,7 +2445,11 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 15
+      "order": 15,
+      "subregions": [],
+      "maps": [
+        "/uploads/wiki/region-maps/dragon-island.webp"
+      ]
     },
     {
       "slug": "qiong-yi-zu-wen-yi-zhi-di",
@@ -1951,7 +2458,7 @@
       "type": "瘟疫",
       "size": "中",
       "description": "菌母与瘟神的土地。哥布林抵抗者、腐化萨满，和一个自愿成为容器的圣骑士。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/plague.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -2030,7 +2537,11 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 16
+      "order": 16,
+      "subregions": [],
+      "maps": [
+        "/uploads/wiki/region-maps/plague.webp"
+      ]
     },
     {
       "slug": "shi-zhan-shan-mai-shan-qu",
@@ -2039,7 +2550,7 @@
       "type": "山区",
       "size": "大",
       "description": "石谵山脉与永夜古堡。雷电法王、吸血鬼女伯爵，和山里的矿洞。",
-      "image": null,
+      "image": "/uploads/wiki/region-maps/barney-mountains.webp",
       "map": "/uploads/wiki/map/world-map.webp",
       "monsters": [
         {
@@ -2184,7 +2695,11 @@
         }
       ],
       "story": [],
-      "order": 17
+      "order": 17,
+      "subregions": [],
+      "maps": [
+        "/uploads/wiki/region-maps/barney-mountains.webp"
+      ]
     },
     {
       "slug": "di-lao-wu-xian-di-xia-cheng",
@@ -2322,7 +2837,9 @@
           "chapter": "独立区域"
         }
       ],
-      "order": 18
+      "order": 18,
+      "subregions": [],
+      "maps": []
     },
     {
       "slug": "ling-jie-xu-wu-de-kong-jian",
@@ -2349,7 +2866,204 @@
         }
       ],
       "story": [],
-      "order": 19
+      "order": 19,
+      "subregions": [],
+      "maps": []
+    },
+    {
+      "slug": "zhu-shi-jie",
+      "name": "主世界",
+      "en": "",
+      "type": "经营",
+      "size": "大",
+      "description": "主世界的日常与经营区域：主角家、店铺、酒吧、超市和侦探社。",
+      "image": null,
+      "map": "/uploads/wiki/map/world-map.webp",
+      "maps": [],
+      "subregions": [
+        {
+          "name": "主角家里",
+          "rooms": [
+            "餐厅",
+            "合成室",
+            "厕所",
+            "客厅",
+            "玄关",
+            "养殖园",
+            "浴室",
+            "合成室",
+            "二楼房间"
+          ]
+        },
+        {
+          "name": "夜店酒吧",
+          "rooms": [
+            "二楼探案工作室",
+            "三楼杂货间"
+          ]
+        },
+        {
+          "name": "服装店",
+          "rooms": [
+            "服装货架群（可试穿服装）"
+          ]
+        },
+        {
+          "name": "餐厅",
+          "rooms": [
+            "桌凳群（可点餐）",
+            "前台"
+          ]
+        },
+        {
+          "name": "丝袜店",
+          "rooms": [
+            "服装货架群（不可试穿服装）"
+          ]
+        },
+        {
+          "name": "超市",
+          "rooms": [
+            "货架群",
+            "收银台（可购买所需用品）",
+            "地下室（有时会有灵异事件）"
+          ]
+        },
+        {
+          "name": "卡拉OK",
+          "rooms": [
+            "麦克风群（需要使用麦克风唱歌）",
+            "包厢群",
+            "拍大头照机"
+          ]
+        },
+        {
+          "name": "扭蛋机店",
+          "rooms": [
+            "可扭蛋（随机中奖）"
+          ]
+        },
+        {
+          "name": "二次元谷子店",
+          "rooms": [
+            "手办柜台群",
+            "前台购买"
+          ]
+        },
+        {
+          "name": "寺庙",
+          "rooms": [
+            "巨大摇钟（许愿）"
+          ]
+        },
+        {
+          "name": "女仆咖啡厅",
+          "rooms": [
+            "桌凳群",
+            "可点女仆一起互动"
+          ]
+        },
+        {
+          "name": "游戏厅",
+          "rooms": [
+            "游戏机群",
+            "餐饮前台"
+          ]
+        },
+        {
+          "name": "地下偶像场地",
+          "rooms": [
+            "捧场"
+          ]
+        },
+        {
+          "name": "自动售卖机",
+          "rooms": [
+            "按钮界面（可购买需要的饮品）"
+          ]
+        },
+        {
+          "name": "小巷子",
+          "rooms": [
+            "垃圾桶群",
+            "垃圾堆",
+            "凶杀现场（有时会有灵异事件）"
+          ]
+        },
+        {
+          "name": "电影院",
+          "rooms": [
+            "播放电影前台(每一场需要指定时间观看)",
+            "电影里场"
+          ]
+        },
+        {
+          "name": "小摊贩",
+          "rooms": [
+            "讲价区"
+          ]
+        }
+      ],
+      "monsters": [],
+      "npcs": [],
+      "bosses": [],
+      "events": [],
+      "story": [],
+      "order": 20
+    },
+    {
+      "slug": "e-mo-zu-fu-lan-zhi-di",
+      "name": "恶魔族（腐烂之地）",
+      "en": "",
+      "type": "种族",
+      "size": "大",
+      "description": "恶魔族与腐烂之地的区域。",
+      "image": null,
+      "map": "/uploads/wiki/map/world-map.webp",
+      "maps": [],
+      "subregions": [],
+      "monsters": [],
+      "npcs": [],
+      "bosses": [],
+      "events": [],
+      "story": [],
+      "order": 21
+    },
+    {
+      "slug": "si-wang-dao-fu-xiu-zhi-di",
+      "name": "死亡岛（腐朽之地）",
+      "en": "",
+      "type": "岛屿",
+      "size": "大",
+      "description": "死亡岛与腐朽之地，旧世界的残骸。",
+      "image": null,
+      "map": "/uploads/wiki/map/world-map.webp",
+      "maps": [],
+      "subregions": [],
+      "monsters": [],
+      "npcs": [],
+      "bosses": [],
+      "events": [],
+      "story": [],
+      "order": 22
+    },
+    {
+      "slug": "ka-ka-de-xi-lian-bang",
+      "name": "卡卡德西联邦",
+      "en": "",
+      "type": "联邦",
+      "size": "中",
+      "description": "卡卡德西联邦，大陆另一侧的势力。",
+      "image": null,
+      "map": "/uploads/wiki/map/world-map.webp",
+      "maps": [],
+      "subregions": [],
+      "monsters": [],
+      "npcs": [],
+      "bosses": [],
+      "events": [],
+      "story": [],
+      "order": 23
     }
   ]
 }
