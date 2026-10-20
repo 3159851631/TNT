@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="未满 18 岁"
+  description="本站包含成人向内容，未满 18 岁请先离开。"
+  noindex
+  ageGate={false}
+>
+  <div class="wrap" style="min-height: 72vh; display: flex; align-items: center; justify-content: center; text-align: center">
+    <div>
+      <p class="page-head__kicker">CONTENT NOTICE / 内容提示</p>
+      <h1 class="page-head__title">未满 18 岁</h1>
+      <p class="page-head__lead" style="max-width: 34em; margin-inline: auto">
+        本站包含成人向绘画与游戏内容。感谢访问，18 岁后再来。
+      </p>
+      <p style="margin-top: 32px">
+        <a class="btn" href="/">返回首页</a>
+      </p>
+    </div>
+  </div>
+</Base>

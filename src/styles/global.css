@@ -2,6 +2,14 @@
    EXPLODINGTNT — Midnight Archive
    ========================================================= */
 
+@font-face {
+  font-family: "JiYingHuiPianHeYuan";
+  src: url("/fonts/jyhphy-2.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -21,8 +29,8 @@
   --gold: #c6a468;
   --violet: #8f7bb0;
 
-  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
-  --display: "Cormorant Garamond", "Noto Serif SC", "Songti SC", serif;
+  --serif: "JiYingHuiPianHeYuan", "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --display: "JiYingHuiPianHeYuan", "Cormorant Garamond", "Noto Serif SC", "Songti SC", serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
   --rail: 72px;
@@ -1419,6 +1427,7 @@ main { margin-left: var(--rail); }
   margin-top: 24px;
 }
 
+.age-locked, .age-locked body { overflow: hidden; }
 .age-gate {
   position: fixed;
   inset: 0;

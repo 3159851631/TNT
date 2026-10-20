@@ -16,9 +16,10 @@ interface Props {
   description?: string;
   image?: string;
   noindex?: boolean;
+  ageGate?: boolean;
 }
 
-const { title, description, image, noindex } = Astro.props;
+const { title, description, image, noindex, ageGate = true } = Astro.props;
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.tagline}`;
 const desc = description || site.description;
 const siteBase = Astro.site ?? new URL('https://tnt-game-site.pages.dev');
@@ -55,6 +56,15 @@ const ogImage = new URL(image || '/og-default.jpg', siteBase);
 
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script is:inline>document.documentElement.classList.add('js');</script>
+    {ageGate && (
+      <script is:inline>
+        try {
+          document.documentElement.classList.toggle('age-locked', sessionStorage.getItem('tnt-site-age') !== '1');
+        } catch (e) {
+          document.documentElement.classList.add('age-locked');
+        }
+      </script>
+    )}
 
     <script
       is:inline
@@ -77,6 +87,21 @@ const ogImage = new URL(image || '/og-default.jpg', siteBase);
     <div class="scroll-progress" aria-hidden="true"></div>
     <Rail />
     <Header />
+    {ageGate && (
+      <div class="age-gate" data-age-gate>
+        <div class="age-gate__card">
+          <p class="page-head__kicker">CONTENT NOTICE / 内容提示</p>
+          <h1 class="age-gate__title">本网站包含成人向绘画</h1>
+          <p>
+            网站里包含人体练习和成人向作品，仅限 18 岁以上查看。请确认你的年龄。
+          </p>
+          <div class="age-gate__actions">
+            <button class="btn btn--primary" type="button" data-age-enter>我已满 18 岁，进入</button>
+            <a class="btn" href="/leave/">未满 18 岁，离开</a>
+          </div>
+        </div>
+      </div>
+    )}
     <main id="main">
       <slot />
     </main>
@@ -129,5 +154,19 @@ const ogImage = new URL(image || '/og-default.jpg', siteBase);
         });
       });
     </script>
+    {ageGate && (
+      <script>
+        const gateEl = document.querySelector<HTMLElement>('[data-age-gate]');
+        document.querySelector('[data-age-enter]')?.addEventListener('click', () => {
+          try {
+            sessionStorage.setItem('tnt-site-age', '1');
+          } catch (e) {
+            // ignore storage errors
+          }
+          document.documentElement.classList.remove('age-locked');
+          gateEl?.classList.add('is-hidden');
+        });
+      </script>
+    )}
   </body>
 </html>
