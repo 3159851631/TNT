@@ -16,14 +16,20 @@ interface Props {
   description?: string;
   image?: string;
 }
-
 const { title, description, image } = Astro.props;
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.tagline}`;
 const desc = description || site.description;
-const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(image || '/og-default.jpg', Astro.site);
----
 
+let canonical;
+let ogImage;
+if (Astro.site) {
+  canonical = new URL(Astro.url.pathname, Astro.site);
+  ogImage = new URL(image || '/og-default.jpg', Astro.site);
+} else {
+  canonical = Astro.url.pathname;
+  ogImage = image || '/og-default.jpg';
+}
+---
 <!doctype html>
 <html lang="zh-CN">
   <head>
@@ -36,7 +42,6 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#08070c" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={pageTitle} />
@@ -49,10 +54,8 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={desc} />
     <meta name="twitter:image" content={ogImage} />
-
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script is:inline>document.documentElement.classList.add('js');</script>
-
     <script
       is:inline
       type="application/ld+json"
@@ -66,7 +69,6 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
         url: Astro.site?.href,
       })}
     />
-
     <link rel="preconnect" href="https://unpkg.com" />
   </head>
   <body>
@@ -78,7 +80,6 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
       <slot />
     </main>
     <Footer />
-
     <script>
       const progress = document.querySelector<HTMLElement>('.scroll-progress');
       const updateProgress = () => {
@@ -89,7 +90,6 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
       };
       document.addEventListener('scroll', updateProgress, { passive: true });
       updateProgress();
-
       const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
       if ('IntersectionObserver' in window) {
         const io = new IntersectionObserver(
@@ -107,7 +107,6 @@ const ogImage = new URL(image || '/og-default.jpg', Astro.site);
       } else {
         targets.forEach((el) => el.classList.add('is-visible'));
       }
-
       document.querySelectorAll<HTMLButtonElement>('[data-bvid]').forEach((button) => {
         button.addEventListener('click', () => {
           const bvid = button.dataset.bvid;
