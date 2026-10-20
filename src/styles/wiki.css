@@ -393,7 +393,7 @@ button, input { font: inherit; }
 .wiki-char-card { border: 1px solid var(--w-line); background: var(--w-panel); transition: border-color .2s, transform .2s; overflow: hidden; }
 .wiki-char-card:hover { border-color: var(--w-gold); transform: translateY(-2px); }
 .wiki-char-card__portrait { aspect-ratio: 4 / 3; background: var(--w-panel-2); overflow: hidden; }
-.wiki-char-card__portrait img { width: 100%; height: 100%; object-fit: contain; object-position: right center; background: var(--w-panel-2); filter: saturate(.9) brightness(.88); transition: transform .4s; }
+.wiki-char-card__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: saturate(.9) brightness(.88); transition: transform .4s; }
 .wiki-char-card:hover .wiki-char-card__portrait img { transform: scale(1.03); }
 .wiki-char-card__body { padding: 12px 14px 14px; }
 .wiki-char-card__name { margin: 0; font-family: var(--w-display); font-size: 19px; font-weight: 400; letter-spacing: .04em; }
@@ -455,8 +455,8 @@ button, input { font: inherit; }
 .wiki-card__media { position: relative; background: var(--w-panel-2); overflow: hidden; }
 .wiki-grid--regions .wiki-card__media { aspect-ratio: 16 / 9; }
 .wiki-grid--chars .wiki-card__media, .wiki-grid--monsters .wiki-card__media { aspect-ratio: 3 / 4; }
-.wiki-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: right center; background: var(--w-panel-2); filter: saturate(.88) brightness(.86); transition: transform .4s; }
-.wiki-grid--chars .wiki-card__media img, .wiki-grid--monsters .wiki-card__media img { object-position: right center; }
+.wiki-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: saturate(.88) brightness(.86); transition: transform .4s; }
+.wiki-grid--chars .wiki-card__media img, .wiki-grid--monsters .wiki-card__media img { object-position: top center; }
 .wiki-card:hover .wiki-card__media img { transform: scale(1.03); }
 .wiki-card__placeholder {
   display: flex;
@@ -547,7 +547,7 @@ button, input { font: inherit; }
 .wiki-detail__meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
 
 .wiki-infobox { border: 1px solid var(--w-line); background: var(--w-panel); overflow: hidden; }
-.wiki-infobox__image { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; object-position: right center; background: var(--w-panel-2); }
+.wiki-infobox__image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top center; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap { position: relative; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap .wiki-card__placeholder { min-height: 220px; font-size: 54px; }
 .wiki-infobox__title { margin: 0; padding: 13px 14px 0; font-family: var(--w-display); font-size: 22px; font-weight: 400; letter-spacing: .04em; }
@@ -894,8 +894,8 @@ body.wiki-body { overflow-x: hidden; }
 
 /* portrait-safe hero slide */
 .wiki-hero-full__slide--contain {
-  object-fit: contain;
-  object-position: right center;
+  object-fit: cover;
+  object-position: center top;
   background: var(--w-bg);
 }
 

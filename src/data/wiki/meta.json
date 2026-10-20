@@ -133,7 +133,7 @@
     },
     {
       "src": "/uploads/wiki/cg/hero-10.webp",
-      "fit": "contain"
+      "fit": "cover"
     }
   ]
 }
