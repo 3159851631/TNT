@@ -8,8 +8,8 @@
   "email": "3159851631@qq.com",
   "location": "中国 · 江西赣州",
   "socials": [
-    { "label": "Bilibili", "short": "B", "url": "https://space.bilibili.com/335700319", "handle": "335700319" },
-    { "label": "Bilibili 2", "short": "B2", "url": "https://space.bilibili.com/425353868", "handle": "425353868" },
+    { "label": "B站主号", "short": "B1", "url": "https://space.bilibili.com/335700319", "handle": "335700319" },
+    { "label": "B站小号", "short": "B2", "url": "https://space.bilibili.com/425353868", "handle": "425353868" },
     { "label": "YouTube", "short": "Y", "url": "https://www.youtube.com/@TNT-EXPLODINGTNT", "handle": "@TNT-EXPLODINGTNT" },
     { "label": "X", "short": "X", "url": "https://x.com/TNT_TUONI", "handle": "@TNT_TUONI" },
     { "label": "Patreon", "short": "P", "url": "https://www.patreon.com/c/EXPLODINGTNT975", "handle": "EXPLODINGTNT975" },
