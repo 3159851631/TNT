@@ -9,7 +9,7 @@
 
 backend:
   name: github
-  repo: EXPLODINGTNT/explodingtnt-site
+  repo: 3159851631/TNT
   branch: main
 
 media_folder: public/uploads

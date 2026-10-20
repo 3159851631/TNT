@@ -5,3 +5,5 @@ _tools/
 _import/
 .DS_Store
 *.log
+
+/TNT/
