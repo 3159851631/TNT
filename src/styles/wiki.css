@@ -81,15 +81,15 @@ button, input { font: inherit; }
   flex: 0 0 auto;
 }
 .wiki-brand__logo {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(198, 164, 104, 0.22));
 }
 .wiki-brand__text { display: flex; flex-direction: column; line-height: 1.15; }
 .wiki-brand__name {
   font-family: var(--w-display);
-  font-size: 20px;
+  font-size: 21px;
   letter-spacing: 0.06em;
   color: var(--w-ink);
 }
@@ -115,7 +115,7 @@ button, input { font: inherit; }
   padding: 7px 10px;
   border: 1px solid transparent;
   color: var(--w-soft);
-  font-size: 13px;
+  font-size: 13.5px;
   white-space: nowrap;
   transition: color .2s, border-color .2s, background .2s;
 }
@@ -243,7 +243,7 @@ button, input { font: inherit; }
   gap: 10px;
   margin: 0 0 14px;
   font-family: var(--w-mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .18em;
   color: var(--w-gold);
 }
@@ -297,11 +297,11 @@ button, input { font: inherit; }
 .wiki-hero__en {
   margin: 6px 0 0;
   font-family: var(--w-mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: .2em;
   color: var(--w-gold);
 }
-.wiki-hero__tagline { margin: 16px 0 0; max-width: 30em; color: var(--w-soft); font-size: 14px; }
+.wiki-hero__tagline { margin: 16px 0 0; max-width: 30em; color: var(--w-soft); font-size: 15.5px; }
 .wiki-hero__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .wiki-hero__stats {
   display: flex;
@@ -393,7 +393,7 @@ button, input { font: inherit; }
 .wiki-char-card { border: 1px solid var(--w-line); background: var(--w-panel); transition: border-color .2s, transform .2s; overflow: hidden; }
 .wiki-char-card:hover { border-color: var(--w-gold); transform: translateY(-2px); }
 .wiki-char-card__portrait { aspect-ratio: 4 / 3; background: var(--w-panel-2); overflow: hidden; }
-.wiki-char-card__portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: saturate(.9) brightness(.88); transition: transform .4s; }
+.wiki-char-card__portrait img { width: 100%; height: 100%; object-fit: contain; object-position: right center; background: var(--w-panel-2); filter: saturate(.9) brightness(.88); transition: transform .4s; }
 .wiki-char-card:hover .wiki-char-card__portrait img { transform: scale(1.03); }
 .wiki-char-card__body { padding: 12px 14px 14px; }
 .wiki-char-card__name { margin: 0; font-family: var(--w-display); font-size: 19px; font-weight: 400; letter-spacing: .04em; }
@@ -455,8 +455,8 @@ button, input { font: inherit; }
 .wiki-card__media { position: relative; background: var(--w-panel-2); overflow: hidden; }
 .wiki-grid--regions .wiki-card__media { aspect-ratio: 16 / 9; }
 .wiki-grid--chars .wiki-card__media, .wiki-grid--monsters .wiki-card__media { aspect-ratio: 3 / 4; }
-.wiki-card__media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.88) brightness(.86); transition: transform .4s; }
-.wiki-grid--chars .wiki-card__media img, .wiki-grid--monsters .wiki-card__media img { object-position: top center; }
+.wiki-card__media img { width: 100%; height: 100%; object-fit: contain; object-position: right center; background: var(--w-panel-2); filter: saturate(.88) brightness(.86); transition: transform .4s; }
+.wiki-grid--chars .wiki-card__media img, .wiki-grid--monsters .wiki-card__media img { object-position: right center; }
 .wiki-card:hover .wiki-card__media img { transform: scale(1.03); }
 .wiki-card__placeholder {
   display: flex;
@@ -547,7 +547,7 @@ button, input { font: inherit; }
 .wiki-detail__meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
 
 .wiki-infobox { border: 1px solid var(--w-line); background: var(--w-panel); overflow: hidden; }
-.wiki-infobox__image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top center; background: var(--w-panel-2); }
+.wiki-infobox__image { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; object-position: right center; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap { position: relative; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap .wiki-card__placeholder { min-height: 220px; font-size: 54px; }
 .wiki-infobox__title { margin: 0; padding: 13px 14px 0; font-family: var(--w-display); font-size: 22px; font-weight: 400; letter-spacing: .04em; }
@@ -829,7 +829,7 @@ button, input { font: inherit; }
 }
 .wiki-hero-full__copy { max-width: 620px; }
 .wiki-hero-full__logo {
-  width: clamp(118px, 14vw, 168px);
+  width: clamp(130px, 15vw, 185px);
   height: auto;
   object-fit: contain;
   margin-bottom: 6px;
@@ -838,7 +838,7 @@ button, input { font: inherit; }
 .wiki-hero-full__title {
   margin: 8px 0 0;
   font-family: var(--w-display);
-  font-size: clamp(34px, 4.8vw, 60px);
+  font-size: clamp(36px, 5.2vw, 66px);
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: .05em;
@@ -853,7 +853,9 @@ button, input { font: inherit; }
 .wiki-hero-full__tagline { margin: 16px 0 0; max-width: 30em; color: var(--w-soft); font-size: 14px; }
 .wiki-hero-full__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .wiki-hero-full__stats { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 28px; padding-top: 17px; border-top: 1px solid rgba(236,230,214,.18); }
-.wiki-hero-full__stats .wiki-stat b { font-size: 24px; }
+.wiki-hero-full__stats .wiki-stat b { font-size: 27px; }
+.wiki-hero-full__stats .wiki-stat span { font-size: 9px; }
+.wiki-hero-full__actions .wiki-btn { font-size: 13px; padding: 10px 17px; }
 
 /* ================= tiny character avatars ================= */
 .wiki-avatar-grid {
@@ -889,3 +891,41 @@ button, input { font: inherit; }
 
 body.wiki-body { overflow-x: hidden; }
 
+
+/* portrait-safe hero slide */
+.wiki-hero-full__slide--contain {
+  object-fit: contain;
+  object-position: right center;
+  background: var(--w-bg);
+}
+
+/* wiki age gate */
+.age-locked, .age-locked body { overflow: hidden; }
+.age-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 14, 11, 0.96);
+  backdrop-filter: blur(10px);
+}
+.age-locked .age-gate { display: flex; }
+.age-gate.is-hidden { display: none; }
+.age-gate__card {
+  width: min(620px, 100%);
+  padding: clamp(28px, 5vw, 52px);
+  border: 1px solid var(--w-line-2);
+  background: var(--w-panel);
+}
+.age-gate__title {
+  margin: 6px 0 14px;
+  font-family: var(--w-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+.age-gate__card p { color: var(--w-soft); line-height: 1.9; }
+.age-gate__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }

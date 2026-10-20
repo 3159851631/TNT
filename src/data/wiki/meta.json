@@ -115,14 +115,25 @@
     }
   ],
   "heroSlides": [
-    "/uploads/wiki/cg/hero-1.webp",
-    "/uploads/wiki/cg/hero-2.webp",
-    "/uploads/wiki/cg/guide.webp",
-    "/uploads/wiki/cg/elf.webp",
-    "/uploads/wiki/cg/elf-2.webp",
-    "/uploads/wiki/cg/elf-3.webp",
-    "/uploads/wiki/cg/hero-7.webp",
-    "/uploads/wiki/cg/hero-8.webp",
-    "/uploads/wiki/cg/hero-9.webp"
+    {
+      "src": "/uploads/wiki/cg/hero-1.webp",
+      "fit": "cover"
+    },
+    {
+      "src": "/uploads/wiki/cg/hero-2.webp",
+      "fit": "cover"
+    },
+    {
+      "src": "/uploads/wiki/cg/hero-8.webp",
+      "fit": "cover"
+    },
+    {
+      "src": "/uploads/wiki/cg/hero-7.webp",
+      "fit": "cover"
+    },
+    {
+      "src": "/uploads/wiki/cg/hero-10.webp",
+      "fit": "contain"
+    }
   ]
 }

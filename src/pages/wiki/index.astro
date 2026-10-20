@@ -12,16 +12,16 @@ const featuredCharacters = characters.filter((character) => character.featured).
 const latestStories = stories.slice(0, 6);
 const categories = meta.categories;
 const counts = meta.counts;
-const heroSlides = meta.heroSlides?.length ? meta.heroSlides : [meta.hero].filter(Boolean);
+const heroSlides = meta.heroSlides?.length ? meta.heroSlides : (meta.hero ? [{ src: meta.hero, fit: 'cover' }] : []);
 ---
 
 <WikiLayout title="游戏 Wiki" description={meta.tagline} active="home">
   <section class="wiki-hero-full">
     <div class="wiki-hero-full__bg" data-wiki-hero>
-      {heroSlides.map((src, index) => (
+      {heroSlides.map((slide, index) => (
         <img
-          class:list={['wiki-hero-full__slide', index === 0 && 'is-active']}
-          src={src}
+          class:list={['wiki-hero-full__slide', index === 0 && 'is-active', slide.fit === 'contain' && 'wiki-hero-full__slide--contain']}
+          src={slide.src}
           alt={`${meta.gameName} CG ${index + 1}`}
           loading={index === 0 ? 'eager' : 'lazy'}
           decoding="async"
