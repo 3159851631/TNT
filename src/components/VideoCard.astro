@@ -9,6 +9,7 @@ interface Video {
   youtubeId?: string;
   provider?: 'bilibili' | 'youtube';
   account?: string;
+  featured?: boolean;
   cover: string;
   description?: string;
 }
@@ -46,6 +47,7 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : 'BILIBILI';
     <div class="video-card__meta">
       <span class="video-card__provider">{providerLabel}</span>
       {video.account && <span class="video-card__account">{video.account}</span>}
+      {video.featured && <span class="video-card__featured">首页推荐</span>}
     </div>
     <h3 class="video-card__title">{video.title}</h3>
     {video.en && <p class="video-card__en">{video.en} · {video.year}</p>}

@@ -1174,6 +1174,14 @@ main { margin-left: var(--rail); }
   border-left: 1px solid var(--line);
   color: var(--rose);
 }
+.video-card__featured {
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+  font-family: var(--display);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--rose-bright);
+}
 
 .video-contact {
   margin-top: 64px;

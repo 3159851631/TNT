@@ -14,6 +14,7 @@ import galgame from '../data/galgame-items.json';
 const works = worksData.works;
 const projects = projectsData.projects;
 const videos = videosData.videos;
+const homeVideos = [...videos.filter((video) => video.featured), ...videos.filter((video) => !video.featured)].slice(0, 2);
 
 const hero = works.find((work) => work.slug === 'ruins-echo') || works[0];
 const featured = works.filter((work) => work.featured).slice(0, 5);
@@ -97,7 +98,7 @@ const marquee = [
   <section class="section wrap" id="videos">
     <SectionHead index="03" en="MOTION / VIDEOS" title="视频" link="/videos/" />
     <div class="video-grid">
-      {videos.slice(0, 2).map((video) => <VideoCard video={video} />)}
+      {homeVideos.map((video) => <VideoCard video={video} />)}
     </div>
   </section>
 
