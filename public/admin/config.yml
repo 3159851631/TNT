@@ -16,8 +16,8 @@ media_folder: public/uploads
 public_folder: /uploads
 
 locale: zh_Hans
-site_url: https://explodingtnt.pages.dev
-display_url: https://explodingtnt.pages.dev
+site_url: https://tnt-game-site.pages.dev
+display_url: https://tnt-game-site.pages.dev
 logo_url: /favicon.svg
 
 collections:

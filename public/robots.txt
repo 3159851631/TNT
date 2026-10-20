@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://explodingtnt.pages.dev/sitemap-index.xml
+Sitemap: https://tnt-game-site.pages.dev/sitemap-index.xml
