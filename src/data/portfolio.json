@@ -1,0 +1,631 @@
+{
+  "pages": [
+    {
+      "src": "/uploads/portfolio/page-001.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 2560,
+      "h": 1440,
+      "aspect": "16/9",
+      "caption": "作品集档案 01"
+    },
+    {
+      "src": "/uploads/portfolio/page-002.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 02"
+    },
+    {
+      "src": "/uploads/portfolio/page-003.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 03"
+    },
+    {
+      "src": "/uploads/portfolio/page-004.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 04"
+    },
+    {
+      "src": "/uploads/portfolio/page-005.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1280,
+      "h": 696,
+      "aspect": "16/9",
+      "caption": "作品集档案 05"
+    },
+    {
+      "src": "/uploads/portfolio/page-006.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 06"
+    },
+    {
+      "src": "/uploads/portfolio/page-007.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 07"
+    },
+    {
+      "src": "/uploads/portfolio/page-008.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 2355,
+      "h": 1280,
+      "aspect": "16/9",
+      "caption": "作品集档案 08"
+    },
+    {
+      "src": "/uploads/portfolio/page-009.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 09"
+    },
+    {
+      "src": "/uploads/portfolio/page-010.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 10"
+    },
+    {
+      "src": "/uploads/portfolio/page-011.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 11"
+    },
+    {
+      "src": "/uploads/portfolio/page-012.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 12"
+    },
+    {
+      "src": "/uploads/portfolio/page-013.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 13"
+    },
+    {
+      "src": "/uploads/portfolio/page-014.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 14"
+    },
+    {
+      "src": "/uploads/portfolio/page-015.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 15"
+    },
+    {
+      "src": "/uploads/portfolio/page-016.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 16"
+    },
+    {
+      "src": "/uploads/portfolio/page-017.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 17"
+    },
+    {
+      "src": "/uploads/portfolio/page-018.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 18"
+    },
+    {
+      "src": "/uploads/portfolio/page-019.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 19"
+    },
+    {
+      "src": "/uploads/portfolio/page-020.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 20"
+    },
+    {
+      "src": "/uploads/portfolio/page-021.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 21"
+    },
+    {
+      "src": "/uploads/portfolio/page-022.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 22"
+    },
+    {
+      "src": "/uploads/portfolio/page-023.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 23"
+    },
+    {
+      "src": "/uploads/portfolio/page-024.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 696,
+      "h": 696,
+      "aspect": "1/1",
+      "caption": "作品集档案 24"
+    },
+    {
+      "src": "/uploads/portfolio/page-025.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 780,
+      "h": 780,
+      "aspect": "1/1",
+      "caption": "作品集档案 25"
+    },
+    {
+      "src": "/uploads/portfolio/page-026.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 26"
+    },
+    {
+      "src": "/uploads/portfolio/page-027.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 27"
+    },
+    {
+      "src": "/uploads/portfolio/page-028.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 28"
+    },
+    {
+      "src": "/uploads/portfolio/page-029.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 29"
+    },
+    {
+      "src": "/uploads/portfolio/page-030.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1280,
+      "h": 720,
+      "aspect": "16/9",
+      "caption": "作品集档案 30"
+    },
+    {
+      "src": "/uploads/portfolio/page-031.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 31"
+    },
+    {
+      "src": "/uploads/portfolio/page-032.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 32"
+    },
+    {
+      "src": "/uploads/portfolio/page-033.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 33"
+    },
+    {
+      "src": "/uploads/portfolio/page-034.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 34"
+    },
+    {
+      "src": "/uploads/portfolio/page-035.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 2560,
+      "h": 1440,
+      "aspect": "16/9",
+      "caption": "作品集档案 35"
+    },
+    {
+      "src": "/uploads/portfolio/page-036.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 36"
+    },
+    {
+      "src": "/uploads/portfolio/page-037.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 37"
+    },
+    {
+      "src": "/uploads/portfolio/page-038.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 2560,
+      "h": 1440,
+      "aspect": "16/9",
+      "caption": "作品集档案 38"
+    },
+    {
+      "src": "/uploads/portfolio/page-039.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 2560,
+      "h": 1440,
+      "aspect": "16/9",
+      "caption": "作品集档案 39"
+    },
+    {
+      "src": "/uploads/portfolio/page-040.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 40"
+    },
+    {
+      "src": "/uploads/portfolio/page-041.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 41"
+    },
+    {
+      "src": "/uploads/portfolio/page-042.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 42"
+    },
+    {
+      "src": "/uploads/portfolio/page-043.webp",
+      "year": "2025",
+      "source": "2025 作品集",
+      "sourceKey": "july",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 43"
+    },
+    {
+      "src": "/uploads/portfolio/page-044.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 44"
+    },
+    {
+      "src": "/uploads/portfolio/page-045.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 45"
+    },
+    {
+      "src": "/uploads/portfolio/page-046.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 46"
+    },
+    {
+      "src": "/uploads/portfolio/page-047.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 47"
+    },
+    {
+      "src": "/uploads/portfolio/page-048.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 48"
+    },
+    {
+      "src": "/uploads/portfolio/page-049.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 49"
+    },
+    {
+      "src": "/uploads/portfolio/page-050.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 50"
+    },
+    {
+      "src": "/uploads/portfolio/page-051.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 51"
+    },
+    {
+      "src": "/uploads/portfolio/page-052.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 2560,
+      "h": 1440,
+      "aspect": "16/9",
+      "caption": "作品集档案 52"
+    },
+    {
+      "src": "/uploads/portfolio/page-053.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 53"
+    },
+    {
+      "src": "/uploads/portfolio/page-054.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 54"
+    },
+    {
+      "src": "/uploads/portfolio/page-055.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 55"
+    },
+    {
+      "src": "/uploads/portfolio/page-056.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 56"
+    },
+    {
+      "src": "/uploads/portfolio/page-057.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 57"
+    },
+    {
+      "src": "/uploads/portfolio/page-058.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 58"
+    },
+    {
+      "src": "/uploads/portfolio/page-059.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 59"
+    },
+    {
+      "src": "/uploads/portfolio/page-060.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 60"
+    },
+    {
+      "src": "/uploads/portfolio/page-061.webp",
+      "year": "2025",
+      "source": "2025 作品集 · 早期",
+      "sourceKey": "feb",
+      "w": 1920,
+      "h": 1080,
+      "aspect": "16/9",
+      "caption": "作品集档案 61"
+    }
+  ],
+  "downloads": [
+    {
+      "label": "2025 作品集 PDF",
+      "src": "/uploads/portfolio/portfolio-2025.pdf",
+      "size": "15 MB"
+    },
+    {
+      "label": "2024 作品集 PDF",
+      "src": "/uploads/portfolio/portfolio-2024.pdf",
+      "size": "8.6 MB"
+    },
+    {
+      "label": "2024 作品集长图",
+      "src": "/uploads/portfolio/portfolio-2024-long.jpg",
+      "size": "3.5 MB"
+    }
+  ]
+}

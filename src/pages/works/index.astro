@@ -5,6 +5,7 @@ import WorkCard from '../../components/WorkCard.astro';
 import VideoCard from '../../components/VideoCard.astro';
 import worksData from '../../data/works.json';
 import videosData from '../../data/videos.json';
+import portfolioData from '../../data/portfolio.json';
 
 const works = [...worksData.works].sort((a, b) => a.order - b.order);
 const videos = videosData.videos;
@@ -57,6 +58,19 @@ const categories = ['全部', ...Array.from(new Set(works.map((work) => work.cat
     <p class="page-head__lead" style="margin-top: 26px; font-size: 12px; color: var(--faint)">
       长视频放在 B 站，网站里只嵌播放器；几十秒的短片之后会直接放上来。
     </p>
+  </section>
+
+  <section class="section wrap" id="portfolio">
+    <SectionHead index="03" en="FULL PORTFOLIO" title="完整作品集" link="/portfolio/" linkLabel="打开档案" />
+    <div class="portfolio-cta">
+      <p class="page-head__lead" style="max-width: 44em">
+        精选作品在上面；完整作品集收录了 2024–2025 的 {portfolioData.pages.length} 页原稿，包括排版页、过程图和更多作品。
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px">
+        <a class="btn btn--primary" href="/portfolio/">打开完整作品集</a>
+        <a class="btn" href="/uploads/portfolio/portfolio-2025.pdf" download>下载 2025 作品集 PDF</a>
+      </div>
+    </div>
   </section>
 </Base>
 

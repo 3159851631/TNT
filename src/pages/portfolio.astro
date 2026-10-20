@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import portfolio from '../data/portfolio.json';
+
+const sources = Array.from(new Set(portfolio.pages.map((page) => page.source)));
+---
+
+<Base
+  title="作品集"
+  description="王君 / EXPLODINGTNT 2024–2025 完整作品集：场景、角色、游戏美术、UI 与 3D。"
+  image={portfolio.pages[0]?.src}
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">PORTFOLIO / 作品集</p>
+      <h1 class="page-head__title">完整作品集 <em>ARCHIVE</em></h1>
+      <p class="page-head__lead">
+        2024–2025 的作品集原页。精选作品在「作品」里；这里是完整档案，包含排版页、过程图和更多作品。
+      </p>
+      <div class="page-head__meta">
+        <span><b>{portfolio.pages.length}</b> 页</span>
+        <span>2024 — 2025</span>
+        <span>点击图片放大</span>
+      </div>
+    </header>
+
+    <div class="filter-bar" data-filter-root>
+      <span class="filter-bar__label">筛选</span>
+      <button class="chip is-active" type="button" data-filter="全部">全部</button>
+      {sources.map((source) => (
+        <button class="chip" type="button" data-filter={source}>{source}</button>
+      ))}
+      <span class="filter-count" data-count>{portfolio.pages.length} PAGES</span>
+    </div>
+
+    <div class="archive-grid" data-archive-grid>
+      {portfolio.pages.map((page) => (
+        <button
+          class="archive-card"
+          type="button"
+          data-source={page.source}
+          data-src={page.src}
+          data-caption={`${page.caption} · ${page.source}`}
+          aria-label={`放大：${page.caption}`}
+        >
+          <img src={page.src} alt={page.caption} loading="lazy" decoding="async" />
+          <span class="archive-card__caption">
+            <b>{page.caption}</b>
+            <span>{page.source}</span>
+          </span>
+        </button>
+      ))}
+    </div>
+
+    <section style="padding: 30px 0 70px">
+      <h2 class="subhead">下载 / <em>DOWNLOAD</em></h2>
+      <div class="download-list">
+        {portfolio.downloads.map((item) => (
+          <a class="download-row" href={item.src} download>
+            <span>{item.label}</span>
+            <span>{item.size} · 下载</span>
+          </a>
+        ))}
+      </div>
+      <p class="muted" style="margin-top: 18px; font-size: 11.5px; line-height: 1.8">
+        作品集 PDF 为完整版；网页档案是其中可展示的页面。
+      </p>
+    </section>
+  </div>
+
+  <dialog class="lightbox" data-lightbox>
+    <button class="lightbox__close" type="button" data-close aria-label="关闭">×</button>
+    <img data-lightbox-img alt="" />
+    <p data-lightbox-caption></p>
+  </dialog>
+</Base>
+
+<script>
+  const filterRoot = document.querySelector<HTMLElement>('[data-filter-root]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.archive-card'));
+  const count = document.querySelector<HTMLElement>('[data-count]');
+  let active = '全部';
+
+  const applyFilter = () => {
+    let shown = 0;
+    cards.forEach((card) => {
+      const visible = active === '全部' || card.dataset.source === active;
+      card.style.display = visible ? '' : 'none';
+      if (visible) shown += 1;
+    });
+    if (count) count.textContent = `${shown} PAGES`;
+  };
+
+  filterRoot?.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      filterRoot.querySelectorAll('[data-filter]').forEach((item) => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+      active = button.dataset.filter || '全部';
+      applyFilter();
+    });
+  });
+
+  const dialog = document.querySelector<HTMLDialogElement>('[data-lightbox]');
+  const lightboxImage = dialog?.querySelector<HTMLImageElement>('[data-lightbox-img]');
+  const lightboxCaption = dialog?.querySelector<HTMLElement>('[data-lightbox-caption]');
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      if (!dialog || !lightboxImage || !lightboxCaption) return;
+      lightboxImage.src = card.dataset.src || '';
+      lightboxImage.alt = card.dataset.caption || '';
+      lightboxCaption.textContent = card.dataset.caption || '';
+      dialog.showModal();
+    });
+  });
+
+  dialog?.querySelector('[data-close]')?.addEventListener('click', () => dialog.close());
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+</script>
