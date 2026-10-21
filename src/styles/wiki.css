@@ -1005,3 +1005,46 @@ body.wiki-body { overflow-x: hidden; }
   .wiki-map-gallery, .wiki-subregions__grid { grid-template-columns: 1fr; }
   .wiki-story-characters__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ================= persistent background music ================= */
+.wiki-music {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 260;
+  display: flex;
+  align-items: center;
+}
+.wiki-music audio { display: none; }
+.wiki-music__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid var(--w-line-2);
+  background: rgba(10, 14, 11, 0.84);
+  color: var(--w-soft);
+  font-family: var(--w-body);
+  font-size: 11px;
+  letter-spacing: .04em;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: border-color .2s, color .2s;
+}
+.wiki-music__btn:hover { border-color: var(--w-gold); color: var(--w-ink); }
+.wiki-music__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--w-gold);
+  color: var(--w-gold);
+  font-size: 12px;
+  line-height: 1;
+}
+.wiki-music.is-off .wiki-music__icon { opacity: .35; border-color: var(--w-line-2); color: var(--w-muted); }
+.wiki-music.is-off .wiki-music__btn { color: var(--w-muted); }
+@media (max-width: 720px) {
+  .wiki-music { left: 12px; bottom: 12px; }
+  .wiki-music__btn { padding: 7px 10px; font-size: 10px; }
+}

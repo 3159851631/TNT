@@ -1,4 +1,10 @@
 (() => {
+  let cleanups = [];
+
+  const initWiki = () => {
+    cleanups.forEach((fn) => fn());
+    cleanups = [];
+
   const escapeHtml = (value) =>
     String(value)
       .replaceAll('&', '&amp;')
@@ -102,11 +108,12 @@
     const slides = Array.from(hero.querySelectorAll('[data-wiki-hero-slide]'));
     if (slides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       let heroIndex = 0;
-      window.setInterval(() => {
+      const heroTimer = window.setInterval(() => {
         slides[heroIndex].classList.remove('is-active');
         heroIndex = (heroIndex + 1) % slides.length;
         slides[heroIndex].classList.add('is-active');
       }, 7000);
+      cleanups.push(() => window.clearInterval(heroTimer));
     }
   }
 
@@ -174,4 +181,8 @@
     });
     apply();
   }
+  };
+
+  document.addEventListener('astro:page-load', initWiki);
+  if (document.readyState !== 'loading') initWiki();
 })();

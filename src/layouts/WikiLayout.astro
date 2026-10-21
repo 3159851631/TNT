@@ -1,6 +1,7 @@
 ---
 import meta from '../data/wiki/meta.json';
 import LegalFooter from '../components/LegalFooter.astro';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/wiki.css';
 
 interface Crumb {
@@ -34,6 +35,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="font" type="font/ttf" href="/fonts/jyhphy-2.ttf" crossorigin />
+    <ClientRouter />
     {ageGate && (
       <script is:inline>
         try {
@@ -154,6 +156,17 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt
         });
       </script>
     )}
+
+    <div class="wiki-music" data-wiki-music transition:persist>
+      <audio data-wiki-audio="a" src="/audio/day-forest.mp3" preload="auto"></audio>
+      <audio data-wiki-audio="b" src="/audio/day-forest.mp3" preload="auto"></audio>
+      <button class="wiki-music__btn" type="button" data-wiki-music-toggle aria-pressed="true" aria-label="背景音乐开关">
+        <span class="wiki-music__icon" aria-hidden="true">♪</span>
+        <span class="wiki-music__label" data-wiki-music-label>音乐 开</span>
+      </button>
+    </div>
+
+  <script src="/wiki-music.js" defer></script>
   <script src="/wiki.js" defer></script>
 </body>
 </html>
