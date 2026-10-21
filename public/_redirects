@@ -1,3 +1,6 @@
 /admin  /admin/  301
 
 /codex/*  /wiki/  301
+
+/projects/monster-girl-survival  /projects/monster-girl-synthesis/  301
+/projects/monster-girl-survival/*  /projects/monster-girl-synthesis/  301
