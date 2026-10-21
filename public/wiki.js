@@ -212,6 +212,45 @@
     });
   }
 
+  const videoButtons = Array.from(document.querySelectorAll('[data-wiki-video-play]'));
+  videoButtons.forEach((button) => {
+    if (button.dataset.bound === '1') return;
+    button.dataset.bound = '1';
+    button.addEventListener('click', () => {
+      const cover = button.closest('.wiki-video__cover');
+      if (!cover) return;
+      const provider = button.dataset.provider || 'bilibili';
+      if (provider === 'local' && button.dataset.local) {
+        const videoEl = document.createElement('video');
+        videoEl.className = 'wiki-video__player';
+        videoEl.controls = true;
+        videoEl.autoplay = true;
+        videoEl.playsInline = true;
+        videoEl.preload = 'metadata';
+        videoEl.src = button.dataset.local;
+        cover.innerHTML = '';
+        cover.appendChild(videoEl);
+        return;
+      }
+      const bvid = button.dataset.bvid || '';
+      const youtubeId = button.dataset.youtube || '';
+      if (provider === 'youtube' && !youtubeId) return;
+      if (provider !== 'youtube' && !bvid) return;
+      const iframe = document.createElement('iframe');
+      iframe.className = 'wiki-video__player';
+      iframe.loading = 'lazy';
+      iframe.title = button.dataset.title || '视频播放器';
+      iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; encrypted-media');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.src =
+        provider === 'youtube'
+          ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(youtubeId)}?autoplay=1&rel=0`
+          : `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bvid)}&page=1&high_quality=1&danmaku=0&autoplay=1`;
+      cover.innerHTML = '';
+      cover.appendChild(iframe);
+    });
+  });
+
   const viewer = document.querySelector('[data-wiki-map]');
   if (viewer) {
     const layers = Array.from(viewer.querySelectorAll('[data-wiki-map-layer]'));

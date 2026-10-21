@@ -112,6 +112,14 @@
       "url": "/wiki/map/",
       "count": 0,
       "desc": "世界地图，可用鼠标滚轮缩放和拖动。"
+    },
+    {
+      "key": "videos",
+      "name": "视频",
+      "en": "VIDEOS",
+      "url": "/wiki/videos/",
+      "count": 16,
+      "desc": "开发记录、绘画过程与实机片段，来自 B 站主号和小号。"
     }
   ],
   "heroSlides": [

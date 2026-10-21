@@ -1,0 +1,52 @@
+---
+interface Video {
+  slug: string;
+  title: string;
+  year: string | number;
+  duration?: string;
+  bvid?: string;
+  youtubeId?: string;
+  localSrc?: string;
+  provider?: 'bilibili' | 'youtube' | 'local';
+  account?: string;
+  cover: string;
+}
+
+interface Props {
+  video: Video;
+}
+
+const { video } = Astro.props;
+const provider = video.provider || (video.youtubeId ? 'youtube' : video.localSrc ? 'local' : 'bilibili');
+const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' ? '游戏实机' : 'BILIBILI';
+const meta = [video.account, video.year, video.duration].filter(Boolean).join(' · ');
+---
+
+<article
+  class="wiki-video"
+  id={`video-${video.slug}`}
+  data-wiki-item
+  data-name={video.title}
+  data-type={video.account || providerLabel}
+>
+  <div class="wiki-video__cover">
+    <img src={video.cover} alt={video.title} loading="lazy" decoding="async" />
+    <button
+      class="wiki-video__play"
+      type="button"
+      data-wiki-video-play
+      data-provider={provider}
+      data-bvid={video.bvid || ''}
+      data-youtube={video.youtubeId || ''}
+      data-local={video.localSrc || ''}
+      data-title={video.title}
+      aria-label={`播放 ${video.title}`}
+    ></button>
+    {video.duration && <span class="wiki-video__duration">{video.duration}</span>}
+    <span class="wiki-video__source">{providerLabel}</span>
+  </div>
+  <div class="wiki-video__body">
+    <h3 class="wiki-video__title">{video.title}</h3>
+    <p class="wiki-video__meta">{meta}</p>
+  </div>
+</article>

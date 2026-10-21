@@ -1,9 +1,11 @@
 ---
 import WikiLayout from '../../layouts/WikiLayout.astro';
+import WikiVideo from '../../components/WikiVideo.astro';
 import meta from '../../data/wiki/meta.json';
 import regionsData from '../../data/wiki/regions.json';
 import charactersData from '../../data/wiki/characters.json';
 import storiesData from '../../data/wiki/stories.json';
+import { homeVideos, sortedVideos } from '../../lib/wikiVideos';
 
 const regions = regionsData.regions;
 const characters = charactersData.characters;
@@ -18,6 +20,7 @@ const liveCounts = {
   '/wiki/items/': counts.items,
   '/wiki/recipes/': counts.recipes,
   '/wiki/story/': counts.stories,
+  '/wiki/videos/': sortedVideos.length,
 };
 const categories = meta.categories.map((category) =>
   liveCounts[category.url] != null ? { ...category, count: liveCounts[category.url] } : category
@@ -225,6 +228,20 @@ const heroSlides = meta.heroSlides?.length ? meta.heroSlides : (meta.hero ? [{ s
           </div>
         </a>
       ))}
+    </div>
+  </section>
+
+  <section class="wiki-section">
+    <header class="wiki-section__head">
+      <div>
+        <p class="wiki-section__kicker">VIDEOS / 视频</p>
+        <h2 class="wiki-section__title">游戏是怎么长出来的</h2>
+      </div>
+      <a class="wiki-section__link" href="/wiki/videos/">全部 {sortedVideos.length} 个视频 →</a>
+    </header>
+    <p class="wiki-section__note">开发记录、绘画过程、实机片段。点封面直接在页面里播放，也可以去作品站的视频页看全部。</p>
+    <div class="wiki-video-grid">
+      {homeVideos.map((video) => <WikiVideo video={video} />)}
     </div>
   </section>
 </WikiLayout>

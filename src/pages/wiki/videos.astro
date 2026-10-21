@@ -1,0 +1,50 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import WikiVideo from '../../components/WikiVideo.astro';
+import { sortedVideos } from '../../lib/wikiVideos';
+
+const accounts = Array.from(new Set(sortedVideos.map((video) => video.account).filter(Boolean)));
+const total = sortedVideos.length;
+---
+
+<WikiLayout
+  title="视频"
+  description="《魔物娘合成乐园》的开发记录、绘画过程和游戏实机视频，来自 B 站主号与小号。"
+  active="videos"
+  breadcrumb={[{ label: '视频' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">VIDEOS / 视频</p>
+    <h1 class="wiki-page-head__title">视频 <em>VIDEOS</em></h1>
+    <p class="wiki-page-head__lead">
+      开发记录、绘画过程、实机片段。这里的视频来自我的 B 站主号和小号，点封面就能在页面里播放。
+    </p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{total}</b><span>VIDEOS / 视频</span></div>
+      <div class="wiki-stat"><b>{accounts.length}</b><span>SOURCES / 来源</span></div>
+      <div class="wiki-stat"><b>BILIBILI</b><span>PLATFORM / 平台</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-list>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索视频标题…" data-wiki-search aria-label="搜索视频" />
+      </div>
+      <div class="wiki-chips">
+        <button class="wiki-chip is-active" type="button" data-wiki-chip="全部">全部</button>
+        {accounts.map((account) => <button class="wiki-chip" type="button" data-wiki-chip={account}>{account}</button>)}
+      </div>
+      <span class="wiki-count" data-wiki-count>{total} / {total}</span>
+    </div>
+
+    <div class="wiki-video-grid">
+      {sortedVideos.map((video) => <WikiVideo video={video} />)}
+    </div>
+  </div>
+
+  <p class="wiki-video-more">
+    <a class="wiki-btn" href="/videos/">作品站的视频页 ↗</a>
+    <span>游戏实机片段和更多作品视频都在那边。</span>
+  </p>
+</WikiLayout>
