@@ -10,8 +10,18 @@ const characters = charactersData.characters;
 const stories = storiesData.stories;
 const featuredCharacters = characters.filter((character) => character.featured).slice(0, 6);
 const latestStories = stories.slice(0, 6);
-const categories = meta.categories;
 const counts = meta.counts;
+const liveCounts = {
+  '/wiki/regions/': counts.regions,
+  '/wiki/characters/': counts.characters,
+  '/wiki/monsters/': counts.monsters,
+  '/wiki/items/': counts.items,
+  '/wiki/recipes/': counts.recipes,
+  '/wiki/story/': counts.stories,
+};
+const categories = meta.categories.map((category) =>
+  liveCounts[category.url] != null ? { ...category, count: liveCounts[category.url] } : category
+);
 const heroSlides = meta.heroSlides?.length ? meta.heroSlides : (meta.hero ? [{ src: meta.hero, fit: 'cover' }] : []);
 ---
 

@@ -30,7 +30,7 @@
       "name": "区域",
       "en": "REGIONS",
       "url": "/wiki/regions/",
-      "count": 19,
+      "count": 23,
       "desc": "先从这里开始：每片区域的 NPC、怪物、BOSS、掉落与剧情。"
     },
     {
@@ -38,7 +38,7 @@
       "name": "角色",
       "en": "CHARACTERS",
       "url": "/wiki/characters/",
-      "count": 205,
+      "count": 197,
       "desc": "NPC、主线角色、魔物娘与他们的故事。"
     },
     {
@@ -46,7 +46,7 @@
       "name": "怪物",
       "en": "MONSTERS",
       "url": "/wiki/monsters/",
-      "count": 274,
+      "count": 309,
       "desc": "小怪、精英、夜晚种、动物、事件与 BOSS。"
     },
     {
