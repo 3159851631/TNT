@@ -23,12 +23,15 @@ export const wikiVideos = all.filter(
     (video.provider === 'local' && String(video.title || '').includes('魔物娘合成乐园'))
 );
 
-export const sortedVideos = [...wikiVideos].sort(
-  (a, b) =>
-    Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
-    Number(b.year) - Number(a.year) ||
-    a.title.localeCompare(b.title)
-);
+export const sortedVideos = wikiVideos
+  .map((video, index) => ({ video, index }))
+  .sort(
+    (a, b) =>
+      Number(Boolean(b.video.featured)) - Number(Boolean(a.video.featured)) ||
+      Number(b.video.year) - Number(a.video.year) ||
+      a.index - b.index
+  )
+  .map((item) => item.video);
 
 // 首页 4 个：优先推荐位 → 游戏实机 → 最新的账号视频
 const picks: WikiVideoItem[] = [];
