@@ -117,13 +117,7 @@
       "system": "特殊NPC",
       "region": "初始森林",
       "story": "山下小镇，运气很差，小巷披风小女孩",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": "/uploads/wiki/characters/yi-si-ma.webp",
       "folder": "小女孩",
       "featured": false,
@@ -392,11 +386,6 @@
       "story": "创造所有神，想重启世界，第八章出现",
       "chapters": [
         {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
-        {
           "title": "独立区域剧情：龙之岛·巴哈姆特与佩露",
           "slug": "story-15",
           "chapter": "独立区域"
@@ -445,11 +434,6 @@
       "region": "初始森林",
       "story": "图书馆魔法师，性格古怪，赠魔法书",
       "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
         {
           "title": "第二章：前往主城",
           "slug": "story-02",
@@ -771,11 +755,6 @@
       "story": "偏执缺爱，逼阿葵吃虫，被飞天鸟妖叼走",
       "chapters": [
         {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
-        {
           "title": "第二章：前往主城",
           "slug": "story-02",
           "chapter": "第二章"
@@ -806,13 +785,7 @@
       "system": "服务行业",
       "region": "初始森林",
       "story": "修道院治疗埃莉",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": null,
       "folder": "",
       "featured": false,
@@ -1372,11 +1345,6 @@
       "story": "森林守护神，女儿鹤娅被杀，发疯",
       "chapters": [
         {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
-        {
           "title": "第二章：前往主城",
           "slug": "story-02",
           "chapter": "第二章"
@@ -1468,11 +1436,6 @@
       "region": "地牢（无限地下城）",
       "story": "清洗新神",
       "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
         {
           "title": "第七章：魔王之地与永夜区",
           "slug": "story-13",
@@ -1764,11 +1727,6 @@
       "story": "吸收孩子成为根",
       "chapters": [
         {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
-        {
           "title": "独立区域剧情：精灵丛林·遗忘密林与熊的挽歌",
           "slug": "story-19",
           "chapter": "独立区域"
@@ -1973,11 +1931,6 @@
       "region": "初始森林",
       "story": "木屋主人，给阿葵取名，交出碎片",
       "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
         {
           "title": "第二章：前往主城",
           "slug": "story-02",
@@ -2491,11 +2444,6 @@
       "story": "策划火石岭屠杀，手持碎片",
       "chapters": [
         {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
-        {
           "title": "第二章：前往主城",
           "slug": "story-02",
           "chapter": "第二章"
@@ -2930,13 +2878,7 @@
       "system": "服务行业",
       "region": "初始森林",
       "story": "邀请阿葵一行去温泉",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": null,
       "folder": "",
       "featured": false,
@@ -3038,11 +2980,6 @@
           "title": "序章：囚笼与转生",
           "slug": "story-00",
           "chapter": "序章"
-        },
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
         },
         {
           "title": "第二章：前往主城",
@@ -3317,13 +3254,7 @@
       "system": "背景",
       "region": "初始森林",
       "story": "被教会杀害，库丝发疯原因",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": null,
       "folder": "",
       "featured": false,
@@ -3728,11 +3659,6 @@
       "story": "",
       "chapters": [
         {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        },
-        {
           "title": "第三章：火山章节",
           "slug": "story-03",
           "chapter": "第三章"
@@ -3768,13 +3694,7 @@
       "system": "NPC",
       "region": "山下小镇",
       "story": "",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": "/uploads/wiki/characters/tu-shu-guan-mo-fa-shi.webp",
       "folder": "图书馆魔法师",
       "featured": false,
@@ -3925,13 +3845,7 @@
       "system": "NPC",
       "region": "山下小镇",
       "story": "",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": null,
       "folder": "",
       "featured": false,
@@ -4634,13 +4548,7 @@
       "system": "NPC",
       "region": "山下小镇",
       "story": "",
-      "chapters": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "chapters": [],
       "image": null,
       "folder": "",
       "featured": false,

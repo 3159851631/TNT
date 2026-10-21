@@ -495,13 +495,7 @@
         }
       ],
       "events": [],
-      "story": [
-        {
-          "title": "给 DeepSeek V4 的生成要求模板",
-          "slug": "story-01",
-          "chapter": "第一章"
-        }
-      ],
+      "story": [],
       "order": 2,
       "subregions": [
         {

@@ -33,7 +33,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt
     <meta name="description" content={desc} />
     <meta name="theme-color" content="#0b0f0c" />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon-wiki.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/uploads/wiki/logos/game-icon.png" />
+    <link rel="apple-touch-icon" href="/uploads/wiki/logos/game-icon-180.png" />
     <link rel="preload" as="font" type="font/ttf" href="/fonts/jyhphy-2.ttf" crossorigin />
     <ClientRouter />
     {ageGate && (
