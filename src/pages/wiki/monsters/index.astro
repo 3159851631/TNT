@@ -37,33 +37,60 @@ const types = Array.from(new Set(monsters.map((m) => m.type)));
     </div>
 
     <div class="wiki-grid wiki-grid--monsters">
-      {monsters.map((monster) => (
-        <a
-          class="wiki-card"
-          href={`/wiki/monsters/${monster.slug}/`}
-          data-wiki-item
-          data-name={monster.name}
-          data-type={monster.type}
-          data-region={monster.region}
-        >
-          <div class="wiki-card__media">
-            {monster.image ? (
-              <img src={monster.image} alt={monster.name} loading="lazy" decoding="async" />
-            ) : (
-              <div class="wiki-card__placeholder">{monster.name.slice(0, 1)}</div>
-            )}
-          </div>
-          <div class="wiki-card__body">
-            <h2 class="wiki-card__title">{monster.name}</h2>
-            <p class="wiki-card__meta">{monster.type}{monster.region ? ` · ${monster.region}` : ''}</p>
-            <div class="wiki-card__tags">
-              {monster.isBoss && <span class="wiki-tag wiki-tag--red">BOSS</span>}
-              {monster.isEvent && <span class="wiki-tag wiki-tag--gold">事件</span>}
-              {monster.regions.length > 1 && <span class="wiki-tag">{monster.regions.length} 个区域</span>}
+      {monsters.flatMap((monster) => {
+        const cards = [
+          <a
+            class="wiki-card"
+            href={`/wiki/monsters/${monster.slug}/`}
+            data-wiki-item
+            data-name={monster.name}
+            data-type={monster.type}
+            data-region={monster.region}
+          >
+            <div class="wiki-card__media">
+              {monster.image ? (
+                <img src={monster.image} alt={monster.name} loading="lazy" decoding="async" />
+              ) : (
+                <div class="wiki-card__placeholder">{monster.name.slice(0, 1)}</div>
+              )}
             </div>
-          </div>
-        </a>
-      ))}
+            <div class="wiki-card__body">
+              <h2 class="wiki-card__title">{monster.name}</h2>
+              <p class="wiki-card__meta">{monster.type}{monster.region ? ` · ${monster.region}` : ''}</p>
+              <div class="wiki-card__tags">
+                {monster.isBoss && <span class="wiki-tag wiki-tag--red">BOSS</span>}
+                {monster.isEvent && <span class="wiki-tag wiki-tag--gold">事件</span>}
+                {monster.regions.length > 1 && <span class="wiki-tag">{monster.regions.length} 个区域</span>}
+                {monster.forms?.length > 0 && <span class="wiki-tag wiki-tag--red">{monster.forms.length} 形态</span>}
+              </div>
+            </div>
+          </a>,
+        ];
+        (monster.forms || []).forEach((form) => {
+          cards.push(
+            <a
+              class="wiki-card wiki-card--variant"
+              href={`/wiki/monsters/${monster.slug}/#form-${form.id}`}
+              data-wiki-item
+              data-name={`${monster.name} ${form.label}`}
+              data-type={monster.type}
+              data-region={monster.region}
+            >
+              <div class="wiki-card__media">
+                <img src={form.image} alt={`${monster.name} ${form.label}`} loading="lazy" decoding="async" />
+              </div>
+              <div class="wiki-card__body">
+                <h2 class="wiki-card__title">{monster.name} · {form.label}</h2>
+                <p class="wiki-card__meta">{form.type || monster.type} · 独立形态</p>
+                <div class="wiki-card__tags">
+                  <span class="wiki-tag wiki-tag--red">{form.label}</span>
+                </div>
+              </div>
+            </a>
+          );
+        });
+        return cards;
+      })}
     </div>
   </div>
 </WikiLayout>

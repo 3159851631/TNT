@@ -19,8 +19,13 @@ const regions = data.regions;
 
   <div class="wiki-map-page">
     <div class="wiki-map-viewer" data-wiki-map>
-      {meta.map && <img src={meta.map} alt="世界地图" />}
+      {meta.map && <img class="wiki-map-layer is-active" data-wiki-map-layer="base" src={meta.map} alt="世界地图" />}
+      <img class="wiki-map-layer" data-wiki-map-layer="marked" src="/uploads/wiki/map/world-map-marked.webp" alt="世界地图 标点层" loading="lazy" />
       <span class="wiki-map-hint">SCROLL TO ZOOM · DRAG TO PAN / 滚轮缩放 · 拖动平移</span>
+      <div class="wiki-map-layers" role="group" aria-label="地图图层">
+        <button type="button" class="is-active" data-wiki-map-toggle="base">原图</button>
+        <button type="button" data-wiki-map-toggle="marked">标点层</button>
+      </div>
       <div class="wiki-map-controls">
         <button type="button" data-wiki-map-in aria-label="放大">+</button>
         <button type="button" data-wiki-map-out aria-label="缩小">−</button>

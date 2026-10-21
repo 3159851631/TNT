@@ -42,6 +42,24 @@ const related = data.monsters
         <p>{monster.note || `这是${monster.regions.join('、')}的${monster.type}。`}</p>
         {monster.note && <p>{monster.note}</p>}
 
+        {monster.forms?.length > 0 && (
+          <>
+            <h2>形态 / 阶段（{monster.forms.length}）</h2>
+            <div class="wiki-variant-grid">
+              {monster.forms.map((form) => (
+                <div class="wiki-variant" id={`form-${form.id}`}>
+                  <div class="wiki-variant__pic">
+                    <img src={form.image} alt={`${monster.name} ${form.label}`} loading="lazy" decoding="async" />
+                  </div>
+                  <h3 class="wiki-variant__name">{monster.name} · {form.label}</h3>
+                  <p class="wiki-variant__desc">{form.note || `${form.label} 形态的数值、技能与掉落待补充。`}</p>
+                  <span class="wiki-tag wiki-tag--red">{form.type || monster.type}</span>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
         <h2>出现区域</h2>
         <ul>
           {regions.length > 0 ? regions.map((region) => (

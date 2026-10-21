@@ -25,7 +25,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/bu-si-niao.webp",
       "order": 2
     },
     {
@@ -67,7 +67,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/wu-mu-zhang-yu-niang.webp",
       "order": 5
     },
     {
@@ -95,8 +95,17 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
-      "order": 7
+      "image": "/uploads/wiki/monsters/ren-lei-guo-wang-a-er-ai-ding-bao-yan-shi-zhe-de-hua-shen.webp",
+      "order": 7,
+      "forms": [
+        {
+          "id": "ren-lei-xing-tai",
+          "label": "人类形态",
+          "image": "/uploads/wiki/monsters/ren-lei-guo-wang-a-er-ai-ding-bao-yan-shi-zhe-de-hua-shen-ren-lei-xing-tai.webp",
+          "note": "",
+          "type": "BOSS"
+        }
+      ]
     },
     {
       "slug": "ren-mian-hai-xing",
@@ -137,7 +146,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/bing-jing-nv-huang-shuang-ju-ren.webp",
       "order": 10
     },
     {
@@ -165,7 +174,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/ka-de-er-wei-jia.webp",
       "order": 12
     },
     {
@@ -179,8 +188,17 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
-      "order": 13
+      "image": "/uploads/wiki/monsters/he-cheng-ren-pin-zhuang-ren-lei.webp",
+      "order": 13,
+      "forms": [
+        {
+          "id": "di-er-jie-duan",
+          "label": "第二阶段",
+          "image": "/uploads/wiki/monsters/he-cheng-ren-pin-zhuang-ren-lei-di-er-jie-duan.webp",
+          "note": "",
+          "type": "BOSS"
+        }
+      ]
     },
     {
       "slug": "ji-yan-huo-tao-tie",
@@ -207,7 +225,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/kui-niu.webp",
       "order": 15
     },
     {
@@ -347,7 +365,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/de-lei-ke-di-huang-shi-zi-shen.webp",
       "order": 25
     },
     {
@@ -389,7 +407,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/sa-dan-de-hua-shen-yang-tou-e-mo.webp",
       "order": 28
     },
     {
@@ -404,7 +422,30 @@
       "isBoss": true,
       "isEvent": false,
       "image": null,
-      "order": 29
+      "order": 29,
+      "forms": [
+        {
+          "id": "ren-lei-di-ren-zhuang-tai",
+          "label": "人类敌人状态",
+          "image": "/uploads/wiki/monsters/jiao-huang-bo-er-zi-ren-lei-di-ren-zhuang-tai.webp",
+          "note": "",
+          "type": "BOSS"
+        },
+        {
+          "id": "zhuang-tai-yi",
+          "label": "状态一",
+          "image": "/uploads/wiki/monsters/jiao-huang-bo-er-zi-zhuang-tai-yi.webp",
+          "note": "",
+          "type": "BOSS"
+        },
+        {
+          "id": "zhuang-tai-er",
+          "label": "状态二",
+          "image": "/uploads/wiki/monsters/jiao-huang-bo-er-zi-zhuang-tai-er.webp",
+          "note": "",
+          "type": "BOSS"
+        }
+      ]
     },
     {
       "slug": "xing-yun-fu-guai-ju-xing-shi-lai-mu",
@@ -417,8 +458,24 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
-      "order": 30
+      "image": "/uploads/wiki/monsters/xing-yun-fu-guai-ju-xing-shi-lai-mu.webp",
+      "order": 30,
+      "forms": [
+        {
+          "id": "di-yi-jie-duan",
+          "label": "第一阶段",
+          "image": "/uploads/wiki/monsters/xing-yun-fu-guai-ju-xing-shi-lai-mu-di-yi-jie-duan.webp",
+          "note": "",
+          "type": "BOSS"
+        },
+        {
+          "id": "di-er-xing-tai",
+          "label": "第二形态",
+          "image": "/uploads/wiki/monsters/xing-yun-fu-guai-ju-xing-shi-lai-mu-di-er-xing-tai.webp",
+          "note": "",
+          "type": "BOSS"
+        }
+      ]
     },
     {
       "slug": "an-ying-bian-fu",
@@ -432,7 +489,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/an-ying-bian-fu.webp",
       "order": 31
     },
     {
@@ -446,7 +503,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/shu-jing-die-yao.webp",
       "order": 32
     },
     {
@@ -460,7 +517,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/ge-lei-la-hai-guai-ren-lei-chuan-shuo-zhong-de-guai-wu.webp",
       "order": 33
     },
     {
@@ -474,7 +531,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/qiao-shang-de-shi-ju-ren.webp",
       "order": 34
     },
     {
@@ -614,7 +671,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/wen-shen-lei-en-te.webp",
       "order": 44
     },
     {
@@ -699,7 +756,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/hong-hai-xing-za-jiao-hai-xing-shui-mu.webp",
       "order": 50
     },
     {
@@ -727,7 +784,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/ai-lun-te-shang-jiang.webp",
       "order": 52
     },
     {
@@ -741,7 +798,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/shi-tie-xie.webp",
       "order": 53
     },
     {
@@ -909,7 +966,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/fei-tian-niao-yao.webp",
       "order": 65
     },
     {
@@ -993,7 +1050,7 @@
       "note": "",
       "isBoss": true,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/yu-tou-ren.webp",
       "order": 71
     },
     {
@@ -1512,7 +1569,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/da-xing-shu-yao.webp",
       "order": 108
     },
     {
@@ -1526,7 +1583,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/da-xing-shi-tou-guai.webp",
       "order": 109
     },
     {
@@ -1540,7 +1597,7 @@
       "note": "",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/da-xing-fu-rou-guai.webp",
       "order": 110
     },
     {
@@ -1554,7 +1611,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/da-xing-zhi-zhu-guai.webp",
       "order": 111
     },
     {
@@ -1568,7 +1625,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/da-xing-tie-kuang-guai.webp",
       "order": 112
     },
     {
@@ -1582,7 +1639,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/da-xing-tong-kuang-guai.webp",
       "order": 113
     },
     {
@@ -1764,7 +1821,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/ju-xing-zhen-jun-guai.webp",
       "order": 126
     },
     {
@@ -2086,7 +2143,7 @@
       "note": "",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/jiao-tu-jiao-tu.webp",
       "order": 149
     },
     {
@@ -2100,7 +2157,7 @@
       "note": "",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/jiao-tu-jiao-tu-gao-ji-fa-shi.webp",
       "order": 150
     },
     {
@@ -2240,7 +2297,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/ji-su-shi-lai-mu.webp",
       "order": 160
     },
     {
@@ -2254,7 +2311,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/shu-yao.webp",
       "order": 161
     },
     {
@@ -2773,7 +2830,7 @@
       "note": "蓝色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/zhen-jun-guai.webp",
       "order": 198
     },
     {
@@ -2815,7 +2872,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/shi-tou-guai.webp",
       "order": 201
     },
     {
@@ -3095,7 +3152,7 @@
       "note": "",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/fei-pang-fu-rou.webp",
       "order": 221
     },
     {
@@ -3165,7 +3222,7 @@
       "note": "",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/fu-rou-guai.webp",
       "order": 226
     },
     {
@@ -3235,7 +3292,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/cao-shi-lai-mu.webp",
       "order": 231
     },
     {
@@ -3263,7 +3320,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/lan-se-shi-lai-mu.webp",
       "order": 233
     },
     {
@@ -3305,7 +3362,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/zhi-zhu-guai.webp",
       "order": 236
     },
     {
@@ -3529,7 +3586,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/tie-kuang-guai.webp",
       "order": 252
     },
     {
@@ -3543,7 +3600,7 @@
       "note": "红色背景",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/tong-kuang-guai.webp",
       "order": 253
     },
     {
@@ -3767,7 +3824,7 @@
       "note": "",
       "isBoss": false,
       "isEvent": false,
-      "image": null,
+      "image": "/uploads/wiki/monsters/ku-lou-guai.webp",
       "order": 269
     },
     {
@@ -3839,6 +3896,513 @@
       "isEvent": false,
       "image": null,
       "order": 274
+    },
+    {
+      "slug": "shi-jie-shu-shen-yuan-mu-shen-ju-da-de-zhi-wu-chu-shou",
+      "name": "世界树深渊母神（巨大的植物触手）",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/shi-jie-shu-shen-yuan-mu-shen-ju-da-de-zhi-wu-chu-shou.webp",
+      "forms": [],
+      "order": 275
+    },
+    {
+      "slug": "ren-mian-gui",
+      "name": "人面龟",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ren-mian-gui.webp",
+      "forms": [],
+      "order": 276
+    },
+    {
+      "slug": "ji-yan-huo-you-hun",
+      "name": "基岩火幽魂",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ji-yan-huo-you-hun.webp",
+      "forms": [],
+      "order": 277
+    },
+    {
+      "slug": "ju-xing-shi-tie-xie-mie-mie",
+      "name": "巨型蚀铁蟹咩咩",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ju-xing-shi-tie-xie-mie-mie.webp",
+      "forms": [],
+      "order": 278
+    },
+    {
+      "slug": "e-zhao-zhi-zi-he-ya",
+      "name": "恶兆之子（鹤娅）",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/e-zhao-zhi-zi-he-ya.webp",
+      "forms": [],
+      "order": 279
+    },
+    {
+      "slug": "shen-hai-jing-sha-ren-yu",
+      "name": "深海鲸鲨（人鱼）",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/shen-hai-jing-sha-ren-yu.webp",
+      "forms": [],
+      "order": 280
+    },
+    {
+      "slug": "wu-gong-nv",
+      "name": "蜈蚣女",
+      "type": "BOSS",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/wu-gong-nv.webp",
+      "forms": [],
+      "order": 281
+    },
+    {
+      "slug": "pei-li-ga-hai-shen",
+      "name": "佩利伽（海神）",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/pei-li-ga-hai-shen.webp",
+      "forms": [],
+      "order": 282
+    },
+    {
+      "slug": "chuang-shi-shen-mo-er-ke",
+      "name": "创世神摩尔科",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/chuang-shi-shen-mo-er-ke.webp",
+      "forms": [],
+      "order": 283
+    },
+    {
+      "slug": "chen-shui-shi-ju-ren",
+      "name": "沉睡石巨人",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/chen-shui-shi-ju-ren.webp",
+      "forms": [],
+      "order": 284
+    },
+    {
+      "slug": "sha-bao-he-xin-sha-ba-zhi-wang-luo-la-si-er-dai-sha-mo-zhi-shen",
+      "name": "沙暴核心·沙巴之王罗拉斯（二代沙漠之神）",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/sha-bao-he-xin-sha-ba-zhi-wang-luo-la-si-er-dai-sha-mo-zhi-shen.webp",
+      "forms": [],
+      "order": 285
+    },
+    {
+      "slug": "yan-chong-rong-yan-huang-hou",
+      "name": "炎虫·熔岩皇后",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/yan-chong-rong-yan-huang-hou.webp",
+      "forms": [],
+      "order": 286
+    },
+    {
+      "slug": "zhu-wang",
+      "name": "猪王",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": null,
+      "forms": [
+        {
+          "id": "zao-qi-ban-ben",
+          "label": "早期版本",
+          "image": "/uploads/wiki/monsters/zhu-wang-zao-qi-ban-ben.webp",
+          "note": "",
+          "type": "BOSS"
+        }
+      ],
+      "order": 287
+    },
+    {
+      "slug": "zhu-wang-ai-wei-da",
+      "name": "猪王爱维达",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/zhu-wang-ai-wei-da.webp",
+      "forms": [],
+      "order": 288
+    },
+    {
+      "slug": "ding-zi-tou-fu-li-ci",
+      "name": "钉子头弗里茨",
+      "type": "BOSS",
+      "regions": [],
+      "region": "",
+      "note": "",
+      "isBoss": true,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ding-zi-tou-fu-li-ci.webp",
+      "forms": [],
+      "order": 289
+    },
+    {
+      "slug": "wu-ya",
+      "name": "乌鸦",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/wu-ya.webp",
+      "forms": [],
+      "order": 290
+    },
+    {
+      "slug": "ci-wei",
+      "name": "刺猬",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ci-wei.webp",
+      "forms": [],
+      "order": 291
+    },
+    {
+      "slug": "da-xing-mei-kuang-guai",
+      "name": "大型煤矿怪",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/da-xing-mei-kuang-guai.webp",
+      "forms": [],
+      "order": 292
+    },
+    {
+      "slug": "xiao-bian-fu",
+      "name": "小蝙蝠",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/xiao-bian-fu.webp",
+      "forms": [],
+      "order": 293
+    },
+    {
+      "slug": "an-ying-mo-yang-niang",
+      "name": "暗影魔羊娘",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/an-ying-mo-yang-niang.webp",
+      "forms": [],
+      "order": 294
+    },
+    {
+      "slug": "mei-hua-lu",
+      "name": "梅花鹿",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/mei-hua-lu.webp",
+      "forms": [],
+      "order": 295
+    },
+    {
+      "slug": "sen-lin-ge-bu-lin",
+      "name": "森林哥布林",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/sen-lin-ge-bu-lin.webp",
+      "forms": [],
+      "order": 296
+    },
+    {
+      "slug": "mei-kuang-guai",
+      "name": "煤矿怪",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/mei-kuang-guai.webp",
+      "forms": [],
+      "order": 297
+    },
+    {
+      "slug": "mian-yang",
+      "name": "绵羊",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/mian-yang.webp",
+      "forms": [],
+      "order": 298
+    },
+    {
+      "slug": "bei-kan-diao-de-teng-wan-guai",
+      "name": "被砍掉的藤蔓怪",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/bei-kan-diao-de-teng-wan-guai.webp",
+      "forms": [],
+      "order": 299
+    },
+    {
+      "slug": "ye-tu",
+      "name": "野兔",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ye-tu.webp",
+      "forms": [],
+      "order": 300
+    },
+    {
+      "slug": "ye-niu",
+      "name": "野牛",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ye-niu.webp",
+      "forms": [],
+      "order": 301
+    },
+    {
+      "slug": "ye-zhu",
+      "name": "野猪",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ye-zhu.webp",
+      "forms": [],
+      "order": 302
+    },
+    {
+      "slug": "ma-que",
+      "name": "麻雀",
+      "type": "怪物",
+      "regions": [
+        "初始森林"
+      ],
+      "region": "初始森林",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/ma-que.webp",
+      "forms": [],
+      "order": 303
+    },
+    {
+      "slug": "qiu-tu-bei-fu-de-yan-long-can-hai",
+      "name": "囚徒 · 被缚的炎龙残骸",
+      "type": "怪物",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/qiu-tu-bei-fu-de-yan-long-can-hai.webp",
+      "forms": [],
+      "order": 304
+    },
+    {
+      "slug": "jing-bei-yan-gui",
+      "name": "晶背炎龟",
+      "type": "怪物",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/jing-bei-yan-gui.webp",
+      "forms": [],
+      "order": 305
+    },
+    {
+      "slug": "huo-shan-tang-lang-rong-qie-zhe",
+      "name": "火山螳螂 · 熔切者",
+      "type": "怪物",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/huo-shan-tang-lang-rong-qie-zhe.webp",
+      "forms": [],
+      "order": 306
+    },
+    {
+      "slug": "yan-yu-jian-cha-zhe",
+      "name": "炎狱监察者",
+      "type": "怪物",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/yan-yu-jian-cha-zhe.webp",
+      "forms": [],
+      "order": 307
+    },
+    {
+      "slug": "rong-yan-ji-sheng-chong-jin-yi",
+      "name": "熔岩寄生虫 · 烬蜴",
+      "type": "怪物",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/rong-yan-ji-sheng-chong-jin-yi.webp",
+      "forms": [],
+      "order": 308
+    },
+    {
+      "slug": "kuang-gong-wang-hun-de-zao-wu-yuan-nian-kui-lei",
+      "name": "矿工亡魂的造物 · 怨念傀儡",
+      "type": "怪物",
+      "regions": [
+        "火石领"
+      ],
+      "region": "火石领",
+      "note": "",
+      "isBoss": false,
+      "isEvent": false,
+      "image": "/uploads/wiki/monsters/kuang-gong-wang-hun-de-zao-wu-yuan-nian-kui-lei.webp",
+      "forms": [],
+      "order": 309
     }
   ]
 }

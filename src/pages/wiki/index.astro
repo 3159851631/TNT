@@ -91,18 +91,26 @@ const heroSlides = meta.heroSlides?.length ? meta.heroSlides : (meta.hero ? [{ s
     </header>
     <p class="wiki-section__note">点小头像直接进角色页。没有立绘的角色先用名字占位。</p>
     <div class="wiki-avatar-grid">
-      {characters.map((character) => (
-        <a class="wiki-avatar" href={`/wiki/characters/${character.slug}/`} title={character.name} aria-label={character.name}>
-          <span class="wiki-avatar__pic">
-            {character.image ? (
-              <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
-            ) : (
-              <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
-            )}
-          </span>
-          <span class="wiki-avatar__name">{character.name}</span>
-        </a>
-      ))}
+      {characters.map((character) => {
+        const tooltip = [
+          character.name,
+          character.identity || character.system,
+          character.region,
+          ...(character.variants || []).map((variant) => variant.label),
+        ].filter(Boolean).join(' · ');
+        return (
+          <a class="wiki-avatar" href={`/wiki/characters/${character.slug}/`} title={tooltip} aria-label={tooltip} data-tooltip={tooltip}>
+            <span class="wiki-avatar__pic">
+              {character.thumb || character.image ? (
+                <img src={character.thumb || character.image} alt={character.name} loading="lazy" decoding="async" />
+              ) : (
+                <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+              )}
+            </span>
+            <span class="wiki-avatar__name">{character.name}</span>
+          </a>
+        );
+      })}
     </div>
   </section>
 

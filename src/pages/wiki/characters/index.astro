@@ -37,31 +37,57 @@ const systems = Array.from(new Set(characters.map((c) => c.system).filter(Boolea
     </div>
 
     <div class="wiki-grid wiki-grid--chars">
-      {characters.map((character) => (
-        <a
-          class="wiki-card"
-          href={`/wiki/characters/${character.slug}/`}
-          data-wiki-item
-          data-name={character.name}
-          data-type={character.system}
-        >
-          <div class="wiki-card__media">
-            {character.image ? (
-              <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
-            ) : (
-              <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
-            )}
-          </div>
-          <div class="wiki-card__body">
-            <h2 class="wiki-card__title">{character.name}</h2>
-            <p class="wiki-card__meta">{character.identity || character.system}</p>
-            <div class="wiki-card__tags">
-              {character.region && <span class="wiki-tag">{character.region}</span>}
-              {character.chapters.length > 0 && <span class="wiki-tag wiki-tag--gold">{character.chapters.length} 剧情</span>}
+      {characters.flatMap((character) => {
+        const cards = [
+          <a
+            class="wiki-card"
+            href={`/wiki/characters/${character.slug}/`}
+            data-wiki-item
+            data-name={character.name}
+            data-type={character.system}
+          >
+            <div class="wiki-card__media">
+              {character.image ? (
+                <img src={character.image} alt={character.name} loading="lazy" decoding="async" />
+              ) : (
+                <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+              )}
             </div>
-          </div>
-        </a>
-      ))}
+            <div class="wiki-card__body">
+              <h2 class="wiki-card__title">{character.name}</h2>
+              <p class="wiki-card__meta">{character.identity || character.system}</p>
+              <div class="wiki-card__tags">
+                {character.region && <span class="wiki-tag">{character.region}</span>}
+                {character.chapters.length > 0 && <span class="wiki-tag wiki-tag--gold">{character.chapters.length} 剧情</span>}
+                {character.variants?.length > 0 && <span class="wiki-tag wiki-tag--gold">{character.variants.length} 形态</span>}
+              </div>
+            </div>
+          </a>,
+        ];
+        (character.variants || []).forEach((variant) => {
+          cards.push(
+            <a
+              class="wiki-card wiki-card--variant"
+              href={`/wiki/characters/${character.slug}/#variant-${variant.id}`}
+              data-wiki-item
+              data-name={`${character.name} ${variant.label}`}
+              data-type={character.system}
+            >
+              <div class="wiki-card__media">
+                <img src={variant.image} alt={`${character.name} ${variant.label}`} loading="lazy" decoding="async" />
+              </div>
+              <div class="wiki-card__body">
+                <h2 class="wiki-card__title">{character.name} · {variant.label}</h2>
+                <p class="wiki-card__meta">{variant.kind === 'stage' ? '阶段/形态' : '服装/外观'}</p>
+                <div class="wiki-card__tags">
+                  <span class="wiki-tag wiki-tag--gold">{variant.label}</span>
+                </div>
+              </div>
+            </a>
+          );
+        });
+        return cards;
+      })}
     </div>
   </div>
 </WikiLayout>

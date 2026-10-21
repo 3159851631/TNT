@@ -225,6 +225,106 @@
           "type": "动物",
           "note": "",
           "slug": "qing-wa"
+        },
+        {
+          "name": "合成人(拼装人类)",
+          "slug": "he-cheng-ren-pin-zhuang-ren-lei",
+          "type": "BOSS"
+        },
+        {
+          "name": "奎牛",
+          "slug": "kui-niu",
+          "type": "BOSS"
+        },
+        {
+          "name": "星云浮怪(巨型史莱姆)",
+          "slug": "xing-yun-fu-guai-ju-xing-shi-lai-mu",
+          "type": "BOSS"
+        },
+        {
+          "name": "桥上的石巨人",
+          "slug": "qiao-shang-de-shi-ju-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "飞天鸟妖",
+          "slug": "fei-tian-niao-yao",
+          "type": "BOSS"
+        },
+        {
+          "name": "史莱姆群入侵",
+          "slug": "shi-lai-mu-qun-ru-qin",
+          "type": "事件"
+        },
+        {
+          "name": "乌鸦",
+          "slug": "wu-ya",
+          "type": "怪物"
+        },
+        {
+          "name": "刺猬",
+          "slug": "ci-wei",
+          "type": "怪物"
+        },
+        {
+          "name": "大型煤矿怪",
+          "slug": "da-xing-mei-kuang-guai",
+          "type": "怪物"
+        },
+        {
+          "name": "小蝙蝠",
+          "slug": "xiao-bian-fu",
+          "type": "怪物"
+        },
+        {
+          "name": "暗影魔羊娘",
+          "slug": "an-ying-mo-yang-niang",
+          "type": "怪物"
+        },
+        {
+          "name": "梅花鹿",
+          "slug": "mei-hua-lu",
+          "type": "怪物"
+        },
+        {
+          "name": "森林哥布林",
+          "slug": "sen-lin-ge-bu-lin",
+          "type": "怪物"
+        },
+        {
+          "name": "煤矿怪",
+          "slug": "mei-kuang-guai",
+          "type": "怪物"
+        },
+        {
+          "name": "绵羊",
+          "slug": "mian-yang",
+          "type": "怪物"
+        },
+        {
+          "name": "被砍掉的藤蔓怪",
+          "slug": "bei-kan-diao-de-teng-wan-guai",
+          "type": "怪物"
+        },
+        {
+          "name": "野兔",
+          "slug": "ye-tu",
+          "type": "怪物"
+        },
+        {
+          "name": "野牛",
+          "slug": "ye-niu",
+          "type": "怪物"
+        },
+        {
+          "name": "野猪",
+          "slug": "ye-zhu",
+          "type": "怪物"
+        },
+        {
+          "name": "麻雀",
+          "slug": "ma-que",
+          "type": "怪物"
         }
       ],
       "npcs": [
@@ -454,7 +554,13 @@
       "description": "森林边缘的小镇。酒馆、温泉、图书馆和运气很差的小女孩。",
       "image": "/uploads/wiki/regions/hill-town.webp",
       "map": "/uploads/wiki/map/world-map.webp",
-      "monsters": [],
+      "monsters": [
+        {
+          "name": "暗影蝙蝠",
+          "slug": "an-ying-bian-fu",
+          "type": "BOSS"
+        }
+      ],
       "npcs": [
         {
           "name": "酒吧老板娘",
@@ -608,6 +714,16 @@
           "type": "精英怪",
           "note": "",
           "slug": "pao-ta"
+        },
+        {
+          "name": "人类国王-阿尔*爱丁堡岩噬者的化身",
+          "slug": "ren-lei-guo-wang-a-er-ai-ding-bao-yan-shi-zhe-de-hua-shen",
+          "type": "BOSS"
+        },
+        {
+          "name": "艾伦特上将",
+          "slug": "ai-lun-te-shang-jiang",
+          "type": "BOSS"
         }
       ],
       "npcs": [
@@ -1004,6 +1120,51 @@
           "type": "动物",
           "note": "",
           "slug": "sha-qiu-mao"
+        },
+        {
+          "name": "巨型蛇头",
+          "slug": "ju-xing-she-tou",
+          "type": "BOSS"
+        },
+        {
+          "name": "幻影巨鲸（沙漠尸体鲸鱼）",
+          "slug": "huan-ying-ju-jing-sha-mo-shi-ti-jing-yu",
+          "type": "BOSS"
+        },
+        {
+          "name": "德雷克帝皇狮子神",
+          "slug": "de-lei-ke-di-huang-shi-zi-shen",
+          "type": "BOSS"
+        },
+        {
+          "name": "沙暴核心·沙巴之王",
+          "slug": "sha-bao-he-xin-sha-ba-zhi-wang",
+          "type": "BOSS"
+        },
+        {
+          "name": "泰坦格鲁",
+          "slug": "tai-tan-ge-lu",
+          "type": "BOSS"
+        },
+        {
+          "name": "猫头人",
+          "slug": "mao-tou-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "蜈蚣女威特斯",
+          "slug": "wu-gong-nv-wei-te-si",
+          "type": "BOSS"
+        },
+        {
+          "name": "沙尘暴",
+          "slug": "sha-chen-bao",
+          "type": "事件"
+        },
+        {
+          "name": "绷带怪群",
+          "slug": "beng-dai-guai-qun",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -1188,6 +1349,36 @@
           "type": "精英怪",
           "note": "",
           "slug": "ni-wang-zhe-de-hun-sha-cang-sha"
+        },
+        {
+          "name": "人面海星",
+          "slug": "ren-mian-hai-xing",
+          "type": "BOSS"
+        },
+        {
+          "name": "巨型螃蟹",
+          "slug": "ju-xing-pang-xie",
+          "type": "BOSS"
+        },
+        {
+          "name": "蚀铁蟹",
+          "slug": "shi-tie-xie",
+          "type": "BOSS"
+        },
+        {
+          "name": "蠕动的巨虫(古神)",
+          "slug": "ru-dong-de-ju-chong-gu-shen",
+          "type": "BOSS"
+        },
+        {
+          "name": "鱼头人",
+          "slug": "yu-tou-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "蟹人上岸群巢",
+          "slug": "xie-ren-shang-an-qun-chao",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -1368,6 +1559,46 @@
           "type": "精英怪",
           "note": "",
           "slug": "ju-xing-zhang-yu"
+        },
+        {
+          "name": "乌姆(章鱼娘)",
+          "slug": "wu-mu-zhang-yu-niang",
+          "type": "BOSS"
+        },
+        {
+          "name": "格雷拉海怪(人类传说中的怪物)",
+          "slug": "ge-lei-la-hai-guai-ren-lei-chuan-shuo-zhong-de-guai-wu",
+          "type": "BOSS"
+        },
+        {
+          "name": "海妖(咩奈)",
+          "slug": "hai-yao-mie-nai",
+          "type": "BOSS"
+        },
+        {
+          "name": "深海鲨鲨(人鱼)",
+          "slug": "shen-hai-sha-sha-ren-yu",
+          "type": "BOSS"
+        },
+        {
+          "name": "红海星(杂交海星水母)",
+          "slug": "hong-hai-xing-za-jiao-hai-xing-shui-mu",
+          "type": "BOSS"
+        },
+        {
+          "name": "食人鱼群",
+          "slug": "shi-ren-yu-qun",
+          "type": "BOSS"
+        },
+        {
+          "name": "悲鸣女妖集群袭击",
+          "slug": "bei-ming-nv-yao-ji-qun-xi-ji",
+          "type": "事件"
+        },
+        {
+          "name": "海啸",
+          "slug": "hai-xiao",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -1563,6 +1794,46 @@
           "type": "精英怪",
           "note": "",
           "slug": "ze-shi-long-hui"
+        },
+        {
+          "name": "五宗罪",
+          "slug": "wu-zong-zui",
+          "type": "BOSS"
+        },
+        {
+          "name": "树精蝶妖",
+          "slug": "shu-jing-die-yao",
+          "type": "BOSS"
+        },
+        {
+          "name": "猪王BOSS爱维达",
+          "slug": "zhu-wang-boss-ai-wei-da",
+          "type": "BOSS"
+        },
+        {
+          "name": "百骸沼主(巴利特)",
+          "slug": "bai-hai-zhao-zhu-ba-li-te",
+          "type": "BOSS"
+        },
+        {
+          "name": "石笋巨虫",
+          "slug": "shi-sun-ju-chong",
+          "type": "BOSS"
+        },
+        {
+          "name": "野蛮猪人(红温)",
+          "slug": "ye-man-zhu-ren-hong-wen",
+          "type": "BOSS"
+        },
+        {
+          "name": "哥布林群入侵",
+          "slug": "ge-bu-lin-qun-ru-qin",
+          "type": "事件"
+        },
+        {
+          "name": "荆棘行军蚁群",
+          "slug": "jing-ji-xing-jun-yi-qun",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -1733,6 +2004,31 @@
           "type": "精英怪",
           "note": "",
           "slug": "zhu-tian-shi-zhi-tian-shi"
+        },
+        {
+          "name": "始祖大象脚(巨大脚)",
+          "slug": "shi-zu-da-xiang-jiao-ju-da-jiao",
+          "type": "BOSS"
+        },
+        {
+          "name": "审判者(权利之眼)",
+          "slug": "shen-pan-zhe-quan-li-zhi-yan",
+          "type": "BOSS"
+        },
+        {
+          "name": "空中之神·翼天使",
+          "slug": "kong-zhong-zhi-shen-yi-tian-shi",
+          "type": "BOSS"
+        },
+        {
+          "name": "空中蛇妖",
+          "slug": "kong-zhong-she-yao",
+          "type": "BOSS"
+        },
+        {
+          "name": "天使侦查队",
+          "slug": "tian-shi-zhen-cha-dui",
+          "type": "事件"
         }
       ],
       "npcs": [],
@@ -1844,6 +2140,46 @@
           "type": "夜晚小怪",
           "note": "",
           "slug": "gui-xiang-ling"
+        },
+        {
+          "name": "伯爵",
+          "slug": "bo-jue",
+          "type": "BOSS"
+        },
+        {
+          "name": "冰晶女皇·霜巨人",
+          "slug": "bing-jing-nv-huang-shuang-ju-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "白毛巨人",
+          "slug": "bai-mao-ju-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "血月狼人(雪山的传说)",
+          "slug": "xue-yue-lang-ren-xue-shan-de-chuan-shuo",
+          "type": "BOSS"
+        },
+        {
+          "name": "雪怪(传闻中的神级巨人)",
+          "slug": "xue-guai-chuan-wen-zhong-de-shen-ji-ju-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "雪羊",
+          "slug": "xue-yang",
+          "type": "BOSS"
+        },
+        {
+          "name": "暴风雪",
+          "slug": "bao-feng-xue",
+          "type": "事件"
+        },
+        {
+          "name": "霜龙人入侵(霜龙骑士)",
+          "slug": "shuang-long-ren-ru-qin-shuang-long-qi-shi",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -1978,6 +2314,66 @@
           "type": "精英怪",
           "note": "",
           "slug": "yan-yu-xun-you-zhe"
+        },
+        {
+          "name": "恶来之子(娇)",
+          "slug": "e-lai-zhi-zi-jiao",
+          "type": "BOSS"
+        },
+        {
+          "name": "教皇波尔兹",
+          "slug": "jiao-huang-bo-er-zi",
+          "type": "BOSS"
+        },
+        {
+          "name": "炎土·熔岩皇后",
+          "slug": "yan-tu-rong-yan-huang-hou",
+          "type": "BOSS"
+        },
+        {
+          "name": "教团入侵",
+          "slug": "jiao-tuan-ru-qin",
+          "type": "事件"
+        },
+        {
+          "name": "基岩火幽魂",
+          "slug": "ji-yan-huo-you-hun",
+          "type": "BOSS"
+        },
+        {
+          "name": "蜈蚣女",
+          "slug": "wu-gong-nv",
+          "type": "BOSS"
+        },
+        {
+          "name": "囚徒 · 被缚的炎龙残骸",
+          "slug": "qiu-tu-bei-fu-de-yan-long-can-hai",
+          "type": "怪物"
+        },
+        {
+          "name": "晶背炎龟",
+          "slug": "jing-bei-yan-gui",
+          "type": "怪物"
+        },
+        {
+          "name": "火山螳螂 · 熔切者",
+          "slug": "huo-shan-tang-lang-rong-qie-zhe",
+          "type": "怪物"
+        },
+        {
+          "name": "炎狱监察者",
+          "slug": "yan-yu-jian-cha-zhe",
+          "type": "怪物"
+        },
+        {
+          "name": "熔岩寄生虫 · 烬蜴",
+          "slug": "rong-yan-ji-sheng-chong-jin-yi",
+          "type": "怪物"
+        },
+        {
+          "name": "矿工亡魂的造物 · 怨念傀儡",
+          "slug": "kuang-gong-wang-hun-de-zao-wu-yuan-nian-kui-lei",
+          "type": "怪物"
         }
       ],
       "npcs": [
@@ -2159,6 +2555,36 @@
           "type": "精英怪",
           "note": "",
           "slug": "liu-lang-de-mo-shen-luo-po-shen-ming"
+        },
+        {
+          "name": "卡德尔·维迦",
+          "slug": "ka-de-er-wei-jia",
+          "type": "BOSS"
+        },
+        {
+          "name": "暗影蝙蝠",
+          "slug": "an-ying-bian-fu",
+          "type": "BOSS"
+        },
+        {
+          "name": "梦魇喃喃",
+          "slug": "meng-yan-nan-nan",
+          "type": "BOSS"
+        },
+        {
+          "name": "迷失剑客",
+          "slug": "mi-shi-jian-ke",
+          "type": "BOSS"
+        },
+        {
+          "name": "魅魔(艾夏)",
+          "slug": "mei-mo-ai-xia",
+          "type": "BOSS"
+        },
+        {
+          "name": "北境人入侵",
+          "slug": "bei-jing-ren-ru-qin",
+          "type": "事件"
         }
       ],
       "npcs": [],
@@ -2293,6 +2719,11 @@
           "type": "精英怪",
           "note": "",
           "slug": "ge-bu-lin-sa-man"
+        },
+        {
+          "name": "哥布林群入侵",
+          "slug": "ge-bu-lin-qun-ru-qin",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -2342,7 +2773,13 @@
       "description": "被世界遗忘的垃圾堆沙漠。只有一个混沌的化身守在这里。",
       "image": null,
       "map": "/uploads/wiki/map/world-map.webp",
-      "monsters": [],
+      "monsters": [
+        {
+          "name": "世界混沌的化身",
+          "slug": "shi-jie-hun-dun-de-hua-shen",
+          "type": "BOSS"
+        }
+      ],
       "npcs": [],
       "bosses": [
         {
@@ -2396,6 +2833,36 @@
           "type": "精英怪",
           "note": "",
           "slug": "bing-shuang-long-zu"
+        },
+        {
+          "name": "巴哈姆特(大巢)",
+          "slug": "ba-ha-mu-te-da-chao",
+          "type": "BOSS"
+        },
+        {
+          "name": "帮龙人入侵(帮龙骑士)",
+          "slug": "bang-long-ren-ru-qin-bang-long-qi-shi",
+          "type": "BOSS"
+        },
+        {
+          "name": "幼龙",
+          "slug": "you-long",
+          "type": "BOSS"
+        },
+        {
+          "name": "飞龙(古薇尔)",
+          "slug": "fei-long-gu-wei-er",
+          "type": "BOSS"
+        },
+        {
+          "name": "飞龙(吉罗特)",
+          "slug": "fei-long-ji-luo-te",
+          "type": "BOSS"
+        },
+        {
+          "name": "骨灰龙骨生命体",
+          "slug": "gu-hui-long-gu-sheng-ming-ti",
+          "type": "BOSS"
         }
       ],
       "npcs": [],
@@ -2508,6 +2975,11 @@
           "type": "精英怪",
           "note": "",
           "slug": "xiu-kai-zhao-xing-xie"
+        },
+        {
+          "name": "瘟神(雷恩特)",
+          "slug": "wen-shen-lei-en-te",
+          "type": "BOSS"
         }
       ],
       "npcs": [],
@@ -2636,6 +3108,46 @@
           "type": "精英怪",
           "note": "",
           "slug": "wu-yao"
+        },
+        {
+          "name": "卡卡(雷塔守护者)",
+          "slug": "ka-ka-lei-ta-shou-hu-zhe",
+          "type": "BOSS"
+        },
+        {
+          "name": "怨恨的少女(井底)",
+          "slug": "yuan-hen-de-shao-nv-jing-di",
+          "type": "BOSS"
+        },
+        {
+          "name": "沉睡女巨人",
+          "slug": "chen-shui-nv-ju-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "空中蛇妖",
+          "slug": "kong-zhong-she-yao",
+          "type": "BOSS"
+        },
+        {
+          "name": "红裙妖精",
+          "slug": "hong-qun-yao-jing",
+          "type": "BOSS"
+        },
+        {
+          "name": "血果女伯爵卡米拉",
+          "slug": "xue-guo-nv-bo-jue-ka-mi-la",
+          "type": "BOSS"
+        },
+        {
+          "name": "国王军离遣队",
+          "slug": "guo-wang-jun-li-qian-dui",
+          "type": "事件"
+        },
+        {
+          "name": "龙脊风",
+          "slug": "long-ji-feng",
+          "type": "事件"
         }
       ],
       "npcs": [
@@ -2788,6 +3300,36 @@
           "type": "精英怪",
           "note": "",
           "slug": "gu-dai-shi-yan-ti"
+        },
+        {
+          "name": "下水道孵化病巨鼠",
+          "slug": "xia-shui-dao-fu-hua-bing-ju-shu",
+          "type": "BOSS"
+        },
+        {
+          "name": "守门人盔甲",
+          "slug": "shou-men-ren-kui-jia",
+          "type": "BOSS"
+        },
+        {
+          "name": "撒旦的化身(羊头恶魔)",
+          "slug": "sa-dan-de-hua-shen-yang-tou-e-mo",
+          "type": "BOSS"
+        },
+        {
+          "name": "血腥化身(尸山)",
+          "slug": "xue-xing-hua-shen-shi-shan",
+          "type": "BOSS"
+        },
+        {
+          "name": "钉子头弗里茨(巨型骷髅不死人)",
+          "slug": "ding-zi-tou-fu-li-ci-ju-xing-ku-lou-bu-si-ren",
+          "type": "BOSS"
+        },
+        {
+          "name": "地牢虫巢",
+          "slug": "di-lao-chong-chao",
+          "type": "事件"
         }
       ],
       "npcs": [],
@@ -2844,7 +3386,18 @@
       "description": "世界之外的虚无。创世神摩尔科的初始形态，和最终的选择。",
       "image": null,
       "map": "/uploads/wiki/map/world-map.webp",
-      "monsters": [],
+      "monsters": [
+        {
+          "name": "世界混沌的化身*创世神摩尔科初始",
+          "slug": "shi-jie-hun-dun-de-hua-shen-chuang-shi-shen-mo-er-ke-chu-shi",
+          "type": "BOSS"
+        },
+        {
+          "name": "剧烈风暴",
+          "slug": "ju-lie-feng-bao",
+          "type": "事件"
+        }
+      ],
       "npcs": [],
       "bosses": [
         {

@@ -62,6 +62,37 @@ const related = data.characters
             <p><a href={`/wiki/regions/${region.slug}/`}>{region.name}</a> · {region.type} · {region.size}</p>
           </>
         )}
+
+        {character.variants?.length > 0 && (
+          <>
+            <h2>形态 / 服装（{character.variants.length}）</h2>
+            <div class="wiki-variant-grid">
+              {character.variants.map((variant) => (
+                <div class="wiki-variant" id={`variant-${variant.id}`}>
+                  <div class="wiki-variant__pic">
+                    <img src={variant.image} alt={`${character.name} ${variant.label}`} loading="lazy" decoding="async" />
+                  </div>
+                  <h3 class="wiki-variant__name">{character.name} · {variant.label}</h3>
+                  <p class="wiki-variant__desc">{variant.description || '这个形态/服装的详细设定待补充。'}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {character.qImages?.length > 0 && (
+          <>
+            <h2>游戏内 Q 版形象</h2>
+            <div class="wiki-q-grid">
+              {character.qImages.map((q) => (
+                <figure class="wiki-q">
+                  <img src={q.image} alt={`${character.name} Q 版`} loading="lazy" decoding="async" />
+                  <figcaption>{q.name}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </>
+        )}
       </article>
 
       {related.length > 0 && (
@@ -77,8 +108,8 @@ const related = data.characters
     <aside class="wiki-detail__aside">
       <div class="wiki-infobox">
         <div class="wiki-infobox__image-wrap">
-          {character.image ? (
-            <img class="wiki-infobox__image" src={character.image} alt={character.name} />
+          {(character.thumb || character.image) ? (
+            <img class="wiki-infobox__image" src={character.thumb || character.image} alt={character.name} />
           ) : (
             <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
           )}

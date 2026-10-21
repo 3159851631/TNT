@@ -117,12 +117,40 @@
     }
   }
 
+  const tooltip = document.createElement('div');
+  tooltip.className = 'wiki-tooltip';
+  document.body.appendChild(tooltip);
+  cleanups.push(() => tooltip.remove());
+  const tipTargets = Array.from(document.querySelectorAll('[data-tooltip]'));
+  tipTargets.forEach((target) => {
+    const show = (event) => {
+      tooltip.textContent = target.dataset.tooltip || '';
+      tooltip.classList.add('is-visible');
+      move(event);
+    };
+    const move = (event) => {
+      const x = Math.min(window.innerWidth - 300, event.clientX + 18);
+      const y = Math.min(window.innerHeight - 90, event.clientY + 18);
+      tooltip.style.left = `${Math.max(10, x)}px`;
+      tooltip.style.top = `${Math.max(10, y)}px`;
+    };
+    target.addEventListener('pointerenter', show);
+    target.addEventListener('pointermove', move);
+    target.addEventListener('pointerleave', () => tooltip.classList.remove('is-visible'));
+    cleanups.push(() => {
+      target.removeEventListener('pointerenter', show);
+      target.removeEventListener('pointermove', move);
+    });
+  });
+
   const viewer = document.querySelector('[data-wiki-map]');
   if (viewer) {
-    const image = viewer.querySelector('img');
+    const layers = Array.from(viewer.querySelectorAll('[data-wiki-map-layer]'));
+    const image = layers[0];
     const reset = document.querySelector('[data-wiki-map-reset]');
     const zoomIn = document.querySelector('[data-wiki-map-in]');
     const zoomOut = document.querySelector('[data-wiki-map-out]');
+    const layerButtons = Array.from(viewer.querySelectorAll('[data-wiki-map-toggle]'));
     let scale = 0.7;
     let x = 0;
     let y = 0;
@@ -133,7 +161,9 @@
     let originY = 0;
 
     const apply = () => {
-      if (image) image.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${scale})`;
+      layers.forEach((layer) => {
+        layer.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${scale})`;
+      });
     };
     const setScale = (value) => {
       scale = Math.max(0.6, Math.min(6, value));
@@ -173,6 +203,17 @@
 
     zoomIn?.addEventListener('click', () => setScale(scale * 1.2));
     zoomOut?.addEventListener('click', () => setScale(scale / 1.2));
+    layerButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.wikiMapToggle;
+        layers.forEach((layer) => layer.classList.toggle('is-active', layer.dataset.wikiMapLayer === target));
+        layerButtons.forEach((btn) => {
+          const active = btn === button;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      });
+    });
     reset?.addEventListener('click', () => {
       scale = 1;
       x = 0;
