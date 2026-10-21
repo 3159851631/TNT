@@ -3,9 +3,7 @@
     {
       "slug": "san-ge-feng-chen-nv-zi",
       "name": "三个风尘女子",
-      "aliases": [
-        "三个风尘女子"
-      ],
+      "aliases": [],
       "identity": "玛拉等",
       "system": "背景",
       "region": "沙漠（炎沙国）",
@@ -25,9 +23,7 @@
     {
       "slug": "zhu-shi-jie-xin-dian-yuan",
       "name": "主世界新店员",
-      "aliases": [
-        "主世界新店员"
-      ],
+      "aliases": [],
       "identity": "便利店新店员",
       "system": "经营系统",
       "region": "霜脉族（雪山）",
@@ -45,27 +41,9 @@
       "order": 2
     },
     {
-      "slug": "wu-mu-zhang-yu-niang",
-      "name": "乌姆（章鱼娘）",
-      "aliases": [
-        "乌姆（章鱼娘）"
-      ],
-      "identity": "章鱼娘",
-      "system": "服务行业",
-      "region": "",
-      "story": "待补充",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 3
-    },
-    {
       "slug": "wu-zong-zui",
       "name": "五宗罪",
-      "aliases": [
-        "五宗罪"
-      ],
+      "aliases": [],
       "identity": "愤怒、贪婪、懒惰、傲慢、嫉妒",
       "system": "BOSS",
       "region": "腐荒王国（沼泽）",
@@ -80,14 +58,13 @@
       "image": "/uploads/wiki/characters/wu-zong-zui.webp",
       "folder": "五宗罪",
       "featured": false,
-      "order": 4
+      "order": 3
     },
     {
       "slug": "ren-lei-guo-wang-a-er-ai-ding-bao",
       "name": "人类国王阿尔·爱丁堡",
       "aliases": [
         "国王",
-        "人类国王阿尔·爱丁堡",
         "人类国王-阿尔*爱丁堡"
       ],
       "identity": "诺兰德帝国国王",
@@ -104,14 +81,16 @@
       "image": "/uploads/wiki/characters/ren-lei-guo-wang-a-er-ai-ding-bao.webp",
       "folder": "国王",
       "featured": false,
-      "order": 5
+      "order": 4,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/ren-lei-guo-wang-a-er-ai-ding-bao-2.webp"
     },
     {
       "slug": "yi-si-ma",
       "name": "伊思玛",
       "aliases": [
-        "小女孩",
-        "伊思玛"
+        "小女孩"
       ],
       "identity": "小镇小女孩",
       "system": "特殊NPC",
@@ -121,15 +100,13 @@
       "image": "/uploads/wiki/characters/yi-si-ma.webp",
       "folder": "小女孩",
       "featured": false,
-      "order": 6,
+      "order": 5,
       "thumb": "/uploads/wiki/characters/yi-si-ma.webp"
     },
     {
       "slug": "yi-si-duo",
       "name": "伊斯多",
-      "aliases": [
-        "伊斯多"
-      ],
+      "aliases": [],
       "identity": "精灵公主护卫",
       "system": "战斗系统",
       "region": "诺兰德主城",
@@ -149,14 +126,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 7
+      "order": 6
     },
     {
       "slug": "zuo-yi-wei-jia",
       "name": "佐伊·维迦",
       "aliases": [
-        "佐伊",
-        "佐伊·维迦"
+        "佐伊"
       ],
       "identity": "邪神撒旦",
       "system": "BOSS / 伙伴",
@@ -177,13 +153,13 @@
       "image": "/uploads/wiki/characters/zuo-yi-wei-jia.webp",
       "folder": "",
       "featured": true,
-      "order": 8
+      "order": 7
     },
     {
       "slug": "pei-li-ga",
       "name": "佩利伽",
       "aliases": [
-        "佩利伽"
+        "佩利伽（海神）"
       ],
       "identity": "海神 / 爱莎女儿",
       "system": "主线伙伴",
@@ -204,13 +180,18 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 9
+      "order": 8,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/pei-li-ga-hai-shen.webp"
     },
     {
       "slug": "pei-lu",
       "name": "佩露",
       "aliases": [
-        "佩露"
+        "佩露（哨兵）",
+        "龙娘",
+        "哨兵"
       ],
       "identity": "龙族后人 / 哨兵",
       "system": "主线NPC",
@@ -233,17 +214,26 @@
           "chapter": "独立区域"
         }
       ],
-      "image": null,
+      "image": "/uploads/wiki/characters/pei-lu-shao-bing.webp",
       "folder": "",
       "featured": false,
-      "order": 10
+      "order": 9,
+      "variants": [
+        {
+          "id": "龙娘",
+          "label": "龙娘",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/long-niang.webp",
+          "description": ""
+        }
+      ],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/pei-lu-shao-bing.webp"
     },
     {
       "slug": "ke-lai-en-ge-bu-lin",
       "name": "克莱恩（哥布林）",
-      "aliases": [
-        "克莱恩（哥布林）"
-      ],
+      "aliases": [],
       "identity": "哥布林",
       "system": "特殊NPC",
       "region": "",
@@ -252,14 +242,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 11
+      "order": 10
     },
     {
       "slug": "tu-zi-xiao-jie",
       "name": "兔子小姐",
-      "aliases": [
-        "兔子小姐"
-      ],
+      "aliases": [],
       "identity": "猎人公会前台",
       "system": "服务行业",
       "region": "诺兰德主城",
@@ -274,14 +262,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 12
+      "order": 11
     },
     {
       "slug": "jing-yan-shi",
       "name": "净言使",
-      "aliases": [
-        "净言使"
-      ],
+      "aliases": [],
       "identity": "天使",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -296,58 +282,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 13
-    },
-    {
-      "slug": "lin-xue-nv",
-      "name": "凛（雪女）",
-      "aliases": [
-        "凛（雪女）"
-      ],
-      "identity": "雪女",
-      "system": "BOSS",
-      "region": "霜脉族（雪山）",
-      "story": "等待百年，被看见后释然",
-      "chapters": [
-        {
-          "title": "第四章：霜脉族·雪山",
-          "slug": "story-04",
-          "chapter": "第四章"
-        },
-        {
-          "title": "独立区域剧情：巴尼尔山脉·永夜古堡·吸血鬼女伯爵",
-          "slug": "story-08",
-          "chapter": "独立区域"
-        }
-      ],
-      "image": "/uploads/wiki/characters/lin-xue-nv.webp",
-      "folder": "",
-      "featured": false,
-      "order": 14,
-      "thumb": "/uploads/wiki/characters/lin-xue-nv.webp"
-    },
-    {
-      "slug": "kai-sa-you-mu-ao-jiao-huang",
-      "name": "凯撒·尤姆奥（教皇）",
-      "aliases": [
-        "凯撒·尤姆奥（教皇）"
-      ],
-      "identity": "教皇",
-      "system": "宗教系统",
-      "region": "",
-      "story": "待补充",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/kai-sa-you-mu-ao-jiao-huang.webp",
-      "folder": "",
-      "featured": false,
-      "order": 15,
-      "thumb": "/uploads/wiki/characters/kai-sa-you-mu-ao-jiao-huang.webp"
+      "order": 12
     },
     {
       "slug": "kai-xi-ya",
       "name": "凯西亚",
       "aliases": [
-        "凯西亚",
         "凯西亚（精灵皇后）",
         "精灵皇后"
       ],
@@ -356,34 +296,26 @@
       "region": "精灵族（丛林）",
       "story": "精灵族领袖",
       "chapters": [],
-      "image": "/uploads/wiki/characters/kai-xi-ya.webp",
+      "image": "/uploads/wiki/characters/kai-xi-ya-jing-ling-huang-hou.webp",
       "folder": "凯西亚",
       "featured": false,
-      "order": 16
-    },
-    {
-      "slug": "kai-xi-ya-jing-ling-huang-hou",
-      "name": "凯西亚（精灵皇后）",
-      "aliases": [
-        "凯西亚（精灵皇后）"
+      "order": 13,
+      "variants": [
+        {
+          "id": "旧版立绘",
+          "label": "旧版立绘",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/kai-xi-ya.webp",
+          "description": ""
+        }
       ],
-      "identity": "精灵皇后",
-      "system": "主线NPC",
-      "region": "",
-      "story": "精灵族领袖",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/kai-xi-ya-jing-ling-huang-hou.webp",
-      "folder": "",
-      "featured": false,
-      "order": 17,
+      "qImages": [],
       "thumb": "/uploads/wiki/characters/kai-xi-ya-jing-ling-huang-hou.webp"
     },
     {
       "slug": "chuang-shi-shen-mo-er-ke",
       "name": "创世神摩尔科",
-      "aliases": [
-        "创世神摩尔科"
-      ],
+      "aliases": [],
       "identity": "创世神",
       "system": "最终BOSS",
       "region": "初始森林",
@@ -408,15 +340,13 @@
       "image": "/uploads/wiki/characters/chuang-shi-shen-mo-er-ke.webp",
       "folder": "创世神摩尔科",
       "featured": false,
-      "order": 18,
+      "order": 14,
       "thumb": "/uploads/wiki/characters/chuang-shi-shen-mo-er-ke.webp"
     },
     {
       "slug": "ka-ka-lei-dian-fa-wang",
       "name": "卡卡（雷电法王）",
-      "aliases": [
-        "卡卡（雷电法王）"
-      ],
+      "aliases": [],
       "identity": "雷电法王",
       "system": "特殊NPC",
       "region": "",
@@ -425,14 +355,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 19
+      "order": 15
     },
     {
       "slug": "ka-qi",
       "name": "卡奇",
       "aliases": [
-        "图书馆魔法师",
-        "卡奇"
+        "图书馆魔法师"
       ],
       "identity": "大法师",
       "system": "主线NPC",
@@ -458,15 +387,13 @@
       "image": "/uploads/wiki/characters/ka-qi.webp",
       "folder": "图书馆魔法师",
       "featured": false,
-      "order": 20,
+      "order": 16,
       "thumb": "/uploads/wiki/characters/ka-qi.webp"
     },
     {
       "slug": "ka-xi-ga",
       "name": "卡希伽",
-      "aliases": [
-        "卡希伽"
-      ],
+      "aliases": [],
       "identity": "未知",
       "system": "特殊NPC",
       "region": "",
@@ -475,15 +402,14 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 21,
+      "order": 17,
       "thumb": "/uploads/wiki/characters/ka-xi-ga.webp"
     },
     {
       "slug": "ka-de-er-wei-jia",
       "name": "卡德尔·维迦",
       "aliases": [
-        "魔王",
-        "卡德尔·维迦"
+        "魔王"
       ],
       "identity": "魔神",
       "system": "主线伙伴",
@@ -514,15 +440,13 @@
       "image": "/uploads/wiki/characters/ka-de-er-wei-jia.webp",
       "folder": "魔王",
       "featured": true,
-      "order": 22,
+      "order": 18,
       "thumb": "/uploads/wiki/characters/ka-de-er-wei-jia.webp"
     },
     {
       "slug": "ka-mi-la",
       "name": "卡米拉",
-      "aliases": [
-        "卡米拉"
-      ],
+      "aliases": [],
       "identity": "吸血鬼女伯爵",
       "system": "BOSS",
       "region": "永夜区（荒漠）",
@@ -537,14 +461,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 23
+      "order": 19
     },
     {
       "slug": "lu-ka-si",
       "name": "卢卡斯",
-      "aliases": [
-        "卢卡斯"
-      ],
+      "aliases": [],
       "identity": "沙漠商人",
       "system": "商人系统",
       "region": "沙漠（炎沙国）",
@@ -559,14 +481,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 24
+      "order": 20
     },
     {
       "slug": "shi-lai-mu-niang",
       "name": "史莱姆娘",
-      "aliases": [
-        "史莱姆娘"
-      ],
+      "aliases": [],
       "identity": "阿葵合成的魔物娘",
       "system": "魔物娘系统",
       "region": "诺兰德主城",
@@ -581,14 +501,12 @@
       "image": "/uploads/wiki/characters/shi-lai-mu-niang.webp",
       "folder": "史莱姆娘",
       "featured": false,
-      "order": 25
+      "order": 21
     },
     {
       "slug": "ji-er",
       "name": "吉尔",
-      "aliases": [
-        "吉尔"
-      ],
+      "aliases": [],
       "identity": "精灵国公主",
       "system": "主线NPC",
       "region": "诺兰德主城",
@@ -608,14 +526,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 26
+      "order": 22
     },
     {
       "slug": "xiang-dao",
       "name": "向导",
-      "aliases": [
-        "向导"
-      ],
+      "aliases": [],
       "identity": "向导",
       "system": "服务行业",
       "region": "霜脉族（雪山）",
@@ -635,14 +551,13 @@
       "image": "/uploads/wiki/characters/xiang-dao.webp",
       "folder": "向导",
       "featured": false,
-      "order": 27
+      "order": 23
     },
     {
       "slug": "mie-mie",
       "name": "咩咩",
       "aliases": [
-        "巨型螃蟹",
-        "咩咩"
+        "巨型螃蟹"
       ],
       "identity": "巨型磐蟹 / 净化后少女",
       "system": "BOSS / 伙伴",
@@ -673,32 +588,13 @@
       "image": "/uploads/wiki/characters/mie-mie.webp",
       "folder": "巨型螃蟹",
       "featured": false,
-      "order": 28,
+      "order": 24,
       "thumb": "/uploads/wiki/characters/mie-mie.webp"
-    },
-    {
-      "slug": "mie-nai-ma-tou-xiao-tou",
-      "name": "咩奈·码头小偷",
-      "aliases": [
-        "咩奈·码头小偷"
-      ],
-      "identity": "码头小偷",
-      "system": "特殊NPC",
-      "region": "",
-      "story": "待补充",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 29,
-      "thumb": "/uploads/wiki/characters/mie-nai-ma-tou-xiao-tou.webp"
     },
     {
       "slug": "ge-ge-lei-ji-niang",
       "name": "咯咯蕾（鸡娘）",
-      "aliases": [
-        "咯咯蕾（鸡娘）"
-      ],
+      "aliases": [],
       "identity": "无名冒险家",
       "system": "商人/骗子",
       "region": "诺兰德主城",
@@ -707,15 +603,13 @@
       "image": "/uploads/wiki/characters/ge-ge-lei-ji-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 30,
+      "order": 25,
       "thumb": "/uploads/wiki/characters/ge-ge-lei-ji-niang.webp"
     },
     {
       "slug": "ge-bu-lin-qiu-zhang",
       "name": "哥布林酋长",
-      "aliases": [
-        "哥布林酋长"
-      ],
+      "aliases": [],
       "identity": "抵抗者领袖",
       "system": "主线NPC",
       "region": "穹翼族（瘟疫之地）",
@@ -730,14 +624,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 31
+      "order": 26
     },
     {
       "slug": "si-ming-nv-pu",
       "name": "四名女仆",
-      "aliases": [
-        "四名女仆"
-      ],
+      "aliases": [],
       "identity": "被奴役怨灵",
       "system": "背景",
       "region": "永夜区（荒漠）",
@@ -752,14 +644,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 32
+      "order": 27
     },
     {
       "slug": "ai-li",
       "name": "埃莉",
-      "aliases": [
-        "埃莉"
-      ],
+      "aliases": [],
       "identity": "短发少女",
       "system": "主线NPC",
       "region": "初始森林",
@@ -784,21 +674,19 @@
       "image": "/uploads/wiki/characters/ai-li.webp",
       "folder": "埃莉",
       "featured": true,
-      "order": 33,
+      "order": 28,
       "thumb": "/uploads/wiki/characters/ai-li.webp",
       "qImages": [
         {
           "name": "Q 版",
-          "image": "/uploads/wiki/characters/ai-li.webp"
+          "image": "/uploads/wiki/characters/q/ai-li.webp"
         }
       ]
     },
     {
       "slug": "sai-mi-ya",
       "name": "塞米娅",
-      "aliases": [
-        "塞米娅"
-      ],
+      "aliases": [],
       "identity": "蛇女药师",
       "system": "服务行业",
       "region": "初始森林",
@@ -807,32 +695,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 34,
+      "order": 29,
       "thumb": "/uploads/wiki/characters/sai-mi-ya.webp"
-    },
-    {
-      "slug": "ye-shen-ri-yuan-ding",
-      "name": "夜神日（园丁）",
-      "aliases": [
-        "夜神日（园丁）"
-      ],
-      "identity": "园丁",
-      "system": "服务行业",
-      "region": "",
-      "story": "待补充",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/ye-shen-ri-yuan-ding.webp",
-      "folder": "",
-      "featured": false,
-      "order": 35,
-      "thumb": "/uploads/wiki/characters/ye-shen-ri-yuan-ding.webp"
     },
     {
       "slug": "ye-diao-lao-ren-diao-sou",
       "name": "夜钓老人 / 钓叟",
-      "aliases": [
-        "夜钓老人 / 钓叟"
-      ],
+      "aliases": [],
       "identity": "古怪夜钓老人",
       "system": "特殊NPC",
       "region": "沙滩区（海洋）",
@@ -847,14 +716,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 36
+      "order": 30
     },
     {
       "slug": "da-zhu-jiao",
       "name": "大主教",
-      "aliases": [
-        "大主教"
-      ],
+      "aliases": [],
       "identity": "大主教",
       "system": "宗教系统",
       "region": "霜脉族（雪山）",
@@ -869,14 +736,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 37
+      "order": 31
     },
     {
       "slug": "da-wang-hua-niang",
       "name": "大王花娘",
-      "aliases": [
-        "大王花娘"
-      ],
+      "aliases": [],
       "identity": "大王花娘",
       "system": "魔物娘系统",
       "region": "",
@@ -885,14 +750,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 38
+      "order": 32
     },
     {
       "slug": "tian-ping-zhi-shen",
       "name": "天平之神",
-      "aliases": [
-        "天平之神"
-      ],
+      "aliases": [],
       "identity": "天秤之神",
       "system": "背景",
       "region": "穹翼族（瘟疫之地）",
@@ -917,14 +780,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 39
+      "order": 33
     },
     {
       "slug": "tian-cheng-zhi-shen",
       "name": "天秤之神",
-      "aliases": [
-        "天秤之神"
-      ],
+      "aliases": [],
       "identity": "天秤之神",
       "system": "背景",
       "region": "初始森林",
@@ -939,21 +800,19 @@
       "image": "/uploads/wiki/characters/tian-cheng-zhi-shen.webp",
       "folder": "",
       "featured": false,
-      "order": 40,
+      "order": 34,
       "thumb": "/uploads/wiki/characters/tian-cheng-zhi-shen.webp",
       "qImages": [
         {
           "name": "Q 版",
-          "image": "/uploads/wiki/characters/tian-cheng-zhi-shen.webp"
+          "image": "/uploads/wiki/characters/q/tian-cheng-zhi-shen.webp"
         }
       ]
     },
     {
       "slug": "tai-yang-zhi-shen-a-luo-de",
       "name": "太阳之神阿罗德",
-      "aliases": [
-        "太阳之神阿罗德"
-      ],
+      "aliases": [],
       "identity": "太阳神",
       "system": "背景",
       "region": "地牢（无限地下城）",
@@ -968,14 +827,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 41
+      "order": 35
     },
     {
       "slug": "ao-gu-er-lao-guo-wang",
       "name": "奥古尔老国王",
-      "aliases": [
-        "奥古尔老国王"
-      ],
+      "aliases": [],
       "identity": "奥古尔王国国王",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -990,14 +847,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 42
+      "order": 36
     },
     {
       "slug": "nv-lie-ren",
       "name": "女猎人",
-      "aliases": [
-        "女猎人"
-      ],
+      "aliases": [],
       "identity": "破晓之光猎团首领",
       "system": "战斗系统",
       "region": "永夜区（荒漠）",
@@ -1012,14 +867,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 43
+      "order": 37
     },
     {
       "slug": "wei-lian-mu",
       "name": "威廉姆",
       "aliases": [
-        "威廉",
-        "威廉姆"
+        "威廉"
       ],
       "identity": "猪人团长",
       "system": "主线NPC",
@@ -1035,15 +889,13 @@
       "image": "/uploads/wiki/characters/wei-lian-mu.webp",
       "folder": "威廉",
       "featured": false,
-      "order": 44,
+      "order": 38,
       "thumb": "/uploads/wiki/characters/wei-lian-mu.webp"
     },
     {
       "slug": "shou-guang-ren",
       "name": "守光人",
-      "aliases": [
-        "守光人"
-      ],
+      "aliases": [],
       "identity": "太阳神殿枯瘦老者",
       "system": "特殊NPC",
       "region": "沙漠（炎沙国）",
@@ -1058,31 +910,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 45
-    },
-    {
-      "slug": "an-ni-li-ya-tu-niang",
-      "name": "安妮丽雅（兔娘）",
-      "aliases": [
-        "安妮丽雅（兔娘）"
-      ],
-      "identity": "兔娘",
-      "system": "服务行业",
-      "region": "",
-      "story": "待补充",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/an-ni-li-ya-tu-niang.webp",
-      "folder": "",
-      "featured": false,
-      "order": 46,
-      "thumb": "/uploads/wiki/characters/an-ni-li-ya-tu-niang.webp"
+      "order": 39
     },
     {
       "slug": "shen-pan-zhe-quan-li-zhi-yan",
       "name": "审判者·权力之眼",
-      "aliases": [
-        "审判者·权力之眼"
-      ],
+      "aliases": [],
       "identity": "天使族巨型傀儡",
       "system": "BOSS",
       "region": "龙之岛（血腥地段）",
@@ -1097,14 +930,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 47
+      "order": 40
     },
     {
       "slug": "dao-shi",
       "name": "导师",
-      "aliases": [
-        "导师"
-      ],
+      "aliases": [],
       "identity": "王城学院导师",
       "system": "主线NPC",
       "region": "王城学院",
@@ -1119,14 +950,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 48
+      "order": 41
     },
     {
       "slug": "xiao-jing-ling-nan-hai",
       "name": "小精灵男孩",
-      "aliases": [
-        "小精灵男孩"
-      ],
+      "aliases": [],
       "identity": "放小木马的孩子",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -1141,14 +970,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 49
+      "order": 42
     },
     {
       "slug": "xiao-ji",
       "name": "小蓟",
-      "aliases": [
-        "小蓟"
-      ],
+      "aliases": [],
       "identity": "传说中人物",
       "system": "背景",
       "region": "霜脉族（雪山）",
@@ -1163,14 +990,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 50
+      "order": 43
     },
     {
       "slug": "shan-gui",
       "name": "山鬼",
-      "aliases": [
-        "山鬼"
-      ],
+      "aliases": [],
       "identity": "幻象魔物",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -1185,14 +1010,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 51
+      "order": 44
     },
     {
       "slug": "yan-sheng",
       "name": "岩生",
-      "aliases": [
-        "岩生"
-      ],
+      "aliases": [],
       "identity": "传说中人物",
       "system": "背景",
       "region": "霜脉族（雪山）",
@@ -1207,14 +1030,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 52
+      "order": 45
     },
     {
       "slug": "wu-shi",
       "name": "巫师",
-      "aliases": [
-        "巫师"
-      ],
+      "aliases": [],
       "identity": "巫师",
       "system": "背景",
       "region": "永夜区（荒漠）",
@@ -1234,13 +1055,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 53
+      "order": 46
     },
     {
       "slug": "ba-ha-mu-te",
       "name": "巴哈姆特",
       "aliases": [
-        "巴哈姆特",
         "龙神之子巴哈姆特"
       ],
       "identity": "龙族王子",
@@ -1272,14 +1092,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 54
+      "order": 47
     },
     {
       "slug": "ba-long",
       "name": "巴隆",
-      "aliases": [
-        "巴隆"
-      ],
+      "aliases": [],
       "identity": "守墓人",
       "system": "主线NPC",
       "region": "永夜区（荒漠）",
@@ -1294,14 +1112,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 55
+      "order": 48
     },
     {
       "slug": "pa-ni",
       "name": "帕尼",
-      "aliases": [
-        "帕尼"
-      ],
+      "aliases": [],
       "identity": "蜥蜴兄弟弟弟",
       "system": "主线NPC",
       "region": "腐荒王国（沼泽）",
@@ -1316,14 +1132,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 56
+      "order": 49
     },
     {
       "slug": "pa-ge",
       "name": "帕格",
-      "aliases": [
-        "帕格"
-      ],
+      "aliases": [],
       "identity": "蜥蜴兄弟大哥",
       "system": "主线NPC",
       "region": "腐荒王国（沼泽）",
@@ -1338,14 +1152,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 57
+      "order": 50
     },
     {
       "slug": "nian-qing-nv-ren",
       "name": "年轻女人",
-      "aliases": [
-        "年轻女人"
-      ],
+      "aliases": [],
       "identity": "抵抗者",
       "system": "背景",
       "region": "穹翼族（瘟疫之地）",
@@ -1360,14 +1172,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 58
+      "order": 51
     },
     {
       "slug": "ku-si-ha-bi",
       "name": "库丝（哈比）",
-      "aliases": [
-        "库丝（哈比）"
-      ],
+      "aliases": [],
       "identity": "鸟人魔物母亲",
       "system": "主线NPC",
       "region": "初始森林",
@@ -1384,17 +1194,23 @@
           "chapter": "第三章"
         }
       ],
-      "image": null,
+      "image": "/uploads/wiki/characters/ku-si-ha-bi-2.webp",
       "folder": "",
       "featured": false,
-      "order": 59
+      "order": 52,
+      "variants": [],
+      "qImages": [
+        {
+          "name": "Q 版",
+          "image": "/uploads/wiki/characters/q/ku-si-ha-bi.webp"
+        }
+      ],
+      "thumb": "/uploads/wiki/characters/ku-si-ha-bi-2.webp"
     },
     {
       "slug": "de-lei-ke-di-huang",
       "name": "德雷克帝皇",
-      "aliases": [
-        "德雷克帝皇"
-      ],
+      "aliases": [],
       "identity": "西半球帝皇 / 瓦格鲁",
       "system": "沙漠 / 西方",
       "region": "初始森林",
@@ -1403,15 +1219,13 @@
       "image": "/uploads/wiki/characters/de-lei-ke-di-huang.webp",
       "folder": "德雷克帝皇",
       "featured": false,
-      "order": 60,
+      "order": 53,
       "thumb": "/uploads/wiki/characters/de-lei-ke-di-huang.webp"
     },
     {
       "slug": "yi-jian-zhe",
       "name": "忆剪者",
-      "aliases": [
-        "忆剪者"
-      ],
+      "aliases": [],
       "identity": "天使",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -1426,14 +1240,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 61
+      "order": 54
     },
     {
       "slug": "tuo-er",
       "name": "托尔",
-      "aliases": [
-        "托尔"
-      ],
+      "aliases": [],
       "identity": "拾荒者 / 巴哈姆特",
       "system": "主线NPC",
       "region": "天空城（魔羽天城）",
@@ -1453,14 +1265,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 62
+      "order": 55
     },
     {
       "slug": "mo-er-ke",
       "name": "摩尔科",
-      "aliases": [
-        "摩尔科"
-      ],
+      "aliases": [],
       "identity": "创世神",
       "system": "最终BOSS",
       "region": "地牢（无限地下城）",
@@ -1495,14 +1305,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 63
+      "order": 56
     },
     {
       "slug": "jiao-tuan-gao-jie-ji-si",
       "name": "教团高阶祭司",
-      "aliases": [
-        "教团高阶祭司"
-      ],
+      "aliases": [],
       "identity": "永恒教团",
       "system": "主线反派",
       "region": "王城学院",
@@ -1517,14 +1325,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 64
+      "order": 57
     },
     {
       "slug": "an-ying-ge-bu-lin-wen-yi-ling-zhu",
       "name": "暗影哥布林·瘟疫领主",
-      "aliases": [
-        "暗影哥布林·瘟疫领主"
-      ],
+      "aliases": [],
       "identity": "菌洞王座",
       "system": "BOSS",
       "region": "穹翼族（瘟疫之地）",
@@ -1539,14 +1345,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 65
+      "order": 58
     },
     {
       "slug": "an-ying-bian-fu",
       "name": "暗影蝙蝠",
-      "aliases": [
-        "暗影蝙蝠"
-      ],
+      "aliases": [],
       "identity": "永夜区BOSS",
       "system": "BOSS",
       "region": "永夜区（荒漠）",
@@ -1561,14 +1365,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 66
+      "order": 59
     },
     {
       "slug": "bao-jun-tai-tan-ge-lei",
       "name": "暴君泰坦格雷",
-      "aliases": [
-        "暴君泰坦格雷"
-      ],
+      "aliases": [],
       "identity": "拉斯特儿子",
       "system": "BOSS",
       "region": "沙漠（炎沙国）",
@@ -1577,14 +1379,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 67
+      "order": 60
     },
     {
       "slug": "cun-li-hu-wei-dui",
       "name": "村里护卫队",
-      "aliases": [
-        "村里护卫队"
-      ],
+      "aliases": [],
       "identity": "护卫队",
       "system": "战斗系统",
       "region": "初始森林",
@@ -1593,13 +1393,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 68
+      "order": 61
     },
     {
       "slug": "bo-lin-ka",
       "name": "柏林卡",
       "aliases": [
-        "柏林卡",
         "木偶师"
       ],
       "identity": "木偶师",
@@ -1616,14 +1415,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 69
+      "order": 62
     },
     {
       "slug": "xiao-zhang",
       "name": "校长",
-      "aliases": [
-        "校长"
-      ],
+      "aliases": [],
       "identity": "王城学院校长",
       "system": "主线NPC",
       "region": "王城学院",
@@ -1638,14 +1435,14 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 70
+      "order": 63
     },
     {
       "slug": "ge-mu",
       "name": "格姆",
       "aliases": [
         "丝袜店老板",
-        "格姆"
+        "格姆（丝袜店老板）"
       ],
       "identity": "丝袜店老板",
       "system": "商人系统",
@@ -1658,40 +1455,18 @@
           "chapter": "独立区域"
         }
       ],
-      "image": "/uploads/wiki/characters/ge-mu.webp",
+      "image": "/uploads/wiki/characters/ge-mu-si-wa-dian-lao-ban.webp",
       "folder": "丝袜店老板",
       "featured": false,
-      "order": 71
-    },
-    {
-      "slug": "ge-mu-si-wa-dian-lao-ban",
-      "name": "格姆（丝袜店老板）",
-      "aliases": [
-        "格姆（丝袜店老板）"
-      ],
-      "identity": "丝袜店老板",
-      "system": "商人系统",
-      "region": "",
-      "story": "佩露朋友，主世界经营丝袜店",
-      "chapters": [
-        {
-          "title": "独立区域剧情：龙之岛·巴哈姆特与佩露",
-          "slug": "story-15",
-          "chapter": "独立区域"
-        }
-      ],
-      "image": "/uploads/wiki/characters/ge-mu-si-wa-dian-lao-ban.webp",
-      "folder": "",
-      "featured": false,
-      "order": 72,
+      "order": 64,
+      "variants": [],
+      "qImages": [],
       "thumb": "/uploads/wiki/characters/ge-mu-si-wa-dian-lao-ban.webp"
     },
     {
       "slug": "ge-shi-zhe",
       "name": "格式者",
-      "aliases": [
-        "格式者"
-      ],
+      "aliases": [],
       "identity": "天使",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -1706,14 +1481,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 73
+      "order": 65
     },
     {
       "slug": "ge-la-wa-jiu-ba-lao-ban-niang",
       "name": "格拉瓦（酒吧老板娘）",
-      "aliases": [
-        "格拉瓦（酒吧老板娘）"
-      ],
+      "aliases": [],
       "identity": "酒吧老板娘",
       "system": "服务行业",
       "region": "",
@@ -1722,21 +1495,19 @@
       "image": "/uploads/wiki/characters/ge-la-wa-jiu-ba-lao-ban-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 74,
+      "order": 66,
       "thumb": "/uploads/wiki/characters/ge-la-wa-jiu-ba-lao-ban-niang.webp",
       "qImages": [
         {
           "name": "Q 版",
-          "image": "/uploads/wiki/characters/ge-la-wa-jiu-ba-lao-ban-niang.webp"
+          "image": "/uploads/wiki/characters/q/ge-la-wa-jiu-ba-lao-ban-niang.webp"
         }
       ]
     },
     {
       "slug": "sen-lin-nv-wu",
       "name": "森林女巫",
-      "aliases": [
-        "森林女巫"
-      ],
+      "aliases": [],
       "identity": "预言者小屋分部",
       "system": "商人系统",
       "region": "沙漠（炎沙国）",
@@ -1751,14 +1522,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 75
+      "order": 67
     },
     {
       "slug": "sen-lin-shou-hu-shen",
       "name": "森林守护神",
-      "aliases": [
-        "森林守护神"
-      ],
+      "aliases": [],
       "identity": "精灵族盟友",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -1773,14 +1542,14 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 76
+      "order": 68
     },
     {
       "slug": "shui-lian",
       "name": "水莲",
       "aliases": [
         "史莱姆娘",
-        "水莲"
+        "水莲(史莱姆娘)"
       ],
       "identity": "史莱姆娘",
       "system": "魔物娘系统",
@@ -1790,14 +1559,49 @@
       "image": "/uploads/wiki/characters/shui-lian.webp",
       "folder": "史莱姆娘",
       "featured": false,
-      "order": 77
+      "order": 69,
+      "variants": [
+        {
+          "id": "di-yi-jie-duan",
+          "label": "第一阶段",
+          "kind": "stage",
+          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-yi-jie-duan.webp",
+          "description": ""
+        },
+        {
+          "id": "di-san-jie-duan",
+          "label": "第三阶段",
+          "kind": "stage",
+          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-san-jie-duan.webp",
+          "description": ""
+        },
+        {
+          "id": "di-er-jie-duan",
+          "label": "第二阶段",
+          "kind": "stage",
+          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-er-jie-duan.webp",
+          "description": ""
+        },
+        {
+          "id": "di-si-jie-duan-ren-xing-hua",
+          "label": "第四阶段人形化",
+          "kind": "stage",
+          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-si-jie-duan-ren-xing-hua.webp",
+          "description": ""
+        }
+      ],
+      "qImages": [
+        {
+          "name": "Q 版",
+          "image": "/uploads/wiki/characters/q/shui-lian.webp"
+        }
+      ],
+      "thumb": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang.webp"
     },
     {
       "slug": "sha-ba-zhi-wang-luo-la-si",
       "name": "沙巴之王罗拉斯",
-      "aliases": [
-        "沙巴之王罗拉斯"
-      ],
+      "aliases": [],
       "identity": "二代沙漠之神",
       "system": "主线NPC",
       "region": "沙漠（炎沙国）",
@@ -1812,14 +1616,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 78
+      "order": 70
     },
     {
       "slug": "sha-mo-zhi-shen-la-si-te",
       "name": "沙漠之神拉斯特",
-      "aliases": [
-        "沙漠之神拉斯特"
-      ],
+      "aliases": [],
       "identity": "沙之国国王",
       "system": "背景",
       "region": "沙漠（炎沙国）",
@@ -1834,14 +1636,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 79
+      "order": 71
     },
     {
       "slug": "hai-xia",
       "name": "海夏",
-      "aliases": [
-        "海夏"
-      ],
+      "aliases": [],
       "identity": "未知",
       "system": "特殊NPC",
       "region": "",
@@ -1850,15 +1650,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 80,
+      "order": 72,
       "thumb": "/uploads/wiki/characters/hai-xia.webp"
     },
     {
       "slug": "hun-xue-jing-ling-mu-qin",
       "name": "混血精灵母亲",
-      "aliases": [
-        "混血精灵母亲"
-      ],
+      "aliases": [],
       "identity": "失去儿子罗恩",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -1873,14 +1671,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 81
+      "order": 73
     },
     {
       "slug": "qing-li-zhe",
       "name": "清理者",
-      "aliases": [
-        "清理者"
-      ],
+      "aliases": [],
       "identity": "低等天使",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -1895,14 +1691,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 82
+      "order": 74
     },
     {
       "slug": "wen-di-si-huang-zi",
       "name": "温迪斯皇子",
-      "aliases": [
-        "温迪斯皇子"
-      ],
+      "aliases": [],
       "identity": "王城皇子",
       "system": "主线NPC",
       "region": "诺兰德主城",
@@ -1911,14 +1705,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 83
+      "order": 75
     },
     {
       "slug": "chao-xi-shou-wang-zhe",
       "name": "潮汐守望者",
-      "aliases": [
-        "潮汐守望者"
-      ],
+      "aliases": [],
       "identity": "BOSS",
       "system": "BOSS",
       "region": "沙滩区（海洋）",
@@ -1933,17 +1725,21 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 84
+      "order": 76
     },
     {
       "slug": "yan-chong-rong-yan-huang-hou-li-ya",
-      "name": "炎虫熔岩皇后 / 莉亚",
+      "name": "莉亚",
       "aliases": [
-        "炎虫熔岩皇后 / 莉亚"
+        "炎虫熔岩皇后 / 莉亚",
+        "莉亚(炎土·熔岩皇后)",
+        "莉亚(炎虫·熔岩皇后)",
+        "炎虫熔岩皇后",
+        "熔岩皇后"
       ],
       "identity": "虫族孕妇",
       "system": "BOSS",
-      "region": "王城学院",
+      "region": "火石领",
       "story": "火山大屠杀幸存者，寄生古火龙",
       "chapters": [
         {
@@ -1952,10 +1748,13 @@
           "chapter": "第三章"
         }
       ],
-      "image": null,
+      "image": "/uploads/wiki/characters/li-ya-yan-chong-rong-yan-huang-hou.webp",
       "folder": "",
       "featured": false,
-      "order": 85
+      "order": 77,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/li-ya-yan-chong-rong-yan-huang-hou.webp"
     },
     {
       "slug": "ai-na",
@@ -1963,7 +1762,8 @@
       "aliases": [
         "爱那",
         "爱那（向导）",
-        "向导"
+        "向导",
+        "爱娜（向导）"
       ],
       "identity": "猫耳女孩",
       "system": "主线NPC",
@@ -1986,16 +1786,31 @@
           "chapter": "第四章"
         }
       ],
-      "image": "/uploads/wiki/characters/ai-na.webp",
+      "image": "/uploads/wiki/characters/ai-na-xiang-dao-2.webp",
       "folder": "向导",
       "featured": true,
-      "order": 86
+      "order": 78,
+      "variants": [
+        {
+          "id": "li-hui",
+          "label": "立绘",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/ai-na-xiang-dao-2-li-hui.webp",
+          "description": ""
+        }
+      ],
+      "qImages": [
+        {
+          "name": "Q 版",
+          "image": "/uploads/wiki/characters/q/ai-na.webp"
+        }
+      ],
+      "thumb": "/uploads/wiki/characters/ai-na-xiang-dao-2.webp"
     },
     {
       "slug": "ai-wei-da",
       "name": "爱维达",
       "aliases": [
-        "爱维达",
         "猪王BOSS爱维达"
       ],
       "identity": "腐朽之王",
@@ -2017,15 +1832,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 87,
+      "order": 79,
       "thumb": "/uploads/wiki/characters/ai-wei-da.webp"
     },
     {
       "slug": "ai-sha",
       "name": "爱莎",
-      "aliases": [
-        "爱莎"
-      ],
+      "aliases": [],
       "identity": "潮汐歌者 / 海神血脉",
       "system": "背景",
       "region": "沙滩区（海洋）",
@@ -2040,30 +1853,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 88
-    },
-    {
-      "slug": "ai-na-xiang-dao",
-      "name": "爱那（向导）",
-      "aliases": [
-        "爱那（向导）"
-      ],
-      "identity": "向导",
-      "system": "服务行业",
-      "region": "",
-      "story": "待补充",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/ai-na-xiang-dao.webp",
-      "folder": "爱那（向导）",
-      "featured": false,
-      "order": 89
+      "order": 80
     },
     {
       "slug": "ma-er-ta",
       "name": "玛尔塔",
-      "aliases": [
-        "玛尔塔"
-      ],
+      "aliases": [],
       "identity": "巴隆养母",
       "system": "背景",
       "region": "永夜区（荒漠）",
@@ -2078,13 +1873,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 90
+      "order": 81
     },
     {
       "slug": "lin-ya",
       "name": "琳雅",
       "aliases": [
-        "琳雅"
+        "琳雅（精灵女）"
       ],
       "identity": "精灵女",
       "system": "主线NPC",
@@ -2097,17 +1892,40 @@
           "chapter": "第三章"
         }
       ],
-      "image": null,
+      "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-1.webp",
       "folder": "",
       "featured": false,
-      "order": 91
+      "order": 82,
+      "variants": [
+        {
+          "id": "li-hui-1",
+          "label": "立绘1",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-1.webp",
+          "description": ""
+        },
+        {
+          "id": "li-hui-2",
+          "label": "立绘2",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-2.webp",
+          "description": ""
+        },
+        {
+          "id": "li-hui-3",
+          "label": "立绘3",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-3.webp",
+          "description": ""
+        }
+      ],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/lin-ya-jing-ling-nv.webp"
     },
     {
       "slug": "wen-shen-lei-en-te",
       "name": "瘟神雷恩特",
-      "aliases": [
-        "瘟神雷恩特"
-      ],
+      "aliases": [],
       "identity": "前圣骑士",
       "system": "BOSS",
       "region": "穹翼族（瘟疫之地）",
@@ -2127,14 +1945,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 92
+      "order": 83
     },
     {
       "slug": "huang-zi",
       "name": "皇子",
-      "aliases": [
-        "皇子"
-      ],
+      "aliases": [],
       "identity": "王城皇子",
       "system": "主线NPC",
       "region": "王城学院",
@@ -2154,14 +1970,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 93
+      "order": 84
     },
     {
       "slug": "huang-jia-xin-feng-hao-chuan-zhang",
       "name": "皇家信风号船长",
-      "aliases": [
-        "皇家信风号船长"
-      ],
+      "aliases": [],
       "identity": "日志中提及",
       "system": "背景",
       "region": "沙滩区（海洋）",
@@ -2176,30 +1990,32 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 94
+      "order": 85
     },
     {
       "slug": "pi-de-lu-lu-lu-xiu",
       "name": "皮德鲁·路路修",
       "aliases": [
-        "皮德鲁·路路修"
+        "皮德鲁*路路修（商人）",
+        "皮德鲁*路路修"
       ],
       "identity": "商人",
       "system": "商人系统",
-      "region": "",
+      "region": "诺兰德主城",
       "story": "待补充",
       "chapters": [],
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 95
+      "order": 86,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/pi-de-lu-lu-lu-xiu-shang-ren.webp"
     },
     {
       "slug": "gai-ya",
       "name": "盖亚",
-      "aliases": [
-        "盖亚"
-      ],
+      "aliases": [],
       "identity": "大地女神",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -2229,14 +2045,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 96
+      "order": 87
     },
     {
       "slug": "gai-er",
       "name": "盖尔",
-      "aliases": [
-        "盖尔"
-      ],
+      "aliases": [],
       "identity": "未知",
       "system": "特殊NPC",
       "region": "",
@@ -2245,14 +2059,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 97
+      "order": 88
     },
     {
       "slug": "kong-zhong-zhi-shen-yi-tian-shi",
       "name": "空中之神·翼天使",
-      "aliases": [
-        "空中之神·翼天使"
-      ],
+      "aliases": [],
       "identity": "巴哈姆特兄长",
       "system": "BOSS",
       "region": "天空城（魔羽天城）",
@@ -2277,14 +2089,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 98
+      "order": 89
     },
     {
       "slug": "jing-ji-chang-cai-pan",
       "name": "竞技场裁判",
-      "aliases": [
-        "竞技场裁判"
-      ],
+      "aliases": [],
       "identity": "裁判",
       "system": "战斗系统",
       "region": "诺兰德主城",
@@ -2299,14 +2109,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 99
+      "order": 90
     },
     {
       "slug": "wei-na-jia",
       "name": "维纳嘉",
       "aliases": [
-        "野猪维纳嘉（公主）",
-        "维纳嘉"
+        "野猪维纳嘉（公主）"
       ],
       "identity": "猪人公主",
       "system": "主线NPC",
@@ -2322,15 +2131,13 @@
       "image": "/uploads/wiki/characters/wei-na-jia.webp",
       "folder": "野猪维纳嘉（公主）",
       "featured": false,
-      "order": 100,
+      "order": 91,
       "thumb": "/uploads/wiki/characters/wei-na-jia.webp"
     },
     {
       "slug": "luo-de",
       "name": "罗德",
-      "aliases": [
-        "罗德"
-      ],
+      "aliases": [],
       "identity": "赏金猎人",
       "system": "背景",
       "region": "永夜区（荒漠）",
@@ -2355,14 +2162,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 101
+      "order": 92
     },
     {
       "slug": "lao-guo-wang",
       "name": "老国王",
-      "aliases": [
-        "老国王"
-      ],
+      "aliases": [],
       "identity": "腐荒王国国王",
       "system": "背景",
       "region": "腐荒王国（沼泽）",
@@ -2382,14 +2187,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 102
+      "order": 93
     },
     {
       "slug": "lao-jian-ya",
       "name": "老尖牙",
-      "aliases": [
-        "老尖牙"
-      ],
+      "aliases": [],
       "identity": "蜥蜴族村长",
       "system": "主线NPC",
       "region": "腐荒王国（沼泽）",
@@ -2404,14 +2207,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 103
+      "order": 94
     },
     {
       "slug": "lao-ba-er",
       "name": "老巴尔",
-      "aliases": [
-        "老巴尔"
-      ],
+      "aliases": [],
       "identity": "边缘村村长者",
       "system": "情报系统",
       "region": "精灵族（丛林）",
@@ -2426,14 +2227,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 104
+      "order": 95
     },
     {
       "slug": "lao-yu-min",
       "name": "老渔民",
-      "aliases": [
-        "老渔民"
-      ],
+      "aliases": [],
       "identity": "篝火边讲故事",
       "system": "情报系统",
       "region": "沙滩区（海洋）",
@@ -2448,14 +2247,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 105
+      "order": 96
     },
     {
       "slug": "lao-yao",
       "name": "老鹞",
-      "aliases": [
-        "老鹞"
-      ],
+      "aliases": [],
       "identity": "锈蚀港湾老居民",
       "system": "情报系统",
       "region": "沙滩区（海洋）",
@@ -2470,14 +2267,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 106
+      "order": 97
     },
     {
       "slug": "ai-lun-te-shang-jiang",
       "name": "艾伦特上将",
       "aliases": [
-        "艾伦特",
-        "艾伦特上将"
+        "艾伦特"
       ],
       "identity": "0号骑士团领头",
       "system": "主线反派",
@@ -2498,15 +2294,13 @@
       "image": "/uploads/wiki/characters/ai-lun-te-shang-jiang.webp",
       "folder": "艾伦特",
       "featured": false,
-      "order": 107,
+      "order": 98,
       "thumb": "/uploads/wiki/characters/ai-lun-te-shang-jiang.webp"
     },
     {
       "slug": "ai-li-2",
       "name": "艾莉",
-      "aliases": [
-        "艾莉"
-      ],
+      "aliases": [],
       "identity": "赫克托女儿",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -2521,14 +2315,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 108
+      "order": 99
     },
     {
       "slug": "li-na",
       "name": "莉娜",
-      "aliases": [
-        "莉娜"
-      ],
+      "aliases": [],
       "identity": "赫克托妻子",
       "system": "背景",
       "region": "精灵族（丛林）",
@@ -2543,14 +2335,14 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 109
+      "order": 100
     },
     {
       "slug": "lei-ya-si",
       "name": "蕾雅思",
       "aliases": [
         "老师",
-        "蕾雅思"
+        "蕾雅思（王城学院的老师）"
       ],
       "identity": "王城学院老师 / 骑士长",
       "system": "主线NPC",
@@ -2566,13 +2358,16 @@
       "image": "/uploads/wiki/characters/lei-ya-si.webp",
       "folder": "老师",
       "featured": false,
-      "order": 110
+      "order": 101,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/lei-ya-si-wang-cheng-xue-yuan-de-lao-shi.webp"
     },
     {
       "slug": "wei-wei-an-hei-tu-shen-he-zhang",
       "name": "薇薇安（黑兔审核长）",
       "aliases": [
-        "薇薇安（黑兔审核长）"
+        "薇薇安（黑免审核长）"
       ],
       "identity": "审核长",
       "system": "服务行业",
@@ -2582,15 +2377,15 @@
       "image": "/uploads/wiki/characters/wei-wei-an-hei-tu-shen-he-zhang.webp",
       "folder": "",
       "featured": false,
-      "order": 111,
-      "thumb": "/uploads/wiki/characters/wei-wei-an-hei-tu-shen-he-zhang.webp"
+      "order": 102,
+      "thumb": "/uploads/wiki/characters/wei-wei-an-hei-tu-shen-he-zhang.webp",
+      "variants": [],
+      "qImages": []
     },
     {
       "slug": "chong-niang",
       "name": "虫娘",
-      "aliases": [
-        "虫娘"
-      ],
+      "aliases": [],
       "identity": "虫娘",
       "system": "魔物娘系统",
       "region": "",
@@ -2599,14 +2394,12 @@
       "image": "/uploads/wiki/characters/chong-niang.webp",
       "folder": "虫娘",
       "featured": false,
-      "order": 112
+      "order": 103
     },
     {
       "slug": "bei-tong-hua-ge-bu-lin",
       "name": "被同化哥布林",
-      "aliases": [
-        "被同化哥布林"
-      ],
+      "aliases": [],
       "identity": "菌丝同化",
       "system": "背景",
       "region": "穹翼族（瘟疫之地）",
@@ -2615,14 +2408,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 113
+      "order": 104
     },
     {
       "slug": "gui-zu-dui-shou",
       "name": "贵族对手",
-      "aliases": [
-        "贵族对手"
-      ],
+      "aliases": [],
       "identity": "爱维达竞选对手",
       "system": "背景",
       "region": "腐荒王国（沼泽）",
@@ -2637,14 +2428,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 114
+      "order": 105
     },
     {
       "slug": "chi-gui",
       "name": "赤鬼",
       "aliases": [
-        "恶鬼",
-        "赤鬼"
+        "恶鬼"
       ],
       "identity": "传说中魔物",
       "system": "背景",
@@ -2665,14 +2455,12 @@
       "image": "/uploads/wiki/characters/chi-gui.webp",
       "folder": "恶鬼",
       "featured": false,
-      "order": 115
+      "order": 106
     },
     {
       "slug": "he-ke-tuo",
       "name": "赫克托",
-      "aliases": [
-        "赫克托"
-      ],
+      "aliases": [],
       "identity": "熊人",
       "system": "BOSS",
       "region": "精灵族（丛林）",
@@ -2687,14 +2475,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 116
+      "order": 107
     },
     {
       "slug": "jin-fa-tan-xian-jia",
       "name": "金发探险家",
-      "aliases": [
-        "金发探险家"
-      ],
+      "aliases": [],
       "identity": "凛回忆中男子",
       "system": "背景",
       "region": "霜脉族（雪山）",
@@ -2709,14 +2495,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 117
+      "order": 108
     },
     {
       "slug": "ding-zi-tou-fu-li-ci",
       "name": "钉子头弗里茨",
-      "aliases": [
-        "钉子头弗里茨"
-      ],
+      "aliases": [],
       "identity": "巨型骷髅不死人",
       "system": "BOSS",
       "region": "诺兰德主城",
@@ -2741,14 +2525,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 118
+      "order": 109
     },
     {
       "slug": "diao-yu-lao",
       "name": "钓鱼佬",
-      "aliases": [
-        "钓鱼佬"
-      ],
+      "aliases": [],
       "identity": "港口深处小森林",
       "system": "情报系统",
       "region": "沙滩区（海洋）",
@@ -2763,14 +2545,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 119
+      "order": 110
     },
     {
       "slug": "a-ji",
       "name": "阿吉",
-      "aliases": [
-        "阿吉"
-      ],
+      "aliases": [],
       "identity": "宿舍室友",
       "system": "鹰之眼委员会",
       "region": "王城学院",
@@ -2815,14 +2595,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 120
+      "order": 111
     },
     {
       "slug": "a-xia",
       "name": "阿夏",
-      "aliases": [
-        "阿夏"
-      ],
+      "aliases": [],
       "identity": "宿舍室友",
       "system": "鹰之眼委员会",
       "region": "王城学院",
@@ -2867,14 +2645,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 121
+      "order": 112
     },
     {
       "slug": "a-er-bi-ya",
       "name": "阿尔比亚",
-      "aliases": [
-        "阿尔比亚"
-      ],
+      "aliases": [],
       "identity": "半神",
       "system": "主线核心",
       "region": "地牢（无限地下城）",
@@ -2909,15 +2685,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 122,
+      "order": 113,
       "thumb": "/uploads/wiki/characters/a-er-bi-ya.webp"
     },
     {
       "slug": "a-kang-wen-quan-tui-jian-ren",
       "name": "阿康温泉推荐人",
-      "aliases": [
-        "阿康温泉推荐人"
-      ],
+      "aliases": [],
       "identity": "温泉推荐人",
       "system": "服务行业",
       "region": "初始森林",
@@ -2926,14 +2700,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 123
+      "order": 114
     },
     {
       "slug": "a-jie",
       "name": "阿杰",
       "aliases": [
-        "男主",
-        "阿杰"
+        "男主"
       ],
       "identity": "男主 / 阿葵转生前",
       "system": "主角",
@@ -2954,7 +2727,7 @@
       "image": "/uploads/wiki/characters/a-jie.webp",
       "folder": "男主",
       "featured": false,
-      "order": 124,
+      "order": 115,
       "variants": [
         {
           "id": "shang-bei-zi-de-yang-zi",
@@ -2969,9 +2742,7 @@
     {
       "slug": "a-lin",
       "name": "阿琳",
-      "aliases": [
-        "阿琳"
-      ],
+      "aliases": [],
       "identity": "宿舍室友",
       "system": "鹰之眼委员会",
       "region": "王城学院",
@@ -3016,14 +2787,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 125
+      "order": 116
     },
     {
       "slug": "a-kui",
       "name": "阿葵",
       "aliases": [
-        "女主角",
-        "阿葵"
+        "女主角"
       ],
       "identity": "玩家角色 / 半神容器",
       "system": "主角",
@@ -3129,7 +2899,7 @@
       "image": "/uploads/wiki/characters/a-kui.webp",
       "folder": "女主角",
       "featured": true,
-      "order": 126,
+      "order": 117,
       "variants": [
         {
           "id": "kui-jia-zhuang",
@@ -3143,16 +2913,14 @@
       "qImages": [
         {
           "name": "Q 版",
-          "image": "/uploads/wiki/characters/a-kui.webp"
+          "image": "/uploads/wiki/characters/q/a-kui.webp"
         }
       ]
     },
     {
       "slug": "a-wei",
       "name": "阿薇",
-      "aliases": [
-        "阿薇"
-      ],
+      "aliases": [],
       "identity": "宿舍室友",
       "system": "鹰之眼委员会",
       "region": "王城学院",
@@ -3197,14 +2965,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 127
+      "order": 118
     },
     {
       "slug": "xue-tu-a-po",
       "name": "雪兔阿婆",
-      "aliases": [
-        "雪兔阿婆"
-      ],
+      "aliases": [],
       "identity": "温泉旅店服务员",
       "system": "服务行业",
       "region": "霜脉族（雪山）",
@@ -3224,14 +2990,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 128
+      "order": 119
     },
     {
       "slug": "huo-ke-ye-ye",
       "name": "霍克爷爷",
-      "aliases": [
-        "霍克爷爷"
-      ],
+      "aliases": [],
       "identity": "老拾荒者",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -3246,14 +3010,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 129
+      "order": 120
     },
     {
       "slug": "shuang-mai-zu-zhang-lao",
       "name": "霜脉族长老",
-      "aliases": [
-        "霜脉族长老"
-      ],
+      "aliases": [],
       "identity": "霜脉族长老",
       "system": "主线NPC",
       "region": "霜脉族（雪山）",
@@ -3268,14 +3030,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 130
+      "order": 121
     },
     {
       "slug": "mei-mo-ai-xia",
       "name": "魅魔艾夏",
-      "aliases": [
-        "魅魔艾夏"
-      ],
+      "aliases": [],
       "identity": "永夜区BOSS",
       "system": "BOSS",
       "region": "永夜区（荒漠）",
@@ -3290,14 +3050,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 131
+      "order": 122
     },
     {
       "slug": "mo-wang-yi-jie-duan",
       "name": "魔王（一阶段）",
-      "aliases": [
-        "魔王（一阶段）"
-      ],
+      "aliases": [],
       "identity": "萝莉形态",
       "system": "主线NPC",
       "region": "王城学院",
@@ -3312,14 +3070,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 132
+      "order": 123
     },
     {
       "slug": "he-ya",
       "name": "鹤娅",
-      "aliases": [
-        "鹤娅"
-      ],
+      "aliases": [],
       "identity": "库丝女儿",
       "system": "背景",
       "region": "初始森林",
@@ -3328,14 +3084,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 133
+      "order": 124
     },
     {
       "slug": "lu-lu-di-lao-li-ru-dong-de-nv-hai",
       "name": "鹭鹭（地牢里蠕动的女孩）",
-      "aliases": [
-        "鹭鹭（地牢里蠕动的女孩）"
-      ],
+      "aliases": [],
       "identity": "地牢女孩",
       "system": "特殊NPC",
       "region": "",
@@ -3344,14 +3098,13 @@
       "image": "/uploads/wiki/characters/lu-lu-di-lao-li-ru-dong-de-nv-hai.webp",
       "folder": "",
       "featured": false,
-      "order": 134
+      "order": 125
     },
     {
       "slug": "ying-zhi-yan-wei-yuan-hui-hui-zhang",
       "name": "鹰之眼委员会会长",
       "aliases": [
-        "委员会会长",
-        "鹰之眼委员会会长"
+        "委员会会长"
       ],
       "identity": "会长",
       "system": "特殊NPC",
@@ -3367,14 +3120,12 @@
       "image": "/uploads/wiki/characters/ying-zhi-yan-wei-yuan-hui-hui-zhang.webp",
       "folder": "委员会会长",
       "featured": false,
-      "order": 135
+      "order": 126
     },
     {
       "slug": "dai-yin-fan-xiao-ba",
       "name": "黛阴烦（校霸）",
-      "aliases": [
-        "黛阴烦（校霸）"
-      ],
+      "aliases": [],
       "identity": "校霸",
       "system": "特殊NPC",
       "region": "",
@@ -3383,15 +3134,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 136,
+      "order": 127,
       "thumb": "/uploads/wiki/characters/dai-yin-fan-xiao-ba.webp"
     },
     {
       "slug": "long-zhi-shen",
       "name": "龙之神",
-      "aliases": [
-        "龙之神"
-      ],
+      "aliases": [],
       "identity": "巴哈姆特之父",
       "system": "背景",
       "region": "天空城（魔羽天城）",
@@ -3411,14 +3160,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 137
+      "order": 128
     },
     {
       "slug": "long-zu",
       "name": "龙族",
-      "aliases": [
-        "龙族"
-      ],
+      "aliases": [],
       "identity": "北方龙族",
       "system": "背景",
       "region": "腐荒王国（沼泽）",
@@ -3458,14 +3205,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 138
+      "order": 129
     },
     {
       "slug": "long-shen-zhi-zi-ba-ha-mu-te",
       "name": "龙神之子巴哈姆特",
-      "aliases": [
-        "龙神之子巴哈姆特"
-      ],
+      "aliases": [],
       "identity": "龙族王子",
       "system": "龙之岛 / 天空城",
       "region": "初始森林",
@@ -3474,14 +3219,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 139
+      "order": 130
     },
     {
       "slug": "oc",
       "name": "OC",
-      "aliases": [
-        "OC"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3490,40 +3233,24 @@
       "image": "/uploads/wiki/characters/oc.webp",
       "folder": "oc",
       "featured": false,
-      "order": 140
+      "order": 131
     },
     {
       "slug": "wu-mu",
       "name": "乌姆",
       "aliases": [
         "章鱼娘",
-        "乌姆"
+        "乌姆（章鱼娘）"
       ],
       "identity": "魔物娘",
       "system": "NPC",
-      "region": "",
-      "story": "",
+      "region": "海妖区（艾兰德里亚）",
+      "story": "待补充",
       "chapters": [],
       "image": "/uploads/wiki/characters/wu-mu.webp",
       "folder": "章鱼娘",
       "featured": false,
-      "order": 141
-    },
-    {
-      "slug": "wu-mu-zhang-yu-niang-2",
-      "name": "乌姆(章鱼娘)",
-      "aliases": [
-        "乌姆(章鱼娘)"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "海妖区（艾兰德里亚）",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 142,
+      "order": 132,
       "variants": [
         {
           "id": "di-san-jie-duan",
@@ -3540,31 +3267,13 @@
           "description": ""
         }
       ],
+      "qImages": [],
       "thumb": "/uploads/wiki/characters/wu-mu-zhang-yu-niang-2.webp"
-    },
-    {
-      "slug": "ren-lei-guo-wang-a-er-ai-ding-bao-2",
-      "name": "人类国王-阿尔*爱丁堡",
-      "aliases": [
-        "人类国王-阿尔*爱丁堡"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "诺兰德主城",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/ren-lei-guo-wang-a-er-ai-ding-bao-2.webp",
-      "folder": "",
-      "featured": false,
-      "order": 143,
-      "thumb": "/uploads/wiki/characters/ren-lei-guo-wang-a-er-ai-ding-bao-2.webp"
     },
     {
       "slug": "yi-si-duo-gong-zhu-gong-zhu-de-hu-wei",
       "name": "伊斯多公主公主的护卫",
-      "aliases": [
-        "伊斯多公主公主的护卫"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "初始森林",
@@ -3573,21 +3282,19 @@
       "image": "/uploads/wiki/characters/yi-si-duo-gong-zhu-gong-zhu-de-hu-wei.webp",
       "folder": "",
       "featured": false,
-      "order": 144,
+      "order": 133,
       "thumb": "/uploads/wiki/characters/yi-si-duo-gong-zhu-gong-zhu-de-hu-wei.webp",
       "qImages": [
         {
           "name": "Q 版",
-          "image": "/uploads/wiki/characters/yi-si-duo-gong-zhu-gong-zhu-de-hu-wei.webp"
+          "image": "/uploads/wiki/characters/q/yi-si-duo-gong-zhu-gong-zhu-de-hu-wei.webp"
         }
       ]
     },
     {
       "slug": "gong-zhu-gong-zhu-de-hu-wei",
       "name": "公主公主的护卫",
-      "aliases": [
-        "公主公主的护卫"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "初始森林",
@@ -3596,14 +3303,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 145
+      "order": 134
     },
     {
       "slug": "shou-mo-wu",
       "name": "兽魔物",
-      "aliases": [
-        "兽魔物"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3612,20 +3317,19 @@
       "image": "/uploads/wiki/characters/shou-mo-wu.webp",
       "folder": "兽魔物",
       "featured": false,
-      "order": 146
+      "order": 135
     },
     {
       "slug": "lin",
       "name": "凛",
       "aliases": [
         "凛(雪女)",
-        "雪女",
-        "凛"
+        "雪女"
       ],
       "identity": "魔物娘",
       "system": "NPC",
-      "region": "",
-      "story": "",
+      "region": "霜脉族（雪山）",
+      "story": "等待百年，被看见后释然",
       "chapters": [
         {
           "title": "第三章：火山章节",
@@ -3648,34 +3352,38 @@
           "chapter": "独立区域"
         }
       ],
-      "image": "/uploads/wiki/characters/lin.webp",
+      "image": "/uploads/wiki/characters/lin-xue-nv.webp",
       "folder": "凛(雪女)",
       "featured": true,
-      "order": 147
+      "order": 136,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/lin-xue-nv.webp"
     },
     {
       "slug": "kai-sa-you-mu-ao",
       "name": "凯撒·尤姆奥",
       "aliases": [
         "教皇",
-        "凯撒·尤姆奥"
+        "凯撒·尤姆奥（教皇）"
       ],
-      "identity": "",
+      "identity": "教皇",
       "system": "NPC",
       "region": "",
-      "story": "",
+      "story": "待补充",
       "chapters": [],
       "image": "/uploads/wiki/characters/kai-sa-you-mu-ao.webp",
       "folder": "教皇",
       "featured": false,
-      "order": 148
+      "order": 137,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/kai-sa-you-mu-ao-jiao-huang.webp"
     },
     {
       "slug": "ji-er-jing-ling-guo-gong-zhu",
       "name": "吉尔精灵国公主",
-      "aliases": [
-        "吉尔精灵国公主"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "初始森林",
@@ -3684,12 +3392,12 @@
       "image": "/uploads/wiki/characters/ji-er-jing-ling-guo-gong-zhu.webp",
       "folder": "",
       "featured": false,
-      "order": 149,
+      "order": 138,
       "thumb": "/uploads/wiki/characters/ji-er-jing-ling-guo-gong-zhu.webp",
       "qImages": [
         {
           "name": "Q 版",
-          "image": "/uploads/wiki/characters/ji-er-jing-ling-guo-gong-zhu.webp"
+          "image": "/uploads/wiki/characters/q/ji-er-jing-ling-guo-gong-zhu.webp"
         }
       ]
     },
@@ -3698,42 +3406,27 @@
       "name": "咩奈",
       "aliases": [
         "1",
-        "咩奈",
         "咩奈·码头小偷",
-        "码头小偷"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/mie-nai.webp",
-      "folder": "1",
-      "featured": false,
-      "order": 150
-    },
-    {
-      "slug": "mie-nai-hai-yao",
-      "name": "咩奈(海妖)",
-      "aliases": [
+        "码头小偷",
         "咩奈(海妖)"
       ],
       "identity": "",
       "system": "NPC",
-      "region": "海妖区（艾兰德里亚）",
-      "story": "",
+      "region": "",
+      "story": "待补充",
       "chapters": [],
-      "image": null,
-      "folder": "",
+      "image": "/uploads/wiki/characters/mie-nai.webp",
+      "folder": "1",
       "featured": false,
-      "order": 151
+      "order": 139,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/mie-nai-ma-tou-xiao-tou.webp"
     },
     {
       "slug": "ge-bu-lin-qun",
       "name": "哥布林群",
-      "aliases": [
-        "哥布林群"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3748,14 +3441,12 @@
       "image": "/uploads/wiki/characters/ge-bu-lin-qun.webp",
       "folder": "哥布林群",
       "featured": false,
-      "order": 152
+      "order": 140
     },
     {
       "slug": "shang-ren",
       "name": "商人",
-      "aliases": [
-        "商人"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "沙滩区（海洋）",
@@ -3785,14 +3476,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 153
+      "order": 141
     },
     {
       "slug": "tu-shu-guan-mo-fa-shi",
       "name": "图书馆魔法师",
-      "aliases": [
-        "图书馆魔法师"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "山下小镇",
@@ -3801,14 +3490,12 @@
       "image": "/uploads/wiki/characters/tu-shu-guan-mo-fa-shi.webp",
       "folder": "图书馆魔法师",
       "featured": false,
-      "order": 154
+      "order": 142
     },
     {
       "slug": "di-lao-boss",
       "name": "地牢 BOSS",
-      "aliases": [
-        "地牢 BOSS"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3817,31 +3504,32 @@
       "image": "/uploads/wiki/characters/di-lao-boss.webp",
       "folder": "地牢BOSS",
       "featured": false,
-      "order": 155
+      "order": 143
     },
     {
       "slug": "ye-shen-ri",
       "name": "夜神日",
       "aliases": [
         "园丁",
-        "夜神日"
+        "夜神日（园丁）"
       ],
-      "identity": "",
+      "identity": "园丁",
       "system": "NPC",
       "region": "",
-      "story": "",
+      "story": "待补充",
       "chapters": [],
       "image": "/uploads/wiki/characters/ye-shen-ri.webp",
       "folder": "园丁",
       "featured": false,
-      "order": 156
+      "order": 144,
+      "variants": [],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/ye-shen-ri-yuan-ding.webp"
     },
     {
       "slug": "da-wang-hua-guai",
       "name": "大王花怪",
-      "aliases": [
-        "大王花怪"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "精灵族（丛林）",
@@ -3850,14 +3538,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 157
+      "order": 145
     },
     {
       "slug": "tian-cheng-ban-shen",
       "name": "天秤半神",
-      "aliases": [
-        "天秤半神"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "初始森林",
@@ -3866,14 +3552,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 158
+      "order": 146
     },
     {
       "slug": "kui-niang",
       "name": "奎娘",
-      "aliases": [
-        "奎娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3882,14 +3566,12 @@
       "image": "/uploads/wiki/characters/kui-niang.webp",
       "folder": "奎娘",
       "featured": false,
-      "order": 159
+      "order": 147
     },
     {
       "slug": "nv-shen",
       "name": "女神",
-      "aliases": [
-        "女神"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3919,31 +3601,40 @@
       "image": "/uploads/wiki/characters/nv-shen.webp",
       "folder": "女神",
       "featured": false,
-      "order": 160
+      "order": 148
     },
     {
       "slug": "an-ni-li-ya",
       "name": "安妮丽雅",
       "aliases": [
         "兔娘",
-        "安妮丽雅"
+        "安妮丽雅（兔娘）"
       ],
-      "identity": "魔物娘",
+      "identity": "兔娘",
       "system": "NPC",
       "region": "",
-      "story": "",
+      "story": "待补充",
       "chapters": [],
-      "image": "/uploads/wiki/characters/an-ni-li-ya.webp",
+      "image": "/uploads/wiki/characters/an-ni-li-ya-tu-niang.webp",
       "folder": "兔娘",
       "featured": false,
-      "order": 161
+      "order": 149,
+      "variants": [
+        {
+          "id": "旧版立绘",
+          "label": "旧版立绘",
+          "kind": "outfit",
+          "image": "/uploads/wiki/characters/an-ni-li-ya.webp",
+          "description": ""
+        }
+      ],
+      "qImages": [],
+      "thumb": "/uploads/wiki/characters/an-ni-li-ya-tu-niang.webp"
     },
     {
       "slug": "xiao-zhen-xiao-nv-hai",
       "name": "小镇小女孩",
-      "aliases": [
-        "小镇小女孩"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "山下小镇",
@@ -3952,14 +3643,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 162
+      "order": 150
     },
     {
       "slug": "shan-shou-niang",
       "name": "山兽娘",
-      "aliases": [
-        "山兽娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -3968,37 +3657,12 @@
       "image": "/uploads/wiki/characters/shan-shou-niang.webp",
       "folder": "山兽娘（后山守护神）",
       "featured": false,
-      "order": 163
-    },
-    {
-      "slug": "ku-si-ha-bi-2",
-      "name": "库丝(哈比)",
-      "aliases": [
-        "库丝(哈比)"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "初始森林",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/ku-si-ha-bi-2.webp",
-      "folder": "",
-      "featured": false,
-      "order": 164,
-      "thumb": "/uploads/wiki/characters/ku-si-ha-bi-2.webp",
-      "qImages": [
-        {
-          "name": "Q 版",
-          "image": "/uploads/wiki/characters/ku-si-ha-bi-2.webp"
-        }
-      ]
+      "order": 151
     },
     {
       "slug": "dai-lun-xi-yi-zu-tou-ling",
       "name": "戴伦蜥蜴族(头领)",
-      "aliases": [
-        "戴伦蜥蜴族(头领)"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "腐荒王国（沼泽）",
@@ -4007,14 +3671,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 165
+      "order": 152
     },
     {
       "slug": "jiao-huang",
       "name": "教皇",
-      "aliases": [
-        "教皇"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "火石领",
@@ -4023,14 +3685,12 @@
       "image": "/uploads/wiki/characters/jiao-huang.webp",
       "folder": "教皇",
       "featured": false,
-      "order": 166
+      "order": 153
     },
     {
       "slug": "kun-chong-niang",
       "name": "昆虫娘",
-      "aliases": [
-        "昆虫娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4039,14 +3699,12 @@
       "image": "/uploads/wiki/characters/kun-chong-niang.webp",
       "folder": "昆虫娘",
       "featured": false,
-      "order": 167
+      "order": 154
     },
     {
       "slug": "cun-zhang",
       "name": "村长",
-      "aliases": [
-        "村长"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "山下小镇",
@@ -4071,15 +3729,13 @@
       "image": "/uploads/wiki/characters/cun-zhang.webp",
       "folder": "村长",
       "featured": false,
-      "order": 168,
+      "order": 155,
       "thumb": "/uploads/wiki/characters/cun-zhang.webp"
     },
     {
       "slug": "sen-zhi-qi",
       "name": "森之妻",
-      "aliases": [
-        "森之妻"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "精灵族（丛林）",
@@ -4088,67 +3744,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 169
-    },
-    {
-      "slug": "shui-lian-shi-lai-mu-niang",
-      "name": "水莲(史莱姆娘)",
-      "aliases": [
-        "水莲(史莱姆娘)"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "初始森林",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 170,
-      "variants": [
-        {
-          "id": "di-yi-jie-duan",
-          "label": "第一阶段",
-          "kind": "stage",
-          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-yi-jie-duan.webp",
-          "description": ""
-        },
-        {
-          "id": "di-san-jie-duan",
-          "label": "第三阶段",
-          "kind": "stage",
-          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-san-jie-duan.webp",
-          "description": ""
-        },
-        {
-          "id": "di-er-jie-duan",
-          "label": "第二阶段",
-          "kind": "stage",
-          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-er-jie-duan.webp",
-          "description": ""
-        },
-        {
-          "id": "di-si-jie-duan-ren-xing-hua",
-          "label": "第四阶段人形化",
-          "kind": "stage",
-          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang-di-si-jie-duan-ren-xing-hua.webp",
-          "description": ""
-        }
-      ],
-      "thumb": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang.webp",
-      "qImages": [
-        {
-          "name": "Q 版",
-          "image": "/uploads/wiki/characters/shui-lian-shi-lai-mu-niang.webp"
-        }
-      ]
+      "order": 156
     },
     {
       "slug": "sha-bao-he-xin-sha-ba-zhi-wang",
       "name": "沙暴核心·沙巴之王",
-      "aliases": [
-        "沙暴核心·沙巴之王"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "沙漠（炎沙国）",
@@ -4163,14 +3764,12 @@
       "image": "/uploads/wiki/characters/sha-bao-he-xin-sha-ba-zhi-wang.webp",
       "folder": "沙暴核心·沙巴之王",
       "featured": false,
-      "order": 171
+      "order": 157
     },
     {
       "slug": "sha-mo-shang-ren",
       "name": "沙漠商人",
-      "aliases": [
-        "沙漠商人"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "沙漠（炎沙国）",
@@ -4185,46 +3784,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 172
-    },
-    {
-      "slug": "ai-na-xiang-dao-2",
-      "name": "爱那(向导)",
-      "aliases": [
-        "爱那(向导)"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "初始森林",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/ai-na-xiang-dao-2.webp",
-      "folder": "",
-      "featured": false,
-      "order": 173,
-      "variants": [
-        {
-          "id": "li-hui",
-          "label": "立绘",
-          "kind": "outfit",
-          "image": "/uploads/wiki/characters/ai-na-xiang-dao-2-li-hui.webp",
-          "description": ""
-        }
-      ],
-      "thumb": "/uploads/wiki/characters/ai-na-xiang-dao-2.webp",
-      "qImages": [
-        {
-          "name": "Q 版",
-          "image": "/uploads/wiki/characters/ai-na-xiang-dao-2.webp"
-        }
-      ]
+      "order": 158
     },
     {
       "slug": "niu-niang",
       "name": "牛娘",
-      "aliases": [
-        "牛娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4233,14 +3798,12 @@
       "image": "/uploads/wiki/characters/niu-niang.webp",
       "folder": "牛娘",
       "featured": false,
-      "order": 174
+      "order": 159
     },
     {
       "slug": "hu-yao",
       "name": "狐妖",
-      "aliases": [
-        "狐妖"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4249,14 +3812,12 @@
       "image": "/uploads/wiki/characters/hu-yao.webp",
       "folder": "狐妖",
       "featured": false,
-      "order": 175
+      "order": 160
     },
     {
       "slug": "gou-niang",
       "name": "狗娘",
-      "aliases": [
-        "狗娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4265,14 +3826,12 @@
       "image": "/uploads/wiki/characters/gou-niang.webp",
       "folder": "狗娘",
       "featured": false,
-      "order": 176
+      "order": 161
     },
     {
       "slug": "lang-niang",
       "name": "狼娘",
-      "aliases": [
-        "狼娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4281,14 +3840,12 @@
       "image": "/uploads/wiki/characters/lang-niang.webp",
       "folder": "狼娘",
       "featured": false,
-      "order": 177
+      "order": 162
     },
     {
       "slug": "zhu-ren-cun-zhang",
       "name": "猪人村长",
-      "aliases": [
-        "猪人村长"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "腐荒王国（沼泽）",
@@ -4297,14 +3854,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 178
+      "order": 163
     },
     {
       "slug": "zhu-wang",
       "name": "猪王",
-      "aliases": [
-        "猪王"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4324,14 +3879,12 @@
       "image": "/uploads/wiki/characters/zhu-wang.webp",
       "folder": "猪王",
       "featured": false,
-      "order": 179
+      "order": 164
     },
     {
       "slug": "mao-niang",
       "name": "猫娘",
-      "aliases": [
-        "猫娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4340,14 +3893,12 @@
       "image": "/uploads/wiki/characters/mao-niang.webp",
       "folder": "猫娘",
       "featured": false,
-      "order": 180
+      "order": 165
     },
     {
       "slug": "wang-cheng-npc",
       "name": "王城 NPC",
-      "aliases": [
-        "王城 NPC"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4356,14 +3907,12 @@
       "image": "/uploads/wiki/characters/wang-cheng-npc.webp",
       "folder": "王城的NPC",
       "featured": false,
-      "order": 181
+      "order": 166
     },
     {
       "slug": "wang-cheng-xue-yuan-de-lao-shi",
       "name": "王城学院的老师",
-      "aliases": [
-        "王城学院的老师"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "王城学院",
@@ -4378,71 +3927,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 182
-    },
-    {
-      "slug": "lin-ya-jing-ling-nv",
-      "name": "琳雅（精灵女）",
-      "aliases": [
-        "琳雅（精灵女）"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "诺兰德主城",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 183,
-      "variants": [
-        {
-          "id": "li-hui-1",
-          "label": "立绘1",
-          "kind": "outfit",
-          "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-1.webp",
-          "description": ""
-        },
-        {
-          "id": "li-hui-2",
-          "label": "立绘2",
-          "kind": "outfit",
-          "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-2.webp",
-          "description": ""
-        },
-        {
-          "id": "li-hui-3",
-          "label": "立绘3",
-          "kind": "outfit",
-          "image": "/uploads/wiki/characters/lin-ya-jing-ling-nv-li-hui-3.webp",
-          "description": ""
-        }
-      ],
-      "thumb": "/uploads/wiki/characters/lin-ya-jing-ling-nv.webp"
-    },
-    {
-      "slug": "pi-de-lu-lu-lu-xiu-shang-ren",
-      "name": "皮德鲁*路路修（商人）",
-      "aliases": [
-        "皮德鲁*路路修（商人）"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "诺兰德主城",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 184,
-      "thumb": "/uploads/wiki/characters/pi-de-lu-lu-lu-xiu-shang-ren.webp"
+      "order": 167
     },
     {
       "slug": "jing-ling",
       "name": "精灵",
-      "aliases": [
-        "精灵"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4477,14 +3967,12 @@
       "image": "/uploads/wiki/characters/jing-ling.webp",
       "folder": "精灵",
       "featured": false,
-      "order": 185
+      "order": 168
     },
     {
       "slug": "jing-ling-nv-wang",
       "name": "精灵女王",
-      "aliases": [
-        "精灵女王"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "精灵族（丛林）",
@@ -4493,14 +3981,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 186
+      "order": 169
     },
     {
       "slug": "luo-la-si",
       "name": "罗拉斯",
       "aliases": [
-        "沙暴核心·沙巴之王",
-        "罗拉斯"
+        "沙暴核心·沙巴之王"
       ],
       "identity": "",
       "system": "NPC",
@@ -4521,69 +4008,12 @@
       "image": "/uploads/wiki/characters/luo-la-si.webp",
       "folder": "沙暴核心·沙巴之王",
       "featured": false,
-      "order": 187
-    },
-    {
-      "slug": "li-ya-yan-tu-rong-yan-huang-hou",
-      "name": "莉亚(炎土·熔岩皇后)",
-      "aliases": [
-        "莉亚(炎土·熔岩皇后)"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "火石领",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 188
-    },
-    {
-      "slug": "lei-ya-si-wang-cheng-xue-yuan-de-lao-shi",
-      "name": "蕾雅思（王城学院的老师）",
-      "aliases": [
-        "蕾雅思（王城学院的老师）"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "诺兰德主城",
-      "story": "",
-      "chapters": [
-        {
-          "title": "第三章：火山章节",
-          "slug": "story-03",
-          "chapter": "第三章"
-        }
-      ],
-      "image": "/uploads/wiki/characters/lei-ya-si-wang-cheng-xue-yuan-de-lao-shi.webp",
-      "folder": "",
-      "featured": false,
-      "order": 189,
-      "thumb": "/uploads/wiki/characters/lei-ya-si-wang-cheng-xue-yuan-de-lao-shi.webp"
-    },
-    {
-      "slug": "wei-wei-an-hei-mian-shen-he-zhang",
-      "name": "薇薇安（黑免审核长）",
-      "aliases": [
-        "薇薇安（黑免审核长）"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "诺兰德主城",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 190
+      "order": 170
     },
     {
       "slug": "zhi-zhu-jing",
       "name": "蜘蛛精",
-      "aliases": [
-        "蜘蛛精"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4592,14 +4022,12 @@
       "image": "/uploads/wiki/characters/zhi-zhu-jing.webp",
       "folder": "蜘蛛精",
       "featured": false,
-      "order": 191
+      "order": 171
     },
     {
       "slug": "bao-niang",
       "name": "豹娘",
-      "aliases": [
-        "豹娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4608,14 +4036,12 @@
       "image": "/uploads/wiki/characters/bao-niang.webp",
       "folder": "豹娘",
       "featured": false,
-      "order": 192
+      "order": 172
     },
     {
       "slug": "gui-zu-jing-ying-pai-xi-yin-bei-hui",
       "name": "贵族精英派系「银杯会」",
-      "aliases": [
-        "贵族精英派系「银杯会」"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "诺兰德主城",
@@ -4624,14 +4050,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 193
+      "order": 173
     },
     {
       "slug": "jiu-ba-lao-ban-niang",
       "name": "酒吧老板娘",
-      "aliases": [
-        "酒吧老板娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "山下小镇",
@@ -4640,14 +4064,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 194
+      "order": 174
     },
     {
       "slug": "ye-zhu-wei-lian-mu-da-dui-zhang",
       "name": "野猪威廉姆(大队长)",
-      "aliases": [
-        "野猪威廉姆(大队长)"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "腐荒王国（沼泽）",
@@ -4656,14 +4078,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 195
+      "order": 175
     },
     {
       "slug": "ye-zhu-wei-na-jia-gong-zhu",
       "name": "野猪维纳嘉(公主)",
-      "aliases": [
-        "野猪维纳嘉(公主)"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "腐荒王国（沼泽）",
@@ -4672,14 +4092,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 196
+      "order": 176
     },
     {
       "slug": "diao-yu-lao-2",
       "name": "钓鱼老",
-      "aliases": [
-        "钓鱼老"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "沙滩区（海洋）",
@@ -4688,14 +4106,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 197
+      "order": 177
     },
     {
       "slug": "tie-jiang",
       "name": "铁匠",
-      "aliases": [
-        "铁匠"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "诺兰德主城",
@@ -4710,14 +4126,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 198
+      "order": 178
     },
     {
       "slug": "tie-peng-de-lao-ren",
       "name": "铁棚的老人",
-      "aliases": [
-        "铁棚的老人"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "沙滩区（海洋）",
@@ -4726,14 +4140,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 199
+      "order": 179
     },
     {
       "slug": "a-kang",
       "name": "阿康",
-      "aliases": [
-        "阿康"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "山下小镇",
@@ -4742,15 +4154,13 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 200,
+      "order": 180,
       "thumb": "/uploads/wiki/characters/a-kang.webp"
     },
     {
       "slug": "xue-nv-xue-ji",
       "name": "雪女(雪姬)",
-      "aliases": [
-        "雪女(雪姬)"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "霜脉族（雪山）",
@@ -4759,14 +4169,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 201
+      "order": 181
     },
     {
       "slug": "ma-niang",
       "name": "马娘",
-      "aliases": [
-        "马娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4775,14 +4183,12 @@
       "image": "/uploads/wiki/characters/ma-niang.webp",
       "folder": "马娘",
       "featured": false,
-      "order": 202
+      "order": 182
     },
     {
       "slug": "luo-tuo-lv-ren",
       "name": "骆驼旅人",
-      "aliases": [
-        "骆驼旅人"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "沙漠（炎沙国）",
@@ -4791,14 +4197,12 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 203
+      "order": 183
     },
     {
       "slug": "niao-niang",
       "name": "鸟娘",
-      "aliases": [
-        "鸟娘"
-      ],
+      "aliases": [],
       "identity": "",
       "system": "NPC",
       "region": "",
@@ -4807,49 +4211,12 @@
       "image": "/uploads/wiki/characters/niao-niang.webp",
       "folder": "鸟娘",
       "featured": false,
-      "order": 204
-    },
-    {
-      "slug": "long-niang",
-      "name": "龙娘",
-      "aliases": [
-        "龙娘"
-      ],
-      "identity": "",
-      "system": "NPC",
-      "region": "",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/long-niang.webp",
-      "folder": "龙娘",
-      "featured": false,
-      "order": 205
-    },
-    {
-      "slug": "pei-lu-shao-bing",
-      "name": "佩露（哨兵）",
-      "aliases": [
-        "佩露（哨兵）"
-      ],
-      "identity": "角色",
-      "system": "角色",
-      "region": "",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/pei-lu-shao-bing.webp",
-      "folder": "",
-      "featured": false,
-      "order": 206,
-      "thumb": "/uploads/wiki/characters/pei-lu-shao-bing.webp",
-      "qImages": [],
-      "variants": []
+      "order": 184
     },
     {
       "slug": "ban-shen",
       "name": "半神",
-      "aliases": [
-        "半神"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4858,7 +4225,7 @@
       "image": "/uploads/wiki/characters/ban-shen.webp",
       "folder": "",
       "featured": false,
-      "order": 207,
+      "order": 185,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4866,9 +4233,7 @@
     {
       "slug": "kun-chong-liang",
       "name": "昆虫粮",
-      "aliases": [
-        "昆虫粮"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4877,7 +4242,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 208,
+      "order": 186,
       "thumb": null,
       "qImages": [],
       "variants": [
@@ -4893,9 +4258,7 @@
     {
       "slug": "rong-yan-ji-sheng-chong-jin-yi",
       "name": "熔岩寄生虫 · 烬蜴",
-      "aliases": [
-        "熔岩寄生虫 · 烬蜴"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4904,7 +4267,7 @@
       "image": "/uploads/wiki/characters/rong-yan-ji-sheng-chong-jin-yi.webp",
       "folder": "",
       "featured": false,
-      "order": 209,
+      "order": 187,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4912,9 +4275,7 @@
     {
       "slug": "wu-gong-niang",
       "name": "蜈蚣娘",
-      "aliases": [
-        "蜈蚣娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4923,7 +4284,7 @@
       "image": "/uploads/wiki/characters/wu-gong-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 210,
+      "order": 188,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4931,9 +4292,7 @@
     {
       "slug": "rong-he-sen-lin-wu-yao-guai",
       "name": "融合森林巫妖怪",
-      "aliases": [
-        "融合森林巫妖怪"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4942,7 +4301,7 @@
       "image": "/uploads/wiki/characters/rong-he-sen-lin-wu-yao-guai.webp",
       "folder": "",
       "featured": false,
-      "order": 211,
+      "order": 189,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4950,9 +4309,7 @@
     {
       "slug": "rong-he-she-niang",
       "name": "融合蛇娘",
-      "aliases": [
-        "融合蛇娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4961,7 +4318,7 @@
       "image": "/uploads/wiki/characters/rong-he-she-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 212,
+      "order": 190,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4969,9 +4326,7 @@
     {
       "slug": "rong-he-tang-lang-niang",
       "name": "融合螳螂娘",
-      "aliases": [
-        "融合螳螂娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4980,7 +4335,7 @@
       "image": "/uploads/wiki/characters/rong-he-tang-lang-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 213,
+      "order": 191,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4988,9 +4343,7 @@
     {
       "slug": "rong-he-bao-niang",
       "name": "融合豹娘",
-      "aliases": [
-        "融合豹娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -4999,7 +4352,7 @@
       "image": "/uploads/wiki/characters/rong-he-bao-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 214,
+      "order": 192,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -5007,9 +4360,7 @@
     {
       "slug": "tang-lang-kun-chong-niang",
       "name": "螳螂昆虫娘",
-      "aliases": [
-        "螳螂昆虫娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -5018,7 +4369,7 @@
       "image": "/uploads/wiki/characters/tang-lang-kun-chong-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 215,
+      "order": 193,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -5026,9 +4377,7 @@
     {
       "slug": "hei-quan-niang",
       "name": "黑犬娘",
-      "aliases": [
-        "黑犬娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -5037,7 +4386,7 @@
       "image": "/uploads/wiki/characters/hei-quan-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 216,
+      "order": 194,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -5045,9 +4394,7 @@
     {
       "slug": "hei-lang-niang",
       "name": "黑狼娘",
-      "aliases": [
-        "黑狼娘"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -5056,7 +4403,7 @@
       "image": "/uploads/wiki/characters/hei-lang-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 217,
+      "order": 195,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -5064,9 +4411,7 @@
     {
       "slug": "ying-ya-xiao-jing-ling",
       "name": "（莹亚）小精灵",
-      "aliases": [
-        "（莹亚）小精灵"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -5075,7 +4420,7 @@
       "image": "/uploads/wiki/characters/ying-ya-xiao-jing-ling.webp",
       "folder": "",
       "featured": false,
-      "order": 218,
+      "order": 196,
       "thumb": "/uploads/wiki/characters/ying-ya-xiao-jing-ling.webp",
       "qImages": [],
       "variants": []
@@ -5083,9 +4428,7 @@
     {
       "slug": "zhu-jue-xi-huan-de-nv-hai",
       "name": "主角喜欢的女孩",
-      "aliases": [
-        "主角喜欢的女孩"
-      ],
+      "aliases": [],
       "identity": "角色",
       "system": "角色",
       "region": "",
@@ -5094,46 +4437,8 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 219,
+      "order": 197,
       "thumb": "/uploads/wiki/characters/zhu-jue-xi-huan-de-nv-hai.webp",
-      "qImages": [],
-      "variants": []
-    },
-    {
-      "slug": "pei-li-ga-hai-shen",
-      "name": "佩利伽（海神）",
-      "aliases": [
-        "佩利伽（海神）"
-      ],
-      "identity": "角色",
-      "system": "角色",
-      "region": "",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 220,
-      "thumb": "/uploads/wiki/characters/pei-li-ga-hai-shen.webp",
-      "qImages": [],
-      "variants": []
-    },
-    {
-      "slug": "li-ya-yan-chong-rong-yan-huang-hou",
-      "name": "莉亚(炎虫·熔岩皇后)",
-      "aliases": [
-        "莉亚(炎虫·熔岩皇后)"
-      ],
-      "identity": "角色",
-      "system": "角色",
-      "region": "",
-      "story": "",
-      "chapters": [],
-      "image": null,
-      "folder": "",
-      "featured": false,
-      "order": 221,
-      "thumb": "/uploads/wiki/characters/li-ya-yan-chong-rong-yan-huang-hou.webp",
       "qImages": [],
       "variants": []
     }

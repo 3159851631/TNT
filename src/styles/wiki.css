@@ -547,7 +547,7 @@ button, input { font: inherit; }
 .wiki-detail__meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 14px; }
 
 .wiki-infobox { border: 1px solid var(--w-line); background: var(--w-panel); overflow: hidden; }
-.wiki-infobox__image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top center; background: var(--w-panel-2); }
+.wiki-infobox__image { width: 100%; aspect-ratio: 3 / 4; object-fit: contain; object-position: center top; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap { position: relative; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap .wiki-card__placeholder { min-height: 220px; font-size: 54px; }
 .wiki-infobox__title { margin: 0; padding: 13px 14px 0; font-family: var(--w-display); font-size: 22px; font-weight: 400; letter-spacing: .04em; }
@@ -647,7 +647,7 @@ button, input { font: inherit; }
   pointer-events: none;
 }
 .wiki-map-hint {
-  position: absolute; left: 12px; top: 12px;
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%);
   padding: 4px 8px;
   border: 1px solid var(--w-line);
   background: rgba(10,14,11,.75);
@@ -656,6 +656,7 @@ button, input { font: inherit; }
   letter-spacing: .08em;
   color: var(--w-muted);
   pointer-events: none;
+  white-space: nowrap;
 }
 .wiki-map-controls { position: absolute; right: 12px; top: 12px; display: flex; gap: 6px; }
 .wiki-map-controls button {
@@ -667,6 +668,7 @@ button, input { font: inherit; }
   cursor: pointer;
 }
 .wiki-map-controls button:hover { border-color: var(--w-gold); color: var(--w-gold-2); }
+.wiki-map-controls button[data-wiki-map-reset] { width: auto; padding: 0 9px; font-family: var(--w-body); font-size: 11px; }
 .wiki-map-regions { display: flex; flex-direction: column; gap: 4px; border: 1px solid var(--w-line); background: var(--w-panel); padding: 8px; max-height: 720px; overflow: auto; }
 .wiki-map-regions a { display: flex; justify-content: space-between; gap: 8px; padding: 6px 8px; border-bottom: 1px solid var(--w-line); font-size: 11.5px; color: var(--w-soft); }
 .wiki-map-regions a:last-child { border-bottom: 0; }
@@ -1055,8 +1057,8 @@ body.wiki-body { overflow-x: hidden; }
 .wiki-map-layers {
   position: absolute;
   left: 12px;
-  bottom: 12px;
-  z-index: 3;
+  top: 12px;
+  z-index: 6;
   display: flex;
   gap: 4px;
 }
@@ -1092,8 +1094,8 @@ body.wiki-body { overflow-x: hidden; }
   background: var(--w-panel);
   scroll-margin-top: 90px;
 }
-.wiki-variant__pic { aspect-ratio: 3 / 4; overflow: hidden; background: var(--w-panel-2); }
-.wiki-variant__pic img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.wiki-variant__pic { aspect-ratio: 2 / 3; overflow: hidden; background: var(--w-panel-2); }
+.wiki-variant__pic img { width: 100%; height: 100%; object-fit: contain; object-position: center top; }
 .wiki-variant__name { margin: 9px 10px 4px; font-family: var(--w-display); font-size: 15px; font-weight: 400; color: var(--w-ink); }
 .wiki-variant__desc { margin: 0 10px 9px; font-size: 10.5px; line-height: 1.7; color: var(--w-muted); }
 .wiki-variant .wiki-tag { margin: 0 10px 10px; display: inline-block; }

@@ -65,7 +65,7 @@ const related = data.characters
 
         {character.variants?.length > 0 && (
           <>
-            <h2>形态 / 服装（{character.variants.length}）</h2>
+            <h2>立绘 / 形态（{character.variants.length}）</h2>
             <div class="wiki-variant-grid">
               {character.variants.map((variant) => (
                 <div class="wiki-variant" id={`variant-${variant.id}`}>
@@ -73,7 +73,7 @@ const related = data.characters
                     <img src={variant.image} alt={`${character.name} ${variant.label}`} loading="lazy" decoding="async" />
                   </div>
                   <h3 class="wiki-variant__name">{character.name} · {variant.label}</h3>
-                  <p class="wiki-variant__desc">{variant.description || '这个形态/服装的详细设定待补充。'}</p>
+                  <p class="wiki-variant__desc">{variant.description || '这张立绘的说明待补充。'}</p>
                 </div>
               ))}
             </div>
@@ -108,8 +108,8 @@ const related = data.characters
     <aside class="wiki-detail__aside">
       <div class="wiki-infobox">
         <div class="wiki-infobox__image-wrap">
-          {(character.thumb || character.image) ? (
-            <img class="wiki-infobox__image" src={character.thumb || character.image} alt={character.name} />
+          {(character.image || character.thumb) ? (
+            <img class="wiki-infobox__image" src={character.image || character.thumb} alt={character.name} />
           ) : (
             <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
           )}

@@ -180,6 +180,8 @@
     );
 
     viewer.addEventListener('pointerdown', (event) => {
+      if (event.button !== 0) return;
+      if (event.target.closest('button, a, input, select, textarea, .wiki-map-layers, .wiki-map-controls')) return;
       dragging = true;
       startX = event.clientX;
       startY = event.clientY;
@@ -194,9 +196,13 @@
       y = originY + (event.clientY - startY);
       apply();
     });
-    const endDrag = () => {
+    const endDrag = (event) => {
+      if (!dragging) return;
       dragging = false;
       viewer.classList.remove('is-dragging');
+      if (event && viewer.hasPointerCapture?.(event.pointerId)) {
+        viewer.releasePointerCapture(event.pointerId);
+      }
     };
     viewer.addEventListener('pointerup', endDrag);
     viewer.addEventListener('pointercancel', endDrag);

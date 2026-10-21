@@ -329,10 +329,10 @@
       ],
       "npcs": [
         {
-          "name": "爱那(向导)",
+          "name": "爱娜",
           "note": "",
           "role": "NPC",
-          "slug": "ai-na-xiang-dao-2"
+          "slug": "ai-na"
         },
         {
           "name": "埃莉",
@@ -371,16 +371,16 @@
           "slug": "yi-si-duo-gong-zhu-gong-zhu-de-hu-wei"
         },
         {
-          "name": "库丝(哈比)",
+          "name": "库丝（哈比）",
           "note": "",
           "role": "NPC",
-          "slug": "ku-si-ha-bi-2"
+          "slug": "ku-si-ha-bi"
         },
         {
-          "name": "水莲(史莱姆娘)",
+          "name": "水莲",
           "note": "",
           "role": "NPC",
-          "slug": "shui-lian-shi-lai-mu-niang"
+          "slug": "shui-lian"
         }
       ],
       "bosses": [
@@ -728,10 +728,10 @@
       ],
       "npcs": [
         {
-          "name": "凯西亚（精灵皇后）",
+          "name": "凯西亚",
           "note": "",
           "role": "NPC",
-          "slug": "kai-xi-ya-jing-ling-huang-hou"
+          "slug": "kai-xi-ya"
         },
         {
           "name": "艾伦特上将",
@@ -740,40 +740,40 @@
           "slug": "ai-lun-te-shang-jiang"
         },
         {
-          "name": "皮德鲁*路路修（商人）",
+          "name": "皮德鲁·路路修",
           "note": "",
           "role": "NPC",
-          "slug": "pi-de-lu-lu-lu-xiu-shang-ren"
+          "slug": "pi-de-lu-lu-lu-xiu"
         },
         {
-          "name": "蕾雅思（王城学院的老师）",
+          "name": "蕾雅思",
           "note": "",
           "role": "NPC",
-          "slug": "lei-ya-si-wang-cheng-xue-yuan-de-lao-shi"
+          "slug": "lei-ya-si"
         },
         {
-          "name": "琳雅（精灵女）",
+          "name": "琳雅",
           "note": "",
           "role": "NPC",
-          "slug": "lin-ya-jing-ling-nv"
+          "slug": "lin-ya"
         },
         {
-          "name": "薇薇安（黑免审核长）",
+          "name": "薇薇安（黑兔审核长）",
           "note": "",
           "role": "NPC",
-          "slug": "wei-wei-an-hei-mian-shen-he-zhang"
+          "slug": "wei-wei-an-hei-tu-shen-he-zhang"
         },
         {
-          "name": "安妮丽雅（兔娘）",
+          "name": "安妮丽雅",
           "note": "",
           "role": "NPC",
-          "slug": "an-ni-li-ya-tu-niang"
+          "slug": "an-ni-li-ya"
         },
         {
-          "name": "人类国王-阿尔*爱丁堡",
+          "name": "人类国王阿尔·爱丁堡",
           "note": "",
           "role": "NPC",
-          "slug": "ren-lei-guo-wang-a-er-ai-ding-bao-2"
+          "slug": "ren-lei-guo-wang-a-er-ai-ding-bao"
         },
         {
           "name": "塞米娅",
@@ -924,16 +924,16 @@
           "slug": "ai-lun-te-shang-jiang"
         },
         {
-          "name": "凯西亚（精灵皇后）",
+          "name": "凯西亚",
           "note": "",
           "role": "NPC",
-          "slug": "kai-xi-ya-jing-ling-huang-hou"
+          "slug": "kai-xi-ya"
         },
         {
-          "name": "人类国王-阿尔*爱丁堡",
+          "name": "人类国王阿尔·爱丁堡",
           "note": "",
           "role": "NPC",
-          "slug": "ren-lei-guo-wang-a-er-ai-ding-bao-2"
+          "slug": "ren-lei-guo-wang-a-er-ai-ding-bao"
         },
         {
           "name": "王城学院的老师",
@@ -1603,16 +1603,16 @@
       ],
       "npcs": [
         {
-          "name": "咩奈(海妖)",
+          "name": "咩奈",
           "note": "",
           "role": "NPC",
-          "slug": "mie-nai-hai-yao"
+          "slug": "mie-nai"
         },
         {
-          "name": "乌姆(章鱼娘)",
+          "name": "乌姆",
           "note": "",
           "role": "NPC",
-          "slug": "wu-mu-zhang-yu-niang-2"
+          "slug": "wu-mu"
         }
       ],
       "bosses": [
@@ -2384,10 +2384,10 @@
           "slug": "jiao-huang"
         },
         {
-          "name": "莉亚(炎土·熔岩皇后)",
+          "name": "莉亚",
           "note": "",
           "role": "NPC",
-          "slug": "li-ya-yan-tu-rong-yan-huang-hou"
+          "slug": "yan-chong-rong-yan-huang-hou-li-ya"
         }
       ],
       "bosses": [
