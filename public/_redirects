@@ -4,3 +4,31 @@
 
 /projects/monster-girl-survival  /projects/monster-girl-synthesis/  301
 /projects/monster-girl-survival/*  /projects/monster-girl-synthesis/  301
+
+# 合并掉的角色页 → 合并后的角色页（301，避免旧链接 404）
+/wiki/characters/kai-xi-ya-jing-ling-huang-hou/*  /wiki/characters/kai-xi-ya/  301
+/wiki/characters/ge-mu-si-wa-dian-lao-ban/*  /wiki/characters/ge-mu/  301
+/wiki/characters/ai-na-xiang-dao/*  /wiki/characters/ai-na/  301
+/wiki/characters/ai-na-xiang-dao-2/*  /wiki/characters/ai-na/  301
+/wiki/characters/lin-ya-jing-ling-nv/*  /wiki/characters/lin-ya/  301
+/wiki/characters/pei-lu-shao-bing/*  /wiki/characters/pei-lu/  301
+/wiki/characters/long-niang/*  /wiki/characters/pei-lu/  301
+/wiki/characters/wu-mu-zhang-yu-niang/*  /wiki/characters/wu-mu/  301
+/wiki/characters/wu-mu-zhang-yu-niang-2/*  /wiki/characters/wu-mu/  301
+/wiki/characters/shui-lian-shi-lai-mu-niang/*  /wiki/characters/shui-lian/  301
+/wiki/characters/ku-si-ha-bi-2/*  /wiki/characters/ku-si-ha-bi/  301
+/wiki/characters/lin-xue-nv/*  /wiki/characters/lin/  301
+/wiki/characters/kai-sa-you-mu-ao-jiao-huang/*  /wiki/characters/kai-sa-you-mu-ao/  301
+/wiki/characters/ye-shen-ri-yuan-ding/*  /wiki/characters/ye-shen-ri/  301
+/wiki/characters/an-ni-li-ya-tu-niang/*  /wiki/characters/an-ni-li-ya/  301
+/wiki/characters/lei-ya-si-wang-cheng-xue-yuan-de-lao-shi/*  /wiki/characters/lei-ya-si/  301
+/wiki/characters/wei-wei-an-hei-mian-shen-he-zhang/*  /wiki/characters/wei-wei-an-hei-tu-shen-he-zhang/  301
+/wiki/characters/mie-nai-hai-yao/*  /wiki/characters/mie-nai/  301
+/wiki/characters/mie-nai-ma-tou-xiao-tou/*  /wiki/characters/mie-nai/  301
+/wiki/characters/li-ya-yan-tu-rong-yan-huang-hou/*  /wiki/characters/yan-chong-rong-yan-huang-hou-li-ya/  301
+/wiki/characters/li-ya-yan-chong-rong-yan-huang-hou/*  /wiki/characters/yan-chong-rong-yan-huang-hou-li-ya/  301
+/wiki/characters/pei-li-ga-hai-shen/*  /wiki/characters/pei-li-ga/  301
+/wiki/characters/ren-lei-guo-wang-a-er-ai-ding-bao-2/*  /wiki/characters/ren-lei-guo-wang-a-er-ai-ding-bao/  301
+/wiki/characters/pi-de-lu-lu-lu-xiu-shang-ren/*  /wiki/characters/pi-de-lu-lu-lu-xiu/  301
+/wiki/characters/nv-shen/*  /wiki/characters/a-er-bi-ya/  301
+/wiki/characters/ban-shen/*  /wiki/characters/a-er-bi-ya/  301
