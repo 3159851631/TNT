@@ -72,7 +72,8 @@
         .filter((item) => {
           const name = (item.name || '').toLowerCase();
           const sub = (item.sub || '').toLowerCase();
-          return name.includes(query) || sub.includes(query) || String(item.type).includes(query);
+          const alias = (item.alias || '').toLowerCase();
+          return name.includes(query) || sub.includes(query) || alias.includes(query) || String(item.type).includes(query);
         })
         .slice(0, 150);
       results.innerHTML = hits

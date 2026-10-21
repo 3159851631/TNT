@@ -42,7 +42,7 @@ const systems = Array.from(new Set(characters.map((c) => c.system).filter(Boolea
           class="wiki-card"
           href={`/wiki/characters/${character.slug}/`}
           data-wiki-item
-          data-name={character.name}
+          data-name={`${character.name} ${(character.aliases || []).join(' ')}`}
           data-type={character.system}
         >
           <div class="wiki-card__media">
