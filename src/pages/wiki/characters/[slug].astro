@@ -12,6 +12,22 @@ const region = regionsData.regions.find((r) => r.name === character.region);
 const related = data.characters
   .filter((c) => c.slug !== character.slug && (c.region === character.region || c.system === character.system))
   .slice(0, 8);
+const cover = character.image || character.thumb;
+const variantList = character.variants || [];
+// Show the default portrait in the gallery too, unless it is already one of the variants.
+const gallery =
+  cover && variantList.length > 0 && !variantList.some((variant) => variant.image === cover)
+    ? [
+        {
+          id: 'default',
+          label: '普通立绘',
+          kind: 'outfit',
+          image: cover,
+          description: '默认立绘，列表和头像用的就是这张。',
+        },
+        ...variantList,
+      ]
+    : variantList;
 ---
 
 <WikiLayout
@@ -63,11 +79,11 @@ const related = data.characters
           </>
         )}
 
-        {character.variants?.length > 0 && (
+        {gallery.length > 0 && (
           <>
-            <h2>立绘 / 形态（{character.variants.length}）</h2>
+            <h2>立绘 / 形态（{gallery.length}）</h2>
             <div class="wiki-variant-grid">
-              {character.variants.map((variant) => (
+              {gallery.map((variant) => (
                 <div class="wiki-variant" id={`variant-${variant.id}`}>
                   <div class="wiki-variant__pic">
                     <img src={variant.image} alt={`${character.name} ${variant.label}`} loading="lazy" decoding="async" />
@@ -109,7 +125,10 @@ const related = data.characters
       <div class="wiki-infobox">
         <div class="wiki-infobox__image-wrap">
           {(character.image || character.thumb) ? (
-            <img class="wiki-infobox__image" src={character.image || character.thumb} alt={character.name} />
+            <>
+              <img class="wiki-infobox__image" src={character.image || character.thumb} alt={`${character.name} 默认立绘`} />
+              <span class="wiki-infobox__image-tag">默认立绘</span>
+            </>
           ) : (
             <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
           )}

@@ -21,14 +21,9 @@ const gallery = (project.gallery || []).filter((src) => src !== project.cover);
 const paragraphs = (project.body || []).map((paragraph: string | { paragraph?: string }) =>
   typeof paragraph === 'string' ? paragraph : paragraph.paragraph || ''
 );
-const codexLink =
-  project.slug === 'monster-girl-survival'
-    ? '/codex/survival/'
-    : project.slug === 'monster-girl-synthesis'
-      ? '/codex/synthesis/'
-      : '';
-const codexLabel =
-  project.slug === 'monster-girl-survival' ? '打开生存百科' : '打开物品图鉴';
+const extraLink = (project.links || [])[0];
+const codexLink = extraLink?.url || '';
+const codexLabel = extraLink?.label || '';
 ---
 
 <Base title={project.title} description={project.summary} image={project.cover}>

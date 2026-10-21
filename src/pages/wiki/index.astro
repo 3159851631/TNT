@@ -99,29 +99,35 @@ const heroSlides = meta.heroSlides?.length ? meta.heroSlides : (meta.hero ? [{ s
       </div>
       <a class="wiki-section__link" href="/wiki/characters/">全部 {counts.characters} 位角色 →</a>
     </header>
-    <p class="wiki-section__note">点小头像直接进角色页。没有立绘的角色先用名字占位。</p>
-    <div class="wiki-avatar-grid">
-      {characters.map((character) => {
-        const tooltip = [
-          character.name,
-          character.identity || character.system,
-          character.region,
-          ...(character.variants || []).map((variant) => variant.label),
-        ].filter(Boolean).join(' · ');
-        return (
-          <a class="wiki-avatar" href={`/wiki/characters/${character.slug}/`} title={tooltip} aria-label={tooltip} data-tooltip={tooltip}>
-            <span class="wiki-avatar__pic">
-              {character.thumb || character.image ? (
-                <img src={character.thumb || character.image} alt={character.name} loading="lazy" decoding="async" />
-              ) : (
-                <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
-              )}
-            </span>
-            <span class="wiki-avatar__name">{character.name}</span>
-          </a>
-        );
-      })}
+    <p class="wiki-section__note">点小头像直接进角色页。默认只展开两排，想找其他人点下面的按钮展开全部。</p>
+    <div class="wiki-avatar-drawer" data-wiki-avatar-drawer>
+      <div class="wiki-avatar-grid" id="wiki-avatar-grid" data-wiki-avatar-grid>
+        {characters.map((character) => {
+          const tooltip = [
+            character.name,
+            character.identity || character.system,
+            character.region,
+            ...(character.variants || []).map((variant) => variant.label),
+          ].filter(Boolean).join(' · ');
+          return (
+            <a class="wiki-avatar" href={`/wiki/characters/${character.slug}/`} title={tooltip} aria-label={tooltip} data-tooltip={tooltip}>
+              <span class="wiki-avatar__pic">
+                {character.thumb || character.image ? (
+                  <img src={character.thumb || character.image} alt={character.name} loading="lazy" decoding="async" />
+                ) : (
+                  <div class="wiki-card__placeholder">{character.name.slice(0, 1)}</div>
+                )}
+              </span>
+              <span class="wiki-avatar__name">{character.name}</span>
+            </a>
+          );
+        })}
+      </div>
     </div>
+    <button class="wiki-avatar-toggle" type="button" data-wiki-avatar-toggle aria-expanded="false" aria-controls="wiki-avatar-grid">
+      <span data-wiki-avatar-toggle-label>展开全部 {characters.length} 位角色</span>
+      <span class="wiki-avatar-toggle__arrow" aria-hidden="true">↓</span>
+    </button>
   </section>
 
   <section class="wiki-section">

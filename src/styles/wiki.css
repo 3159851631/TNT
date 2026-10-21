@@ -550,6 +550,19 @@ button, input { font: inherit; }
 .wiki-infobox__image { width: 100%; aspect-ratio: 3 / 4; object-fit: contain; object-position: center top; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap { position: relative; background: var(--w-panel-2); }
 .wiki-infobox__image-wrap .wiki-card__placeholder { min-height: 220px; font-size: 54px; }
+.wiki-infobox__image-tag {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 3px 8px;
+  border: 1px solid rgba(198, 164, 104, .45);
+  background: rgba(10, 14, 11, .82);
+  color: var(--w-gold-2);
+  font-family: var(--w-mono);
+  font-size: 8px;
+  letter-spacing: .1em;
+  pointer-events: none;
+}
 .wiki-infobox__title { margin: 0; padding: 13px 14px 0; font-family: var(--w-display); font-size: 22px; font-weight: 400; letter-spacing: .04em; }
 .wiki-infobox__sub { padding: 0 14px 12px; font-size: 10.5px; color: var(--w-muted); }
 .wiki-infobox__rows { border-top: 1px solid var(--w-line); }
@@ -860,6 +873,31 @@ button, input { font: inherit; }
 .wiki-hero-full__actions .wiki-btn { font-size: 13px; padding: 10px 17px; }
 
 /* ================= tiny character avatars ================= */
+.wiki-avatar-drawer { position: relative; overflow: hidden; transition: max-height .55s cubic-bezier(.4, 0, .2, 1); }
+.wiki-avatar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 16px auto 2px;
+  padding: 10px 20px;
+  border: 1px solid var(--w-line-2);
+  background: var(--w-panel);
+  color: var(--w-soft);
+  font-family: var(--w-body);
+  font-size: 12px;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s;
+}
+.wiki-avatar-toggle:hover { border-color: var(--w-gold); color: var(--w-gold-2); background: rgba(198,164,104,.06); }
+.wiki-avatar-toggle__arrow { display: inline-block; font-size: 10px; line-height: 1; transition: transform .3s; }
+.wiki-avatar-toggle[aria-expanded="true"] .wiki-avatar-toggle__arrow { transform: rotate(180deg); }
+.wiki-avatar-toggle[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .wiki-avatar-drawer { transition: none; }
+  .wiki-avatar-toggle__arrow { transition: none; }
+}
 .wiki-avatar-grid {
   display: grid;
   grid-template-columns: repeat(16, minmax(0, 1fr));

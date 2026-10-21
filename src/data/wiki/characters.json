@@ -2650,7 +2650,10 @@
     {
       "slug": "a-er-bi-ya",
       "name": "阿尔比亚",
-      "aliases": [],
+      "aliases": [
+        "女神",
+        "半神"
+      ],
       "identity": "半神",
       "system": "主线核心",
       "region": "地牢（无限地下城）",
@@ -2680,9 +2683,14 @@
           "title": "第八章：天空城·创世对决",
           "slug": "story-18",
           "chapter": "第八章"
+        },
+        {
+          "title": "序章：囚笼与转生",
+          "slug": "story-00",
+          "chapter": "序章"
         }
       ],
-      "image": null,
+      "image": "/uploads/wiki/characters/nv-shen.webp",
       "folder": "",
       "featured": false,
       "order": 113,
@@ -3569,41 +3577,6 @@
       "order": 147
     },
     {
-      "slug": "nv-shen",
-      "name": "女神",
-      "aliases": [],
-      "identity": "",
-      "system": "NPC",
-      "region": "",
-      "story": "",
-      "chapters": [
-        {
-          "title": "序章：囚笼与转生",
-          "slug": "story-00",
-          "chapter": "序章"
-        },
-        {
-          "title": "独立区域剧情：龙之岛·巴哈姆特与佩露",
-          "slug": "story-15",
-          "chapter": "独立区域"
-        },
-        {
-          "title": "独立区域剧情：天空城·坠落之翼与拾荒的龙",
-          "slug": "story-16",
-          "chapter": "独立区域"
-        },
-        {
-          "title": "独立区域剧情：地牢·木偶师与邪神佐伊",
-          "slug": "story-17",
-          "chapter": "独立区域"
-        }
-      ],
-      "image": "/uploads/wiki/characters/nv-shen.webp",
-      "folder": "女神",
-      "featured": false,
-      "order": 148
-    },
-    {
       "slug": "an-ni-li-ya",
       "name": "安妮丽雅",
       "aliases": [
@@ -3618,7 +3591,7 @@
       "image": "/uploads/wiki/characters/an-ni-li-ya-tu-niang.webp",
       "folder": "兔娘",
       "featured": false,
-      "order": 149,
+      "order": 148,
       "variants": [
         {
           "id": "旧版立绘",
@@ -3643,7 +3616,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 150
+      "order": 149
     },
     {
       "slug": "shan-shou-niang",
@@ -3657,7 +3630,7 @@
       "image": "/uploads/wiki/characters/shan-shou-niang.webp",
       "folder": "山兽娘（后山守护神）",
       "featured": false,
-      "order": 151
+      "order": 150
     },
     {
       "slug": "dai-lun-xi-yi-zu-tou-ling",
@@ -3671,7 +3644,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 152
+      "order": 151
     },
     {
       "slug": "jiao-huang",
@@ -3685,7 +3658,7 @@
       "image": "/uploads/wiki/characters/jiao-huang.webp",
       "folder": "教皇",
       "featured": false,
-      "order": 153
+      "order": 152
     },
     {
       "slug": "kun-chong-niang",
@@ -3699,7 +3672,7 @@
       "image": "/uploads/wiki/characters/kun-chong-niang.webp",
       "folder": "昆虫娘",
       "featured": false,
-      "order": 154
+      "order": 153
     },
     {
       "slug": "cun-zhang",
@@ -3729,7 +3702,7 @@
       "image": "/uploads/wiki/characters/cun-zhang.webp",
       "folder": "村长",
       "featured": false,
-      "order": 155,
+      "order": 154,
       "thumb": "/uploads/wiki/characters/cun-zhang.webp"
     },
     {
@@ -3744,7 +3717,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 156
+      "order": 155
     },
     {
       "slug": "sha-bao-he-xin-sha-ba-zhi-wang",
@@ -3764,7 +3737,7 @@
       "image": "/uploads/wiki/characters/sha-bao-he-xin-sha-ba-zhi-wang.webp",
       "folder": "沙暴核心·沙巴之王",
       "featured": false,
-      "order": 157
+      "order": 156
     },
     {
       "slug": "sha-mo-shang-ren",
@@ -3784,7 +3757,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 158
+      "order": 157
     },
     {
       "slug": "niu-niang",
@@ -3798,7 +3771,7 @@
       "image": "/uploads/wiki/characters/niu-niang.webp",
       "folder": "牛娘",
       "featured": false,
-      "order": 159
+      "order": 158
     },
     {
       "slug": "hu-yao",
@@ -3812,7 +3785,7 @@
       "image": "/uploads/wiki/characters/hu-yao.webp",
       "folder": "狐妖",
       "featured": false,
-      "order": 160
+      "order": 159
     },
     {
       "slug": "gou-niang",
@@ -3826,7 +3799,7 @@
       "image": "/uploads/wiki/characters/gou-niang.webp",
       "folder": "狗娘",
       "featured": false,
-      "order": 161
+      "order": 160
     },
     {
       "slug": "lang-niang",
@@ -3840,7 +3813,7 @@
       "image": "/uploads/wiki/characters/lang-niang.webp",
       "folder": "狼娘",
       "featured": false,
-      "order": 162
+      "order": 161
     },
     {
       "slug": "zhu-ren-cun-zhang",
@@ -3854,7 +3827,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 163
+      "order": 162
     },
     {
       "slug": "zhu-wang",
@@ -3879,7 +3852,7 @@
       "image": "/uploads/wiki/characters/zhu-wang.webp",
       "folder": "猪王",
       "featured": false,
-      "order": 164
+      "order": 163
     },
     {
       "slug": "mao-niang",
@@ -3893,7 +3866,7 @@
       "image": "/uploads/wiki/characters/mao-niang.webp",
       "folder": "猫娘",
       "featured": false,
-      "order": 165
+      "order": 164
     },
     {
       "slug": "wang-cheng-npc",
@@ -3907,7 +3880,7 @@
       "image": "/uploads/wiki/characters/wang-cheng-npc.webp",
       "folder": "王城的NPC",
       "featured": false,
-      "order": 166
+      "order": 165
     },
     {
       "slug": "wang-cheng-xue-yuan-de-lao-shi",
@@ -3927,7 +3900,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 167
+      "order": 166
     },
     {
       "slug": "jing-ling",
@@ -3967,7 +3940,7 @@
       "image": "/uploads/wiki/characters/jing-ling.webp",
       "folder": "精灵",
       "featured": false,
-      "order": 168
+      "order": 167
     },
     {
       "slug": "jing-ling-nv-wang",
@@ -3981,7 +3954,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 169
+      "order": 168
     },
     {
       "slug": "luo-la-si",
@@ -4008,7 +3981,7 @@
       "image": "/uploads/wiki/characters/luo-la-si.webp",
       "folder": "沙暴核心·沙巴之王",
       "featured": false,
-      "order": 170
+      "order": 169
     },
     {
       "slug": "zhi-zhu-jing",
@@ -4022,7 +3995,7 @@
       "image": "/uploads/wiki/characters/zhi-zhu-jing.webp",
       "folder": "蜘蛛精",
       "featured": false,
-      "order": 171
+      "order": 170
     },
     {
       "slug": "bao-niang",
@@ -4036,7 +4009,7 @@
       "image": "/uploads/wiki/characters/bao-niang.webp",
       "folder": "豹娘",
       "featured": false,
-      "order": 172
+      "order": 171
     },
     {
       "slug": "gui-zu-jing-ying-pai-xi-yin-bei-hui",
@@ -4050,7 +4023,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 173
+      "order": 172
     },
     {
       "slug": "jiu-ba-lao-ban-niang",
@@ -4064,7 +4037,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 174
+      "order": 173
     },
     {
       "slug": "ye-zhu-wei-lian-mu-da-dui-zhang",
@@ -4078,7 +4051,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 175
+      "order": 174
     },
     {
       "slug": "ye-zhu-wei-na-jia-gong-zhu",
@@ -4092,7 +4065,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 176
+      "order": 175
     },
     {
       "slug": "diao-yu-lao-2",
@@ -4106,7 +4079,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 177
+      "order": 176
     },
     {
       "slug": "tie-jiang",
@@ -4126,7 +4099,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 178
+      "order": 177
     },
     {
       "slug": "tie-peng-de-lao-ren",
@@ -4140,7 +4113,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 179
+      "order": 178
     },
     {
       "slug": "a-kang",
@@ -4154,7 +4127,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 180,
+      "order": 179,
       "thumb": "/uploads/wiki/characters/a-kang.webp"
     },
     {
@@ -4169,7 +4142,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 181
+      "order": 180
     },
     {
       "slug": "ma-niang",
@@ -4183,7 +4156,7 @@
       "image": "/uploads/wiki/characters/ma-niang.webp",
       "folder": "马娘",
       "featured": false,
-      "order": 182
+      "order": 181
     },
     {
       "slug": "luo-tuo-lv-ren",
@@ -4197,7 +4170,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 183
+      "order": 182
     },
     {
       "slug": "niao-niang",
@@ -4211,24 +4184,7 @@
       "image": "/uploads/wiki/characters/niao-niang.webp",
       "folder": "鸟娘",
       "featured": false,
-      "order": 184
-    },
-    {
-      "slug": "ban-shen",
-      "name": "半神",
-      "aliases": [],
-      "identity": "角色",
-      "system": "角色",
-      "region": "",
-      "story": "",
-      "chapters": [],
-      "image": "/uploads/wiki/characters/ban-shen.webp",
-      "folder": "",
-      "featured": false,
-      "order": 185,
-      "thumb": null,
-      "qImages": [],
-      "variants": []
+      "order": 183
     },
     {
       "slug": "kun-chong-liang",
@@ -4242,7 +4198,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 186,
+      "order": 184,
       "thumb": null,
       "qImages": [],
       "variants": [
@@ -4267,7 +4223,7 @@
       "image": "/uploads/wiki/characters/rong-yan-ji-sheng-chong-jin-yi.webp",
       "folder": "",
       "featured": false,
-      "order": 187,
+      "order": 185,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4284,7 +4240,7 @@
       "image": "/uploads/wiki/characters/wu-gong-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 188,
+      "order": 186,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4301,7 +4257,7 @@
       "image": "/uploads/wiki/characters/rong-he-sen-lin-wu-yao-guai.webp",
       "folder": "",
       "featured": false,
-      "order": 189,
+      "order": 187,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4318,7 +4274,7 @@
       "image": "/uploads/wiki/characters/rong-he-she-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 190,
+      "order": 188,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4335,7 +4291,7 @@
       "image": "/uploads/wiki/characters/rong-he-tang-lang-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 191,
+      "order": 189,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4352,7 +4308,7 @@
       "image": "/uploads/wiki/characters/rong-he-bao-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 192,
+      "order": 190,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4369,7 +4325,7 @@
       "image": "/uploads/wiki/characters/tang-lang-kun-chong-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 193,
+      "order": 191,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4386,7 +4342,7 @@
       "image": "/uploads/wiki/characters/hei-quan-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 194,
+      "order": 192,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4403,7 +4359,7 @@
       "image": "/uploads/wiki/characters/hei-lang-niang.webp",
       "folder": "",
       "featured": false,
-      "order": 195,
+      "order": 193,
       "thumb": null,
       "qImages": [],
       "variants": []
@@ -4420,7 +4376,7 @@
       "image": "/uploads/wiki/characters/ying-ya-xiao-jing-ling.webp",
       "folder": "",
       "featured": false,
-      "order": 196,
+      "order": 194,
       "thumb": "/uploads/wiki/characters/ying-ya-xiao-jing-ling.webp",
       "qImages": [],
       "variants": []
@@ -4437,7 +4393,7 @@
       "image": null,
       "folder": "",
       "featured": false,
-      "order": 197,
+      "order": 195,
       "thumb": "/uploads/wiki/characters/zhu-jue-xi-huan-de-nv-hai.webp",
       "qImages": [],
       "variants": []

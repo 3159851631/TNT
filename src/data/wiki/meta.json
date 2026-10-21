@@ -10,7 +10,7 @@
   "hero": "/uploads/wiki/cg/hero-1.webp",
   "counts": {
     "regions": 23,
-    "characters": 197,
+    "characters": 195,
     "monsters": 309,
     "items": 456,
     "recipes": 168,
@@ -38,7 +38,7 @@
       "name": "角色",
       "en": "CHARACTERS",
       "url": "/wiki/characters/",
-      "count": 197,
+      "count": 195,
       "desc": "NPC、主线角色、魔物娘与他们的故事。"
     },
     {

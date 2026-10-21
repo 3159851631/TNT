@@ -144,6 +144,74 @@
     });
   });
 
+  const avatarDrawer = document.querySelector('[data-wiki-avatar-drawer]');
+  if (avatarDrawer) {
+    const grid = avatarDrawer.querySelector('[data-wiki-avatar-grid]');
+    const toggle = document.querySelector('[data-wiki-avatar-toggle]');
+    const label = toggle?.querySelector('[data-wiki-avatar-toggle-label]');
+    const avatars = grid ? Array.from(grid.querySelectorAll('.wiki-avatar')) : [];
+    let open = false;
+    let frame = 0;
+
+    const rowStarts = () => {
+      const tops = [];
+      avatars.forEach((el) => {
+        if (!tops.includes(el.offsetTop)) tops.push(el.offsetTop);
+      });
+      return tops.sort((a, b) => a - b);
+    };
+
+    const apply = (animate) => {
+      if (!grid || !toggle) return;
+      const tops = rowStarts();
+      const hasMore = tops.length > 2;
+      toggle.hidden = !hasMore;
+      if (!hasMore) {
+        avatarDrawer.style.maxHeight = '';
+        avatarDrawer.classList.remove('is-open');
+        return;
+      }
+      if (!animate) avatarDrawer.style.transition = 'none';
+      const fullHeight = grid.offsetTop + grid.offsetHeight;
+      avatarDrawer.style.maxHeight = `${open ? fullHeight : tops[2]}px`;
+      avatarDrawer.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      if (label) label.textContent = open ? '收起角色列表' : `展开全部 ${avatars.length} 位角色`;
+      if (!animate) {
+        void avatarDrawer.offsetHeight;
+        avatarDrawer.style.transition = '';
+      }
+    };
+
+    const onToggle = () => {
+      open = !open;
+      apply(true);
+      if (!open) {
+        window.setTimeout(() => toggle.scrollIntoView({ block: 'nearest', behavior: 'smooth' }), 560);
+      }
+    };
+
+    const onResize = () => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => apply(false));
+    };
+
+    const observer = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(onResize) : null;
+    observer?.observe(grid);
+
+    toggle?.addEventListener('click', onToggle);
+    window.addEventListener('resize', onResize);
+    apply(false);
+
+    cleanups.push(() => {
+      toggle?.removeEventListener('click', onToggle);
+      window.removeEventListener('resize', onResize);
+      window.cancelAnimationFrame(frame);
+      observer?.disconnect();
+      avatarDrawer.style.maxHeight = '';
+    });
+  }
+
   const viewer = document.querySelector('[data-wiki-map]');
   if (viewer) {
     const layers = Array.from(viewer.querySelectorAll('[data-wiki-map-layer]'));
