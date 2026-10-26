@@ -21,7 +21,42 @@ const { title, description, active = '', breadcrumb = [], ageGate = true } = Ast
 const pageTitle = title ? `${title} · ${meta.gameName} Wiki` : `${meta.gameName} · 游戏 Wiki`;
 const desc = description || meta.tagline;
 const categories = meta.categories;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt-game-site.pages.dev'));
+const siteBase = Astro.site ?? new URL('https://tnt-game-site.pages.dev');
+const canonical = new URL(Astro.url.pathname, siteBase);
+const ogImage = new URL('/og-default.jpg', siteBase);
+const wikiHome = new URL('/wiki/', siteBase).href;
+const searchUrl = new URL('/wiki/search/', siteBase).href;
+const gameUrl = new URL('/projects/monster-girl-synthesis/', siteBase).href;
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: `${meta.gameName} Wiki`,
+  alternateName: [`${meta.gameName}攻略`, `${meta.gameName}百科`, meta.gameEn],
+  url: wikiHome,
+  inLanguage: 'zh-CN',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: { '@type': 'EntryPoint', urlTemplate: `${searchUrl}?q={search_term_string}` },
+    'query-input': 'required name=search_term_string',
+  },
+};
+const gameLd = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoGame',
+  name: meta.gameName,
+  alternateName: ['半神容器', meta.gameEn],
+  description: '异世界生存建造 × 魔物娘养成 × 合成经营的 2D 像素 RPG，含完整 Wiki：区域、角色、怪物、物品、武器、合成与剧情。',
+  genre: ['RPG', 'Simulation', 'Indie'],
+  gamePlatform: 'PC',
+  applicationCategory: 'Game',
+  operatingSystem: 'Windows',
+  inLanguage: 'zh-CN',
+  isAccessibleForFree: true,
+  url: gameUrl,
+  sameAs: [wikiHome],
+  publisher: { '@type': 'Organization', name: 'EXPLODINGTNT' },
+  author: { '@type': 'Person', name: 'EXPLODINGTNT', alternateName: '王君' },
+};
 ---
 
 <!doctype html>
@@ -32,7 +67,28 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt
     <title>{pageTitle}</title>
     <meta name="description" content={desc} />
     <meta name="theme-color" content="#0b0f0c" />
+    <meta name="author" content="EXPLODINGTNT" />
+    <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={`${meta.gameName} Wiki`} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteLd)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(gameLd)} />
     <link rel="icon" href="/favicon-wiki.ico" sizes="any" />
     <link rel="icon" type="image/png" href="/uploads/wiki/logos/game-icon.png" />
     <link rel="apple-touch-icon" href="/uploads/wiki/logos/game-icon-180.png" />
