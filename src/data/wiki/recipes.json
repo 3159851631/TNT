@@ -4680,7 +4680,36 @@
       "note": "最终形态的大剑，一刀斩断星辰，无视防御的真实伤害。 · 获取：最终合成",
       "usedIn": [],
       "url": "/wiki/items/4500/"
+    },
+    {
+      "id": "4506",
+      "name": "诅咒魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影残片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "每释放一次会扣除自身微量生命。 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4506/"
     }
   ],
-  "count": 169
+  "count": 170
 }

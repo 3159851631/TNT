@@ -11,8 +11,21 @@ const { item } = Astro.props;
 const related = data.items.filter((i) => i.id !== item.id && i.category === item.category).slice(0, 8);
 const usedInItems = data.items.filter((i) => item.usedIn.includes(i.name));
 const myWeapons = weaponsData.weapons.filter((w) => w.itemId === item.id);
+const kindOf = (w: any) => weaponsData.kinds.find((k) => k.key === w.kind);
 const obtainTagClass = (w: any) =>
-  w.obtain === '购买' ? 'is-buy' : w.obtain === '掉落' ? 'is-drop' : 'is-craft';
+  w.obtain.includes('购买') ? 'is-buy' : w.obtain.includes('掉落') ? 'is-drop' : 'is-craft';
+const statLines = (w: any, key: string) => {
+  const v = w.stats?.[key];
+  if (v == null || v === '') return null;
+  return Array.isArray(v) ? v : [v];
+};
+const weaponLink = myWeapons.length > 0 ? kindOf(myWeapons[0])?.url : null;
+const mainKind: any = myWeapons.length > 0 ? kindOf(myWeapons[0]) : null;
+const specTitle =
+  mainKind?.key === 'accessories' ? '饰品属性'
+  : mainKind?.key === 'traps' ? '陷阱属性'
+  : mainKind?.key === 'throwing' ? '投掷物属性'
+  : '武器属性';
 ---
 
 <WikiLayout
@@ -32,52 +45,69 @@ const obtainTagClass = (w: any) =>
           {item.craftable ? <span class="wiki-tag wiki-tag--gold">可合成</span> : <span class="wiki-tag">素材 / 拾取</span>}
           <span class="wiki-tag">{item.category}</span>
           {item.station && <span class="wiki-tag">{item.station}</span>}
-          {myWeapons.length > 0 && <a class="wiki-tag" href="/wiki/weapons/">武器图鉴 →</a>}
+          {weaponLink && <a class="wiki-tag" href={weaponLink}>武器图鉴 →</a>}
         </div>
       </header>
 
       <article class="wiki-prose">
         {myWeapons.length > 0 && (
           <>
-            <h2>武器属性</h2>
-            {myWeapons.map((w) => (
-              <div class="wp-spec">
-                {myWeapons.length > 1 && <h3 class="wp-spec__title">{w.name}{w.seriesKey === 'core' ? '（进化形态）' : ''}</h3>}
-                <table class="wp-spec__table">
-                  <tbody>
-                    <tr class="is-group"><th colspan="2">战斗属性</th></tr>
-                    <tr><th>元素</th><td><span class={`wp-el wp-el--${w.elementKey}`}>{w.element}</span></td></tr>
-                    <tr><th>伤害</th><td><b class="wp-spec__dmg">{w.damage}</b></td></tr>
-                    <tr><th>攻速</th><td>{w.speed || '未标注'}</td></tr>
-                    <tr><th>系列</th><td>{weaponsData.series.find((s) => s.key === w.seriesKey)?.name || w.seriesKey}</td></tr>
+            <h2>{specTitle}</h2>
+            {myWeapons.map((w) => {
+              const kind = kindOf(w);
+              const series = kind?.series.find((s: any) => s.key === w.seriesKey);
+              return (
+                <div class="wp-spec">
+                  {myWeapons.length > 1 && (
+                    <h3 class="wp-spec__title">{w.name}{w.seriesKey === 'core' ? '（进化形态）' : ''}</h3>
+                  )}
+                  <table class="wp-spec__table">
+                    <tbody>
+                      <tr class="is-group"><th colspan="2">{kind?.statGroup || '属性'}</th></tr>
+                      <tr><th>类别</th><td>{kind?.name || w.kind}</td></tr>
+                      {series && <tr><th>系列</th><td>{series.name}</td></tr>}
+                      <tr><th>元素</th><td><span class={`wp-el wp-el--${w.elementKey}`}>{w.element}</span></td></tr>
+                      {(kind?.statColumns || []).map((c: any) => {
+                        const lines = statLines(w, c.key);
+                        return (
+                          <tr>
+                            <th>{c.label}</th>
+                            <td>
+                              {lines ? (
+                                lines.length > 1 ? <span class="wp-multi">{lines.map((l: string) => <span>{l}</span>)}</span> : lines[0]
+                              ) : (
+                                <span class="wiki-muted">—</span>
+                              )}
+                            </td>
+                          </tr>
+                        );
+                      })}
 
-                    <tr class="is-group"><th colspan="2">获取与配方</th></tr>
-                    <tr><th>获取方式</th><td><span class={`wp-spec__obtain ${obtainTagClass(w)}`}>{w.obtain}</span></td></tr>
-                    {w.price && <tr><th>售价</th><td>{w.price} 金币</td></tr>}
-                    {w.dropFrom && <tr><th>掉落来源</th><td>击败{w.dropFrom}</td></tr>}
-                    {w.recipe.length > 0 && (
-                      <tr>
-                        <th>武器表配方</th>
-                        <td>
-                          <span class="wp-spec__recipe">
-                            {w.recipe.map((m, i) => (
-                              <span class="wp-spec__mat">{i > 0 && <i>+</i>}{m.name}<b>×{m.qty}</b></span>
-                            ))}
-                          </span>
-                        </td>
-                      </tr>
-                    )}
-                    {w.station && <tr><th>制作站</th><td>{w.station}</td></tr>}
+                      <tr class="is-group"><th colspan="2">获取与配方</th></tr>
+                      <tr><th>获取方式</th><td><span class={`wp-spec__obtain ${obtainTagClass(w)}`}>{w.obtain}</span></td></tr>
+                      {w.price && <tr><th>售价</th><td>{w.price} 金币</td></tr>}
+                      {w.dropFrom && <tr><th>掉落来源</th><td>击败{w.dropFrom}</td></tr>}
+                      {w.recipe.length > 0 && (
+                        <tr>
+                          <th>武器表配方</th>
+                          <td>
+                            <span class="wp-spec__recipe">
+                              {w.recipe.map((m: any, i: number) => (
+                                <span class="wp-spec__mat">{i > 0 && <i>+</i>}{m.name}<b>×{m.qty}</b></span>
+                              ))}
+                            </span>
+                          </td>
+                        </tr>
+                      )}
+                      {w.station && <tr><th>制作站</th><td>{w.station}</td></tr>}
 
-                    <tr class="is-group"><th colspan="2">{w.effectName ? `专属特效 · ${w.effectName}` : '说明与特效'}</th></tr>
-                    <tr>
-                      <th>效果</th>
-                      <td class="wp-spec__effect">{w.effect}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            ))}
+                      <tr class="is-group"><th colspan="2">{w.effectName ? `专属特效 · ${w.effectName}` : '说明与特效'}</th></tr>
+                      <tr><th>效果</th><td class="wp-spec__effect">{w.effect}</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
           </>
         )}
 
@@ -140,8 +170,12 @@ const obtainTagClass = (w: any) =>
         <div class="wiki-infobox__rows">
           <div class="wiki-infobox__row"><span class="wiki-infobox__label">分类</span><span class="wiki-infobox__value">{item.category}</span></div>
           {myWeapons[0] && <div class="wiki-infobox__row"><span class="wiki-infobox__label">元素</span><span class="wiki-infobox__value"><span class={`wp-el wp-el--${myWeapons[0].elementKey}`}>{myWeapons[0].element}</span></span></div>}
-          {myWeapons[0] && <div class="wiki-infobox__row"><span class="wiki-infobox__label">伤害</span><span class="wiki-infobox__value">{myWeapons[0].damage}</span></div>}
-          {myWeapons[0] && <div class="wiki-infobox__row"><span class="wiki-infobox__label">攻速</span><span class="wiki-infobox__value">{myWeapons[0].speed || '—'}</span></div>}
+          {myWeapons[0] && (kindOf(myWeapons[0])?.statColumns || []).slice(0, 2).map((c: any) => (
+            <div class="wiki-infobox__row">
+              <span class="wiki-infobox__label">{c.label}</span>
+              <span class="wiki-infobox__value">{statLines(myWeapons[0], c.key)?.join(' / ') || '—'}</span>
+            </div>
+          ))}
           <div class="wiki-infobox__row"><span class="wiki-infobox__label">可合成</span><span class="wiki-infobox__value">{item.craftable ? '是' : '否'}</span></div>
           <div class="wiki-infobox__row"><span class="wiki-infobox__label">制作站</span><span class="wiki-infobox__value">{item.station || '—'}</span></div>
           <div class="wiki-infobox__row"><span class="wiki-infobox__label">层级</span><span class="wiki-infobox__value">{item.tier || '—'}</span></div>
@@ -199,11 +233,7 @@ const obtainTagClass = (w: any) =>
   }
   .wp-spec__table tr:last-child th,
   .wp-spec__table tr:last-child td { border-bottom: 0; }
-  .wp-spec__dmg {
-    font-family: var(--w-mono);
-    font-size: 14px;
-    color: var(--w-gold-2);
-  }
+  .wp-multi { display: flex; flex-direction: column; gap: 2px; }
   .wp-spec__obtain {
     display: inline-block;
     padding: 1px 6px;

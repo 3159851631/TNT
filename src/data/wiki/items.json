@@ -9635,6 +9635,147 @@
       "note": "最终形态的大剑，一刀斩断星辰，无视防御的真实伤害。 · 获取：最终合成",
       "usedIn": [],
       "url": "/wiki/items/4500/"
+    },
+    {
+      "id": "4501",
+      "name": "大地巨弩",
+      "category": "远程武器",
+      "craftable": false,
+      "tier": null,
+      "station": null,
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "原设定表里写在购买栏的“大地巨刃”属笔误，这里修正为重型连发弩，发射穿透力极强的巨箭。 · 获取：购买",
+      "usedIn": [],
+      "url": "/wiki/items/4501/"
+    },
+    {
+      "id": "4502",
+      "name": "剧毒法杖",
+      "category": "魔法武器",
+      "craftable": false,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "蕴含致命毒液的魔法杖。 · 获取：购买",
+      "usedIn": [],
+      "url": "/wiki/items/4502/"
+    },
+    {
+      "id": "4503",
+      "name": "炎爆法杖",
+      "category": "魔法武器",
+      "craftable": false,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "每次挥动都伴随着爆炸的轰鸣。 · 获取：购买",
+      "usedIn": [],
+      "url": "/wiki/items/4503/"
+    },
+    {
+      "id": "4504",
+      "name": "潮汐法典",
+      "category": "魔法武器",
+      "craftable": false,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "记载着潮汐之力，攻守兼备。 · 获取：购买",
+      "usedIn": [],
+      "url": "/wiki/items/4504/"
+    },
+    {
+      "id": "4505",
+      "name": "雷击木法杖",
+      "category": "魔法武器",
+      "craftable": false,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "由被雷劈中千年的木头制成。 · 获取：掉落/购买",
+      "usedIn": [],
+      "url": "/wiki/items/4505/"
+    },
+    {
+      "id": "4506",
+      "name": "诅咒魔法书",
+      "category": "魔法武器",
+      "craftable": true,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影残片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "每释放一次会扣除自身微量生命。 · 获取：合成",
+      "usedIn": [],
+      "url": "/wiki/items/4506/"
+    },
+    {
+      "id": "4507",
+      "name": "暗影法典",
+      "category": "魔法武器",
+      "craftable": false,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "书皮由深渊魔物的皮革制成。 · 获取：购买",
+      "usedIn": [],
+      "url": "/wiki/items/4507/"
+    },
+    {
+      "id": "4508",
+      "name": "冰霜震爆弹",
+      "category": "投掷 / 陷阱",
+      "craftable": false,
+      "tier": null,
+      "station": null,
+      "materials": [],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 350,
+      "note": "特制的冰系炸弹，爆炸范围内所有敌人被冻结2秒。 · 获取：购买",
+      "usedIn": [],
+      "url": "/wiki/items/4508/"
     }
   ],
   "categories": [
@@ -9666,6 +9807,6 @@
     "矿物精炼器",
     "邪恶合成仪"
   ],
-  "count": 457,
-  "craftableCount": 169
+  "count": 465,
+  "craftableCount": 170
 }

@@ -1,0 +1,310 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/weapons.json';
+
+export function getStaticPaths() {
+  return data.kinds.map((kind) => ({ params: { kind: kind.key }, props: { kind } }));
+}
+
+const { kind } = Astro.props;
+const all = data.weapons;
+const rows = all.filter((w) => w.kind === kind.key);
+const series = kind.series;
+const statColumns = kind.statColumns;
+const elements = Array.from(new Set(rows.map((w) => w.element))).filter((e) => e !== '无');
+const craftable = rows.filter((w) => w.recipe.length > 0 || w.obtain.includes('合成')).length;
+const otherKinds = data.kinds.filter((k) => k.key !== kind.key);
+const colCount = 1 + statColumns.length + 2 + 1;
+
+const obtainClass = (w: any) =>
+  w.obtain.includes('购买') ? 'is-buy' : w.obtain.includes('掉落') ? 'is-drop' : 'is-craft';
+const routeText = (w: any) => {
+  if (w.price) return `${w.price} 金币`;
+  if (w.dropFrom) return `击败${w.dropFrom}掉落`;
+  if (w.recipeText && w.recipeText !== '-' && !w.recipe.length) return w.recipeText;
+  return '—';
+};
+const statValue = (w: any, key: string) => {
+  const v = w.stats?.[key];
+  if (v == null || v === '') return null;
+  return Array.isArray(v) ? v : [v];
+};
+---
+
+<WikiLayout
+  title={kind.name}
+  description={`《魔物娘合成乐园》${kind.name}图鉴：${kind.count} 件，含元素、数值、获取方式、完整配方与特效。`}
+  active="weapons"
+  breadcrumb={[{ label: '武器图鉴', href: '/wiki/weapons/' }, { label: kind.name }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">WEAPONS / {kind.en}</p>
+    <h1 class="wiki-page-head__title">{kind.name} <em>{kind.en}</em></h1>
+    <p class="wiki-page-head__lead">{kind.note}</p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{kind.count}</b><span>WEAPONS / 件</span></div>
+      <div class="wiki-stat"><b>{series.length}</b><span>SERIES / 系列</span></div>
+      {kind.showRange && <div class="wiki-stat"><b>{kind.minDamage}–{kind.maxDamage}</b><span>DAMAGE / 伤害范围</span></div>}
+      {!kind.showRange && elements.length > 0 && <div class="wiki-stat"><b>{elements.length}</b><span>ELEMENTS / 元素</span></div>}
+      <div class="wiki-stat"><b>{craftable}</b><span>CRAFTED / 可合成</span></div>
+    </div>
+    <div class="wk-switch">
+      <a class="wk-switch__link" href="/wiki/weapons/">全部武器</a>
+      {otherKinds.map((k) => <a class="wk-switch__link" href={k.url}>{k.name}</a>)}
+    </div>
+  </header>
+
+  {kind.tips.length > 0 && (
+    <ul class="wk-tips">
+      {kind.tips.map((tip) => <li>{tip}</li>)}
+    </ul>
+  )}
+
+  <div data-wiki-weapons>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder={`搜索${kind.name} / 材料…`} data-wiki-weapon-search aria-label={`搜索${kind.name}`} />
+      </div>
+      <div class="wk-filter-row">
+        <span class="wk-filter-row__label">系列</span>
+        <div class="wiki-chips">
+          <button class="wiki-chip is-active" type="button" data-wiki-series="all">全部</button>
+          {series.map((s) => <button class="wiki-chip" type="button" data-wiki-series={s.key}>{s.name}</button>)}
+        </div>
+      </div>
+      {elements.length > 1 && (
+        <div class="wk-filter-row">
+          <span class="wk-filter-row__label">元素</span>
+          <div class="wiki-chips">
+            <button class="wiki-chip is-active" type="button" data-wiki-element="all">全部</button>
+            {elements.map((e) => <button class="wiki-chip" type="button" data-wiki-element={e}>{e}</button>)}
+          </div>
+        </div>
+      )}
+      <span class="wiki-count" data-wiki-weapon-count>{rows.length} / {rows.length}</span>
+    </div>
+
+    {series.map((s) => {
+      const group = rows.filter((w) => w.seriesKey === s.key);
+      if (group.length === 0) return null;
+      return (
+        <section class="wk-series" data-wiki-series-group={s.key}>
+          <h2 class="wk-series__title">
+            {s.name} <em>{s.en}</em>
+            <span class="wk-series__meta">{group.length} 件</span>
+          </h2>
+          <div class="wiki-table-wrap">
+            <table class="wiki-table wk-table" style={`min-width:${420 + statColumns.length * 150 + 430}px`}>
+              <thead>
+                <tr>
+                  <th rowspan="2">名称</th>
+                  <th colspan={statColumns.length} class="wk-group-head">{kind.statGroup}</th>
+                  <th colspan="2" class="wk-group-head">获取与配方</th>
+                  <th rowspan="2">说明与特效</th>
+                </tr>
+                <tr>
+                  {statColumns.map((c) => <th>{c.label}</th>)}
+                  <th>方式</th>
+                  <th>详细配方 / 获取途径</th>
+                </tr>
+              </thead>
+              <tbody>
+                {group.map((w) => (
+                  <tr data-wiki-weapon data-series={w.seriesKey} data-element={w.element} data-name={`${w.name} ${w.element} ${w.recipeText}`}>
+                    <td class="wk-name">
+                      {w.itemId ? <a href={`/wiki/items/${w.itemId}/`}>{w.name}</a> : <b>{w.name}</b>}
+                    </td>
+                    {statColumns.map((c) => {
+                      const v = statValue(w, c.key);
+                      const isDamage = c.key === '伤害';
+                      return (
+                        <td class={isDamage ? 'wk-stat-dmg' : 'wk-stat'}>
+                          {v ? (
+                            v.length > 1 ? (
+                              <span class="wk-multi">{v.map((line: string) => <span>{line}</span>)}</span>
+                            ) : isDamage ? (
+                              <b class="wk-dmg">{v[0]}</b>
+                            ) : (
+                              v[0]
+                            )
+                          ) : (
+                            <span class="wiki-muted">—</span>
+                          )}
+                        </td>
+                      );
+                    })}
+                    <td><span class={`wk-obtain ${obtainClass(w)}`}>{w.obtain}</span></td>
+                    <td class="wk-recipe">
+                      {w.recipe.length > 0 ? (
+                        <span class="wk-recipe__list">
+                          {w.recipe.map((m: any, i: number) => (
+                            <span class="wk-mat">{i > 0 && <i>+</i>}{m.name}<b>×{m.qty}</b></span>
+                          ))}
+                        </span>
+                      ) : (
+                        <span class="wiki-muted">{routeText(w)}</span>
+                      )}
+                    </td>
+                    <td class="wk-effect">
+                      {w.effectName && <b class="wk-effect__name">【{w.effectName}】</b>}
+                      {w.effect}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    })}
+
+    <p class="wk-footnote">
+      数值为武器基础值，实际效果还受角色属性、元素克制和特效影响，仍会随版本调整。
+      <a href="/wiki/weapons/">→ 回武器图鉴</a> ·
+      <a href="/wiki/items/">→ 物品表看图标与游戏内材料</a>
+    </p>
+  </div>
+</WikiLayout>
+
+<style>
+  .wk-switch { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 16px; }
+  .wk-switch__link {
+    padding: 4px 9px;
+    border: 1px solid var(--w-line);
+    font-size: 11.5px;
+    color: var(--w-soft);
+    transition: color .2s, border-color .2s, background .2s;
+  }
+  .wk-switch__link:hover {
+    color: var(--w-gold-2);
+    border-color: rgba(198, 164, 104, .45);
+    background: rgba(198, 164, 104, .06);
+  }
+
+  .wk-tips {
+    margin: 18px 0 0;
+    padding: 12px 16px 12px 30px;
+    border: 1px solid var(--w-line);
+    background: var(--w-panel);
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--w-muted);
+  }
+  .wk-tips li { margin: 2px 0; }
+
+  .wk-filter-row {
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .wk-filter-row__label {
+    flex: 0 0 auto;
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .14em;
+    color: var(--w-muted);
+  }
+
+  .wk-series__title {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 34px 0 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--w-line);
+    font-family: var(--w-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: .04em;
+  }
+  .wk-series__title em {
+    font-family: var(--w-mono);
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: .16em;
+    color: var(--w-gold);
+  }
+  .wk-series__meta {
+    margin-left: auto;
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .06em;
+    color: var(--w-muted);
+  }
+
+  .wk-table thead tr:first-child th { border-bottom: 1px solid var(--w-line-2); }
+  .wk-group-head {
+    text-align: center !important;
+    color: var(--w-gold) !important;
+    letter-spacing: .14em;
+  }
+  .wk-table td { vertical-align: top; }
+  .wk-name { white-space: nowrap; }
+  .wk-name a { font-size: 12.5px; }
+  .wk-stat { font-size: 11.5px; }
+  .wk-dmg { font-family: var(--w-mono); font-size: 13px; color: var(--w-gold-2); }
+  .wk-multi { display: flex; flex-direction: column; gap: 2px; font-size: 11px; line-height: 1.55; }
+
+  .wk-obtain {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid var(--w-line-2);
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .wk-obtain.is-craft { color: var(--w-green-2); border-color: rgba(120, 163, 122, .45); }
+  .wk-obtain.is-buy { color: var(--w-gold-2); border-color: rgba(198, 164, 104, .45); }
+  .wk-obtain.is-drop { color: #d9877f; border-color: rgba(185, 86, 78, .5); }
+
+  .wk-recipe { min-width: 200px; }
+  .wk-recipe__list { display: flex; flex-wrap: wrap; gap: 3px 6px; }
+  .wk-mat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+    font-size: 11px;
+    color: var(--w-soft);
+    white-space: nowrap;
+  }
+  .wk-mat i { color: var(--w-faint); font-style: normal; margin-right: 3px; }
+  .wk-mat b {
+    font-family: var(--w-mono);
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--w-gold-2);
+  }
+
+  .wk-effect {
+    min-width: 240px;
+    max-width: 460px;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: var(--w-muted);
+  }
+  .wk-effect__name {
+    display: inline-block;
+    margin-right: 3px;
+    color: var(--w-gold-2);
+    font-weight: 600;
+  }
+
+  .wk-footnote {
+    margin: 30px 0 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--w-line);
+    font-size: 11.5px;
+    line-height: 1.8;
+    color: var(--w-muted);
+  }
+  .wk-footnote a { color: var(--w-gold-2); }
+
+  @media (max-width: 720px) {
+    .wk-filter-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .wk-series__meta { margin-left: 0; width: 100%; }
+  }
+</style>

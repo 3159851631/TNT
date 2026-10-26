@@ -1,6 +1,6 @@
 {
-  "title": "近战武器与合成配方图鉴",
-  "intro": "《魔物娘合成乐园》的 63 件近战武器：从 3 点伤害的水果刀到 75 点伤害的星光吞噬者。每条都标明元素、伤害、攻速、获取方式、完整配方和专属特效。",
+  "title": "武器与装备图鉴",
+  "intro": "《魔物娘合成乐园》的 211 件武器与装备，按 6 大类整理：近战、远程、魔法、投掷物、陷阱、饰品。每件都标明元素、数值、获取方式、完整配方和特效。",
   "materialNote": "武器配方里出现的 16 种基础材料，稀有度和获取途径如下。",
   "materials": [
     {
@@ -132,97 +132,4622 @@
       "itemName": "巨型龙骨"
     }
   ],
-  "elements": [
+  "kinds": [
     {
-      "name": "无",
-      "key": "none",
-      "count": 23
-    },
-    {
-      "name": "毒",
-      "key": "poison",
-      "count": 5
-    },
-    {
-      "name": "火",
-      "key": "fire",
-      "count": 5
-    },
-    {
-      "name": "冰",
-      "key": "ice",
-      "count": 5
-    },
-    {
-      "name": "水",
-      "key": "water",
-      "count": 6
-    },
-    {
-      "name": "雷",
-      "key": "thunder",
-      "count": 4
-    },
-    {
-      "name": "光",
-      "key": "light",
-      "count": 8
-    },
-    {
-      "name": "暗",
-      "key": "dark",
-      "count": 7
-    }
-  ],
-  "series": [
-    {
-      "key": "basic",
-      "name": "基础无特效系列",
-      "en": "BASIC",
-      "order": 1,
-      "count": 22,
+      "key": "melee",
+      "name": "近战武器",
+      "en": "MELEE",
+      "url": "/wiki/weapons/melee/",
+      "itemCategory": "近战武器",
+      "desc": "刀、剑、斧、锤、矛。伤害 3 → 75，七个元素方向 + 毕业级进化。",
+      "note": "近战武器靠攻击速度与元素特效取胜。伤害为武器基础值，实际伤害还受角色属性、元素克制影响。",
+      "tips": [],
+      "count": 63,
       "minDamage": 3,
-      "maxDamage": 45
+      "maxDamage": 75,
+      "statGroup": "战斗属性",
+      "showRange": true,
+      "statColumns": [
+        {
+          "key": "伤害",
+          "label": "伤害"
+        },
+        {
+          "key": "攻速",
+          "label": "攻速"
+        }
+      ],
+      "series": [
+        {
+          "key": "basic",
+          "name": "基础无特效系列",
+          "en": "BASIC"
+        },
+        {
+          "key": "element",
+          "name": "元素进阶系列",
+          "en": "ELEMENTAL"
+        },
+        {
+          "key": "core",
+          "name": "核心进化 · 毕业级",
+          "en": "EVOLUTION"
+        },
+        {
+          "key": "special",
+          "name": "特殊神兵",
+          "en": "SPECIAL"
+        }
+      ]
     },
     {
-      "key": "element",
-      "name": "元素进阶系列",
-      "en": "ELEMENTAL",
-      "order": 2,
-      "count": 30,
-      "minDamage": 18,
-      "maxDamage": 45
+      "key": "ranged",
+      "name": "远程武器",
+      "en": "RANGED",
+      "url": "/wiki/weapons/ranged/",
+      "itemCategory": "远程武器",
+      "desc": "弓、弩、火器。伤害 6 → 62，需要搭配弹药使用。",
+      "note": "远程武器除了弓弩本体，还要搭配【弹药】使用（木箭、铁箭、元素箭等）。",
+      "tips": [],
+      "count": 45,
+      "minDamage": 6,
+      "maxDamage": 62,
+      "statGroup": "战斗属性",
+      "showRange": true,
+      "statColumns": [
+        {
+          "key": "伤害",
+          "label": "伤害"
+        },
+        {
+          "key": "攻速",
+          "label": "攻速"
+        }
+      ],
+      "series": [
+        {
+          "key": "basic",
+          "name": "基础与无特效系列",
+          "en": "BASIC"
+        },
+        {
+          "key": "element",
+          "name": "元素进阶系列",
+          "en": "ELEMENTAL"
+        },
+        {
+          "key": "core",
+          "name": "核心进化系列",
+          "en": "EVOLUTION"
+        },
+        {
+          "key": "special",
+          "name": "特殊与异常武器",
+          "en": "SPECIAL"
+        }
+      ]
     },
     {
-      "key": "core",
-      "name": "核心进化 · 毕业级",
-      "en": "EVOLUTION",
-      "order": 3,
-      "count": 7,
-      "minDamage": 50,
-      "maxDamage": 64
+      "key": "magic",
+      "name": "魔法武器",
+      "en": "MAGIC",
+      "url": "/wiki/weapons/magic/",
+      "itemCategory": "魔法武器",
+      "desc": "法杖与法典。伤害 0 → 65，消耗法力值 MP。",
+      "note": "法杖与魔法书需要消耗【法力值 MP】才能释放，提供远程元素伤害、范围控制或特殊增益。",
+      "tips": [],
+      "count": 59,
+      "minDamage": 8,
+      "maxDamage": 65,
+      "statGroup": "战斗属性",
+      "showRange": true,
+      "statColumns": [
+        {
+          "key": "伤害/效果",
+          "label": "伤害 / 效果"
+        },
+        {
+          "key": "法力消耗",
+          "label": "法力消耗"
+        }
+      ],
+      "series": [
+        {
+          "key": "basic",
+          "name": "基础无特效系列",
+          "en": "BASIC"
+        },
+        {
+          "key": "element",
+          "name": "元素进阶系列",
+          "en": "ELEMENTAL"
+        }
+      ]
     },
     {
-      "key": "special",
-      "name": "特殊神兵",
-      "en": "SPECIAL",
-      "order": 4,
-      "count": 4,
-      "minDamage": 50,
-      "maxDamage": 75
+      "key": "throwing",
+      "name": "投掷物与爆炸物",
+      "en": "THROWABLES",
+      "url": "/wiki/weapons/throwing/",
+      "itemCategory": "投掷 / 陷阱",
+      "desc": "雷管、燃烧瓶、元素炸弹。一次性消耗品，伤害 1 → 50。",
+      "note": "投掷物属于一次性消耗品，可通过合成、购买或拾取获得，战斗中用于控场、群伤和破甲。",
+      "tips": [],
+      "count": 24,
+      "minDamage": 1,
+      "maxDamage": 50,
+      "statGroup": "效果",
+      "showRange": true,
+      "statColumns": [
+        {
+          "key": "效果",
+          "label": "效果与伤害"
+        }
+      ],
+      "series": [
+        {
+          "key": "basic",
+          "name": "基础无特效系列",
+          "en": "BASIC"
+        },
+        {
+          "key": "element",
+          "name": "元素进阶系列",
+          "en": "ELEMENTAL"
+        }
+      ]
+    },
+    {
+      "key": "traps",
+      "name": "陷阱与机关",
+      "en": "TRAPS",
+      "url": "/wiki/weapons/traps/",
+      "itemCategory": "投掷 / 陷阱",
+      "desc": "夹子、法阵、地雷。部署型，一次性或充能。",
+      "note": "陷阱为一次性消耗品或充能部署物，多在「基础锻造台」或「魔法锻造台」合成，随后布置在探索地图或家园周围，用于防御怪物入侵或阵地战。",
+      "tips": [
+        "陷阱可以作为投掷武器在战斗中快速布置，也能用于家园防御（例如抵御哥布林群入侵事件）。",
+        "高级陷阱（影噬禁域、圣辉裁决阵）要消耗稀有 BOSS 材料（深渊之眼、圣光结晶），适合用来对付高血量精英怪或 BOSS。"
+      ],
+      "count": 10,
+      "minDamage": 5,
+      "maxDamage": 50,
+      "statGroup": "机制",
+      "showRange": false,
+      "statColumns": [
+        {
+          "key": "效果",
+          "label": "效果"
+        },
+        {
+          "key": "触发方式",
+          "label": "触发方式"
+        }
+      ],
+      "series": [
+        {
+          "key": "basic",
+          "name": "基础无特效系列",
+          "en": "BASIC"
+        },
+        {
+          "key": "element",
+          "name": "元素进阶系列",
+          "en": "ELEMENTAL"
+        }
+      ]
+    },
+    {
+      "key": "accessories",
+      "name": "饰品与护符",
+      "en": "ACCESSORIES",
+      "url": "/wiki/weapons/accessories/",
+      "itemCategory": "饰品",
+      "desc": "徽章、吊坠、戒指、护符。被动增益，可叠加。",
+      "note": "饰品提供被动增益，装备后提升战斗能力、抗性或生存能力。所有饰品的属性增益在合理范围内可以叠加。",
+      "tips": [
+        "「精灵公主的硬币」是第二章精灵公主吉尔的剧情绑定道具，不能靠常规掉落获得。"
+      ],
+      "count": 10,
+      "minDamage": 10,
+      "maxDamage": 30,
+      "statGroup": "属性",
+      "showRange": false,
+      "statColumns": [
+        {
+          "key": "类型",
+          "label": "类型"
+        },
+        {
+          "key": "核心效果",
+          "label": "核心效果"
+        }
+      ],
+      "series": [
+        {
+          "key": "general",
+          "name": "综合饰品图鉴",
+          "en": "GENERAL"
+        }
+      ]
     }
   ],
   "weapons": [
     {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "木弓",
+      "itemId": "408",
+      "itemName": "木弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "6",
+        "攻速": "中等"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木块x3 + 蜘蛛丝x2",
+      "recipe": [
+        {
+          "name": "木块",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "最基础的远程武器，轻巧但射程有限。",
+      "icon": "/uploads/codex/galgame/408.webp",
+      "sortDamage": 6
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "铜弓",
+      "itemId": "4200",
+      "itemName": "铜弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "10",
+        "攻速": "中等"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "铜锭x3 + 木块x2 + 蜘蛛丝x2",
+      "recipe": [
+        {
+          "name": "铜锭",
+          "qty": 3
+        },
+        {
+          "name": "木块",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "station": "金属锻造台",
+      "effectName": null,
+      "effect": "铜制弓身，弹性比木弓更好。",
+      "icon": "/uploads/codex/galgame/4200.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "金弓",
+      "itemId": "4201",
+      "itemName": "金弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "16",
+        "攻速": "快"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "金锭x4 + 木块x2 + 蜘蛛丝x3",
+      "recipe": [
+        {
+          "name": "金锭",
+          "qty": 4
+        },
+        {
+          "name": "木块",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 3
+        }
+      ],
+      "station": "金属锻造台",
+      "effectName": null,
+      "effect": "华丽的贵金属弓，弹道非常平直。",
+      "icon": "/uploads/codex/galgame/4201.webp",
+      "sortDamage": 16
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "枯木弓",
+      "itemId": "4202",
+      "itemName": "枯木弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "12",
+        "攻速": "较慢"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "枯木x4 + 蜘蛛丝x2",
+      "recipe": [
+        {
+          "name": "枯木",
+          "qty": 4
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "枯木制成，拉弓时伴有干枯的吱呀声。",
+      "icon": "/uploads/codex/galgame/4202.webp",
+      "sortDamage": 12
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "草皮藤蔓弓箭",
+      "itemId": "4203",
+      "itemName": "草皮藤蔓弓箭",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "8",
+        "攻速": "快"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木块x2 + 藤蔓x3 + 草x2",
+      "recipe": [
+        {
+          "name": "木块",
+          "qty": 2
+        },
+        {
+          "name": "藤蔓",
+          "qty": 3
+        },
+        {
+          "name": "草",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "用自然植物粗糙捆绑的弓，打猎勉强够用。",
+      "icon": "/uploads/codex/galgame/4203.webp",
+      "sortDamage": 8
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "哥布林弓",
+      "itemId": "4204",
+      "itemName": "哥布林弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "10",
+        "攻速": "快"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "哥布林",
+      "recipeText": "击败哥布林掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "哥布林用兽骨和破布做成的短弓。",
+      "icon": "/uploads/codex/galgame/4204.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "凝胶发射器",
+      "itemId": "407",
+      "itemName": "凝胶发射器",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "14",
+        "攻速": "中等"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "史莱姆王/精英",
+      "recipeText": "击败史莱姆王/精英掉落",
+      "recipe": [],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "用史莱姆凝胶作为弹药的奇特武器。",
+      "icon": "/uploads/codex/galgame/407.webp",
+      "sortDamage": 14
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "遗失的弓箭",
+      "itemId": "4205",
+      "itemName": "遗失的弓箭",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "12",
+        "攻速": "中等"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "古老遗迹宝箱拾取",
+      "recipeText": "古老遗迹宝箱拾取",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "不知名冒险者留下的弓，握把处已被磨平。",
+      "icon": "/uploads/codex/galgame/4205.webp",
+      "sortDamage": 12
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "骷髅弓",
+      "itemId": "4206",
+      "itemName": "骷髅弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "15",
+        "攻速": "快"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "夜晚“骷髅怪”",
+      "recipeText": "击败夜晚“骷髅怪”掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "用巨大肋骨和死灵筋腱做成的弓，透着阴气。",
+      "icon": "/uploads/codex/galgame/4206.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "大地弓箭",
+      "itemId": "4207",
+      "itemName": "大地弓箭",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "13",
+        "攻速": "慢"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "山区“石头人”",
+      "recipeText": "击败山区“石头人”掉落",
+      "recipe": [],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "沉重无比的石弓，箭矢威力很大。",
+      "icon": "/uploads/codex/galgame/4207.webp",
+      "sortDamage": 13
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "精灵弓",
+      "itemId": "4208",
+      "itemName": "精灵弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "20",
+        "攻速": "极快"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 350,
+      "dropFrom": null,
+      "recipeText": "350金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "精灵族工艺，拉弓速度极快，手感轻盈。",
+      "icon": "/uploads/codex/galgame/4208.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "复合弓",
+      "itemId": "4209",
+      "itemName": "复合弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "18",
+        "攻速": "中等"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 400,
+      "dropFrom": null,
+      "recipeText": "400金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "使用了滑轮组结构的精密弓，省力且精准。",
+      "icon": "/uploads/codex/galgame/4209.webp",
+      "sortDamage": 18
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "手枪",
+      "itemId": "4210",
+      "itemName": "手枪",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "22",
+        "攻速": "极快"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 1200,
+      "dropFrom": null,
+      "recipeText": "1200金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "来自异世界的机械武器，需要消耗子弹。",
+      "icon": "/uploads/codex/galgame/4210.webp",
+      "sortDamage": 22
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "tony的弓",
+      "itemId": "4211",
+      "itemName": "tony的弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "25",
+        "攻速": "快"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 800,
+      "dropFrom": null,
+      "recipeText": "800金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "某个叫Tony的工匠制作的定制弓，非常结实。",
+      "icon": "/uploads/codex/galgame/4211.webp",
+      "sortDamage": 25
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "幻影弓",
+      "itemId": "4212",
+      "itemName": "幻影弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "28",
+        "攻速": "快"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 1500,
+      "dropFrom": null,
+      "recipeText": "1500金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "射击时箭矢带有残影，让敌人难以分辨。",
+      "icon": "/uploads/codex/galgame/4212.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "华丽弓",
+      "itemId": "4213",
+      "itemName": "华丽弓",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "26",
+        "攻速": "中等"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 1000,
+      "dropFrom": null,
+      "recipeText": "1000金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "贵族打猎用的装饰弓，属性均衡。",
+      "icon": "/uploads/codex/galgame/4213.webp",
+      "sortDamage": 26
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "basic",
+      "name": "大地之力",
+      "itemId": "4214",
+      "itemName": "大地之力",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "30",
+        "攻速": "慢"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 2000,
+      "dropFrom": null,
+      "recipeText": "2000金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "蕴含土元素力量的巨弓，命中必定造成强击退。",
+      "icon": "/uploads/codex/galgame/4214.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "毒疱弓",
+      "itemId": "4215",
+      "itemName": "毒疱弓",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害": "18"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 毒囊x3 + 蜘蛛丝x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "毒囊",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "弓身长满毒疱，命中使敌人中毒。",
+      "icon": "/uploads/codex/galgame/4215.webp",
+      "sortDamage": 18
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "荼毒十字弩",
+      "itemId": "4216",
+      "itemName": "荼毒·十字弩",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害": "24"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "瘟疫之地“毒沼怪”",
+      "recipeText": "击败瘟疫之地“毒沼怪”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "弩箭上涂满致命剧毒，无视部分防御。",
+      "icon": "/uploads/codex/galgame/4216.webp",
+      "sortDamage": 24
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "暗影低语",
+      "itemId": "4217",
+      "itemName": "暗影低语",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害": "28"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "地牢“暗影法师”",
+      "recipeText": "击败地牢“暗影法师”掉落",
+      "recipe": [],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "射击无声无息，附带致盲毒素。",
+      "icon": "/uploads/codex/galgame/4217.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "渴望的弓弩",
+      "itemId": "4218",
+      "itemName": "渴望的弓弩",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害": "36"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "“瘟神雷恩特”",
+      "recipeText": "击败“瘟神雷恩特”掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "渴望鲜血的邪弩，命中会引发毒爆。",
+      "icon": "/uploads/codex/galgame/4218.webp",
+      "sortDamage": 36
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "炼狱弓",
+      "itemId": "4219",
+      "itemName": "炼狱弓",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害": "22"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 火核x3 + 铁锭x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "火核",
+          "qty": 3
+        },
+        {
+          "name": "铁锭",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "拉弓时弓弦仿佛在燃烧，附带点燃效果。",
+      "icon": "/uploads/codex/galgame/4219.webp",
+      "sortDamage": 22
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "烈焰弓箭",
+      "itemId": "4220",
+      "itemName": "烈焰弓箭",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害": "26"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "火石岭“火元素”",
+      "recipeText": "击败火石岭“火元素”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "射出火矢，可点燃路径上的敌人。",
+      "icon": "/uploads/codex/galgame/4220.webp",
+      "sortDamage": 26
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "炎杀号角",
+      "itemId": "4221",
+      "itemName": "炎杀号角",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害": "30"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "火山“熔岩巨兽”",
+      "recipeText": "击败火山“熔岩巨兽”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "这其实是一把外形像号角的火器，发射爆裂火球。",
+      "icon": "/uploads/codex/galgame/4221.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "寒冰弓",
+      "itemId": "4222",
+      "itemName": "寒冰弓",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害": "20"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 冰晶x3 + 铁锭x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "冰晶",
+          "qty": 3
+        },
+        {
+          "name": "铁锭",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "射出的箭矢自带寒气，减速敌人。",
+      "icon": "/uploads/codex/galgame/4222.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "永冻之弦",
+      "itemId": "4223",
+      "itemName": "永冻之弦",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害": "28"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "雪山“冰霜巨人”",
+      "recipeText": "击败雪山“冰霜巨人”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "弓弦由极寒冰丝制成，命中冻结敌人。",
+      "icon": "/uploads/codex/galgame/4223.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "霜月寒弓",
+      "itemId": "4224",
+      "itemName": "霜月寒弓",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害": "32"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "雪山“霜脉族叛徒”",
+      "recipeText": "击败雪山“霜脉族叛徒”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "射击带有霜月光环，造成范围减速。",
+      "icon": "/uploads/codex/galgame/4224.webp",
+      "sortDamage": 32
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "潮流弓",
+      "itemId": "4225",
+      "itemName": "潮流弓",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害": "20"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 海纹石x3 + 蜘蛛丝x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "海纹石",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "如同海浪般连绵不绝的射击手感。",
+      "icon": "/uploads/codex/galgame/4225.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "海月之弓",
+      "itemId": "4226",
+      "itemName": "海月之弓",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害": "26"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "铁锭x3 + 海纹石x4 + 蜘蛛丝x3",
+      "recipe": [
+        {
+          "name": "铁锭",
+          "qty": 3
+        },
+        {
+          "name": "海纹石",
+          "qty": 4
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "射出的箭矢呈水蓝色，命中溅射水花。",
+      "icon": "/uploads/codex/galgame/4226.webp",
+      "sortDamage": 26
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "潮汐回响",
+      "itemId": "4227",
+      "itemName": "潮汐回响",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害": "30"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "海底“潮汐使者”",
+      "recipeText": "击败海底“潮汐使者”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "每次射击会额外弹射一道水刃。",
+      "icon": "/uploads/codex/galgame/4227.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "碧海流光弓",
+      "itemId": "4228",
+      "itemName": "碧海流光弓",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害": "34"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "海妖区“鲛人女王”",
+      "recipeText": "击败海妖区“鲛人女王”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "流光溢彩的弓，射速极快，水下无阻力。",
+      "icon": "/uploads/codex/galgame/4228.webp",
+      "sortDamage": 34
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "雷之弓",
+      "itemId": "4229",
+      "itemName": "雷之弓",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害": "24"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 雷鸣木x3 + 带电骨片x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "弓身带电，射击时有概率产生电弧。",
+      "icon": "/uploads/codex/galgame/4229.webp",
+      "sortDamage": 24
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "雷霆裁决",
+      "itemId": "4230",
+      "itemName": "雷霆裁决",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害": "32"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "山区“雷鹰”",
+      "recipeText": "击败山区“雷鹰”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "发射雷电长矛，命中时天降落雷。",
+      "icon": "/uploads/codex/galgame/4230.webp",
+      "sortDamage": 32
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "叛逆之怒",
+      "itemId": "4231",
+      "itemName": "叛逆之怒",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害": "38"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "“猪王爱维达”",
+      "recipeText": "击败“猪王爱维达”掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "凝聚着反叛者怒火的弩，必定造成暴击。",
+      "icon": "/uploads/codex/galgame/4231.webp",
+      "sortDamage": 38
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "逐日之弓",
+      "itemId": "4232",
+      "itemName": "逐日之弓→日出",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害": "26"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 日耀石x3 + 金锭x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "日耀石",
+          "qty": 3
+        },
+        {
+          "name": "金锭",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "追踪光明的弓，对暗系怪物有奇效。",
+      "icon": "/uploads/codex/galgame/4232.webp",
+      "sortDamage": 26
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "晨星祈光弓",
+      "itemId": "4233",
+      "itemName": "晨星祈光弓",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害": "32"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "天空城“圣徒”",
+      "recipeText": "击败天空城“圣徒”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "射出光之箭矢，可穿透三个敌人。",
+      "icon": "/uploads/codex/galgame/4233.webp",
+      "sortDamage": 32
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "空辉·天穹之弓",
+      "itemId": "4234",
+      "itemName": "空辉·天穹之弓",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害": "36"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "天空城“智天使”",
+      "recipeText": "击败天空城“智天使”掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "拥有天空之力的长弓，箭矢如流星坠落。",
+      "icon": "/uploads/codex/galgame/4234.webp",
+      "sortDamage": 36
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "王·弓",
+      "itemId": "4235",
+      "itemName": "王·弓",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害": "40"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "精灵丛林“精灵王”",
+      "recipeText": "击败精灵丛林“精灵王”掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "精灵王的佩弓，拉满时能射出巨大的贯穿光柱。",
+      "icon": "/uploads/codex/galgame/4235.webp",
+      "sortDamage": 40
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "暗蚀猎魂弓",
+      "itemId": "4236",
+      "itemName": "暗蚀猎魂弓→日落",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害": "28"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木弓x1 + 暗影残片x3 + 铁锭x2",
+      "recipe": [
+        {
+          "name": "木弓",
+          "qty": 1
+        },
+        {
+          "name": "暗影残片",
+          "qty": 3
+        },
+        {
+          "name": "铁锭",
+          "qty": 2
+        }
+      ],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "吞噬光线的黑弓，命中吸取生命。",
+      "icon": "/uploads/codex/galgame/4236.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "冥月之弓",
+      "itemId": "4237",
+      "itemName": "冥月之弓",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害": "34"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "永夜区“暗影蝙蝠”",
+      "recipeText": "击败永夜区“暗影蝙蝠”掉落",
+      "recipe": [],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "吸收月华之力的暗弓，暴击极高。",
+      "icon": "/uploads/codex/galgame/4237.webp",
+      "sortDamage": 34
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "深渊低语者",
+      "itemId": "4238",
+      "itemName": "深渊低语者",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害": "38"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "地牢“深渊怪物”",
+      "recipeText": "击败地牢“深渊怪物”掉落",
+      "recipe": [],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "箭矢化作深渊触须，束缚敌人。",
+      "icon": "/uploads/codex/galgame/4238.webp",
+      "sortDamage": 38
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "element",
+      "name": "夺血鬼齿·无限",
+      "itemId": "4239",
+      "itemName": "夺血鬼齿·无限",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害": "44"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "“吸血鬼女伯爵”",
+      "recipeText": "击败“吸血鬼女伯爵”掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "吸血鬼的魔弩，消耗生命值代替箭矢射击。",
+      "icon": "/uploads/codex/galgame/4239.webp",
+      "sortDamage": 44
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "core",
+      "name": "日出",
+      "itemId": "4232",
+      "itemName": "逐日之弓→日出",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害": "60"
+      },
+      "obtain": "进化合成",
+      "obtainRaw": "进化合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "逐日之弓x1 + 破晓之辉x3 + 日耀石x10 + 圣光结晶x5",
+      "recipe": [
+        {
+          "name": "逐日之弓",
+          "qty": 1
+        },
+        {
+          "name": "破晓之辉",
+          "qty": 3
+        },
+        {
+          "name": "日耀石",
+          "qty": 10
+        },
+        {
+          "name": "圣光结晶",
+          "qty": 5
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": "光耀黎明",
+      "effect": "连续射击三次后，下一次攻击召唤光柱。在白天伤害提升30%。",
+      "icon": "/uploads/codex/galgame/4232.webp",
+      "sortDamage": 60
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "core",
+      "name": "日落",
+      "itemId": "4236",
+      "itemName": "暗蚀猎魂弓→日落",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害": "62"
+      },
+      "obtain": "进化合成",
+      "obtainRaw": "进化合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "暗蚀猎魂弓x1 + 深渊之眼x3 + 暗影残片x15 + 堕落灵魂x5",
+      "recipe": [
+        {
+          "name": "暗蚀猎魂弓",
+          "qty": 1
+        },
+        {
+          "name": "深渊之眼",
+          "qty": 3
+        },
+        {
+          "name": "暗影残片",
+          "qty": 15
+        },
+        {
+          "name": "堕落灵魂",
+          "qty": 5
+        }
+      ],
+      "station": "邪恶合成仪",
+      "effectName": "无尽黑夜",
+      "effect": "杀敌后进入“暗隐”状态，下一发必定暴击且吸血。在夜晚伤害提升30%。",
+      "icon": "/uploads/codex/galgame/4236.webp",
+      "sortDamage": 62
+    },
+    {
+      "kind": "ranged",
+      "seriesKey": "special",
+      "name": "大地巨弩",
+      "itemId": "4501",
+      "itemName": "大地巨弩",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害": "45"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 3000,
+      "dropFrom": null,
+      "recipeText": "3000金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "重型连发弩，发射穿透力极强的巨箭。",
+      "icon": null,
+      "sortDamage": 45
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "灵木法杖",
+      "itemId": "4400",
+      "itemName": "灵木法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "12点魔法伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 灵木x2 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "灵木",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "新手法师的第一根法杖，散发淡淡的木头清香。",
+      "icon": "/uploads/codex/galgame/4400.webp",
+      "sortDamage": 12
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "仙人掌法杖",
+      "itemId": "4403",
+      "itemName": "仙人掌法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "15点穿刺伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 仙人掌x3 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "仙人掌",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "发射仙人掌刺，命中会造成轻微流血。",
+      "icon": "/uploads/codex/galgame/4403.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "风之魔法杖",
+      "itemId": "4404",
+      "itemName": "风之魔法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "14点魔法伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 魔力精华x3 + 风之羽x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        },
+        {
+          "name": "风之羽",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "挥动时产生风刃，射速极快。",
+      "icon": "/uploads/codex/galgame/4404.webp",
+      "sortDamage": 14
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "初学者魔法书",
+      "itemId": "4401",
+      "itemName": "初学者魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "10点魔法伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x2 + 蜘蛛丝x2 + 魔力精华x1",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "记录着最基础魔法的入门读物。",
+      "icon": "/uploads/codex/galgame/4401.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "中级魔法书",
+      "itemId": "4402",
+      "itemName": "中级魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "18点魔法伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 蜘蛛丝x3 + 魔力精华x3",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "进阶的魔法知识，威力有所提升。",
+      "icon": "/uploads/codex/galgame/4402.webp",
+      "sortDamage": 18
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "高级魔法书",
+      "itemId": "4405",
+      "itemName": "高级魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "25点魔法伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x4 + 丝绸x2 + 魔力精华x5",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 4
+        },
+        {
+          "name": "丝绸",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 5
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "记载着高阶咒语，能释放强力的魔法弹。",
+      "icon": "/uploads/codex/galgame/4405.webp",
+      "sortDamage": 25
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "藤蔓法杖",
+      "itemId": "4406",
+      "itemName": "藤蔓法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "12点伤害+束缚",
+        "法力消耗": "中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 藤蔓x4 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "藤蔓",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "召唤藤蔓缠绕敌人，使其短暂无法移动。",
+      "icon": "/uploads/codex/galgame/4406.webp",
+      "sortDamage": 12
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "枯木法杖",
+      "itemId": "4407",
+      "itemName": "枯木法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "16点魔法伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 枯木x4 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "枯木",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "枯木制成，每次使用会吸取使用者极少量生命。",
+      "icon": "/uploads/codex/galgame/4407.webp",
+      "sortDamage": 16
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "魔法禁书",
+      "itemId": "4408",
+      "itemName": "魔法禁书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "28点魔法伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "地牢魔法师",
+      "recipeText": "击败地牢魔法师掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "被封印的禁忌之书，书页上长满了眼睛。",
+      "icon": "/uploads/codex/galgame/4408.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "章鱼手之书",
+      "itemId": "4409",
+      "itemName": "章鱼手之书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "22点魔法伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "海妖区怪物",
+      "recipeText": "击败海妖区怪物掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "召唤虚幻的章鱼触手拍打敌人。",
+      "icon": "/uploads/codex/galgame/4409.webp",
+      "sortDamage": 22
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "格瑞克的法杖",
+      "itemId": "4410",
+      "itemName": "格瑞克的法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "30点魔法伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "山区哥布林萨满",
+      "recipeText": "击败山区哥布林萨满掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "带有哥布林粗糙工艺的骨杖，威力却出奇的大。",
+      "icon": "/uploads/codex/galgame/4410.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "吸血鬼之书",
+      "itemId": "4411",
+      "itemName": "吸血鬼之书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "25点吸血魔法",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "吸血鬼女伯爵",
+      "recipeText": "击败吸血鬼女伯爵掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "造成伤害的同时，将部分伤害转化为使用者的生命。",
+      "icon": "/uploads/codex/galgame/4411.webp",
+      "sortDamage": 25
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "卡卡魔法书",
+      "itemId": "4412",
+      "itemName": "卡卡魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "35点雷击伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "雷电法王卡卡",
+      "recipeText": "击败雷电法王卡卡掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "记录了雷电魔法的真谛，附带麻痹效果。",
+      "icon": "/uploads/codex/galgame/4412.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "屏障法杖",
+      "itemId": "4413",
+      "itemName": "屏障法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "0伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "古老遗迹拾取",
+      "recipeText": "古老遗迹拾取",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "不造成伤害，但能在身前生成一面吸收伤害的魔法护盾。",
+      "icon": "/uploads/codex/galgame/4413.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "混沌魔法书",
+      "itemId": "4414",
+      "itemName": "混沌魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "40点混乱伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "零界怪物",
+      "recipeText": "击败零界怪物掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "释放不规则的能量球，随机造成火、冰、雷伤害。",
+      "icon": "/uploads/codex/galgame/4414.webp",
+      "sortDamage": 40
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "大冒险家魔法书",
+      "itemId": "4415",
+      "itemName": "大冒险家魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "45点魔法伤害",
+        "法力消耗": "极高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "天空城天使",
+      "recipeText": "击败天空城天使掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "记录了传说级冒险家的魔法，全属性提升。",
+      "icon": "/uploads/codex/galgame/4415.webp",
+      "sortDamage": 45
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "贵族法杖",
+      "itemId": "4416",
+      "itemName": "贵族法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "20点魔法伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 400,
+      "dropFrom": null,
+      "recipeText": "400金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "镶嵌着红宝石的华丽法杖，适合贵族子弟。",
+      "icon": "/uploads/codex/galgame/4416.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "巫师法杖",
+      "itemId": "4417",
+      "itemName": "巫师法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "26点魔法伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 800,
+      "dropFrom": null,
+      "recipeText": "800金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "传统巫师使用的法杖，顶端绑着乌鸦羽毛。",
+      "icon": "/uploads/codex/galgame/4417.webp",
+      "sortDamage": 26
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "初学者法杖",
+      "itemId": "4418",
+      "itemName": "初学者法杖",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "8点魔法伤害",
+        "法力消耗": "极低"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 50,
+      "dropFrom": null,
+      "recipeText": "50金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "最便宜的量产法杖，容易折断。",
+      "icon": "/uploads/codex/galgame/4418.webp",
+      "sortDamage": 8
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "皇家魔导书",
+      "itemId": "4419",
+      "itemName": "皇家魔导书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "38点魔法伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 2500,
+      "dropFrom": null,
+      "recipeText": "2500金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "皇家法师专用的宝典，纸张由纯金箔打造。",
+      "icon": "/uploads/codex/galgame/4419.webp",
+      "sortDamage": 38
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "basic",
+      "name": "伯爵魔法书",
+      "itemId": "4420",
+      "itemName": "伯爵魔法书",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "伤害/效果": "42点魔法伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 3000,
+      "dropFrom": null,
+      "recipeText": "3000金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "伯爵家族世代相传的魔法书。",
+      "icon": "/uploads/codex/galgame/4420.webp",
+      "sortDamage": 42
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "毒泡",
+      "itemId": "4421",
+      "itemName": "毒泡",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害/效果": "15点毒伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x2 + 毒囊x3 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 2
+        },
+        {
+          "name": "毒囊",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "发射一个缓慢飘浮的毒泡，破裂后造成范围中毒。",
+      "icon": "/uploads/codex/galgame/4421.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "腐朽法杖",
+      "itemId": "4422",
+      "itemName": "腐朽法杖",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害/效果": "24点毒伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "瘟疫之地怪物",
+      "recipeText": "击败瘟疫之地怪物掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "散发恶臭的木杖，命中附加疫病。",
+      "icon": "/uploads/codex/galgame/4422.webp",
+      "sortDamage": 24
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "毒雨",
+      "itemId": "4423",
+      "itemName": "毒雨",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害/效果": "30点范围毒伤",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "瘟疫之地精英",
+      "recipeText": "击败瘟疫之地精英掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "在天空召唤一片毒云，降下腐蚀酸雨。",
+      "icon": "/uploads/codex/galgame/4423.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "剧毒法杖",
+      "itemId": "4502",
+      "itemName": "剧毒法杖",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "伤害/效果": "35点毒伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 1500,
+      "dropFrom": null,
+      "recipeText": "1500金币",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "蕴含致命毒液的魔法杖。",
+      "icon": null,
+      "sortDamage": 35
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "火焰魔法书",
+      "itemId": "402",
+      "itemName": "火焰魔法书",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害/效果": "26点火焰伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "火石岭教徒",
+      "recipeText": "击败火石岭教徒掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "最经典的火焰魔法，发射火球。",
+      "icon": "/uploads/codex/galgame/402.webp",
+      "sortDamage": 26
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "加强版火焰魔法书",
+      "itemId": "403",
+      "itemName": "加强版火焰魔法书",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害/效果": "40点火焰伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "进阶合成",
+      "obtainRaw": "进阶合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火焰魔法书x1 + 火核x3 + 魔力精华x3",
+      "recipe": [
+        {
+          "name": "火焰魔法书",
+          "qty": 1
+        },
+        {
+          "name": "火核",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "书页燃烧着不灭的烈焰，发射连发爆裂火球。",
+      "icon": "/uploads/codex/galgame/403.webp",
+      "sortDamage": 40
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "爆破法杖",
+      "itemId": "4424",
+      "itemName": "爆破法杖",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害/效果": "35点范围火伤",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "火山熔岩怪",
+      "recipeText": "击败火山熔岩怪掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "法杖顶端是一个炸药包，发射后会引发爆炸。",
+      "icon": "/uploads/codex/galgame/4424.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "火球法杖",
+      "itemId": "4425",
+      "itemName": "火球法杖",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害/效果": "22点火伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "火元素",
+      "recipeText": "击败火元素掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "快速发射小火球。",
+      "icon": "/uploads/codex/galgame/4425.webp",
+      "sortDamage": 22
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "炎爆法杖",
+      "itemId": "4503",
+      "itemName": "炎爆法杖",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "伤害/效果": "42点火焰伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 2000,
+      "dropFrom": null,
+      "recipeText": "2000金币",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "每次挥动都伴随着爆炸的轰鸣。",
+      "icon": null,
+      "sortDamage": 42
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "冰焰魔法书",
+      "itemId": "4426",
+      "itemName": "冰焰魔法书",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害/效果": "32点混合伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火焰魔法书x1 + 冰晶x4 + 魔力精华x5",
+      "recipe": [
+        {
+          "name": "火焰魔法书",
+          "qty": 1
+        },
+        {
+          "name": "冰晶",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 5
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "冰与火的交融，命中后同时造成灼烧与减速。",
+      "icon": "/uploads/codex/galgame/4426.webp",
+      "sortDamage": 32
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "霜棱寒晶杖",
+      "itemId": "4427",
+      "itemName": "霜棱寒晶杖",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害/效果": "28点冰伤+冻结",
+        "法力消耗": "中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 冰晶x4 + 精炼铁x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "冰晶",
+          "qty": 4
+        },
+        {
+          "name": "精炼铁",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "发射锋利的冰棱，有概率冻结敌人。",
+      "icon": "/uploads/codex/galgame/4427.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "寒冰法杖",
+      "itemId": "4428",
+      "itemName": "寒冰法杖",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害/效果": "20点冰伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "雪山怪物",
+      "recipeText": "击败雪山怪物掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "最基础的寒冰魔法，减速敌人。",
+      "icon": "/uploads/codex/galgame/4428.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "冰球发射器",
+      "itemId": "4429",
+      "itemName": "冰球发射器",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害/效果": "28点冰伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "霜脉族叛徒",
+      "recipeText": "击败霜脉族叛徒掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "机械与魔法结合，发射沉重的冰球。",
+      "icon": "/uploads/codex/galgame/4429.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "永冬封印之书",
+      "itemId": "4430",
+      "itemName": "永冬封印之书",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "伤害/效果": "45点冰冻伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 2500,
+      "dropFrom": null,
+      "recipeText": "2500金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "翻开书页，连空气都会瞬间冻结。",
+      "icon": "/uploads/codex/galgame/4430.webp",
+      "sortDamage": 45
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "海啸",
+      "itemId": "4431",
+      "itemName": "海啸",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "35点水范围伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 鲛人之泪x3 + 魔力精华x5",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "鲛人之泪",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 5
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "召唤一道微型海啸向前推进，击退所有敌人。",
+      "icon": "/uploads/codex/galgame/4431.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "水系法杖",
+      "itemId": "4432",
+      "itemName": "水系法杖",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "18点水伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 海纹石x3 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "海纹石",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "发射高压水球，能浇灭火焰。",
+      "icon": "/uploads/codex/galgame/4432.webp",
+      "sortDamage": 18
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "水龙卷",
+      "itemId": "4433",
+      "itemName": "水龙卷",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "32点水范围伤",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "海底怪物",
+      "recipeText": "击败海底怪物掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "召唤持续旋转的水龙卷。",
+      "icon": "/uploads/codex/galgame/4433.webp",
+      "sortDamage": 32
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "卡奇大法师的魔法书",
+      "itemId": "4434",
+      "itemName": "卡奇大法师的魔法书",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "45点水伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "卡奇或宝箱获取",
+      "recipeText": "击败卡奇或宝箱获取",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "记载着大法师毕生心血的魔法书。",
+      "icon": "/uploads/codex/galgame/4434.webp",
+      "sortDamage": 45
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "水泡",
+      "itemId": "409",
+      "itemName": "水泡",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "12点水伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "史莱姆",
+      "recipeText": "击败史莱姆掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "发射一个水泡困住小型敌人。",
+      "icon": "/uploads/codex/galgame/409.webp",
+      "sortDamage": 12
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "空气水压缩魔导球",
+      "itemId": "4435",
+      "itemName": "空气水压缩魔导球",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "38点水爆伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "咩咩",
+      "recipeText": "击败咩咩掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "发射高度压缩的水弹。",
+      "icon": "/uploads/codex/galgame/4435.webp",
+      "sortDamage": 38
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "潮汐法典",
+      "itemId": "4504",
+      "itemName": "潮汐法典",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "伤害/效果": "40点水伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 1800,
+      "dropFrom": null,
+      "recipeText": "1800金币",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "记载着潮汐之力，攻守兼备。",
+      "icon": null,
+      "sortDamage": 40
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "雷电法杖",
+      "itemId": "4436",
+      "itemName": "雷电法杖→天罚",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害/效果": "22点雷伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木棍x3 + 雷鸣木x3 + 带电骨片x2",
+      "recipe": [
+        {
+          "name": "木棍",
+          "qty": 3
+        },
+        {
+          "name": "雷鸣木",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "发射雷电球，在敌人间弹射。",
+      "icon": "/uploads/codex/galgame/4436.webp",
+      "sortDamage": 22
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "天罚",
+      "itemId": "410",
+      "itemName": "天罚",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害/效果": "65点雷伤害",
+        "法力消耗": "极高"
+      },
+      "obtain": "进阶合成",
+      "obtainRaw": "进阶合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "雷电法杖x1 + 雷神之骨x2 + 雷霆之心x1 + 魔力精华x10",
+      "recipe": [
+        {
+          "name": "雷电法杖",
+          "qty": 1
+        },
+        {
+          "name": "雷神之骨",
+          "qty": 2
+        },
+        {
+          "name": "雷霆之心",
+          "qty": 1
+        },
+        {
+          "name": "魔力精华",
+          "qty": 10
+        }
+      ],
+      "station": null,
+      "effectName": null,
+      "effect": "召唤漫天雷霆，无差别轰炸敌人区域。",
+      "icon": null,
+      "sortDamage": 65
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "闪电魔法书",
+      "itemId": "4437",
+      "itemName": "闪电魔法书",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害/效果": "30点雷伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 带电骨片x4 + 魔力精华x4",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 4
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "召唤一道连锁闪电，最多命中3个目标。",
+      "icon": "/uploads/codex/galgame/4437.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "激荡电流",
+      "itemId": "4438",
+      "itemName": "激荡电流",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害/效果": "35点雷伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "山区雷鸟",
+      "recipeText": "击败山区雷鸟掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "产生一片电场，持续伤害区域内的敌人。",
+      "icon": "/uploads/codex/galgame/4438.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "雷击木法杖",
+      "itemId": "4505",
+      "itemName": "雷击木法杖",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "伤害/效果": "38点雷伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落/购买",
+      "obtainRaw": "掉落/购买",
+      "price": 2000,
+      "dropFrom": "2000金币或击败雷击木精",
+      "recipeText": "2000金币或击败雷击木精",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "由被雷劈中千年的木头制成。",
+      "icon": null,
+      "sortDamage": 38
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "日辉圣典",
+      "itemId": "4439",
+      "itemName": "日辉圣典→审判",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害/效果": "30点光伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 日耀石x3 + 魔力精华x4",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "日耀石",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 4
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "被光芒祝福的圣典。",
+      "icon": "/uploads/codex/galgame/4439.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "审判",
+      "itemId": "4439",
+      "itemName": "日辉圣典→审判",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害/效果": "60点光伤害",
+        "法力消耗": "极高"
+      },
+      "obtain": "进阶合成",
+      "obtainRaw": "进阶合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "日辉圣典x1 + 破晓之辉x2 + 圣光结晶x5 + 魔力精华x10",
+      "recipe": [
+        {
+          "name": "日辉圣典",
+          "qty": 1
+        },
+        {
+          "name": "破晓之辉",
+          "qty": 2
+        },
+        {
+          "name": "圣光结晶",
+          "qty": 5
+        },
+        {
+          "name": "魔力精华",
+          "qty": 10
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "召唤巨大的光剑从天而降，对大范围敌人进行审判。",
+      "icon": "/uploads/codex/galgame/4439.webp",
+      "sortDamage": 60
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "微型太阳",
+      "itemId": "4440",
+      "itemName": "微型太阳",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害/效果": "36点光伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "天空城怪物",
+      "recipeText": "击败天空城怪物掉落",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "召唤一个微型太阳，灼烧周围敌人。",
+      "icon": "/uploads/codex/galgame/4440.webp",
+      "sortDamage": 36
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "太阳神的目录",
+      "itemId": "4441",
+      "itemName": "太阳神的目录",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害/效果": "42点光伤害",
+        "法力消耗": "极高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "沙漠BOSS罗拉斯",
+      "recipeText": "击败沙漠BOSS罗拉斯掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "记载着太阳神神力的残卷。",
+      "icon": "/uploads/codex/galgame/4441.webp",
+      "sortDamage": 42
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "耀光·璀璨明珠",
+      "itemId": "4442",
+      "itemName": "耀光·璀璨明珠",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害/效果": "48点光伤害",
+        "法力消耗": "极高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "天空城天使长",
+      "recipeText": "击败天空城天使长掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "释放耀眼的光束，穿透一切。",
+      "icon": "/uploads/codex/galgame/4442.webp",
+      "sortDamage": 48
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "闪耀魔导器",
+      "itemId": "4443",
+      "itemName": "闪耀魔导器",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "伤害/效果": "40点光伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 2200,
+      "dropFrom": null,
+      "recipeText": "2200金币",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "机械与光魔法的结合体。",
+      "icon": "/uploads/codex/galgame/4443.webp",
+      "sortDamage": 40
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "诅咒魔法书",
+      "itemId": "4506",
+      "itemName": "诅咒魔法书",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害/效果": "26点暗影伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 暗影残片x3 + 魔力精华x3",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影残片",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "每释放一次会扣除自身微量生命。",
+      "icon": null,
+      "sortDamage": 26
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "低级黑暗魔法书",
+      "itemId": "4445",
+      "itemName": "低级黑暗魔法书",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害/效果": "18点暗影伤害",
+        "法力消耗": "低"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 暗影残片x2 + 魔力精华x2",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影残片",
+          "qty": 2
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        }
+      ],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "记录着初级的暗影箭魔法。",
+      "icon": "/uploads/codex/galgame/4445.webp",
+      "sortDamage": 18
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "高级黑暗魔法书",
+      "itemId": "4446",
+      "itemName": "高级黑暗魔法书",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害/效果": "34点暗影伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "木板x3 + 暗影残片x4 + 魔力精华x4",
+      "recipe": [
+        {
+          "name": "木板",
+          "qty": 3
+        },
+        {
+          "name": "暗影残片",
+          "qty": 4
+        },
+        {
+          "name": "魔力精华",
+          "qty": 4
+        }
+      ],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "释放黑洞，缓慢吸附并蚕食敌人。",
+      "icon": "/uploads/codex/galgame/4446.webp",
+      "sortDamage": 34
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "诅咒之书",
+      "itemId": "4447",
+      "itemName": "诅咒之书",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害/效果": "28点暗影伤害",
+        "法力消耗": "中"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "地牢死灵法师",
+      "recipeText": "击败地牢死灵法师掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "每次释放附带随机负面效果。",
+      "icon": "/uploads/codex/galgame/4447.webp",
+      "sortDamage": 28
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "虚无",
+      "itemId": "4448",
+      "itemName": "虚无",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害/效果": "50点真实伤害",
+        "法力消耗": "极高"
+      },
+      "obtain": "掉落",
+      "obtainRaw": "掉落",
+      "price": null,
+      "dropFrom": "零界怪物",
+      "recipeText": "击败零界怪物掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "化作虚无的魔法，无视任何防御。",
+      "icon": "/uploads/codex/galgame/4448.webp",
+      "sortDamage": 50
+    },
+    {
+      "kind": "magic",
+      "seriesKey": "element",
+      "name": "暗影法典",
+      "itemId": "4507",
+      "itemName": "暗影法典",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "伤害/效果": "45点暗影伤害",
+        "法力消耗": "高"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买",
+      "price": 2800,
+      "dropFrom": null,
+      "recipeText": "2800金币",
+      "recipe": [],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "书皮由深渊魔物的皮革制成。",
+      "icon": null,
+      "sortDamage": 45
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "自制雷管",
+      "itemId": "4600",
+      "itemName": "自制雷管",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "30点范围伤害"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火药x2 + 铁锭x1 + 破布x1",
+      "recipe": [
+        {
+          "name": "火药",
+          "qty": 2
+        },
+        {
+          "name": "铁锭",
+          "qty": 1
+        },
+        {
+          "name": "破布",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "用粗糙材料自制的炸弹，威力和安全性都无法保证，扔出去可能会炸到自己。",
+      "icon": "/uploads/codex/galgame/4600.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "南瓜炸弹",
+      "itemId": "4601",
+      "itemName": "南瓜炸弹",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "25点爆炸伤害"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "南瓜x1 + 火药x3",
+      "recipe": [
+        {
+          "name": "南瓜",
+          "qty": 1
+        },
+        {
+          "name": "火药",
+          "qty": 3
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "把火药塞进南瓜里做成的节日炸弹，爆炸时带着南瓜味。",
+      "icon": "/uploads/codex/galgame/4601.webp",
+      "sortDamage": 25
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "石头",
+      "itemId": "1006",
+      "itemName": "石头",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "5点物理伤害"
+      },
+      "obtain": "掉落/拾取",
+      "obtainRaw": "掉落/拾取",
+      "price": null,
+      "dropFrom": "地表拾取",
+      "recipeText": "地表拾取",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "路边随处可见的石头，捡起来砸人勉强能用。",
+      "icon": "/uploads/codex/galgame/1006.webp",
+      "sortDamage": 5
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "震爆弹",
+      "itemId": "4602",
+      "itemName": "震爆弹",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "10点伤害 + 眩晕"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (150金币)",
+      "price": 150,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "没有致命杀伤力，但能产生巨响和强光，使范围内敌人眩晕2秒。",
+      "icon": "/uploads/codex/galgame/4602.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "匕首",
+      "itemId": "4603",
+      "itemName": "匕首",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "15点穿刺伤害"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (80金币)",
+      "price": 80,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "投掷用的飞刀，命中造成流血。",
+      "icon": "/uploads/codex/galgame/4603.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "棒球",
+      "itemId": "4604",
+      "itemName": "棒球",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "8点物理伤害 + 强击退"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (50金币)",
+      "price": 50,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "飞行的棒球，能把敌人打飞很远。",
+      "icon": "/uploads/codex/galgame/4604.webp",
+      "sortDamage": 8
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "basic",
+      "name": "手雷",
+      "itemId": "4605",
+      "itemName": "手雷",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "45点高爆伤害"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (300金币)",
+      "price": 300,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "标准军用高爆手雷，范围伤害极高。",
+      "icon": "/uploads/codex/galgame/4605.webp",
+      "sortDamage": 45
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "瘴毒扩散瓶",
+      "itemId": "4606",
+      "itemName": "瘴毒扩散瓶",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "效果": "15点伤害 + 中毒"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "毒囊x2 + 玻璃瓶x1",
+      "recipe": [
+        {
+          "name": "毒囊",
+          "qty": 2
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "砸碎后释放大片毒雾，持续5秒，使敌人持续掉血。",
+      "icon": "/uploads/codex/galgame/4606.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "一年没洗的袜子",
+      "itemId": "4607",
+      "itemName": "一年没洗的袜子",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "效果": "5点伤害 + 重度虚弱"
+      },
+      "obtain": "掉落/拾取",
+      "obtainRaw": "掉落/拾取",
+      "price": null,
+      "dropFrom": "哥布林极小概率",
+      "recipeText": "击败哥布林极小概率掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "堪称生化武器。命中敌人附加“重度虚弱”和“恶心”状态，减防减速。",
+      "icon": "/uploads/codex/galgame/4607.webp",
+      "sortDamage": 5
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "毒气弹",
+      "itemId": "4608",
+      "itemName": "毒气弹",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "效果": "20点持续毒伤"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (250金币)",
+      "price": 250,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "释放大范围剧毒瓦斯，持续10秒。",
+      "icon": "/uploads/codex/galgame/4608.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "熔火燃烧瓶",
+      "itemId": "4609",
+      "itemName": "熔火燃烧瓶",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "效果": "25点伤害 + 灼烧"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火核x1 + 玻璃瓶x1 + 焦油x1",
+      "recipe": [
+        {
+          "name": "火核",
+          "qty": 1
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "焦油",
+          "qty": 1
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "砸碎后形成一片火海，踩在上面的敌人会被持续灼烧。",
+      "icon": "/uploads/codex/galgame/4609.webp",
+      "sortDamage": 25
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "爆炎火核",
+      "itemId": "4610",
+      "itemName": "爆炎火核",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "效果": "50点爆发伤害"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火核x2 + 火药x3",
+      "recipe": [
+        {
+          "name": "火核",
+          "qty": 2
+        },
+        {
+          "name": "火药",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "高浓缩的火焰结晶，落地瞬间产生剧烈爆炸。",
+      "icon": "/uploads/codex/galgame/4610.webp",
+      "sortDamage": 50
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "燃烧瓶",
+      "itemId": "4611",
+      "itemName": "燃烧瓶",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "效果": "20点伤害 + 灼烧"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (200金币)",
+      "price": 200,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "基础火焰投掷物，适合清理密集的杂兵。",
+      "icon": "/uploads/codex/galgame/4611.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "寒霜冻结晶",
+      "itemId": "4612",
+      "itemName": "寒霜冻结晶",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "效果": "18点伤害 + 减速"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "冰晶x2 + 玻璃瓶x1 + 水x1",
+      "recipe": [
+        {
+          "name": "冰晶",
+          "qty": 2
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "水",
+          "qty": 1
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "砸碎后冻结地面，区域内的敌人减速60%。",
+      "icon": "/uploads/codex/galgame/4612.webp",
+      "sortDamage": 18
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "冰棘爆裂弹",
+      "itemId": "4613",
+      "itemName": "冰棘爆裂弹",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "效果": "35点伤害 + 冰冻"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "冰晶x3 + 火药x2",
+      "recipe": [
+        {
+          "name": "冰晶",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "爆炸后向四周散射冰刺，有概率冻结敌人。",
+      "icon": "/uploads/codex/galgame/4613.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "冰霜震爆弹",
+      "itemId": "4508",
+      "itemName": "冰霜震爆弹",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "效果": "30点范围伤害 + 冻结"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (350金币)",
+      "price": 350,
+      "dropFrom": null,
+      "recipeText": "",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "特制的冰系炸弹，爆炸范围内所有敌人被冻结2秒。",
+      "icon": null,
+      "sortDamage": 30
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "深海涡旋弹",
+      "itemId": "4614",
+      "itemName": "深海涡旋弹",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "效果": "20点伤害 + 吸附"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "海纹石x2 + 玻璃瓶x1 + 凝胶x1",
+      "recipe": [
+        {
+          "name": "海纹石",
+          "qty": 2
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "凝胶",
+          "qty": 1
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "炸开后产生一个微型水龙卷，将敌人向中心吸引。",
+      "icon": "/uploads/codex/galgame/4614.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "空气水压缩魔导球",
+      "itemId": "4435",
+      "itemName": "空气水压缩魔导球",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "效果": "40点水爆伤害"
+      },
+      "obtain": "掉落/拾取",
+      "obtainRaw": "掉落/拾取",
+      "price": null,
+      "dropFrom": "咩咩或海妖",
+      "recipeText": "击败咩咩或海妖掉落",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "高度压缩的水球，砸中目标后爆开，如同高压水枪切割。",
+      "icon": "/uploads/codex/galgame/4435.webp",
+      "sortDamage": 40
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "装水气球",
+      "itemId": "4615",
+      "itemName": "装水气球",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "效果": "1点伤害 + 打湿"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (5金币)",
+      "price": 5,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "一个装满水的气球。丢出去什么也做不了，只能把敌人打湿（可能对火系怪物有微效）。",
+      "icon": "/uploads/codex/galgame/4615.webp",
+      "sortDamage": 1
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "雷鸣震荡球",
+      "itemId": "4616",
+      "itemName": "雷鸣震荡球",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "效果": "25点伤害 + 麻痹"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "雷鸣木x1 + 玻璃瓶x1 + 带电骨片x1",
+      "recipe": [
+        {
+          "name": "雷鸣木",
+          "qty": 1
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "带电骨片",
+          "qty": 1
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "爆炸后释放电磁脉冲，使周围敌人麻痹。",
+      "icon": "/uploads/codex/galgame/4616.webp",
+      "sortDamage": 25
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "轰雷跳跃弹",
+      "itemId": "4617",
+      "itemName": "轰雷跳跃弹",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "效果": "35点伤害 + 弹射"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "带电骨片x3 + 火药x2 + 铁锭x1",
+      "recipe": [
+        {
+          "name": "带电骨片",
+          "qty": 3
+        },
+        {
+          "name": "火药",
+          "qty": 2
+        },
+        {
+          "name": "铁锭",
+          "qty": 1
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "扔出后可在墙面或敌人之间弹射3次，每次弹射释放闪电。",
+      "icon": "/uploads/codex/galgame/4617.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "聚雷符",
+      "itemId": "4618",
+      "itemName": "聚雷符",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "效果": "30点雷击伤害"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (150金币)",
+      "price": 150,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "蕴含雷电力量的符箓，扔出后立刻召唤一道落雷。",
+      "icon": "/uploads/codex/galgame/4618.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "圣辉裁决弹",
+      "itemId": "4619",
+      "itemName": "圣辉裁决弹",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "效果": "45点圣光伤害 + 致盲"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "日耀石x2 + 火药x3",
+      "recipe": [
+        {
+          "name": "日耀石",
+          "qty": 2
+        },
+        {
+          "name": "火药",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "爆炸产生刺眼的圣光，对暗系怪物造成双倍伤害，并致盲普通敌人。",
+      "icon": "/uploads/codex/galgame/4619.webp",
+      "sortDamage": 45
+    },
+    {
+      "kind": "throwing",
+      "seriesKey": "element",
+      "name": "影蚀虚空球",
+      "itemId": "4620",
+      "itemName": "影蚀虚空球",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "效果": "35点暗影伤害 + 腐蚀"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "暗影残片x2 + 玻璃瓶x1 + 深渊泥x1",
+      "recipe": [
+        {
+          "name": "暗影残片",
+          "qty": 2
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 1
+        },
+        {
+          "name": "深渊泥",
+          "qty": 1
+        }
+      ],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "爆炸后产生一片暗影区域，腐蚀护甲，并阻止区域内敌人回血。",
+      "icon": "/uploads/codex/galgame/4620.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "basic",
+      "name": "老鼠夹",
+      "itemId": "4700",
+      "itemName": "老鼠夹",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "效果": "10点伤害",
+        "触发方式": "踩踏触发"
+      },
+      "obtain": "购买",
+      "obtainRaw": "购买 (50金币)",
+      "price": 50,
+      "dropFrom": null,
+      "recipeText": "-",
+      "recipe": [],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "最基础的物理陷阱。虽然简陋，但能死死夹住路过的野兽的脚，使其短暂无法移动。",
+      "icon": "/uploads/codex/galgame/4700.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "瘴毒扩散阵",
+      "itemId": "4701",
+      "itemName": "瘴毒扩散阵",
+      "element": "毒",
+      "elementKey": "poison",
+      "stats": {
+        "效果": "中毒5秒",
+        "触发方式": "敌人靠近"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "毒囊x3 + 木块x2 + 凝胶x2",
+      "recipe": [
+        {
+          "name": "毒囊",
+          "qty": 3
+        },
+        {
+          "name": "木块",
+          "qty": 2
+        },
+        {
+          "name": "凝胶",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "踩中后释放出墨绿色的毒雾。被命中的敌人会陷入虚弱状态，攻击力下降20%。",
+      "icon": "/uploads/codex/galgame/4701.webp",
+      "sortDamage": 5
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "爆炎焚烧阵",
+      "itemId": "4702",
+      "itemName": "爆炎焚烧阵",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "效果": "50点爆发伤害",
+        "触发方式": "敌人踩中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火核x2 + 铁锭x4 + 燧石x3",
+      "recipe": [
+        {
+          "name": "火核",
+          "qty": 2
+        },
+        {
+          "name": "铁锭",
+          "qty": 4
+        },
+        {
+          "name": "燧石",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "地表喷出数道烈焰。敌人踩中瞬间爆炸，并附加长达4秒的“重度灼烧”效果。",
+      "icon": "/uploads/codex/galgame/4702.webp",
+      "sortDamage": 50
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "熔火喷涌机关",
+      "itemId": "4703",
+      "itemName": "熔火喷涌机关",
+      "element": "火",
+      "elementKey": "fire",
+      "stats": {
+        "效果": "持续火柱喷射",
+        "触发方式": "敌人踩中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火耀岩x3 + 黑曜石x4 + 铁锭x5",
+      "recipe": [
+        {
+          "name": "火耀岩",
+          "qty": 3
+        },
+        {
+          "name": "黑曜石",
+          "qty": 4
+        },
+        {
+          "name": "铁锭",
+          "qty": 5
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "埋在地下的熔岩机关。触发后会形成一道持续10秒的冲天火柱，阻挡敌人行进并造成多段伤害。",
+      "icon": "/uploads/codex/galgame/4703.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "霜冻禁行阵",
+      "itemId": "4704",
+      "itemName": "霜冻禁行阵",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "效果": "减速与冻结",
+        "触发方式": "敌人靠近"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "冰晶x3 + 海纹石x2 + 精炼铁x3",
+      "recipe": [
+        {
+          "name": "冰晶",
+          "qty": 3
+        },
+        {
+          "name": "海纹石",
+          "qty": 2
+        },
+        {
+          "name": "精炼铁",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "激活后地面覆盖冰霜。踏入阵中的敌人移动速度降低60%，持续2秒后将被完全冻结。",
+      "icon": "/uploads/codex/galgame/4704.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "冰棘陷阱",
+      "itemId": "4705",
+      "itemName": "冰棘陷阱",
+      "element": "冰",
+      "elementKey": "ice",
+      "stats": {
+        "效果": "35点穿刺伤害",
+        "触发方式": "敌人踩中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "冰晶x4 + 兽骨x4 + 铁锭x3",
+      "recipe": [
+        {
+          "name": "冰晶",
+          "qty": 4
+        },
+        {
+          "name": "兽骨",
+          "qty": 4
+        },
+        {
+          "name": "铁锭",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "瞬间从地下刺出巨大的冰锥，造成高额物理伤害并附带强力击退效果。",
+      "icon": "/uploads/codex/galgame/4705.webp",
+      "sortDamage": 35
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "潮汐束缚阵",
+      "itemId": "4706",
+      "itemName": "潮汐束缚阵",
+      "element": "水",
+      "elementKey": "water",
+      "stats": {
+        "效果": "控制与拖拽",
+        "触发方式": "敌人踩中"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "海纹石x3 + 凝胶x4 + 铁锭x2",
+      "recipe": [
+        {
+          "name": "海纹石",
+          "qty": 3
+        },
+        {
+          "name": "凝胶",
+          "qty": 4
+        },
+        {
+          "name": "铁锭",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "地面化作泥泞的水潭。陷阱激活后产生漩涡，将范围内的敌人向中心拖拽并大幅减速。",
+      "icon": "/uploads/codex/galgame/4706.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "轰雷感应地雷",
+      "itemId": "4707",
+      "itemName": "轰雷感应地雷",
+      "element": "雷",
+      "elementKey": "thunder",
+      "stats": {
+        "效果": "群体麻痹伤害",
+        "触发方式": "敌人靠近"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "雷鸣木x3 + 带电骨片x4 + 铁锭x4",
+      "recipe": [
+        {
+          "name": "雷鸣木",
+          "qty": 3
+        },
+        {
+          "name": "带电骨片",
+          "qty": 4
+        },
+        {
+          "name": "铁锭",
+          "qty": 4
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "感应到生命体即引爆。释放连锁闪电，最多在3个敌人之间弹射，造成群体麻痹（眩晕）效果。",
+      "icon": "/uploads/codex/galgame/4707.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "圣辉裁决阵",
+      "itemId": "4708",
+      "itemName": "圣辉裁决阵",
+      "element": "光",
+      "elementKey": "light",
+      "stats": {
+        "效果": "高额圣光伤害",
+        "触发方式": "敌人靠近"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "日耀石x4 + 圣光结晶x1 + 银锭x3",
+      "recipe": [
+        {
+          "name": "日耀石",
+          "qty": 4
+        },
+        {
+          "name": "圣光结晶",
+          "qty": 1
+        },
+        {
+          "name": "银锭",
+          "qty": 3
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "刻满圣文的法阵。爆发强烈的光芒，对暗系魔物造成200%伤害，并对普通敌人造成致盲（命中率降低）。",
+      "icon": "/uploads/codex/galgame/4708.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "traps",
+      "seriesKey": "element",
+      "name": "影噬禁域",
+      "itemId": "4709",
+      "itemName": "影噬禁域",
+      "element": "暗",
+      "elementKey": "dark",
+      "stats": {
+        "效果": "持续生命流逝",
+        "触发方式": "敌人靠近"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "暗影残片x4 + 深渊之眼x1 + 铁锭x3",
+      "recipe": [
+        {
+          "name": "暗影残片",
+          "qty": 4
+        },
+        {
+          "name": "深渊之眼",
+          "qty": 1
+        },
+        {
+          "name": "铁锭",
+          "qty": 3
+        }
+      ],
+      "station": "邪恶合成仪",
+      "effectName": null,
+      "effect": "制造一片绝对黑暗的区域。踏入的敌人会被暗影触须缠绕，不仅无法使用技能，还会持续流失生命值。",
+      "icon": "/uploads/codex/galgame/4709.webp",
+      "sortDamage": 0
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "行者之徽",
+      "itemId": "4800",
+      "itemName": "行者之徽",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "徽章",
+        "核心效果": "移动速度 +10%"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "精炼铜x2 + 蜘蛛丝x2 + 轻薄兽皮x1",
+      "recipe": [
+        {
+          "name": "精炼铜",
+          "qty": 2
+        },
+        {
+          "name": "蜘蛛丝",
+          "qty": 2
+        },
+        {
+          "name": "轻薄兽皮",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "刻有疾风符文的基础徽章。让佩戴者的脚步更加轻盈，适合长途跋涉的探险者。",
+      "icon": "/uploads/codex/galgame/4800.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "泡泡头",
+      "itemId": "4801",
+      "itemName": "泡泡头",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "头盔饰品",
+        "核心效果": "水下呼吸延长30秒"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "软黏块(凝胶)x4 + 玻璃瓶x2 + 水草x2",
+      "recipe": [
+        {
+          "name": "软黏块(凝胶)",
+          "qty": 4
+        },
+        {
+          "name": "玻璃瓶",
+          "qty": 2
+        },
+        {
+          "name": "水草",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "一个套在头上的透明泡泡。戴上它，你甚至能在水下像鱼一样自由呼吸。",
+      "icon": "/uploads/codex/galgame/4801.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "炎霜双生吊坠",
+      "itemId": "4802",
+      "itemName": "炎霜双生吊坠",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "吊坠",
+        "核心效果": "火/冰属性抗性 +15%"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火核x2 + 冰晶x2 + 精炼金锭x1",
+      "recipe": [
+        {
+          "name": "火核",
+          "qty": 2
+        },
+        {
+          "name": "冰晶",
+          "qty": 2
+        },
+        {
+          "name": "精炼金锭",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "冰与火的力量被强行封印在同一块宝石中。佩戴后能同时抵御极寒与酷热。",
+      "icon": "/uploads/codex/galgame/4802.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "光之护符",
+      "itemId": "4803",
+      "itemName": "光之护符",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "护符",
+        "核心效果": [
+          "光属性伤害 +15%",
+          "光抗性 +10%"
+        ]
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "日耀石x3 + 圣光结晶x1 + 银锭x2",
+      "recipe": [
+        {
+          "name": "日耀石",
+          "qty": 3
+        },
+        {
+          "name": "圣光结晶",
+          "qty": 1
+        },
+        {
+          "name": "银锭",
+          "qty": 2
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "散发着温暖微光的护符，对暗系魔物有天然的克制作用。",
+      "icon": "/uploads/codex/galgame/4803.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "极寒庇护戒",
+      "itemId": "4804",
+      "itemName": "极寒庇护戒",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "戒指",
+        "核心效果": [
+          "冰冻抗性 +30%",
+          "免疫雪地减速"
+        ]
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "冰晶x4 + 精炼铁锭x2 + 霜纹石x1",
+      "recipe": [
+        {
+          "name": "冰晶",
+          "qty": 4
+        },
+        {
+          "name": "精炼铁锭",
+          "qty": 2
+        },
+        {
+          "name": "霜纹石",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "触感冰凉的戒指。戴上它，雪山的风暴在你面前也会变得温柔。",
+      "icon": "/uploads/codex/galgame/4804.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "极炎庇护戒",
+      "itemId": "4805",
+      "itemName": "极炎庇护戒",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "戒指",
+        "核心效果": [
+          "灼烧抗性 +30%",
+          "免疫火山地形伤害"
+        ]
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "火核x4 + 黑曜石x2 + 炎魔之角x1",
+      "recipe": [
+        {
+          "name": "火核",
+          "qty": 4
+        },
+        {
+          "name": "黑曜石",
+          "qty": 2
+        },
+        {
+          "name": "炎魔之角",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "由熔岩深处的晶石打磨而成，能隔绝一切高温。",
+      "icon": "/uploads/codex/galgame/4805.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "无疲灵辉护符",
+      "itemId": "4806",
+      "itemName": "无疲灵辉护符",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "护符",
+        "核心效果": "体力消耗降低 15%"
+      },
+      "obtain": "合成",
+      "obtainRaw": "合成",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "灵辉花瓣x3 + 魔力精华x2 + 精炼金锭x1",
+      "recipe": [
+        {
+          "name": "灵辉花瓣",
+          "qty": 3
+        },
+        {
+          "name": "魔力精华",
+          "qty": 2
+        },
+        {
+          "name": "精炼金锭",
+          "qty": 1
+        }
+      ],
+      "station": "基础锻造台",
+      "effectName": null,
+      "effect": "精灵丛林中孕育的奇迹护符。它用自然的灵气抚慰佩戴者的疲劳。",
+      "icon": "/uploads/codex/galgame/4806.webp",
+      "sortDamage": 15
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "精灵公主的硬币",
+      "itemId": "4807",
+      "itemName": "精灵公主的硬币",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "特殊饰品",
+        "核心效果": [
+          "幸运值 +10",
+          "移动速度 +5%"
+        ]
+      },
+      "obtain": "合成/剧情",
+      "obtainRaw": "合成/剧情",
+      "price": null,
+      "dropFrom": null,
+      "recipeText": "吉尔赠送 + 精灵银币x1 + 风之羽x2",
+      "recipe": [
+        {
+          "name": "吉尔赠送",
+          "qty": 1
+        },
+        {
+          "name": "精灵银币",
+          "qty": 1
+        },
+        {
+          "name": "风之羽",
+          "qty": 2
+        }
+      ],
+      "station": "魔法锻造台",
+      "effectName": null,
+      "effect": "吉尔赠予的祝福硬币。它在阳光下会闪烁，仿佛精灵公主在暗中庇护你。",
+      "icon": "/uploads/codex/galgame/4807.webp",
+      "sortDamage": 10
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "金织手环",
+      "itemId": "4808",
+      "itemName": "金织手环",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "手环",
+        "核心效果": "金币获取量 +20%"
+      },
+      "obtain": "掉落/购买",
+      "obtainRaw": "掉落/购买",
+      "price": 1500,
+      "dropFrom": "鼠人/黑市商人1500金币购买",
+      "recipeText": "击败鼠人/黑市商人1500金币购买",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "用金丝编织的手环。深受商会成员的喜爱，能让你在交易中获利更多。",
+      "icon": "/uploads/codex/galgame/4808.webp",
+      "sortDamage": 20
+    },
+    {
+      "kind": "accessories",
+      "seriesKey": "general",
+      "name": "大法师吊坠",
+      "itemId": "4809",
+      "itemName": "大法师吊坠",
+      "element": "无",
+      "elementKey": "none",
+      "stats": {
+        "类型": "吊坠",
+        "核心效果": [
+          "最大法力值 +30",
+          "魔法回复速度 +10%"
+        ]
+      },
+      "obtain": "掉落/购买",
+      "obtainRaw": "掉落/购买",
+      "price": 800,
+      "dropFrom": "图书馆幽灵/卡奇商店800金币购买",
+      "recipeText": "击败图书馆幽灵/卡奇商店800金币购买",
+      "recipe": [],
+      "station": null,
+      "effectName": null,
+      "effect": "卡奇大法师年轻时使用过的吊坠，蕴含着深奥的奥术魔力。",
+      "icon": "/uploads/codex/galgame/4809.webp",
+      "sortDamage": 30
+    },
+    {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "水果刀",
       "itemId": "4026",
       "itemName": "水果刀",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 3,
-      "speed": "快",
+      "stats": {
+        "伤害": "3",
+        "攻速": "快"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 10,
       "dropFrom": null,
       "recipeText": "",
@@ -230,18 +4755,23 @@
       "station": null,
       "effectName": null,
       "effect": "削水果的，也许能用来戳史莱姆。",
-      "icon": "/uploads/codex/galgame/4026.webp"
+      "icon": "/uploads/codex/galgame/4026.webp",
+      "sortDamage": 3
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "木剑",
       "itemId": "4000",
       "itemName": "木剑",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 5,
-      "speed": "快",
+      "stats": {
+        "伤害": "5",
+        "攻速": "快"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "木块x3 + 木棍x1",
@@ -258,18 +4788,23 @@
       "station": "手工（不需要制作站）",
       "effectName": null,
       "effect": "新手冒险者的第一个伙伴。",
-      "icon": "/uploads/codex/galgame/4000.webp"
+      "icon": "/uploads/codex/galgame/4000.webp",
+      "sortDamage": 5
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "菜刀",
       "itemId": "4027",
       "itemName": "菜刀",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 6,
-      "speed": "中等",
+      "stats": {
+        "伤害": "6",
+        "攻速": "中等"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 25,
       "dropFrom": null,
       "recipeText": "",
@@ -277,18 +4812,23 @@
       "station": null,
       "effectName": null,
       "effect": "厨房用具，很重，可以当钝器。",
-      "icon": "/uploads/codex/galgame/4027.webp"
+      "icon": "/uploads/codex/galgame/4027.webp",
+      "sortDamage": 6
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "石剑",
       "itemId": "4001",
       "itemName": "石剑",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 8,
-      "speed": "中等",
+      "stats": {
+        "伤害": "8",
+        "攻速": "中等"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "石块x4 + 木棍x1",
@@ -305,18 +4845,23 @@
       "station": "手工（不需要制作站）",
       "effectName": null,
       "effect": "沉甸甸的石头，比木剑更具破坏力。",
-      "icon": "/uploads/codex/galgame/4001.webp"
+      "icon": "/uploads/codex/galgame/4001.webp",
+      "sortDamage": 8
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "哥布林短刀",
       "itemId": "4011",
       "itemName": "哥布林短刀",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 10,
-      "speed": "快",
+      "stats": {
+        "伤害": "10",
+        "攻速": "快"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "哥布林",
       "recipeText": "",
@@ -324,18 +4869,23 @@
       "station": null,
       "effectName": null,
       "effect": "粗糙，可能会划伤自己。",
-      "icon": "/uploads/codex/galgame/4011.webp"
+      "icon": "/uploads/codex/galgame/4011.webp",
+      "sortDamage": 10
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "铜剑",
       "itemId": "4002",
       "itemName": "铜剑",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 12,
-      "speed": "快",
+      "stats": {
+        "伤害": "12",
+        "攻速": "快"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铜锭x3 + 木棍x1",
@@ -352,18 +4902,23 @@
       "station": "金属锻造台",
       "effectName": null,
       "effect": "泛着红光，挥动带风声。",
-      "icon": "/uploads/codex/galgame/4002.webp"
+      "icon": "/uploads/codex/galgame/4002.webp",
+      "sortDamage": 12
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "哥布林长矛",
       "itemId": "4012",
       "itemName": "哥布林长矛",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 14,
-      "speed": "较慢",
+      "stats": {
+        "伤害": "14",
+        "攻速": "较慢"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "哥布林精英",
       "recipeText": "",
@@ -371,18 +4926,23 @@
       "station": null,
       "effectName": null,
       "effect": "略长，适合群战。",
-      "icon": "/uploads/codex/galgame/4012.webp"
+      "icon": "/uploads/codex/galgame/4012.webp",
+      "sortDamage": 14
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "长矛",
       "itemId": "4005",
       "itemName": "长矛",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 14,
-      "speed": "较慢",
+      "stats": {
+        "伤害": "14",
+        "攻速": "较慢"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x2 + 木棍x2",
@@ -399,18 +4959,23 @@
       "station": "基础锻造台",
       "effectName": null,
       "effect": "攻击距离较远，适合戳刺。",
-      "icon": "/uploads/codex/galgame/4005.webp"
+      "icon": "/uploads/codex/galgame/4005.webp",
+      "sortDamage": 14
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "棒球棍",
       "itemId": "4030",
       "itemName": "棒球棍",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 15,
-      "speed": "中等",
+      "stats": {
+        "伤害": "15",
+        "攻速": "中等"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 80,
       "dropFrom": null,
       "recipeText": "",
@@ -418,18 +4983,23 @@
       "station": null,
       "effectName": null,
       "effect": "击退率极高，能把敌人打飞。",
-      "icon": "/uploads/codex/galgame/4030.webp"
+      "icon": "/uploads/codex/galgame/4030.webp",
+      "sortDamage": 15
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "铜锤",
       "itemId": "4006",
       "itemName": "铜锤",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 16,
-      "speed": "慢",
+      "stats": {
+        "伤害": "16",
+        "攻速": "慢"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铜锭x5 + 木棍x2",
@@ -446,18 +5016,23 @@
       "station": "金属锻造台",
       "effectName": null,
       "effect": "势大力沉，有20%概率击退敌人。",
-      "icon": "/uploads/codex/galgame/4006.webp"
+      "icon": "/uploads/codex/galgame/4006.webp",
+      "sortDamage": 16
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "金剑",
       "itemId": "4004",
       "itemName": "金剑",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 18,
-      "speed": "快",
+      "stats": {
+        "伤害": "18",
+        "攻速": "快"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "金锭x4 + 木棍x1",
@@ -474,18 +5049,23 @@
       "station": "金属锻造台",
       "effectName": null,
       "effect": "华丽的贵金属剑。",
-      "icon": "/uploads/codex/galgame/4004.webp"
+      "icon": "/uploads/codex/galgame/4004.webp",
+      "sortDamage": 18
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "消防斧",
       "itemId": "4028",
       "itemName": "消防斧",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 20,
-      "speed": "慢",
+      "stats": {
+        "伤害": "20",
+        "攻速": "慢"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 150,
       "dropFrom": null,
       "recipeText": "",
@@ -493,18 +5073,23 @@
       "station": null,
       "effectName": null,
       "effect": "破门利器，对木质怪物有奇效。",
-      "icon": "/uploads/codex/galgame/4028.webp"
+      "icon": "/uploads/codex/galgame/4028.webp",
+      "sortDamage": 20
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "砂铁之刃",
       "itemId": "4007",
       "itemName": "砂铁之刃",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 20,
-      "speed": "中等",
+      "stats": {
+        "伤害": "20",
+        "攻速": "中等"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "砂铁x4 + 木棍x1 + 凝胶x2",
@@ -525,18 +5110,23 @@
       "station": "金属锻造台",
       "effectName": null,
       "effect": "刃口带沙砾，命中造成持续流血。",
-      "icon": "/uploads/codex/galgame/4007.webp"
+      "icon": "/uploads/codex/galgame/4007.webp",
+      "sortDamage": 20
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "卡卡修战斧",
       "itemId": "4008",
       "itemName": "卡卡修战斧",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 24,
-      "speed": "慢",
+      "stats": {
+        "伤害": "24",
+        "攻速": "慢"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x6 + 木棍x2 + 雷鸣木x1",
@@ -557,18 +5147,23 @@
       "station": "基础锻造台",
       "effectName": null,
       "effect": "山区部落的战斧，挥舞有破空声。",
-      "icon": "/uploads/codex/galgame/4008.webp"
+      "icon": "/uploads/codex/galgame/4008.webp",
+      "sortDamage": 24
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "灵界之刃",
       "itemId": "4009",
       "itemName": "灵界之刃",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 25,
-      "speed": "快",
+      "stats": {
+        "伤害": "25",
+        "攻速": "快"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "幽魂类怪物",
       "recipeText": "",
@@ -576,18 +5171,23 @@
       "station": null,
       "effectName": null,
       "effect": "攻击时若隐若现，可穿透部分护甲。",
-      "icon": "/uploads/codex/galgame/4009.webp"
+      "icon": "/uploads/codex/galgame/4009.webp",
+      "sortDamage": 25
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "海盗弯刀",
       "itemId": "4019",
       "itemName": "海盗弯刀",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 26,
-      "speed": "快",
+      "stats": {
+        "伤害": "26",
+        "攻速": "快"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "海盗",
       "recipeText": "",
@@ -595,18 +5195,23 @@
       "station": null,
       "effectName": null,
       "effect": "沾满海盐味，暴击率高。",
-      "icon": "/uploads/codex/galgame/4019.webp"
+      "icon": "/uploads/codex/galgame/4019.webp",
+      "sortDamage": 26
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "华丽西洋剑",
       "itemId": "4032",
       "itemName": "华丽西洋剑",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 28,
-      "speed": "极快",
+      "stats": {
+        "伤害": "28",
+        "攻速": "极快"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 400,
       "dropFrom": null,
       "recipeText": "",
@@ -614,18 +5219,23 @@
       "station": null,
       "effectName": null,
       "effect": "贵族决斗用剑，突刺速度极快。",
-      "icon": "/uploads/codex/galgame/4032.webp"
+      "icon": "/uploads/codex/galgame/4032.webp",
+      "sortDamage": 28
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "半神之刃",
       "itemId": "4010",
       "itemName": "半神之刃",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 30,
-      "speed": "中等",
+      "stats": {
+        "伤害": "30",
+        "攻速": "中等"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "教堂“合成人”",
       "recipeText": "",
@@ -633,18 +5243,23 @@
       "station": null,
       "effectName": null,
       "effect": "蕴含微弱半神气息，对神性生物有效。",
-      "icon": "/uploads/codex/galgame/4010.webp"
+      "icon": "/uploads/codex/galgame/4010.webp",
+      "sortDamage": 30
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "武士刀",
       "itemId": "4029",
       "itemName": "武士刀",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 32,
-      "speed": "极快",
+      "stats": {
+        "伤害": "32",
+        "攻速": "极快"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 500,
       "dropFrom": null,
       "recipeText": "",
@@ -652,18 +5267,23 @@
       "station": null,
       "effectName": null,
       "effect": "异国刀客的武器，拔刀斩极快。",
-      "icon": "/uploads/codex/galgame/4029.webp"
+      "icon": "/uploads/codex/galgame/4029.webp",
+      "sortDamage": 32
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "原生态金钢剑",
       "itemId": "4033",
       "itemName": "原生态金钢剑",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 38,
-      "speed": "中等",
+      "stats": {
+        "伤害": "38",
+        "攻速": "中等"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 800,
       "dropFrom": null,
       "recipeText": "",
@@ -671,18 +5291,23 @@
       "station": null,
       "effectName": null,
       "effect": "特殊工艺打造，极其锋利。",
-      "icon": "/uploads/codex/galgame/4033.webp"
+      "icon": "/uploads/codex/galgame/4033.webp",
+      "sortDamage": 38
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "巨型指甲",
       "itemId": "4020",
       "itemName": "巨人指甲",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 40,
-      "speed": "慢",
+      "stats": {
+        "伤害": "40",
+        "攻速": "慢"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "沙漠“巨人”",
       "recipeText": "",
@@ -690,18 +5315,23 @@
       "station": null,
       "effectName": null,
       "effect": "巨人的指甲，比铁还硬。",
-      "icon": "/uploads/codex/galgame/4020.webp"
+      "icon": "/uploads/codex/galgame/4020.webp",
+      "sortDamage": 40
     },
     {
+      "kind": "melee",
+      "seriesKey": "basic",
       "name": "皇帝之刃",
       "itemId": "4022",
       "itemName": "皇帝之刃",
-      "seriesKey": "basic",
       "element": "无",
       "elementKey": "none",
-      "damage": 45,
-      "speed": "中等",
+      "stats": {
+        "伤害": "45",
+        "攻速": "中等"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "主城“国王”",
       "recipeText": "",
@@ -709,18 +5339,22 @@
       "station": null,
       "effectName": null,
       "effect": "王权的象征，属性全面。",
-      "icon": "/uploads/codex/galgame/4022.webp"
+      "icon": "/uploads/codex/galgame/4022.webp",
+      "sortDamage": 45
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "丢失的刀",
       "itemId": "4037",
       "itemName": "丢失的刀",
-      "seriesKey": "element",
       "element": "毒",
       "elementKey": "poison",
-      "damage": 18,
-      "speed": null,
+      "stats": {
+        "伤害": "18"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "生锈的刀x1 + 毒囊x2 + 铁锭x2",
@@ -741,18 +5375,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "沼泽捡到的刀，被重新淬毒。命中附加中毒。",
-      "icon": "/uploads/codex/galgame/4037.webp"
+      "icon": "/uploads/codex/galgame/4037.webp",
+      "sortDamage": 18
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "破伤风之刃",
       "itemId": "4014",
       "itemName": "破伤风之刃",
-      "seriesKey": "element",
       "element": "毒",
       "elementKey": "poison",
-      "damage": 20,
-      "speed": null,
+      "stats": {
+        "伤害": "20"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "腐朽之地“干尸”",
       "recipeText": "",
@@ -760,18 +5398,22 @@
       "station": null,
       "effectName": null,
       "effect": "锈迹斑斑，命中附加“破伤风”（持续掉血）。",
-      "icon": "/uploads/codex/galgame/4014.webp"
+      "icon": "/uploads/codex/galgame/4014.webp",
+      "sortDamage": 20
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "腐蚀之矛",
       "itemId": "4036",
       "itemName": "腐蚀之矛→蚀毒",
-      "seriesKey": "element",
       "element": "毒",
       "elementKey": "poison",
-      "damage": 22,
-      "speed": null,
+      "stats": {
+        "伤害": "22"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "长矛x1 + 毒囊x3 + 酸液x1",
@@ -792,18 +5434,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "矛尖滴落酸液，可降低敌人防御。",
-      "icon": "/uploads/codex/galgame/4036.webp"
+      "icon": "/uploads/codex/galgame/4036.webp",
+      "sortDamage": 22
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "流浪者短刀",
       "itemId": "4047",
       "itemName": "流浪者短刀",
-      "seriesKey": "element",
       "element": "冰",
       "elementKey": "ice",
-      "damage": 22,
-      "speed": null,
+      "stats": {
+        "伤害": "22"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "雪山“流浪者”",
       "recipeText": "",
@@ -811,18 +5457,22 @@
       "station": null,
       "effectName": null,
       "effect": "流浪剑客的遗物，能瞬间冻结伤口。",
-      "icon": "/uploads/codex/galgame/4047.webp"
+      "icon": "/uploads/codex/galgame/4047.webp",
+      "sortDamage": 22
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "波纹剑",
       "itemId": "4050",
       "itemName": "波纹剑",
-      "seriesKey": "element",
       "element": "水",
       "elementKey": "water",
-      "damage": 22,
-      "speed": null,
+      "stats": {
+        "伤害": "22"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铜锭x4 + 海纹石x2 + 凝胶x1",
@@ -843,18 +5493,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "剑刃像水波一样弯曲，卸去部分攻击。",
-      "icon": "/uploads/codex/galgame/4050.webp"
+      "icon": "/uploads/codex/galgame/4050.webp",
+      "sortDamage": 22
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "冰刃",
       "itemId": "4045",
       "itemName": "冰刃",
-      "seriesKey": "element",
       "element": "冰",
       "elementKey": "ice",
-      "damage": 24,
-      "speed": null,
+      "stats": {
+        "伤害": "24"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x3 + 冰晶x3",
@@ -871,18 +5525,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "极薄的冰刃，攻速快，附加霜冻减速。",
-      "icon": "/uploads/codex/galgame/4045.webp"
+      "icon": "/uploads/codex/galgame/4045.webp",
+      "sortDamage": 24
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "毒藤弯刀",
       "itemId": "4038",
       "itemName": "毒藤弯刀",
-      "seriesKey": "element",
       "element": "毒",
       "elementKey": "poison",
-      "damage": 25,
-      "speed": null,
+      "stats": {
+        "伤害": "25"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "精灵丛林“藤蔓怪”",
       "recipeText": "",
@@ -890,18 +5548,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "带倒刺的藤蔓化作的刀，攻击附带减速。",
-      "icon": "/uploads/codex/galgame/4038.webp"
+      "icon": "/uploads/codex/galgame/4038.webp",
+      "sortDamage": 25
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "灼心炎刃",
       "itemId": "4039",
       "itemName": "灼心炎刃→火山",
-      "seriesKey": "element",
       "element": "火",
       "elementKey": "fire",
-      "damage": 26,
-      "speed": null,
+      "stats": {
+        "伤害": "26"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x4 + 火核x3",
@@ -918,18 +5580,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "剑身通红，命中点燃敌人，造成3秒灼烧。",
-      "icon": "/uploads/codex/galgame/4039.webp"
+      "icon": "/uploads/codex/galgame/4039.webp",
+      "sortDamage": 26
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "潮鸣水刃",
       "itemId": "4049",
       "itemName": "潮鸣水刃→暗涌",
-      "seriesKey": "element",
       "element": "水",
       "elementKey": "water",
-      "damage": 26,
-      "speed": null,
+      "stats": {
+        "伤害": "26"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x4 + 海纹石x3",
@@ -946,18 +5612,22 @@
       "station": "邪恶合成仪",
       "effectName": null,
       "effect": "剑身如流水，命中时有水花溅射。",
-      "icon": "/uploads/codex/galgame/4049.webp"
+      "icon": "/uploads/codex/galgame/4049.webp",
+      "sortDamage": 26
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "寒霜斧",
       "itemId": "4044",
       "itemName": "寒霜斧→冰川",
-      "seriesKey": "element",
       "element": "冰",
       "elementKey": "ice",
-      "damage": 28,
-      "speed": null,
+      "stats": {
+        "伤害": "28"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x5 + 冰晶x4",
@@ -974,18 +5644,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "斧刃寒气逼人，20%概率冻结敌人1秒。",
-      "icon": "/uploads/codex/galgame/4044.webp"
+      "icon": "/uploads/codex/galgame/4044.webp",
+      "sortDamage": 28
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "太阳石剑",
       "itemId": "4057",
       "itemName": "太阳石剑→闪光",
-      "seriesKey": "element",
       "element": "光",
       "elementKey": "light",
-      "damage": 28,
-      "speed": null,
+      "stats": {
+        "伤害": "28"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "金锭x4 + 日耀石x3",
@@ -1002,18 +5676,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "散发温暖光芒，对暗系有特攻。",
-      "icon": "/uploads/codex/galgame/4057.webp"
+      "icon": "/uploads/codex/galgame/4057.webp",
+      "sortDamage": 28
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "被诅咒的刀",
       "itemId": "4064",
       "itemName": "被诅咒的刀",
-      "seriesKey": "element",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 28,
-      "speed": null,
+      "stats": {
+        "伤害": "28"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x3 + 暗影残片x2 + 诅咒之书x1",
@@ -1034,18 +5712,22 @@
       "station": "邪恶合成仪",
       "effectName": null,
       "effect": "持有者持续掉血，但攻击极高。",
-      "icon": "/uploads/codex/galgame/4064.webp"
+      "icon": "/uploads/codex/galgame/4064.webp",
+      "sortDamage": 28
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "雷电锤",
       "itemId": "4054",
       "itemName": "雷电锤→雷击",
-      "seriesKey": "element",
       "element": "雷",
       "elementKey": "thunder",
-      "damage": 30,
-      "speed": null,
+      "stats": {
+        "伤害": "30"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x6 + 雷鸣木x3 + 带电骨片x2",
@@ -1066,18 +5748,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "砸地时概率释放连锁闪电。",
-      "icon": "/uploads/codex/galgame/4054.webp"
+      "icon": "/uploads/codex/galgame/4054.webp",
+      "sortDamage": 30
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "骑士标准刀",
       "itemId": "4062",
       "itemName": "骑士标准刀",
-      "seriesKey": "element",
       "element": "光",
       "elementKey": "light",
-      "damage": 30,
-      "speed": null,
+      "stats": {
+        "伤害": "30"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 550,
       "dropFrom": null,
       "recipeText": "",
@@ -1085,18 +5771,22 @@
       "station": null,
       "effectName": null,
       "effect": "王国骑士的制式武器。",
-      "icon": "/uploads/codex/galgame/4062.webp"
+      "icon": "/uploads/codex/galgame/4062.webp",
+      "sortDamage": 30
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "鬼牙刀",
       "itemId": "4065",
       "itemName": "鬼牙刀",
-      "seriesKey": "element",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 30,
-      "speed": null,
+      "stats": {
+        "伤害": "30"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x4 + 暗影残片x3 + 兽牙x2",
@@ -1117,18 +5807,22 @@
       "station": "邪恶合成仪",
       "effectName": null,
       "effect": "刀身如兽牙，命中吸取微量生命。",
-      "icon": "/uploads/codex/galgame/4065.webp"
+      "icon": "/uploads/codex/galgame/4065.webp",
+      "sortDamage": 30
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "潮刃·碧浪之剑",
       "itemId": "4051",
       "itemName": "潮刃·碧浪之剑",
-      "seriesKey": "element",
       "element": "水",
       "elementKey": "water",
-      "damage": 32,
-      "speed": null,
+      "stats": {
+        "伤害": "32"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "海底“鲛人战士”",
       "recipeText": "",
@@ -1136,18 +5830,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "带着海潮之力，挥出可产生水刃。",
-      "icon": "/uploads/codex/galgame/4051.webp"
+      "icon": "/uploads/codex/galgame/4051.webp",
+      "sortDamage": 32
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "幽冥双刀",
       "itemId": "4063",
       "itemName": "幽冥双刀→暗裔",
-      "seriesKey": "element",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 32,
-      "speed": null,
+      "stats": {
+        "伤害": "32"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "铁锭x4 + 暗影残片x4",
@@ -1164,18 +5862,22 @@
       "station": "邪恶合成仪",
       "effectName": null,
       "effect": "双手武器，挥动带有黑色残影。",
-      "icon": "/uploads/codex/galgame/4063.webp"
+      "icon": "/uploads/codex/galgame/4063.webp",
+      "sortDamage": 32
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "螺旋剑",
       "itemId": "4056",
       "itemName": "螺旋剑",
-      "seriesKey": "element",
       "element": "雷",
       "elementKey": "thunder",
-      "damage": 34,
-      "speed": null,
+      "stats": {
+        "伤害": "34"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 750,
       "dropFrom": null,
       "recipeText": "",
@@ -1183,18 +5885,22 @@
       "station": null,
       "effectName": null,
       "effect": "剑身呈螺旋状，能产生电磁场。",
-      "icon": "/uploads/codex/galgame/4056.webp"
+      "icon": "/uploads/codex/galgame/4056.webp",
+      "sortDamage": 34
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "阜岩火之刃",
       "itemId": "4042",
       "itemName": "阜岩火之刃",
-      "seriesKey": "element",
       "element": "火",
       "elementKey": "fire",
-      "damage": 35,
-      "speed": null,
+      "stats": {
+        "伤害": "35"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "火山“熔岩怪”",
       "recipeText": "",
@@ -1202,18 +5908,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "像流动的火山岩，攻击带岩浆溅射。",
-      "icon": "/uploads/codex/galgame/4042.webp"
+      "icon": "/uploads/codex/galgame/4042.webp",
+      "sortDamage": 35
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "猎魔人之刃",
       "itemId": "4061",
       "itemName": "猎魔人之刃",
-      "seriesKey": "element",
       "element": "光",
       "elementKey": "light",
-      "damage": 35,
-      "speed": null,
+      "stats": {
+        "伤害": "35"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "教堂守卫",
       "recipeText": "",
@@ -1221,18 +5931,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "专门针对魔物的刀刃。",
-      "icon": "/uploads/codex/galgame/4061.webp"
+      "icon": "/uploads/codex/galgame/4061.webp",
+      "sortDamage": 35
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "辉光巨斧",
       "itemId": "4058",
       "itemName": "辉光巨斧",
-      "seriesKey": "element",
       "element": "光",
       "elementKey": "light",
-      "damage": 36,
-      "speed": null,
+      "stats": {
+        "伤害": "36"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "日耀石x5 + 铁锭x6",
@@ -1249,18 +5963,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "镶嵌发光石，挥舞时闪烁强光。",
-      "icon": "/uploads/codex/galgame/4058.webp"
+      "icon": "/uploads/codex/galgame/4058.webp",
+      "sortDamage": 36
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "大地巨刃",
       "itemId": "4068",
       "itemName": "大地巨刃",
-      "seriesKey": "element",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 36,
-      "speed": null,
+      "stats": {
+        "伤害": "36"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 900,
       "dropFrom": null,
       "recipeText": "",
@@ -1268,18 +5986,22 @@
       "station": null,
       "effectName": null,
       "effect": "大地深处暗石打造，极其厚重。",
-      "icon": "/uploads/codex/galgame/4068.webp"
+      "icon": "/uploads/codex/galgame/4068.webp",
+      "sortDamage": 36
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "炎虫之剑",
       "itemId": "4040",
       "itemName": "炎虫之剑",
-      "seriesKey": "element",
       "element": "火",
       "elementKey": "fire",
-      "damage": 38,
-      "speed": null,
+      "stats": {
+        "伤害": "38"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "火石岭“炎虫皇后”",
       "recipeText": "",
@@ -1287,18 +6009,22 @@
       "station": null,
       "effectName": null,
       "effect": "由熔岩皇后的肢体打造，攻击喷发火星。",
-      "icon": "/uploads/codex/galgame/4040.webp"
+      "icon": "/uploads/codex/galgame/4040.webp",
+      "sortDamage": 38
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "深海鸣潮戟",
       "itemId": "4052",
       "itemName": "深海鸣潮戟",
-      "seriesKey": "element",
       "element": "水",
       "elementKey": "water",
-      "damage": 38,
-      "speed": null,
+      "stats": {
+        "伤害": "38"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "海妖区“深海鲨鲨”",
       "recipeText": "",
@@ -1306,18 +6032,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "沉重长戟，攻击时伴随海啸声。",
-      "icon": "/uploads/codex/galgame/4052.webp"
+      "icon": "/uploads/codex/galgame/4052.webp",
+      "sortDamage": 38
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "星闪之剑",
       "itemId": "4059",
       "itemName": "星闪之剑",
-      "seriesKey": "element",
       "element": "光",
       "elementKey": "light",
-      "damage": 38,
-      "speed": null,
+      "stats": {
+        "伤害": "38"
+      },
       "obtain": "合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "太阳石剑x1 + 星尘x3 + 金锭x4",
@@ -1338,18 +6068,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "剑光如星辰闪烁，连击极快。",
-      "icon": "/uploads/codex/galgame/4059.webp"
+      "icon": "/uploads/codex/galgame/4059.webp",
+      "sortDamage": 38
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "虚无截断锯",
       "itemId": "4066",
       "itemName": "虚无截断锯",
-      "seriesKey": "element",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 38,
-      "speed": null,
+      "stats": {
+        "伤害": "38"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "地牢“缝合憎恶”",
       "recipeText": "",
@@ -1357,18 +6091,22 @@
       "station": "邪恶合成仪",
       "effectName": null,
       "effect": "锯齿附有虚无之力，无视30%防御。",
-      "icon": "/uploads/codex/galgame/4066.webp"
+      "icon": "/uploads/codex/galgame/4066.webp",
+      "sortDamage": 38
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "冰晶之刃",
       "itemId": "4046",
       "itemName": "冰晶之刃",
-      "seriesKey": "element",
       "element": "冰",
       "elementKey": "ice",
-      "damage": 40,
-      "speed": null,
+      "stats": {
+        "伤害": "40"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "雪山“冰晶女皇”",
       "recipeText": "",
@@ -1376,18 +6114,22 @@
       "station": null,
       "effectName": null,
       "effect": "晶莹剔透，挥动时带起冰刺。",
-      "icon": "/uploads/codex/galgame/4046.webp"
+      "icon": "/uploads/codex/galgame/4046.webp",
+      "sortDamage": 40
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "雷罚·天鸣之刃",
       "itemId": "4055",
       "itemName": "雷罚·天鸣之刃",
-      "seriesKey": "element",
       "element": "雷",
       "elementKey": "thunder",
-      "damage": 40,
-      "speed": null,
+      "stats": {
+        "伤害": "40"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "山区“雷击木精”",
       "recipeText": "",
@@ -1395,18 +6137,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "蕴含天雷之威，攻击产生麻痹效果。",
-      "icon": "/uploads/codex/galgame/4055.webp"
+      "icon": "/uploads/codex/galgame/4055.webp",
+      "sortDamage": 40
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "赤龙斩",
       "itemId": "4041",
       "itemName": "赤龙斩",
-      "seriesKey": "element",
       "element": "火",
       "elementKey": "fire",
-      "damage": 42,
-      "speed": null,
+      "stats": {
+        "伤害": "42"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "龙之岛“色彩龙”",
       "recipeText": "",
@@ -1414,18 +6160,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "蕴含红龙怒火，暴击引发小范围爆炸。",
-      "icon": "/uploads/codex/galgame/4041.webp"
+      "icon": "/uploads/codex/galgame/4041.webp",
+      "sortDamage": 42
     },
     {
+      "kind": "melee",
+      "seriesKey": "element",
       "name": "辛哉·辉耀之剑",
       "itemId": "4060",
       "itemName": "辛哉·辉耀之剑",
-      "seriesKey": "element",
       "element": "光",
       "elementKey": "light",
-      "damage": 45,
-      "speed": null,
+      "stats": {
+        "伤害": "45"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "天空城“低阶天使”",
       "recipeText": "",
@@ -1433,18 +6183,22 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "天使佩剑，对魔物伤害+30%。",
-      "icon": "/uploads/codex/galgame/4060.webp"
+      "icon": "/uploads/codex/galgame/4060.webp",
+      "sortDamage": 45
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "蚀毒",
       "itemId": "4036",
       "itemName": "腐蚀之矛→蚀毒",
-      "seriesKey": "core",
       "element": "毒",
       "elementKey": "poison",
-      "damage": 50,
-      "speed": null,
+      "stats": {
+        "伤害": "50"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "腐蚀之矛x1 + 万毒囊x2 + 瘟疫之种x1 + 毒液x20",
@@ -1469,18 +6223,22 @@
       "station": "魔法锻造台",
       "effectName": "疫病感染",
       "effect": "被击中的敌人每秒损失1%最大生命值，死亡时爆开毒雾感染周围敌人。",
-      "icon": "/uploads/codex/galgame/4036.webp"
+      "icon": "/uploads/codex/galgame/4036.webp",
+      "sortDamage": 50
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "冰川",
       "itemId": "4044",
       "itemName": "寒霜斧→冰川",
-      "seriesKey": "core",
       "element": "冰",
       "elementKey": "ice",
-      "damage": 55,
-      "speed": null,
+      "stats": {
+        "伤害": "55"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "寒霜斧x1 + 极寒冰核x2 + 霜纹石x5 + 精炼铁x10",
@@ -1505,18 +6263,22 @@
       "station": "魔法锻造台",
       "effectName": "裂地冰波",
       "effect": "右键蓄力劈砍，释放一道冰川裂地波，对前方直线造成大范围冰冻。",
-      "icon": "/uploads/codex/galgame/4044.webp"
+      "icon": "/uploads/codex/galgame/4044.webp",
+      "sortDamage": 55
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "暗涌",
       "itemId": "4049",
       "itemName": "潮鸣水刃→暗涌",
-      "seriesKey": "core",
       "element": "水",
       "elementKey": "water",
-      "damage": 56,
-      "speed": null,
+      "stats": {
+        "伤害": "56"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "潮鸣水刃x1 + 深海之核x2 + 海妖之歌x1 + 潮汐鳞片x15",
@@ -1541,18 +6303,22 @@
       "station": "邪恶合成仪",
       "effectName": "暗流撕裂",
       "effect": "连续命中3次触发真实伤害。在水中攻击力提升50%，且移动不受阻。",
-      "icon": "/uploads/codex/galgame/4049.webp"
+      "icon": "/uploads/codex/galgame/4049.webp",
+      "sortDamage": 56
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "火山",
       "itemId": "4039",
       "itemName": "灼心炎刃→火山",
-      "seriesKey": "core",
       "element": "火",
       "elementKey": "fire",
-      "damage": 58,
-      "speed": null,
+      "stats": {
+        "伤害": "58"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "灼心炎刃x1 + 熔岩之心x2 + 炎魔之角x3 + 火耀岩x10",
@@ -1577,18 +6343,22 @@
       "station": "魔法锻造台",
       "effectName": "火山喷发",
       "effect": "跳跃下劈时，引发大范围熔岩喷发击飞敌人。剑身内仿佛封印着活火山。",
-      "icon": "/uploads/codex/galgame/4039.webp"
+      "icon": "/uploads/codex/galgame/4039.webp",
+      "sortDamage": 58
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "闪光",
       "itemId": "4057",
       "itemName": "太阳石剑→闪光",
-      "seriesKey": "core",
       "element": "光",
       "elementKey": "light",
-      "damage": 60,
-      "speed": null,
+      "stats": {
+        "伤害": "60"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "太阳石剑x1 + 破晓之辉x2 + 圣光结晶x5 + 日耀石x15",
@@ -1613,18 +6383,22 @@
       "station": "魔法锻造台",
       "effectName": "破暗",
       "effect": "自动发光照亮四周。对暗系魔物造成200%暴击。每15秒下次攻击致盲敌人。",
-      "icon": "/uploads/codex/galgame/4057.webp"
+      "icon": "/uploads/codex/galgame/4057.webp",
+      "sortDamage": 60
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "雷击",
       "itemId": "4054",
       "itemName": "雷电锤→雷击",
-      "seriesKey": "core",
       "element": "雷",
       "elementKey": "thunder",
-      "damage": 62,
-      "speed": null,
+      "stats": {
+        "伤害": "62"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "雷电锤x1 + 雷神之骨x2 + 避雷针x1 + 雷电石英x12",
@@ -1649,18 +6423,22 @@
       "station": "魔法锻造台",
       "effectName": "天雷引",
       "effect": "命中概率召唤天雷。蓄力重击可将武器掷出，化作雷矛穿透一切后飞回。",
-      "icon": "/uploads/codex/galgame/4054.webp"
+      "icon": "/uploads/codex/galgame/4054.webp",
+      "sortDamage": 62
     },
     {
+      "kind": "melee",
+      "seriesKey": "core",
       "name": "暗裔",
       "itemId": "4063",
       "itemName": "幽冥双刀→暗裔",
-      "seriesKey": "core",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 64,
-      "speed": null,
+      "stats": {
+        "伤害": "64"
+      },
       "obtain": "进化合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "幽冥双刀x1 + 深渊之眼x2 + 堕落的灵魂x5 + 暗影残片x20",
@@ -1685,18 +6463,22 @@
       "station": "邪恶合成仪",
       "effectName": "渴血",
       "effect": "击杀敌人掉落暗影球，拾取回血回蓝。从背后攻击必定暴击。",
-      "icon": "/uploads/codex/galgame/4063.webp"
+      "icon": "/uploads/codex/galgame/4063.webp",
+      "sortDamage": 64
     },
     {
+      "kind": "melee",
+      "seriesKey": "special",
       "name": "激光剑",
       "itemId": "4031",
       "itemName": "激光剑",
-      "seriesKey": "special",
       "element": "光",
       "elementKey": "light",
-      "damage": 50,
-      "speed": null,
+      "stats": {
+        "伤害": "50"
+      },
       "obtain": "购买",
+      "obtainRaw": "",
       "price": 2000,
       "dropFrom": null,
       "recipeText": "",
@@ -1704,18 +6486,22 @@
       "station": null,
       "effectName": null,
       "effect": "高科技产物，攻击时带有蜂鸣声。",
-      "icon": "/uploads/codex/galgame/4031.webp"
+      "icon": "/uploads/codex/galgame/4031.webp",
+      "sortDamage": 50
     },
     {
+      "kind": "melee",
+      "seriesKey": "special",
       "name": "海神巨尺",
       "itemId": "4053",
       "itemName": "海神巨尺",
-      "seriesKey": "special",
       "element": "水",
       "elementKey": "water",
-      "damage": 65,
-      "speed": null,
+      "stats": {
+        "伤害": "65"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "海神佩利伽",
       "recipeText": "",
@@ -1723,18 +6509,22 @@
       "station": null,
       "effectName": null,
       "effect": "巨大无比的水属性重剑，挥动时如同海啸拍击，附带强击退。",
-      "icon": "/uploads/codex/galgame/4053.webp"
+      "icon": "/uploads/codex/galgame/4053.webp",
+      "sortDamage": 65
     },
     {
+      "kind": "melee",
+      "seriesKey": "special",
       "name": "地下城黑血之刃",
       "itemId": "4067",
       "itemName": "地下城黑血之刃",
-      "seriesKey": "special",
       "element": "暗",
       "elementKey": "dark",
-      "damage": 70,
-      "speed": null,
+      "stats": {
+        "伤害": "70"
+      },
       "obtain": "掉落",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": "佐伊·维迦",
       "recipeText": "",
@@ -1742,18 +6532,22 @@
       "station": null,
       "effectName": null,
       "effect": "吸收宿主生命转化为极致破坏力的魔刃。攻击时吸血，持续消耗理智。",
-      "icon": "/uploads/codex/galgame/4067.webp"
+      "icon": "/uploads/codex/galgame/4067.webp",
+      "sortDamage": 70
     },
     {
+      "kind": "melee",
+      "seriesKey": "special",
       "name": "星光吞噬者",
       "itemId": "4500",
-      "itemName": null,
-      "seriesKey": "special",
+      "itemName": "星光吞噬者",
       "element": "无",
       "elementKey": "none",
-      "damage": 75,
-      "speed": null,
+      "stats": {
+        "伤害": "75"
+      },
       "obtain": "最终合成",
+      "obtainRaw": "",
       "price": null,
       "dropFrom": null,
       "recipeText": "屠龙剑x1 + 半神之刃x1 + 星辰碎片x10",
@@ -1774,8 +6568,9 @@
       "station": "魔法锻造台",
       "effectName": null,
       "effect": "最终形态的大剑，一刀斩断星辰，无视防御的真实伤害。",
-      "icon": null
+      "icon": null,
+      "sortDamage": 75
     }
   ],
-  "count": 63
+  "count": 211
 }

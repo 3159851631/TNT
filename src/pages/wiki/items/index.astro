@@ -11,6 +11,13 @@ for (const w of weaponsData.weapons) {
   const prev = weaponByItem.get(w.itemId);
   if (!prev || (prev.seriesKey === 'core' && w.seriesKey !== 'core')) weaponByItem.set(w.itemId, w);
 }
+const kindByKey = new Map(weaponsData.kinds.map((k) => [k.key, k]));
+const weaponDamage = (w: any) => {
+  const k = kindByKey.get(w.kind);
+  if (!k?.showRange) return null;
+  return w.sortDamage || null;
+};
+const weaponKindUrl = (w: any) => kindByKey.get(w.kind)?.url || '/wiki/weapons/';
 ---
 
 <WikiLayout
@@ -25,7 +32,7 @@ for (const w of weaponsData.weapons) {
     <p class="wiki-page-head__lead">
       数据来自游戏物品表和配方表：{items.length} 件物品，其中 {craftableCount} 件可合成。点名字进详情，看材料、制作站和用途。
       武器还额外标了元素和伤害 —— 想看完整的武器属性、配方和特效，去
-      <a href="/wiki/weapons/">近战武器图鉴 →</a>
+      <a href="/wiki/weapons/">武器图鉴 →</a>
     </p>
     <div class="wiki-page-head__stats">
       <div class="wiki-stat"><b>{items.length}</b><span>ITEMS / 物品</span></div>
@@ -69,7 +76,7 @@ for (const w of weaponsData.weapons) {
                   {wp ? (
                     <span class="it-wp">
                       <span class={`it-wp__el it-wp__el--${wp.elementKey}`}>{wp.element}</span>
-                      <b class="it-wp__dmg">{wp.damage}</b>
+                      {weaponDamage(wp) ? <b class="it-wp__dmg">{weaponDamage(wp)}</b> : <span class="wiki-muted">{kindByKey.get(wp.kind)?.name.split('与')[0]}</span>}
                     </span>
                   ) : (
                     <span class="wiki-muted">—</span>

@@ -1,0 +1,177 @@
+---
+import WikiLayout from '../../../layouts/WikiLayout.astro';
+import data from '../../../data/wiki/weapons.json';
+
+const kinds = data.kinds;
+const materials = data.materials;
+const weapons = data.weapons;
+const maxDamage = Math.max(...weapons.filter((w) => w.sortDamage).map((w) => w.sortDamage));
+const elements = Array.from(new Set(weapons.map((w) => w.element))).filter((e) => e !== '无');
+const rarityClass = (r: string) => (r === '极稀有' ? 'is-legend' : r === '稀有' ? 'is-rare' : 'is-common');
+---
+
+<WikiLayout
+  title="武器"
+  description={`《魔物娘合成乐园》武器与装备图鉴：${weapons.length} 件，分 ${kinds.length} 大类，附元素、数值、获取方式与完整配方。`}
+  active="weapons"
+  breadcrumb={[{ label: '武器图鉴' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">WEAPONS / 武器与装备</p>
+    <h1 class="wiki-page-head__title">武器图鉴 <em>WEAPONS</em></h1>
+    <p class="wiki-page-head__lead">{data.intro}</p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{weapons.length}</b><span>ITEMS / 件</span></div>
+      <div class="wiki-stat"><b>{kinds.length}</b><span>CATEGORIES / 大类</span></div>
+      <div class="wiki-stat"><b>{elements.length}</b><span>ELEMENTS / 元素</span></div>
+      <div class="wiki-stat"><b>{maxDamage}</b><span>MAX DAMAGE / 最高伤害</span></div>
+    </div>
+  </header>
+
+  <section class="wk-kinds">
+    <h2 class="wk-title">分类 <em>CATEGORIES</em></h2>
+    <div class="wk-kinds__grid">
+      {kinds.map((k) => (
+        <a class="wk-card" href={k.url}>
+          <div class="wk-card__head">
+            <h3 class="wk-card__name">{k.name}</h3>
+            <span class="wk-card__count">{k.count}</span>
+          </div>
+          <p class="wk-card__en">{k.en}</p>
+          <p class="wk-card__desc">{k.desc}</p>
+          <span class="wk-card__go">查看 →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wk-materials">
+    <h2 class="wk-title">基础材料 <em>MATERIALS</em></h2>
+    <p class="wk-lead">{data.materialNote}</p>
+    <div class="wiki-table-wrap">
+      <table class="wiki-table wk-materials__table">
+        <thead>
+          <tr>
+            <th>材料</th>
+            <th>稀有度</th>
+            <th>获取途径</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          {materials.map((m) => (
+            <tr>
+              <td>{m.itemId ? <a href={`/wiki/items/${m.itemId}/`}>{m.name}</a> : <b>{m.name}</b>}</td>
+              <td><span class={`wk-rarity ${rarityClass(m.rarity)}`}>{m.rarity}</span></td>
+              <td>{m.source}</td>
+              <td class="wiki-muted">{m.desc}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="wk-footnote">
+    数值来自游戏武器设定表，仍会随版本调整。
+    <a href="/wiki/items/">→ 物品表</a> ·
+    <a href="/wiki/recipes/">→ 合成表</a>
+  </p>
+</WikiLayout>
+
+<style>
+  .wk-title {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 34px 0 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--w-line);
+    font-family: var(--w-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: .04em;
+  }
+  .wk-title em {
+    font-family: var(--w-mono);
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: .16em;
+    color: var(--w-gold);
+  }
+  .wk-lead { margin: 10px 0 0; color: var(--w-soft); font-size: 13px; line-height: 1.8; }
+
+  .wk-kinds__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .wk-card {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 15px 13px;
+    border: 1px solid var(--w-line);
+    background: var(--w-panel);
+    transition: border-color .2s, background .2s, transform .2s;
+  }
+  .wk-card:hover {
+    border-color: var(--w-gold);
+    background: var(--w-panel-2);
+    transform: translateY(-2px);
+  }
+  .wk-card__head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .wk-card__name {
+    margin: 0;
+    font-family: var(--w-display);
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: var(--w-ink);
+  }
+  .wk-card__count {
+    font-family: var(--w-mono);
+    font-size: 15px;
+    color: var(--w-gold-2);
+  }
+  .wk-card__en {
+    margin: 3px 0 0;
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .16em;
+    color: var(--w-gold);
+  }
+  .wk-card__desc { margin: 9px 0 0; font-size: 11.5px; line-height: 1.7; color: var(--w-faint); }
+  .wk-card__go {
+    margin-top: auto;
+    padding-top: 11px;
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    color: var(--w-muted);
+  }
+  .wk-card:hover .wk-card__go { color: var(--w-gold-2); }
+
+  .wk-materials__table { min-width: 640px; }
+  .wk-rarity {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid var(--w-line);
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .wk-rarity.is-common { color: var(--w-muted); }
+  .wk-rarity.is-rare { color: var(--w-gold-2); border-color: rgba(198, 164, 104, .45); }
+  .wk-rarity.is-legend { color: #d9877f; border-color: rgba(185, 86, 78, .5); }
+
+  .wk-footnote {
+    margin: 30px 0 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--w-line);
+    font-size: 11.5px;
+    line-height: 1.8;
+    color: var(--w-muted);
+  }
+  .wk-footnote a { color: var(--w-gold-2); }
+</style>
