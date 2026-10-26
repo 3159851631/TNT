@@ -1,0 +1,328 @@
+---
+import WikiLayout from '../../layouts/WikiLayout.astro';
+import data from '../../data/wiki/weapons.json';
+
+const weapons = data.weapons;
+const materials = data.materials;
+const series = data.series;
+const elements = data.elements;
+
+const maxDamage = Math.max(...weapons.map((w) => w.damage));
+const craftable = weapons.filter((w) => w.obtain === '合成' || w.obtain === '进化合成' || w.obtain === '最终合成').length;
+
+const obtainLabel = (w: any) => {
+  if (w.obtain === '购买') return w.price ? `${w.price} 金币` : '商店购买';
+  if (w.obtain === '掉落') return w.dropFrom ? `击败${w.dropFrom}掉落` : '怪物掉落';
+  return w.recipeText || '—';
+};
+const obtainTagClass = (w: any) =>
+  w.obtain === '购买' ? 'is-buy' : w.obtain === '掉落' ? 'is-drop' : 'is-craft';
+const rarityClass = (r: string) => (r === '极稀有' ? 'is-legend' : r === '稀有' ? 'is-rare' : 'is-common');
+---
+
+<WikiLayout
+  title="武器"
+  description={`《魔物娘合成乐园》近战武器图鉴：${weapons.length} 件武器，元素、伤害、攻速、获取方式、完整配方与专属特效。`}
+  active="weapons"
+  breadcrumb={[{ label: '武器图鉴' }]}
+>
+  <header class="wiki-page-head">
+    <p class="wiki-page-head__kicker">WEAPONS / 近战武器</p>
+    <h1 class="wiki-page-head__title">近战武器 <em>WEAPONS</em></h1>
+    <p class="wiki-page-head__lead">{data.intro}</p>
+    <div class="wiki-page-head__stats">
+      <div class="wiki-stat"><b>{weapons.length}</b><span>WEAPONS / 武器</span></div>
+      <div class="wiki-stat"><b>{elements.length}</b><span>ELEMENTS / 元素</span></div>
+      <div class="wiki-stat"><b>{craftable}</b><span>CRAFTED / 可合成</span></div>
+      <div class="wiki-stat"><b>{maxDamage}</b><span>MAX DAMAGE / 最高伤害</span></div>
+    </div>
+  </header>
+
+  <div data-wiki-weapons>
+    <div class="wiki-toolbar">
+      <div class="wiki-filter">
+        <input class="wiki-filter__search" type="search" placeholder="搜索武器 / 元素 / 材料…" data-wiki-weapon-search aria-label="搜索武器" />
+      </div>
+      <div class="wp-filter-row">
+        <span class="wp-filter-row__label">系列</span>
+        <div class="wiki-chips">
+          <button class="wiki-chip is-active" type="button" data-wiki-series="all">全部</button>
+          {series.map((s) => <button class="wiki-chip" type="button" data-wiki-series={s.key}>{s.name}</button>)}
+        </div>
+      </div>
+      <div class="wp-filter-row">
+        <span class="wp-filter-row__label">元素</span>
+        <div class="wiki-chips">
+          <button class="wiki-chip is-active" type="button" data-wiki-element="all">全部</button>
+          {elements.map((e) => <button class="wiki-chip" type="button" data-wiki-element={e.key}>{e.name}</button>)}
+        </div>
+      </div>
+      <span class="wiki-count" data-wiki-weapon-count>{weapons.length} / {weapons.length}</span>
+    </div>
+
+    <section class="wp-materials">
+      <h2 class="wp-section-title">基础材料 <em>MATERIALS</em></h2>
+      <p class="wp-section-lead">{data.materialNote}</p>
+      <div class="wiki-table-wrap">
+        <table class="wiki-table wp-materials__table">
+          <thead>
+            <tr>
+              <th>材料</th>
+              <th>稀有度</th>
+              <th>获取途径</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            {materials.map((m) => (
+              <tr>
+                <td>
+                  {m.itemId ? <a href={`/wiki/items/${m.itemId}/`}>{m.name}</a> : <b>{m.name}</b>}
+                </td>
+                <td><span class={`wp-rarity ${rarityClass(m.rarity)}`}>{m.rarity}</span></td>
+                <td>{m.source}</td>
+                <td class="wiki-muted">{m.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {series.map((s) => (
+      <section class="wp-series" data-wiki-series-group={s.key}>
+        <h2 class="wp-section-title">
+          {s.name} <em>{s.en}</em>
+          <span class="wp-series__meta">{s.count} 件 · 伤害 {s.minDamage}–{s.maxDamage}</span>
+        </h2>
+        <div class="wiki-table-wrap">
+          <table class="wiki-table wp-table">
+            <thead>
+              <tr>
+                <th rowspan="2">武器</th>
+                <th colspan="3" class="wp-group-head">战斗属性</th>
+                <th colspan="2" class="wp-group-head">获取与配方</th>
+                <th rowspan="2">说明与特效</th>
+              </tr>
+              <tr>
+                <th>元素</th>
+                <th>伤害</th>
+                <th>攻速</th>
+                <th>方式</th>
+                <th>详细配方 / 获取途径</th>
+              </tr>
+            </thead>
+            <tbody>
+              {weapons
+                .filter((w) => w.seriesKey === s.key)
+                .map((w) => (
+                  <tr data-wiki-weapon data-series={w.seriesKey} data-element={w.elementKey} data-name={`${w.name} ${w.element} ${w.recipeText}`}>
+                    <td class="wp-name">
+                      {w.itemId ? <a href={`/wiki/items/${w.itemId}/`}>{w.name}</a> : <b>{w.name}</b>}
+                    </td>
+                    <td><span class={`wp-el wp-el--${w.elementKey}`}>{w.element}</span></td>
+                    <td><b class="wp-dmg">{w.damage}</b></td>
+                    <td>{w.speed || '—'}</td>
+                    <td><span class={`wp-obtain ${obtainTagClass(w)}`}>{w.obtain}</span></td>
+                    <td class="wp-recipe">
+                      {w.recipe.length > 0 ? (
+                        <span class="wp-recipe__list">
+                          {w.recipe.map((m, i) => (
+                            <span class="wp-mat">
+                              {i > 0 && <i>+</i>}
+                              <span>{m.name}</span>
+                              <b>×{m.qty}</b>
+                            </span>
+                          ))}
+                        </span>
+                      ) : (
+                        <span class="wiki-muted">{obtainLabel(w)}</span>
+                      )}
+                    </td>
+                    <td class="wp-effect">
+                      {w.effectName && <b class="wp-effect__name">【{w.effectName}】</b>}
+                      {w.effect}
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <p class="wp-footnote">
+      表格内容来自游戏近战武器设定表：伤害为武器基础值，实际伤害还受角色属性、元素克制和特效影响。
+      攻速只有基础系列标注了（快 / 中等 / 慢），其余系列设定表里还没给数值，先留「—」等补齐。
+      数值仍会随版本调整。<a href="/wiki/items/">→ 去物品表看图标、售价与游戏内材料配方</a>
+    </p>
+  </div>
+</WikiLayout>
+
+<style>
+  .wp-filter-row {
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .wp-filter-row__label {
+    flex: 0 0 auto;
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .14em;
+    color: var(--w-muted);
+  }
+  .wp-section-title {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 34px 0 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--w-line);
+    font-family: var(--w-display);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: .04em;
+  }
+  .wp-section-title em {
+    font-family: var(--w-mono);
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: .16em;
+    color: var(--w-gold);
+  }
+  .wp-series__meta {
+    margin-left: auto;
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .06em;
+    color: var(--w-muted);
+  }
+  .wp-section-lead {
+    margin: 10px 0 0;
+    color: var(--w-soft);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .wp-materials__table { min-width: 640px; }
+
+  .wp-table { min-width: 940px; }
+  .wp-table thead tr:first-child th {
+    border-bottom: 1px solid var(--w-line-2, var(--w-line));
+  }
+  .wp-group-head {
+    text-align: center !important;
+    color: var(--w-gold) !important;
+    letter-spacing: .14em;
+  }
+  .wp-table td { vertical-align: top; }
+  .wp-name { white-space: nowrap; }
+  .wp-name a { font-size: 12.5px; }
+  .wp-dmg {
+    font-family: var(--w-mono);
+    font-size: 13px;
+    color: var(--w-gold-2);
+  }
+
+  .wp-el {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .wp-el::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .85;
+  }
+  .wp-el--none { color: var(--w-muted); }
+  .wp-el--poison { color: #8fbf6f; }
+  .wp-el--fire { color: #dd7a4d; }
+  .wp-el--ice { color: #86c8dd; }
+  .wp-el--water { color: #6aa5db; }
+  .wp-el--thunder { color: #ddc45f; }
+  .wp-el--light { color: #e6d295; }
+  .wp-el--dark { color: #b183d8; }
+
+  .wp-obtain {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid var(--w-line-2, var(--w-line));
+    font-family: var(--w-mono);
+    font-size: 9px;
+    letter-spacing: .06em;
+    white-space: nowrap;
+  }
+  .wp-obtain.is-craft { color: var(--w-green-2); border-color: rgba(120, 163, 122, .45); }
+  .wp-obtain.is-buy { color: var(--w-gold-2); border-color: rgba(198, 164, 104, .45); }
+  .wp-obtain.is-drop { color: #d9877f; border-color: rgba(185, 86, 78, .5); }
+
+  .wp-rarity {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid var(--w-line);
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .wp-rarity.is-common { color: var(--w-muted); }
+  .wp-rarity.is-rare { color: var(--w-gold-2); border-color: rgba(198, 164, 104, .45); }
+  .wp-rarity.is-legend { color: #d9877f; border-color: rgba(185, 86, 78, .5); }
+
+  .wp-recipe { min-width: 210px; }
+  .wp-recipe__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 6px;
+  }
+  .wp-mat {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 3px;
+    font-size: 11px;
+    color: var(--w-soft);
+    white-space: nowrap;
+  }
+  .wp-mat i { color: var(--w-faint); font-style: normal; margin-right: 3px; }
+  .wp-mat b {
+    font-family: var(--w-mono);
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--w-gold-2);
+  }
+
+  .wp-effect {
+    min-width: 240px;
+    max-width: 420px;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: var(--w-muted);
+  }
+  .wp-effect__name {
+    display: inline-block;
+    margin-right: 3px;
+    color: var(--w-gold-2);
+    font-weight: 600;
+  }
+
+  .wp-footnote {
+    margin: 30px 0 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--w-line);
+    font-size: 11.5px;
+    line-height: 1.8;
+    color: var(--w-muted);
+  }
+  .wp-footnote a { color: var(--w-gold-2); }
+
+  @media (max-width: 720px) {
+    .wp-filter-row { align-items: flex-start; flex-direction: column; gap: 4px; }
+    .wp-series__meta { margin-left: 0; width: 100%; }
+  }
+</style>

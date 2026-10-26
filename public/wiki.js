@@ -49,6 +49,66 @@
     apply();
   }
 
+  // 武器图鉴：系列 + 元素 双重筛选
+  const weaponRoot = document.querySelector('[data-wiki-weapons]');
+  if (weaponRoot) {
+    const rows = Array.from(weaponRoot.querySelectorAll('[data-wiki-weapon]'));
+    const groups = Array.from(weaponRoot.querySelectorAll('[data-wiki-series-group]'));
+    const seriesChips = Array.from(weaponRoot.querySelectorAll('[data-wiki-series]'));
+    const elementChips = Array.from(weaponRoot.querySelectorAll('[data-wiki-element]'));
+    const search = weaponRoot.querySelector('[data-wiki-weapon-search]');
+    const count = weaponRoot.querySelector('[data-wiki-weapon-count]');
+    let activeSeries = 'all';
+    let activeElement = 'all';
+
+    const apply = () => {
+      const query = (search?.value || '').trim().toLowerCase();
+      let shown = 0;
+      rows.forEach((el) => {
+        const matchSeries = activeSeries === 'all' || el.dataset.series === activeSeries;
+        const matchElement = activeElement === 'all' || el.dataset.element === activeElement;
+        const text = (el.textContent || '').toLowerCase();
+        const matchQuery = !query || text.includes(query);
+        const show = matchSeries && matchElement && matchQuery;
+        el.style.display = show ? '' : 'none';
+        if (show) shown += 1;
+      });
+      groups.forEach((group) => {
+        const visible = group.querySelectorAll('[data-wiki-weapon]:not([style*="display: none"])').length;
+        group.style.display = visible > 0 ? '' : 'none';
+      });
+      if (count) count.textContent = `${shown} / ${rows.length}`;
+    };
+
+    const onSeries = (chip) => () => {
+      seriesChips.forEach((c) => c.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      activeSeries = chip.dataset.wikiSeries || 'all';
+      apply();
+    };
+    const onElement = (chip) => () => {
+      elementChips.forEach((c) => c.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      activeElement = chip.dataset.wikiElement || 'all';
+      apply();
+    };
+    seriesChips.forEach((chip) => {
+      const fn = onSeries(chip);
+      chip.addEventListener('click', fn);
+      cleanups.push(() => chip.removeEventListener('click', fn));
+    });
+    elementChips.forEach((chip) => {
+      const fn = onElement(chip);
+      chip.addEventListener('click', fn);
+      cleanups.push(() => chip.removeEventListener('click', fn));
+    });
+    if (search) {
+      search.addEventListener('input', apply);
+      cleanups.push(() => search.removeEventListener('input', apply));
+    }
+    apply();
+  }
+
   const searchPage = document.querySelector('[data-wiki-search-page]');
   if (searchPage) {
     const form = searchPage.querySelector('form');

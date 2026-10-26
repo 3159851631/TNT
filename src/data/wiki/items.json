@@ -9606,6 +9606,35 @@
       "note": "",
       "usedIn": [],
       "url": "/wiki/items/11007/"
+    },
+    {
+      "id": "4500",
+      "name": "星光吞噬者",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "屠龙剑",
+          "qty": 1
+        },
+        {
+          "name": "半神之刃",
+          "qty": 1
+        },
+        {
+          "name": "星辰碎片",
+          "qty": 10
+        }
+      ],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "最终形态的大剑，一刀斩断星辰，无视防御的真实伤害。 · 获取：最终合成",
+      "usedIn": [],
+      "url": "/wiki/items/4500/"
     }
   ],
   "categories": [
@@ -9637,6 +9666,6 @@
     "矿物精炼器",
     "邪恶合成仪"
   ],
-  "count": 456,
-  "craftableCount": 168
+  "count": 457,
+  "craftableCount": 169
 }

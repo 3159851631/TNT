@@ -12,8 +12,9 @@
     "regions": 23,
     "characters": 195,
     "monsters": 309,
-    "items": 456,
-    "recipes": 168,
+    "items": 457,
+    "recipes": 169,
+    "weapons": 63,
     "stories": 20
   },
   "featuredCharacters": [
@@ -54,15 +55,23 @@
       "name": "物品",
       "en": "ITEMS",
       "url": "/wiki/items/",
-      "count": 456,
-      "desc": "456 件物品，168 个可合成配方。"
+      "count": 457,
+      "desc": "457 件物品，169 个可合成配方。"
+    },
+    {
+      "key": "weapons",
+      "name": "武器",
+      "en": "WEAPONS",
+      "url": "/wiki/weapons/",
+      "count": 63,
+      "desc": "63 件近战武器：元素、伤害、攻速、配方与专属特效。"
     },
     {
       "key": "recipes",
       "name": "合成",
       "en": "CRAFTING",
       "url": "/wiki/recipes/",
-      "count": 168,
+      "count": 169,
       "desc": "按制作站、材料、层级整理的完整合成表。"
     },
     {

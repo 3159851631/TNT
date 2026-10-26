@@ -7,7 +7,7 @@ const stations = Array.from(new Set(recipes.map((r) => r.station).filter(Boolean
 
 <WikiLayout
   title="合成"
-  description="《魔物娘合成乐园》的合成表：168 个配方，按制作站、材料和层级整理。"
+  description="《魔物娘合成乐园》的合成表：169 个配方，按制作站、材料和层级整理。"
   active="recipes"
   breadcrumb={[{ label: '合成' }]}
 >
@@ -16,6 +16,7 @@ const stations = Array.from(new Set(recipes.map((r) => r.station).filter(Boolean
     <h1 class="wiki-page-head__title">合成 <em>CRAFTING</em></h1>
     <p class="wiki-page-head__lead">
       从基础材料到毕业武器。按制作站筛选，或者直接搜物品名、材料名。
+      武器还可以去 <a href="/wiki/weapons/">近战武器图鉴</a> 看元素、伤害和特效。
     </p>
     <div class="wiki-page-head__stats">
       <div class="wiki-stat"><b>{recipes.length}</b><span>RECIPES / 配方</span></div>
@@ -43,10 +44,24 @@ const stations = Array.from(new Set(recipes.map((r) => r.station).filter(Boolean
         </thead>
         <tbody>
           {recipes.map((recipe) => (
-            <tr data-wiki-item data-name={`${recipe.name} ${recipe.materials.join(' ')}`} data-type={recipe.station || ''}>
+            <tr
+              data-wiki-item
+              data-name={`${recipe.name} ${recipe.materials.map((m) => m.name).join(' ')}`}
+              data-type={recipe.station || ''}
+            >
               <td><a href={`/wiki/items/${recipe.id}/`}>{recipe.name}</a></td>
               <td>{recipe.station || '手工'}</td>
-              <td>{recipe.materials.length > 0 ? recipe.materials.join(' + ') : '—'}</td>
+              <td>
+                {recipe.materials.length > 0 ? (
+                  <span class="rc-mats">
+                    {recipe.materials.map((m, i) => (
+                      <span class="rc-mat">{i > 0 && <i>+</i>}{m.name}<b>×{m.qty}</b></span>
+                    ))}
+                  </span>
+                ) : (
+                  '—'
+                )}
+              </td>
               <td>{recipe.output || '1'}</td>
               <td>{recipe.tier ? `T${recipe.tier}` : '—'}</td>
               <td><a class="wiki-mono" href={`/wiki/items/${recipe.id}/`}>查看 →</a></td>
@@ -57,3 +72,16 @@ const stations = Array.from(new Set(recipes.map((r) => r.station).filter(Boolean
     </div>
   </div>
 </WikiLayout>
+
+<style>
+  .rc-mats { display: flex; flex-wrap: wrap; gap: 2px 8px; }
+  .rc-mat { font-size: 11.5px; white-space: nowrap; }
+  .rc-mat i { margin-right: 4px; color: var(--w-faint); font-style: normal; }
+  .rc-mat b {
+    margin-left: 3px;
+    font-family: var(--w-mono);
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--w-gold-2);
+  }
+</style>

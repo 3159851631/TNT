@@ -123,11 +123,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? new URL('https://tnt
         <div class="wiki-footer__cols">
           <div class="wiki-footer__col">
             <b>图鉴</b>
-            {categories.slice(0, 4).map((category) => <a href={category.url}>{category.name}</a>)}
+            {categories.slice(0, 5).map((category) => <a href={category.url}>{category.name}</a>)}
           </div>
           <div class="wiki-footer__col">
             <b>资料</b>
-            {categories.slice(4).map((category) => <a href={category.url}>{category.name}</a>)}
+            {categories.slice(5).map((category) => <a href={category.url}>{category.name}</a>)}
           </div>
           <div class="wiki-footer__col">
             <b>站内</b>

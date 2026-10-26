@@ -1,15 +1,21 @@
 ---
 import WikiLayout from '../../../layouts/WikiLayout.astro';
 import data from '../../../data/wiki/items.json';
+import weaponsData from '../../../data/wiki/weapons.json';
 const items = data.items;
 const categories = data.categories;
 const craftableCount = data.craftableCount;
 const stations = data.stations;
+const weaponByItem = new Map();
+for (const w of weaponsData.weapons) {
+  const prev = weaponByItem.get(w.itemId);
+  if (!prev || (prev.seriesKey === 'core' && w.seriesKey !== 'core')) weaponByItem.set(w.itemId, w);
+}
 ---
 
 <WikiLayout
   title="物品"
-  description="《魔物娘合成乐园》的完整物品库：456 件物品、168 个可合成配方。"
+  description="《魔物娘合成乐园》的完整物品库：457 件物品、169 个可合成配方。"
   active="items"
   breadcrumb={[{ label: '物品' }]}
 >
@@ -18,6 +24,8 @@ const stations = data.stations;
     <h1 class="wiki-page-head__title">物品 <em>ITEMS</em></h1>
     <p class="wiki-page-head__lead">
       数据来自游戏物品表和配方表：{items.length} 件物品，其中 {craftableCount} 件可合成。点名字进详情，看材料、制作站和用途。
+      武器还额外标了元素和伤害 —— 想看完整的武器属性、配方和特效，去
+      <a href="/wiki/weapons/">近战武器图鉴 →</a>
     </p>
     <div class="wiki-page-head__stats">
       <div class="wiki-stat"><b>{items.length}</b><span>ITEMS / 物品</span></div>
@@ -41,28 +49,71 @@ const stations = data.stations;
     <div class="wiki-table-wrap">
       <table class="wiki-table">
         <thead>
-          <tr><th>图标</th><th>物品</th><th>分类</th><th>获取</th><th>制作站</th><th>层级</th><th></th></tr>
+          <tr><th>图标</th><th>物品</th><th>分类</th><th>元素 / 伤害</th><th>获取</th><th>制作站</th><th>层级</th><th></th></tr>
         </thead>
         <tbody>
-          {items.map((item) => (
-            <tr data-wiki-item data-name={item.name} data-type={item.category} data-region={item.station || ''}>
-              <td>
-                {item.icon ? (
-                  <img class="wiki-item-icon" src={item.icon} alt={item.name} loading="lazy" />
-                ) : (
-                  <span class="wiki-item-icon--empty">{item.name.slice(0, 1)}</span>
-                )}
-              </td>
-              <td><a href={`/wiki/items/${item.id}/`}>{item.name}</a></td>
-              <td>{item.category}</td>
-              <td>{item.craftable ? <span class="wiki-tag wiki-tag--gold">可合成</span> : <span class="wiki-muted">素材 / 拾取</span>}</td>
-              <td>{item.station || '—'}</td>
-              <td>{item.tier ? `T${item.tier}` : '—'}</td>
-              <td><a class="wiki-mono" href={`/wiki/items/${item.id}/`}>查看 →</a></td>
-            </tr>
-          ))}
+          {items.map((item) => {
+            const wp = weaponByItem.get(item.id);
+            return (
+              <tr data-wiki-item data-name={item.name} data-type={item.category} data-region={item.station || ''}>
+                <td>
+                  {item.icon ? (
+                    <img class="wiki-item-icon" src={item.icon} alt={item.name} loading="lazy" />
+                  ) : (
+                    <span class="wiki-item-icon--empty">{item.name.slice(0, 1)}</span>
+                  )}
+                </td>
+                <td><a href={`/wiki/items/${item.id}/`}>{item.name}</a></td>
+                <td>{item.category}</td>
+                <td>
+                  {wp ? (
+                    <span class="it-wp">
+                      <span class={`it-wp__el it-wp__el--${wp.elementKey}`}>{wp.element}</span>
+                      <b class="it-wp__dmg">{wp.damage}</b>
+                    </span>
+                  ) : (
+                    <span class="wiki-muted">—</span>
+                  )}
+                </td>
+                <td>{item.craftable ? <span class="wiki-tag wiki-tag--gold">可合成</span> : <span class="wiki-muted">素材 / 拾取</span>}</td>
+                <td>{item.station || '—'}</td>
+                <td>{item.tier ? `T${item.tier}` : '—'}</td>
+                <td><a class="wiki-mono" href={`/wiki/items/${item.id}/`}>查看 →</a></td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   </div>
 </WikiLayout>
+
+<style>
+  .it-wp { display: inline-flex; align-items: baseline; gap: 6px; white-space: nowrap; }
+  .it-wp__el { font-size: 11px; }
+  .it-wp__el::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    vertical-align: middle;
+    opacity: .85;
+  }
+  .it-wp__el--none { color: var(--w-muted); }
+  .it-wp__el--poison { color: #8fbf6f; }
+  .it-wp__el--fire { color: #dd7a4d; }
+  .it-wp__el--ice { color: #86c8dd; }
+  .it-wp__el--water { color: #6aa5db; }
+  .it-wp__el--thunder { color: #ddc45f; }
+  .it-wp__el--light { color: #e6d295; }
+  .it-wp__el--dark { color: #b183d8; }
+  .it-wp__dmg {
+    font-family: var(--w-mono);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--w-gold-2);
+  }
+</style>

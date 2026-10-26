@@ -4651,7 +4651,36 @@
       "note": "第十二章毕业武器 · 获取：合成",
       "usedIn": [],
       "url": "/wiki/items/4912/"
+    },
+    {
+      "id": "4500",
+      "name": "星光吞噬者",
+      "category": "近战武器",
+      "craftable": true,
+      "tier": null,
+      "station": "魔法锻造台",
+      "materials": [
+        {
+          "name": "屠龙剑",
+          "qty": 1
+        },
+        {
+          "name": "半神之刃",
+          "qty": 1
+        },
+        {
+          "name": "星辰碎片",
+          "qty": 10
+        }
+      ],
+      "output": 1,
+      "icon": null,
+      "iconSize": null,
+      "price": 0,
+      "note": "最终形态的大剑，一刀斩断星辰，无视防御的真实伤害。 · 获取：最终合成",
+      "usedIn": [],
+      "url": "/wiki/items/4500/"
     }
   ],
-  "count": 168
+  "count": 169
 }
