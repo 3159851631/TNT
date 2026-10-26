@@ -84,7 +84,7 @@ const obtainTagClass = (w: any) =>
         <h2>物品信息</h2>
         <p>{item.note || '这个物品的详细说明还在补充。'}</p>
 
-        <h2>获取方式</h2>
+        <h2>获取方式{item.craftable && myWeapons.length > 0 ? ' · 物品表配方' : ''}</h2>
         {item.craftable ? (
           <>
             <p>在 <strong>{item.station || '制作站'}</strong> 合成：</p>
