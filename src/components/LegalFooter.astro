@@ -38,7 +38,8 @@ const socials = site.socials || [];
   <div class="legal-footer__contact">
     <span><b>联系邮箱</b><a href={`mailto:${email}`}>{email}</a></span>
     <span><b>微信</b>{site.wechat}</span>
-    <span><b>QQ</b>{site.qq}</span>
+    <span><b>QQ 大号</b>{site.qqMain || site.qq}</span>
+    <span><b>QQ 小号</b>{site.qq}</span>
     <span><b>所在地</b>{site.location}</span>
   </div>
 
