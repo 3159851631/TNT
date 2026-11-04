@@ -33,6 +33,24 @@
       "handle": "@TNT_TUONI"
     },
     {
+      "label": "Pixiv",
+      "short": "Px",
+      "url": "https://www.pixiv.net/users/44357217",
+      "handle": "44357217"
+    },
+    {
+      "label": "Facebook",
+      "short": "F",
+      "url": "https://www.facebook.com/profile.php?id=61595932123461",
+      "handle": "主页"
+    },
+    {
+      "label": "Discord",
+      "short": "D",
+      "url": "https://discord.gg/X7hwVgrvE",
+      "handle": "群组邀请"
+    },
+    {
       "label": "Patreon",
       "short": "P",
       "url": "https://www.patreon.com/cw/EXPLODINGTNT975",
