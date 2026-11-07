@@ -315,6 +315,21 @@
   if (viewer) {
     const layers = Array.from(viewer.querySelectorAll('[data-wiki-map-layer]'));
     const image = layers[0];
+    // 所有图层统一按底图的像素尺寸渲染，切换图层时四条边完全重合
+    const syncLayerBox = () => {
+      const w = image?.naturalWidth || 0;
+      const h = image?.naturalHeight || 0;
+      if (!w || !h) return;
+      layers.forEach((layer) => {
+        layer.style.width = `${w}px`;
+        layer.style.height = `${h}px`;
+      });
+    };
+    if (image) {
+      if (image.complete && image.naturalWidth) syncLayerBox();
+      else image.addEventListener('load', syncLayerBox, { once: true });
+      cleanups.push(() => image.removeEventListener('load', syncLayerBox));
+    }
     const reset = document.querySelector('[data-wiki-map-reset]');
     const zoomIn = document.querySelector('[data-wiki-map-in]');
     const zoomOut = document.querySelector('[data-wiki-map-out]');
