@@ -8,7 +8,7 @@
       "category": "插画",
       "cover": "/uploads/works/jxyzy.webp",
       "aspect": "16/9",
-      "featured": true,
+      "featured": false,
       "order": -1,
       "description": "插画 / 校园题材。",
       "medium": "插画",
@@ -42,14 +42,15 @@
       "category": "场景",
       "cover": "/uploads/works/world-map.webp",
       "aspect": "16/9",
-      "featured": true,
+      "featured": false,
       "order": -3,
       "description": "游戏地图 / 世界设定。先把区域、路线和整体视觉基调定下来。",
       "medium": "场景 / 地图设计",
       "tools": [
         "Photoshop"
       ],
-      "gallery": []
+      "gallery": [],
+      "hidden": true
     },
     {
       "slug": "ruins-echo",

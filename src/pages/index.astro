@@ -10,6 +10,7 @@ import worksData from '../data/works.json';
 import projectsData from '../data/projects.json';
 import videosData from '../data/videos.json';
 import galgame from '../data/galgame-items.json';
+import gameArt from '../data/game-art.json';
 
 const works = worksData.works;
 const projects = projectsData.projects;
@@ -121,22 +122,47 @@ const marquee = [
     </div>
   </section>
 
+  <section class="section wrap" id="gameart">
+    <SectionHead index="02" en="GAME ART / RANDOM" title="魔物娘合成乐园 · 立绘与 CG" link="/works/all/" linkLabel="全部作品" />
+    <div class="gameart-grid" data-gameart-grid>
+      {gameArt.items.slice(0, 8).map((art) => (
+        <a class="gameart-card" href={art.charUrl || '/wiki/'} data-gameart-card>
+          <img src={art.src} alt={art.title} loading="lazy" decoding="async" data-gameart-img />
+          <span class="gameart-card__cap">
+            <b data-gameart-title>{art.title}</b>
+            <span data-gameart-cat>{art.category}</span>
+          </span>
+        </a>
+      ))}
+    </div>
+    <p class="gameart-note">
+      每次刷新随机抽 8 张。全部 {gameArt.count} 张（{gameArt.counts['角色立绘']} 张立绘、{gameArt.counts['Q 版']} 张 Q 版、{gameArt.counts['游戏CG']} 张 CG）都在
+      <a href="/works/all/">全部作品</a> 里，点开看大图。
+    </p>
+    <script
+      is:inline
+      type="application/json"
+      id="gameart-pool"
+      set:html={JSON.stringify(gameArt.items.map((a) => ({ s: a.src, t: a.title, c: a.category, u: a.charUrl || '/wiki/' })))}
+    />
+  </section>
+
   <section class="section wrap" id="projects">
-    <SectionHead index="02" en="IN DEVELOPMENT" title="在做的东西" link="/projects/" />
+    <SectionHead index="03" en="IN DEVELOPMENT" title="在做的东西" link="/projects/" />
     <div class="dev-grid">
       {inDevelopment.map((project) => <DevCard project={project} />)}
     </div>
   </section>
 
   <section class="section wrap" id="videos">
-    <SectionHead index="03" en="MOTION / VIDEOS" title="视频" link="/videos/" />
+    <SectionHead index="04" en="MOTION / VIDEOS" title="视频" link="/videos/" />
     <div class="video-grid">
       {homeVideos.map((video) => <VideoCard video={video} />)}
     </div>
   </section>
 
   <section class="section wrap" id="codex">
-    <SectionHead index="04" en="CODEX / WIKI" title="图鉴与设定" link="/codex/" />
+    <SectionHead index="05" en="CODEX / WIKI" title="图鉴与设定" link="/codex/" />
     <div class="codex-teaser">
       <div class="codex-teaser__body">
         <p class="kicker">CODEX / 图鉴</p>
@@ -168,7 +194,7 @@ const marquee = [
   </section>
 
   <section class="section wrap" id="about">
-    <SectionHead index="05" en="ABOUT" title="关于" link="/about/" linkLabel="更多关于我" />
+    <SectionHead index="06" en="ABOUT" title="关于" link="/about/" linkLabel="更多关于我" />
     <div class="about-strip">
       <blockquote class="about-strip__quote">
         白天画画，<br />
@@ -257,4 +283,41 @@ const marquee = [
   startHeroTimer();
   heroPlate?.addEventListener('mouseenter', () => window.clearInterval(heroTimer));
   heroPlate?.addEventListener('mouseleave', startHeroTimer);
+</script>
+
+<script>
+  // 首页「立绘与 CG」每次刷新随机抽 8 张
+  const poolEl = document.getElementById('gameart-pool');
+  const artGrid = document.querySelector<HTMLElement>('[data-gameart-grid]');
+  if (poolEl && artGrid) {
+    type Art = { s: string; t: string; c: string; u: string };
+    let pool: Art[] = [];
+    try {
+      pool = JSON.parse(poolEl.textContent || '[]');
+    } catch {
+      pool = [];
+    }
+    const cards = Array.from(artGrid.querySelectorAll<HTMLAnchorElement>('[data-gameart-card]'));
+    if (pool.length > cards.length) {
+      const shuffled = [...pool];
+      for (let i = shuffled.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      cards.forEach((card, i) => {
+        const item = shuffled[i];
+        if (!item) return;
+        card.href = item.u;
+        const img = card.querySelector<HTMLImageElement>('[data-gameart-img]');
+        if (img) {
+          img.src = item.s;
+          img.alt = item.t;
+        }
+        const title = card.querySelector<HTMLElement>('[data-gameart-title]');
+        if (title) title.textContent = item.t;
+        const cat = card.querySelector<HTMLElement>('[data-gameart-cat]');
+        if (cat) cat.textContent = item.c;
+      });
+    }
+  }
 </script>

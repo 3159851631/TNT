@@ -1,28 +1,31 @@
 ---
 import Base from '../../layouts/Base.astro';
 import archive from '../../data/archive.json';
+import gameArt from '../../data/game-art.json';
 
-const items = archive.items.filter((item) => item.sub !== '漫画');
+const archiveItems = archive.items.filter((item) => item.sub !== '漫画');
+const items = [...gameArt.items, ...archiveItems];
 const categories = Array.from(new Set(items.map((item) => item.category)));
 ---
 
 <Base
   title="全部作品"
-  description="王君 / EXPLODINGTNT 2014–2024 的全部早期绘画、练习、黑历史与项目图。"
+  description="王君 / EXPLODINGTNT 的全部作品：2014–2024 的早期绘画、练习与项目图，以及《魔物娘合成乐园》的角色立绘与 CG。"
   noindex
 >
   <div class="wrap">
     <header class="page-head">
       <p class="page-head__kicker">ALL WORKS / 全部作品</p>
-      <h1 class="page-head__title">全部作品 <em>EARLY ARCHIVE</em></h1>
+      <h1 class="page-head__title">全部作品 <em>ALL WORKS</em></h1>
       <p class="page-head__lead">
-        2014–2024 的早期绘画、练习、黑历史、漫画和项目图。精选作品在「作品」里；这里是完整档案。
-        两部完整漫画已单独收录在漫画页。
+        《魔物娘合成乐园》的 {gameArt.counts['角色立绘']} 张角色立绘、{gameArt.counts['Q 版']} 张 Q 版、
+        {gameArt.counts['游戏CG']} 张 CG，加上 2014–2024 的早期绘画、练习、黑历史和项目图，共 {items.length} 件。
+        默认从新到旧。
       </p>
       <div class="page-head__meta">
         <span><b>{items.length}</b> 件</span>
-        <span>2014 — 2024</span>
-        <span>按创作时间</span>
+        <span>2014 — 2026</span>
+        <span>默认从新到旧</span>
       </div>
     </header>
 
@@ -40,8 +43,8 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
       </div>
       <div class="all-sort">
         <span class="filter-bar__label">排序</span>
-        <button class="sort-btn" type="button" data-sort="newest">最新优先</button>
-        <button class="sort-btn is-active" type="button" data-sort="oldest">从旧到新</button>
+        <button class="sort-btn is-active" type="button" data-sort="newest">最新优先</button>
+        <button class="sort-btn" type="button" data-sort="oldest">从旧到新</button>
         <button class="sort-btn" type="button" data-sort="name">按名称</button>
       </div>
       <span class="filter-count" data-count>{items.length} WORKS</span>
@@ -93,7 +96,7 @@ const categories = Array.from(new Set(items.map((item) => item.category)));
   const count = document.querySelector<HTMLElement>('[data-count]');
   const loadMore = document.querySelector<HTMLButtonElement>('[data-load-more]');
   let category = '全部';
-  let sort = 'oldest';
+  let sort = 'newest';
   let visible = 60;
 
   const render = () => {

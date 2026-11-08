@@ -9,7 +9,9 @@ import portfolioData from '../../data/portfolio.json';
 import archiveData from '../../data/archive.json';
 import comicsData from '../../data/comics.json';
 
-const works = [...worksData.works].sort((a, b) => a.order - b.order);
+const works = worksData.works
+  .filter((work) => !work.hidden)
+  .sort((a, b) => a.order - b.order);
 const videos = videosData.videos;
 const categories = ['全部', ...Array.from(new Set(works.map((work) => work.category)))];
 const archiveCount = archiveData.items.filter((item) => item.sub !== '漫画').length;
