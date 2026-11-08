@@ -44,7 +44,14 @@ const posts = [...journal.posts].sort((a, b) => {
               {post.images && post.images.length > 0 && (
                 <div class="journal-item__images">
                   {post.images.map((img) => (
-                    <img src={imgSrc(img)} alt={post.title || '日记配图'} loading="lazy" decoding="async" />
+                    <img
+                      src={imgSrc(img)}
+                      alt={post.title || '日记配图'}
+                      loading="lazy"
+                      decoding="async"
+                      data-journal-img={imgSrc(img)}
+                      data-journal-cap={post.title || ''}
+                    />
                   ))}
                 </div>
               )}
@@ -65,7 +72,35 @@ const posts = [...journal.posts].sort((a, b) => {
       </div>
     )}
   </div>
+
+  <dialog class="about-lightbox journal-lightbox" data-journal-lightbox>
+    <button class="about-lightbox__close" type="button" data-journal-close aria-label="关闭">✕</button>
+    <img data-journal-lightbox-img alt="" />
+    <p data-journal-lightbox-cap></p>
+  </dialog>
 </Base>
+
+<script is:inline>
+  (() => {
+    const dlg = document.querySelector('[data-journal-lightbox]');
+    const dImg = document.querySelector('[data-journal-lightbox-img]');
+    const dCap = document.querySelector('[data-journal-lightbox-cap]');
+    if (!dlg || !dImg) return;
+
+    document.querySelectorAll('[data-journal-img]').forEach((img) => {
+      img.addEventListener('click', () => {
+        dImg.src = img.getAttribute('data-journal-img') || '';
+        if (dCap) dCap.textContent = img.getAttribute('data-journal-cap') || '';
+        dlg.showModal();
+      });
+    });
+
+    document.querySelector('[data-journal-close]')?.addEventListener('click', () => dlg.close());
+    dlg.addEventListener('click', (e) => {
+      if (e.target === dlg) dlg.close();
+    });
+  })();
+</script>
 
 <script is:inline>
   (() => {

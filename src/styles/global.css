@@ -3589,3 +3589,8 @@ html { scroll-behavior: smooth; }
 .journal-comments__mount { min-height: 40px; }
 .journal-comments__mount .utterances { max-width: 100%; margin: 0; }
 .journal-comments__frame { padding: 4px; }
+
+.journal-item__images img { cursor: zoom-in; transition: opacity .25s, transform .4s var(--ease); }
+.journal-item__images img:hover { opacity: .86; transform: scale(1.012); }
+.journal-lightbox { max-width: min(94vw, 1080px); }
+.journal-lightbox img { max-height: 84vh; }
