@@ -3662,3 +3662,35 @@ html { scroll-behavior: smooth; }
   color: var(--gold);
   border-color: rgba(198, 164, 104, 0.6);
 }
+
+.journal-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 0 0 12px;
+}
+.journal-filter__btn {
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  background: transparent;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .25s, border-color .25s, background .25s;
+}
+.journal-filter__btn:hover { color: var(--ink); border-color: rgba(198,164,104,.45); }
+.journal-filter__btn.is-active {
+  color: var(--gold);
+  border-color: rgba(198,164,104,.55);
+  background: rgba(198,164,104,.12);
+}
+.journal-filter__sep {
+  width: 1px;
+  height: 16px;
+  margin: 0 4px;
+  background: var(--line);
+}
+.journal-filter__years { display: flex; flex-wrap: wrap; gap: 6px; }

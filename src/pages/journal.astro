@@ -30,6 +30,17 @@ const posts = [...journal.posts].sort((a, b) => {
     {posts.length === 0 ? (
       <p class="muted" style="padding: 40px 0 90px">还没有内容。登录 <a href="/admin/">/admin/</a> 就能发第一条。</p>
     ) : (
+      <div class="journal-filter">
+        <button class="journal-filter__btn is-active" type="button" data-jf="all">全部</button>
+        <button class="journal-filter__btn" type="button" data-jf="own">我的动态</button>
+        <button class="journal-filter__btn" type="button" data-jf="share">说说</button>
+        <button class="journal-filter__btn" type="button" data-jf="album">相册</button>
+        <span class="journal-filter__sep"></span>
+        <button class="journal-filter__btn" type="button" data-jf="images">只看有图的</button>
+        <span class="journal-filter__sep"></span>
+        <span class="journal-filter__years" data-jf-years></span>
+      </div>
+
       <div class="journal-bar">
         <button class="journal-bar__btn is-active" type="button" data-journal-sort="desc">从新到旧</button>
         <button class="journal-bar__btn" type="button" data-journal-sort="asc">从旧到新</button>
@@ -37,7 +48,7 @@ const posts = [...journal.posts].sort((a, b) => {
 
       <div class="journal-list">
         {posts.map((post) => (
-          <article class="journal-item" data-journal-date={post.date || ""}>
+          <article class="journal-item" data-journal-date={post.date || ""} data-journal-kind={post.source === "QQ空间相册" ? "album" : post.source === "QQ空间" ? "share" : "own"} data-journal-img-count={(post.images || []).length}>
             <div class="journal-item__side">
               <time class="journal-item__date">{(post.date || '').slice(0, 10)}</time>
               {post.mood && <span class="journal-item__mood">{post.mood}</span>}
@@ -117,6 +128,70 @@ const posts = [...journal.posts].sort((a, b) => {
       });
     };
     drawYears();
+
+    // ---- 筛选 ----
+    const fBox = document.querySelector('[data-jf-years]');
+    const years = Array.from(new Set(items.map((el) => (el.getAttribute('data-journal-date') || '').slice(0, 4)).filter(Boolean))).sort().reverse();
+    if (fBox) {
+      fBox.innerHTML = '<button class="journal-filter__btn is-active" type="button" data-jf-year="all">全部年份</button>' +
+        years.map((y) => '<button class="journal-filter__btn" type="button" data-jf-year="' + y + '">' + y + '</button>').join('');
+    }
+
+    let kind = 'all';
+    let year = 'all';
+    let onlyImages = false;
+
+    const applyFilter = () => {
+      items.forEach((el) => {
+        const k = el.getAttribute('data-journal-kind');
+        const y = (el.getAttribute('data-journal-date') || '').slice(0, 4);
+        const n = Number(el.getAttribute('data-journal-img-count') || 0);
+        let show = true;
+        if (kind !== 'all' && k !== kind) show = false;
+        if (year !== 'all' && y !== year) show = false;
+        if (onlyImages && n === 0) show = false;
+        el.style.display = show ? '' : 'none';
+      });
+      // 重排年份标题
+      list.querySelectorAll('.journal-year').forEach((n) => n.remove());
+      let last = null;
+      Array.from(list.querySelectorAll('.journal-item')).forEach((item) => {
+        if (item.style.display === 'none') return;
+        const y = (item.getAttribute('data-journal-date') || '').slice(0, 4);
+        if (!y || y === last) return;
+        last = y;
+        const h = document.createElement('h2');
+        h.className = 'journal-year';
+        h.textContent = y;
+        list.insertBefore(h, item);
+      });
+    };
+
+    document.querySelectorAll('.journal-filter').forEach((box) => {
+      box.addEventListener('click', (e) => {
+        const kindBtn = e.target.closest('[data-jf]');
+        if (kindBtn) {
+          const v = kindBtn.getAttribute('data-jf');
+          if (v === 'images') {
+            onlyImages = !onlyImages;
+            kindBtn.classList.toggle('is-active', onlyImages);
+          } else {
+            kind = v;
+            box.querySelectorAll('[data-jf]').forEach((b) => {
+              if (b.getAttribute('data-jf') !== 'images') b.classList.toggle('is-active', b === kindBtn);
+            });
+          }
+          applyFilter();
+          return;
+        }
+        const yearBtn = e.target.closest('[data-jf-year]');
+        if (yearBtn) {
+          year = yearBtn.getAttribute('data-jf-year');
+          if (fBox) fBox.querySelectorAll('[data-jf-year]').forEach((b) => b.classList.toggle('is-active', b === yearBtn));
+          applyFilter();
+        }
+      });
+    });
 
     bar.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-journal-sort]');
