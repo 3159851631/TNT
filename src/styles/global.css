@@ -3594,3 +3594,38 @@ html { scroll-behavior: smooth; }
 .journal-item__images img:hover { opacity: .86; transform: scale(1.012); }
 .journal-lightbox { max-width: min(94vw, 1080px); }
 .journal-lightbox img { max-height: 84vh; }
+
+/* ---------- language switch ---------- */
+
+.lang-switch {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 320;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(198, 164, 104, 0.3);
+  background: rgba(8, 7, 12, 0.78);
+  backdrop-filter: blur(6px);
+}
+.lang-switch button {
+  padding: 4px 8px;
+  border: 0;
+  background: transparent;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .25s, background .25s;
+}
+.lang-switch button:hover { color: var(--ink); }
+.lang-switch button.is-active {
+  background: rgba(198, 164, 104, 0.16);
+  color: var(--gold);
+}
+@media (max-width: 700px) {
+  .lang-switch { right: 8px; bottom: 8px; }
+  .lang-switch button { padding: 3px 6px; font-size: 8.5px; }
+}
