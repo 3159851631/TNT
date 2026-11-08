@@ -3629,3 +3629,12 @@ html { scroll-behavior: smooth; }
   .lang-switch { right: 8px; bottom: 8px; }
   .lang-switch button { padding: 3px 6px; font-size: 8.5px; }
 }
+
+.journal-bar { display: flex; gap: 6px; padding: 0 0 4px; }
+.journal-bar__btn {
+  padding: 5px 11px; border: 1px solid var(--line); background: transparent;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .12em; color: var(--muted);
+  cursor: pointer; transition: color .25s, border-color .25s, background .25s;
+}
+.journal-bar__btn:hover { color: var(--ink); border-color: rgba(198,164,104,.45); }
+.journal-bar__btn.is-active { color: var(--gold); border-color: rgba(198,164,104,.55); background: rgba(198,164,104,.1); }
