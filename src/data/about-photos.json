@@ -1,0 +1,14 @@
+{
+  "photos": [
+    {
+      "src": "/uploads/about/portrait-2026-11.webp",
+      "period": "2026.11",
+      "caption": "最近的一张"
+    },
+    {
+      "src": "/uploads/about/wangjun-portrait.jpg",
+      "period": "早期",
+      "caption": "以前的样子"
+    }
+  ]
+}

@@ -194,3 +194,29 @@ collections:
               - { label: 宽, name: w, widget: number, value_type: int }
               - { label: 高, name: h, widget: number, value_type: int }
               - { label: 比例, name: aspect, widget: string, required: false }
+
+  # ------------------------------------------------------------
+  # 日记 / 动态：登录 /admin/ 后在这里上传，网友只能看
+  # ------------------------------------------------------------
+  - name: journal
+    label: 日记 / 动态
+    files:
+      - name: posts
+        label: 动态列表
+        file: src/data/journal.json
+        fields:
+          - label: 动态
+            name: posts
+            widget: list
+            summary: '{{fields.date}} · {{fields.title}}'
+            fields:
+              - { label: 日期, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: HH:mm, format: YYYY-MM-DD HH:mm }
+              - { label: 标题, name: title, widget: string, required: false, hint: 可以不填 }
+              - { label: 正文, name: body, widget: text }
+              - { label: 分类, name: mood, widget: select, options: ['日常', '开发进度', '画画', '心情', '杂记'], required: false }
+              - label: 图片
+                name: images
+                widget: list
+                required: false
+                field: { label: 图片, name: image, widget: image }
+              - { label: 置顶, name: pinned, widget: boolean, default: false, required: false }

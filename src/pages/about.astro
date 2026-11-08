@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import Age from '../components/Age.astro';
 import site from '../data/site.json';
+import photoData from '../data/about-photos.json';
 
 const now = [
   ['2026', '做《魔物娘合身乐园》的生存系统和完整 wiki；整理《魔物娘合成乐园》的物品图鉴。'],
@@ -10,6 +11,7 @@ const now = [
   ['2024', '开始系统做 3D 场景和角色；继续画插画、分镜和角色设定。'],
   ['2023', '早期插画与角色练习，开始把画的东西做成小游戏。'],
 ];
+const photos = photoData.photos;
 ---
 
 <Base
@@ -61,18 +63,48 @@ const now = [
 
         <div style="margin-top: 30px">
           <SocialLinks />
+          <p style="margin-top: 18px"><a class="link-arrow" href="/journal/">我的日记 / JOURNAL</a></p>
         </div>
       </div>
 
       <div>
         <div class="about-portrait about-portrait--photo">
-          <img src="/uploads/about/wangjun-portrait.jpg" alt="王君" />
+          <img src={photos[0].src} alt="王君" data-about-main />
           <div class="about-portrait__label">王君 / EXPLODINGTNT</div>
+          <span class="about-portrait__when">{photos[0].period}</span>
         </div>
+
+        <div class="about-photos">
+          <button class="about-photos__toggle" type="button" data-about-toggle aria-expanded="false">
+            查看更多 <span>+{photos.length}</span>
+          </button>
+          <div class="about-photos__strip" data-about-strip hidden>
+            {photos.map((photo, i) => (
+              <button
+                class="about-photos__item"
+                type="button"
+                data-about-photo={photo.src}
+                data-about-period={photo.period}
+                aria-label={`查看 ${photo.period} 的照片`}
+              >
+                <img src={photo.src} alt={`王君 ${photo.period}`} loading="lazy" decoding="async" />
+                <span>{photo.period}</span>
+                {i === 0 && <i>最新</i>}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <p class="muted" style="margin-top: 14px; font-size: 11.5px; line-height: 1.8">
-          本人照片。
+          本人照片，不同时期的放在「查看更多」里。
         </p>
       </div>
+
+      <dialog class="about-lightbox" data-about-lightbox>
+        <button class="about-lightbox__close" type="button" data-about-close aria-label="关闭">✕</button>
+        <img data-about-lightbox-img alt="" />
+        <p data-about-lightbox-cap></p>
+      </dialog>
     </div>
 
     <section style="padding-top: 20px; padding-bottom: 60px">
@@ -127,3 +159,36 @@ const now = [
     </section>
   </div>
 </Base>
+
+<script is:inline>
+  (() => {
+    const toggle = document.querySelector('[data-about-toggle]');
+    const strip = document.querySelector('[data-about-strip]');
+    const dialog = document.querySelector('[data-about-lightbox]');
+    const dImg = document.querySelector('[data-about-lightbox-img]');
+    const dCap = document.querySelector('[data-about-lightbox-cap]');
+
+    toggle?.addEventListener('click', () => {
+      const open = strip.hasAttribute('hidden');
+      if (open) strip.removeAttribute('hidden');
+      else strip.setAttribute('hidden', '');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.firstChild.textContent = open ? '收起 ' : '查看更多 ';
+    });
+
+    document.querySelectorAll('[data-about-photo]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (!dialog || !dImg || !dCap) return;
+        dImg.src = btn.dataset.aboutPhoto || '';
+        dCap.textContent = btn.dataset.aboutPeriod || '';
+        dialog.showModal();
+      });
+    });
+
+    document.querySelector('[data-about-close]')?.addEventListener('click', () => dialog?.close());
+    dialog?.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+  })();
+</script>
+<!-- about-photo-script -->

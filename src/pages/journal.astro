@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import journal from '../data/journal.json';
+
+const posts = [...journal.posts].sort((a, b) => {
+  if (a.pinned && !b.pinned) return -1;
+  if (!a.pinned && b.pinned) return 1;
+  return String(b.date || '').localeCompare(String(a.date || ''));
+});
+---
+
+<Base
+  title="日记"
+  description="EXPLODINGTNT 的日记与动态：开发进度、画画、日常和一些想法。"
+  image={posts[0]?.images?.[0]?.image || undefined}
+>
+  <div class="wrap">
+    <header class="page-head">
+      <p class="page-head__kicker">JOURNAL / 日记</p>
+      <h1 class="page-head__title">日记 <em>JOURNAL</em></h1>
+      <p class="page-head__lead">开发进度、画画、日常和一些想法。想到什么写什么。</p>
+      <div class="page-head__meta">
+        <span><b>{posts.length}</b> 条</span>
+        <span>最新在上</span>
+      </div>
+    </header>
+
+    {posts.length === 0 ? (
+      <p class="muted" style="padding: 40px 0 90px">还没有内容。登录 <a href="/admin/">/admin/</a> 就能发第一条。</p>
+    ) : (
+      <div class="journal-list">
+        {posts.map((post) => (
+          <article class="journal-item">
+            <div class="journal-item__side">
+              <time class="journal-item__date">{(post.date || '').slice(0, 10)}</time>
+              {post.mood && <span class="journal-item__mood">{post.mood}</span>}
+            </div>
+            <div class="journal-item__body">
+              {post.pinned && <span class="journal-item__pin">置顶</span>}
+              {post.title && <h2 class="journal-item__title">{post.title}</h2>}
+              {(post.body || '').split('\n').filter(Boolean).map((line) => <p>{line}</p>)}
+              {post.images && post.images.length > 0 && (
+                <div class="journal-item__images">
+                  {post.images.map((img) => (
+                    <img src={img.image} alt={post.title || '日记配图'} loading="lazy" decoding="async" />
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</Base>
