@@ -6,27 +6,33 @@
       "en": "MONSTER GIRL: SYNTHESIS PARADISE",
       "year": "2026",
       "period": "2026 — 现在",
-      "status": "开发中",
+      "status": "开发中 · Demo 2026 年底",
       "role": "策划 / 美术 / 程序",
       "genre": "2D 像素 / Galgame / 生存建造 / 合成 / 战斗 / 经营",
       "engine": "Unity 2021.3 + Spine",
-      "cover": "/uploads/wiki/cg/hero-2.webp",
+      "cover": "/uploads/projects/itch/shot-01.webp",
       "coverMode": "image",
       "featured": true,
       "order": 1,
-      "summary": "异世界转生题材的 2D 像素游戏：在诺兰德大陆采集、战斗、合成魔物娘，经营自己的乐园，把散落的半神碎片一块块拼回去。完整 Wiki 已上线。",
+      "summary": "异世界转生题材的 2D 像素游戏：在诺兰德大陆采集、战斗、合成魔物娘，经营自己的乐园，把散落的半神碎片一块块拼回去。免费 Demo 计划 2026 年底放出，完整版之后上 Steam。",
       "body": [
         "《魔物娘合成乐园》（原名《半神容器》）是一款 2D 像素的异世界转生游戏：白天在诺兰德大陆探索、采集、战斗，回据点经营自己的店，把一路遇到的魔物娘收进图鉴。用 Unity 2021.3 + Spine 制作，2026 年开始开发，目前仍在做。",
         "故事从现实开始：社畜阿杰在通勤路上为救一个女孩而死，醒来时已经变成异世界的少女「阿葵」。她在初始森林被猫耳向导爱娜捡到，为了活下去跟着爱娜采集、做饭、听她醉酒后讲这个世界的真相，也因此卷进诺兰德帝国的「半神容器」计划——把散落在各地的半神碎片收集起来，装进她这个容器里。",
         "世界由 23 个区域组成：初始森林、山下小镇、诺兰德主城、王城学院、霜脉族的雪山、炎沙国的沙漠、锈蚀港湾、深海、天空城、无限地牢、永夜区、腐荒王国的沼泽、精灵丛林、龙之岛、海妖区、瘟疫之地……每个区域有自己的怪物、BOSS、NPC、资源和昼夜/天气变化，部分区域还会出现沙尘暴、暴风雪、涨潮这类环境事件。",
         "生存部分不是硬核那一挂，但该有的都有：生命、魔力、耐力、饥饿、口渴、温度都会影响行动；怪物会追人，有仇恨和击退；白天和夜晚刷的怪不一样；床、旅馆和复活点可以存档，死亡后在最近的复活点醒来。",
-        "「合成」是核心玩法。素材、魔物娘和事件可以组合出新的东西：同一种魔物娘有多个阶段形态，合成或进化后会换外观、换数值，也会解锁新的配方。图鉴目前收录 309 种怪物、456 件物品和 168 个配方，每条配方都写清材料、制作站和产出。",
+        "「合成」是核心玩法。素材、魔物娘和事件可以组合出新的东西：同一种魔物娘有多个阶段形态，合成或进化后会换外观、换数值，也会解锁新的配方。图鉴目前收录 309 种怪物、465 件物品、170 个配方和 211 件武器，每条配方都写清材料、制作站和产出。",
         "主世界还有一条独立的经营线：买房产、开店、招聘员工、进货、上架定价、支付工资和维护费，接侦探社的委托赚外快，再用赚到的钱升级店铺、扩招员工。冒险和经营是两条可以随时来回切的线。",
         "剧情从序章写到第八章，另有一批独立区域剧情（永夜古堡、腐荒王国、沙缚之国、瘟疫之地、龙之岛、天空城、地牢、精灵丛林）。第一章开始就有选择分支——帮不帮爱娜会走向不同的流程，后面的章节也都有支线和区域剧情。",
-        "游戏的完整 Wiki 已经上线：195 位角色、23 个区域、309 种怪物、456 件物品、168 个配方、20 篇剧情，还有机制、经营、音乐、存档和可缩放的世界地图；支持搜索和别名（搜「龙娘」会找到佩露，搜「雪女」会找到凛）。地址：tnt-game-site.pages.dev/wiki/",
+        "游戏的完整 Wiki 已经上线：195 位角色、23 个区域、309 种怪物、465 件物品、211 件武器、170 个配方、20 篇剧情，还有机制、经营、音乐、存档和可缩放的世界地图；支持搜索和别名（搜「龙娘」会找到佩露，搜「雪女」会找到凛）。地址：tnt-game-site.pages.dev/wiki/",
+        "itch.io 上已经开了页面（tnt-monsterpark.itch.io/monster-girl-synthesis-park）：免费 Demo 计划在 2026 年底放出，内容是第一场 BOSS 战；完整版之后上 Steam。目前支持英语、日语、俄语、简体中文、繁体中文，平均一周目时长约一小时，键盘、鼠标和手柄都能玩。",
+        "美术、剧本、设计、程序全部一个人做，没有使用任何生成式 AI。主题曲《Flourishing Paradise》也已经放进 Wiki 当背景音乐。",
         "游戏仍在开发中，Wiki 会跟着版本继续补，页面上的内容以实际版本为准。"
       ],
       "links": [
+        {
+          "label": "itch.io 页面",
+          "url": "https://tnt-monsterpark.itch.io/monster-girl-synthesis-park"
+        },
         {
           "label": "游戏 Wiki",
           "url": "/wiki/"
@@ -35,8 +41,18 @@
       "gallery": [
         "/uploads/wiki/cg/hero-1.webp",
         "/uploads/projects/galgame-map.webp",
-        "/uploads/wiki/map/world-map-marked.webp",
-        "/uploads/wiki/regions/initial-forest.webp"
+        "/uploads/wiki/map/world-map-marked-v2.webp",
+        "/uploads/wiki/regions/initial-forest.webp",
+        "/uploads/projects/itch/shot-02.webp",
+        "/uploads/projects/itch/shot-03.webp",
+        "/uploads/projects/itch/shot-04.webp",
+        "/uploads/projects/itch/shot-05.webp",
+        "/uploads/projects/itch/shot-06.webp",
+        "/uploads/projects/itch/shot-07.webp",
+        "/uploads/projects/itch/shot-08.webp",
+        "/uploads/projects/itch/shot-09.webp",
+        "/uploads/projects/itch/shot-10.webp",
+        "/uploads/projects/itch/shot-11.webp"
       ]
     },
     {

@@ -21,9 +21,7 @@ const gallery = (project.gallery || []).filter((src) => src !== project.cover);
 const paragraphs = (project.body || []).map((paragraph: string | { paragraph?: string }) =>
   typeof paragraph === 'string' ? paragraph : paragraph.paragraph || ''
 );
-const extraLink = (project.links || [])[0];
-const codexLink = extraLink?.url || '';
-const codexLabel = extraLink?.label || '';
+const links = (project.links || []).filter((link: { url?: string }) => link && link.url);
 ---
 
 <Base title={project.title} description={project.summary} image={project.cover}>
@@ -51,9 +49,18 @@ const codexLabel = extraLink?.label || '';
     <div class="detail-grid">
       <div class="detail-body prose">
         {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-        {codexLink && (
-          <p style="margin-top: 30px">
-            <a class="btn" href={codexLink}>{codexLabel}</a>
+        {links.length > 0 && (
+          <p style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px">
+            {links.map((link) => (
+              <a
+                class="btn"
+                href={link.url}
+                target={link.url.startsWith('http') ? '_blank' : undefined}
+                rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
           </p>
         )}
       </div>
