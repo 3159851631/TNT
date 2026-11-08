@@ -2,6 +2,8 @@
 import Base from '../layouts/Base.astro';
 import journal from '../data/journal.json';
 
+const imgSrc = (img: unknown) =>
+  typeof img === 'string' ? img : ((img as { image?: string })?.image || '');
 const posts = [...journal.posts].sort((a, b) => {
   if (a.pinned && !b.pinned) return -1;
   if (!a.pinned && b.pinned) return 1;
@@ -12,7 +14,7 @@ const posts = [...journal.posts].sort((a, b) => {
 <Base
   title="日记"
   description="EXPLODINGTNT 的日记与动态：开发进度、画画、日常和一些想法。"
-  image={posts[0]?.images?.[0]?.image || undefined}
+  image={imgSrc(posts[0]?.images?.[0])}
 >
   <div class="wrap">
     <header class="page-head">
@@ -42,7 +44,7 @@ const posts = [...journal.posts].sort((a, b) => {
               {post.images && post.images.length > 0 && (
                 <div class="journal-item__images">
                   {post.images.map((img) => (
-                    <img src={img.image} alt={post.title || '日记配图'} loading="lazy" decoding="async" />
+                    <img src={imgSrc(img)} alt={post.title || '日记配图'} loading="lazy" decoding="async" />
                   ))}
                 </div>
               )}
