@@ -72,24 +72,6 @@
       "gallery": []
     },
     {
-      "slug": "rain-train",
-      "title": "雨之残响",
-      "en": "RAIN ECHO",
-      "year": "2025",
-      "category": "场景",
-      "cover": "/uploads/works/rain-train.webp",
-      "aspect": "4/3",
-      "featured": true,
-      "order": 2,
-      "description": "黄昏的站台、潮湿的铁轨，和一趟不知道还会不会来的车。",
-      "medium": "实时场景 / UE5",
-      "tools": [
-        "Unreal Engine 5",
-        "Substance 3D Painter"
-      ],
-      "gallery": []
-    },
-    {
       "slug": "neon-street",
       "title": "霓虹街区",
       "en": "NEON DISTRICT",

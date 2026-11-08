@@ -300,19 +300,6 @@
       "featured": false
     },
     {
-      "slug": "game-09",
-      "title": "雨之残响",
-      "en": "RAIN ECHO",
-      "year": "2025",
-      "duration": "—",
-      "provider": "local",
-      "account": "游戏实机",
-      "localSrc": "/uploads/videos/local/game-09.mp4",
-      "cover": "/uploads/videos/local/game-09.jpg",
-      "description": "游戏实机 · 项目视频",
-      "featured": false
-    },
-    {
       "slug": "game-10",
       "title": "命骸",
       "en": "FATE BONES",

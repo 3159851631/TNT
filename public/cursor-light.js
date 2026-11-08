@@ -132,6 +132,7 @@ html.tnt-down .tnt-cur__ring {
   let lastT = 0;
   let nextParticle = 0;
   let lastMove = 0;
+  let lastDraw = 0;
   let hasPointer = false;
 
   const trail = [];
@@ -152,6 +153,7 @@ html.tnt-down .tnt-cur__ring {
     canvas.height = Math.round(vh * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, vw, vh);
+    initEmbers();
   }
 
   function ensureCanvas() {
@@ -178,6 +180,92 @@ html.tnt-down .tnt-cur__ring {
       size: rand(0.7, 1.7),
       c: Math.random() < 0.28 ? GOLD : ROSE_LIGHT,
     });
+  }
+
+  /* ---------------- 萤火 / 火星 ---------------- */
+  let sprite = null;
+  const embers = [];
+
+  function makeSprite() {
+    const s = document.createElement('canvas');
+    s.width = 32;
+    s.height = 32;
+    const g2 = s.getContext('2d');
+    const grd = g2.createRadialGradient(16, 16, 0, 16, 16, 16);
+    grd.addColorStop(0, 'rgba(255, 244, 220, 1)');
+    grd.addColorStop(0.32, 'rgba(226, 168, 108, 0.5)');
+    grd.addColorStop(1, 'rgba(196, 116, 74, 0)');
+    g2.fillStyle = grd;
+    g2.fillRect(0, 0, 32, 32);
+    return s;
+  }
+
+  function newEmber(anywhere) {
+    const depth = Math.random();
+    return {
+      x: Math.random() * vw,
+      y: anywhere ? Math.random() * vh : vh + rand(10, 60),
+      vx: rand(-0.06, 0.06),
+      vy: rand(-0.3, -0.09) * (0.55 + depth),
+      base: rand(-0.3, -0.09) * (0.55 + depth),
+      depth,
+      phase: Math.random() * Math.PI * 2,
+      sway: rand(0.0003, 0.001),
+      flick: rand(0.0015, 0.004),
+      size: 1.5 + depth * 2.7,
+    };
+  }
+
+  function initEmbers() {
+    embers.length = 0;
+    window.__tntEmbers = embers;
+    if (!vw || !vh) return;
+    const count = Math.max(16, Math.min(64, Math.round((vw * vh) / 22000)));
+    for (let i = 0; i < count; i += 1) embers.push(newEmber(true));
+  }
+
+  function drawEmbers(t, dt) {
+    if (!sprite) sprite = makeSprite();
+    const R = 155;
+    const step = dt * 0.06;
+    for (let i = 0; i < embers.length; i += 1) {
+      const e = embers[i];
+      e.phase += e.sway * dt;
+
+      // 鼠标靠近 → 往外吹散
+      if (hasPointer && t - lastMove < 4000) {
+        const dx = e.x - pointer.x;
+        const dy = e.y - pointer.y;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < R * R) {
+          const d = Math.sqrt(d2) || 1;
+          const f = (1 - d / R) * (1 - d / R) * 4.4;
+          e.vx += (dx / d) * f;
+          e.vy += (dy / d) * f * 0.7;
+        }
+      }
+
+      // 慢慢回到原来的上飘速度
+      e.vx *= 0.93;
+      e.vy += (e.base - e.vy) * 0.035;
+
+      e.x += (e.vx + Math.sin(e.phase * 2.4) * 0.09) * step;
+      e.y += e.vy * step;
+
+      if (e.y < -40) {
+        embers[i] = newEmber(false);
+        continue;
+      }
+      if (e.x < -40) e.x = vw + 40;
+      else if (e.x > vw + 40) e.x = -40;
+
+      const flick = 0.6 + 0.4 * Math.sin(t * e.flick + e.phase * 3);
+      const a = (0.2 + e.depth * 0.4) * flick;
+      const s = e.size * (1 + e.depth * 0.55);
+      ctx.globalAlpha = a;
+      ctx.drawImage(sprite, e.x - s, e.y - s, s * 2, s * 2);
+    }
+    ctx.globalAlpha = 1;
   }
 
   function drawTrail(t) {
@@ -271,27 +359,32 @@ html.tnt-down .tnt-cur__ring {
     const dt = lastT ? Math.min(48, t - lastT) : 16;
     lastT = t;
 
+    const busy =
+      trail.length > 1 || particles.length > 0 || flashes.length > 0 || t - lastMove < 240;
+
+    // 只有萤火在飘时降到约 30fps，省电
+    if (!busy && t - lastDraw < 34) {
+      rafId = requestAnimationFrame(frame);
+      return;
+    }
+    lastDraw = t;
+
     ctx.clearRect(0, 0, vw, vh);
     ctx.globalCompositeOperation = 'lighter';
 
-    while (trail.length && t - trail[0].t > TRAIL_LIFE) trail.shift();
+    while (trail.length && trail[0] && t - trail[0].t > TRAIL_LIFE) trail.shift();
 
+    drawEmbers(t, dt);
     drawTrail(t);
     drawHead(t);
     drawParticles(t, dt);
     drawFlashes(t);
 
+    ctx.globalAlpha = 1;
     ctx.globalCompositeOperation = 'source-over';
 
-    const busy =
-      trail.length > 1 || particles.length > 0 || flashes.length > 0 || t - lastMove < 220;
-    if (busy && !document.hidden) {
-      rafId = requestAnimationFrame(frame);
-    } else {
-      running = false;
-      lastT = 0;
-      ctx.clearRect(0, 0, vw, vh);
-    }
+    if (!document.hidden) rafId = requestAnimationFrame(frame);
+    else running = false;
   }
 
   function start() {
@@ -407,4 +500,5 @@ html.tnt-down .tnt-cur__ring {
   });
 
   ensureCanvas();
+  start();
 })();
