@@ -77,22 +77,26 @@ const marquee = [
       </div>
     </div>
 
-    <figure class="hero__figure" data-hero-figure>
-      <span class="hero__figure-glow" aria-hidden="true"></span>
-      <img
-        class="hero__figure-img"
-        src="/uploads/wiki/characters/a-kui-v2.webp"
-        alt="阿葵 · 《魔物娘合成乐园》主角"
-        width="900"
-        height="1600"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        data-hero-figure-img
-      />
-      <figcaption class="hero__figure-cap">
-        <span class="hero__figure-name"><b>阿葵</b><i>AKUI</i></span>
-        <span class="hero__figure-role">半神容器 / PROTAGONIST</span>
+    <figure class="hero__plate" data-hero-plate>
+      <a class="hero__plate-link" href={`/works/${heroWorks[0].slug}/`} data-hero-link aria-label={`查看作品：${heroWorks[0].title}`}>
+        {heroWorks.map((work, i) => (
+          <img
+            class={`hero__slide${i === 0 ? ' is-active' : ''}`}
+            src={work.cover}
+            alt={work.title}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
+            data-hero-slide
+            data-href={`/works/${work.slug}/`}
+            data-title={work.title}
+            data-en={work.en || ''}
+            data-year={work.year}
+          />
+        ))}
+      </a>
+      <figcaption class="hero__caption">
+        <span><b data-hero-title>{heroWorks[0].title}</b><span data-hero-en>{heroWorks[0].en}</span></span>
+        <span><span data-hero-year>{heroWorks[0].year}</span> / PLATE 001</span>
       </figcaption>
     </figure>
 
@@ -285,48 +289,6 @@ const marquee = [
   startHeroTimer();
   heroPlate?.addEventListener('mouseenter', () => window.clearInterval(heroTimer));
   heroPlate?.addEventListener('mouseleave', startHeroTimer);
-</script>
-
-<script>
-  // 立绘随光标的极轻微视差（±8px），rAF + 缓动，静止即停
-  const figImg = document.querySelector<HTMLElement>('[data-hero-figure-img]');
-  const canParallax =
-    !!figImg &&
-    !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
-    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-  if (canParallax && figImg) {
-    let tx = 0;
-    let ty = 0;
-    let cx = 0;
-    let cy = 0;
-    let raf = 0;
-
-    const tick = () => {
-      cx += (tx - cx) * 0.12;
-      cy += (ty - cy) * 0.12;
-      figImg.style.transform = `translate3d(${cx.toFixed(2)}px,${cy.toFixed(2)}px,0)`;
-      if (Math.abs(tx - cx) > 0.12 || Math.abs(ty - cy) > 0.12) {
-        raf = requestAnimationFrame(tick);
-      } else {
-        raf = 0;
-        figImg.style.transform = `translate3d(${tx}px,${ty}px,0)`;
-      }
-    };
-
-    window.addEventListener(
-      'pointermove',
-      (e) => {
-        if (e.pointerType && e.pointerType !== 'mouse' && e.pointerType !== 'pen') return;
-        const nx = (e.clientX / window.innerWidth - 0.5) * 2;
-        const ny = (e.clientY / window.innerHeight - 0.5) * 2;
-        tx = nx * -8;
-        ty = ny * -5;
-        if (!raf) raf = requestAnimationFrame(tick);
-      },
-      { passive: true }
-    );
-  }
 </script>
 
 <script>
