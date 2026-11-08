@@ -3558,3 +3558,34 @@ html { scroll-behavior: smooth; }
   .journal-item { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .journal-item__side { flex-direction: row; align-items: center; }
 }
+
+/* ---------- journal comments ---------- */
+
+.journal-comments {
+  margin-top: 22px;
+  border: 1px solid var(--line);
+  background: rgba(20, 16, 28, 0.4);
+}
+
+.journal-comments__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.journal-comments__title {
+  font-family: var(--display);
+  font-size: 9.5px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+.journal-comments__hint {
+  font-size: 10px;
+  color: var(--faint);
+}
+.journal-comments__mount { min-height: 40px; }
+.journal-comments__mount .utterances { max-width: 100%; margin: 0; }
+.journal-comments__frame { padding: 4px; }

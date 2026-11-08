@@ -48,6 +48,17 @@ const posts = [...journal.posts].sort((a, b) => {
                   ))}
                 </div>
               )}
+
+              <div class="journal-comments">
+                <div class="journal-comments__head">
+                  <span class="journal-comments__title">留言 / COMMENTS</span>
+                  <span class="journal-comments__hint">用 GitHub 账号登录后即可评论</span>
+                </div>
+                <div
+                  class="journal-comments__mount"
+                  data-utterances={post.slug || post.date || ''}
+                ></div>
+              </div>
             </div>
           </article>
         ))}
@@ -55,3 +66,28 @@ const posts = [...journal.posts].sort((a, b) => {
     )}
   </div>
 </Base>
+
+<script is:inline>
+  (() => {
+    const mounts = document.querySelectorAll('[data-utterances]');
+    if (!mounts.length) return;
+    const REPO = '3159851631/TNT';
+
+    mounts.forEach((mount) => {
+      const term = 'journal/' + (mount.getAttribute('data-utterances') || 'post');
+      const frameWrap = document.createElement('div');
+      frameWrap.className = 'journal-comments__frame';
+      mount.appendChild(frameWrap);
+
+      const s = document.createElement('script');
+      s.src = 'https://utteranc.es/client.js';
+      s.async = true;
+      s.crossOrigin = 'anonymous';
+      s.setAttribute('repo', REPO);
+      s.setAttribute('issue-term', term);
+      s.setAttribute('theme', 'github-dark');
+      s.setAttribute('crossorigin', 'anonymous');
+      frameWrap.appendChild(s);
+    });
+  })();
+</script>
