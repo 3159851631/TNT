@@ -1,3 +1,18 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "date": "2026-11-05 01:26",
+      "title": "游戏的itch界面做好了。",
+      "body": "我的个.itch首页：https://tnt-monsterpark.itch.io/\nitch游戏界面首页:https://tnt-monsterpark.itch.io/monster-girl-synthesis-park",
+      "mood": "开发进度",
+      "images": [
+        "/uploads/pasted-image-1794134048526.png",
+        "/uploads/pasted-image-1794134061466.png",
+        "/uploads/pasted-image-1794134070474.png",
+        "/uploads/pasted-image-1794134074499.png",
+        "/uploads/pasted-image-1794134081644.png"
+      ],
+      "pinned": false
+    }
+  ]
 }
