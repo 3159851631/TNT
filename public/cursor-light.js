@@ -34,7 +34,9 @@
 
   /* ---------------- 样式 ---------------- */
   const CSS = `
-html.tnt-cur-on, html.tnt-cur-on * { cursor: none !important; }
+html.tnt-cur-on:not(.tnt-cur-paused),
+html.tnt-cur-on:not(.tnt-cur-paused) * { cursor: none !important; }
+html.tnt-cur-paused .tnt-cur { display: none !important; }
 html.tnt-cur-on input, html.tnt-cur-on textarea, html.tnt-cur-on select,
 html.tnt-cur-on [contenteditable="true"] { cursor: text !important; }
 
@@ -122,9 +124,56 @@ html.tnt-down .tnt-cur__ring {
     cxEl = el.querySelector('[data-cx]');
     cyEl = el.querySelector('[data-cy]');
     document.documentElement.classList.add('tnt-cur-on');
+    dialogOpen = Boolean(document.querySelector('dialog[open]'));
+    syncPause();
   }
 
   const pad4 = (n) => String(Math.max(0, Math.round(n))).padStart(4, '0');
+
+  /* ---------- 自动让路 ----------
+   * <dialog> 在浏览器"顶层"绘制，固定定位的准星会被盖住；
+   * iframe 里收不到 pointermove，准星会僵在原地。
+   * 这两种情况（以及全屏）一律恢复原生光标。 */
+  let overIframe = false;
+  let dialogOpen = false;
+
+  function syncPause() {
+    const fullscreen = Boolean(document.fullscreenElement);
+    const paused = dialogOpen || fullscreen || overIframe || !hasPointer;
+    document.documentElement.classList.toggle('tnt-cur-paused', paused);
+  }
+
+  function isIframeTarget(el) {
+    if (!el) return false;
+    if (el.tagName === 'IFRAME') return true;
+    const player = el.closest && el.closest('.video-card.is-playing');
+    return Boolean(player);
+  }
+
+  document.addEventListener('toggle', (e) => {
+    if (e.target && e.target.tagName === 'DIALOG') {
+      dialogOpen = Boolean(e.target.open);
+      syncPause();
+    }
+  }, true);
+  document.addEventListener('fullscreenchange', syncPause);
+  document.addEventListener(
+    'pointerover',
+    (e) => {
+      const next = isIframeTarget(e.target);
+      if (next !== overIframe) {
+        overIframe = next;
+        syncPause();
+      }
+    },
+    { passive: true }
+  );
+  document.addEventListener('pointerleave', () => {
+    if (curEl) curEl.style.opacity = '0';
+  });
+  document.addEventListener('pointerenter', () => {
+    if (curEl) curEl.style.opacity = '';
+  });
 
   /* ---------------- 光迹画布 ---------------- */
   let canvas = null;
@@ -436,6 +485,8 @@ html.tnt-down .tnt-cur__ring {
       const hit = e.target && e.target.closest ? e.target.closest(INTERACTIVE) : null;
       document.documentElement.classList.toggle('tnt-hover', !!hit);
     }
+
+    syncPause();
 
     trail.push({ x: e.clientX, y: e.clientY, t, c: Math.random() < 0.3 ? GOLD : ROSE });
     if (trail.length > TRAIL_MAX) trail.shift();
