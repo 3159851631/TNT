@@ -17,9 +17,14 @@
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   if (reduceMotion.matches || !finePointer.matches) return;
 
-  const ROSE = '201,138,134';
-  const ROSE_LIGHT = '224,164,156';
-  const GOLD = '198,164,104';
+  // Wiki 用火光配色（偏黄），主站保持原来的玫瑰金
+  const WIKI = /^\/wiki(\/|$)/.test(location.pathname);
+  const ROSE = WIKI ? '230,150,74' : '201,138,134';
+  const ROSE_LIGHT = WIKI ? '250,214,138' : '224,164,156';
+  const GOLD = WIKI ? '232,188,102' : '198,164,104';
+  const TRAIL_ALPHA = WIKI ? 0.17 : 0.36;
+  const HEAD_ALPHA = WIKI ? 0.065 : 0.11;
+  const DOT_COLOR = WIKI ? 'f2c56a' : 'e0a49c';
 
   const TRAIL_LIFE = 420;
   const TRAIL_MAX = 30;
@@ -57,7 +62,7 @@ html.tnt-cur-on [contenteditable="true"] { cursor: text !important; }
 .tnt-cur__cross::after { left: -.5px; top: -12px; width: 1px; height: 24px; }
 .tnt-cur__dot {
   position: absolute; left: 0; top: 0; width: 3px; height: 3px; margin: -1.5px 0 0 -1.5px;
-  border-radius: 50%; background: #${'e0a49c'};
+  border-radius: 50%; background: #${DOT_COLOR};
   box-shadow: 0 0 7px rgba(${ROSE_LIGHT},.85);
   transition: width .22s, height .22s, margin .22s;
 }
@@ -192,9 +197,15 @@ html.tnt-down .tnt-cur__ring {
     s.height = 32;
     const g2 = s.getContext('2d');
     const grd = g2.createRadialGradient(16, 16, 0, 16, 16, 16);
-    grd.addColorStop(0, 'rgba(255, 244, 220, 1)');
-    grd.addColorStop(0.32, 'rgba(226, 168, 108, 0.5)');
-    grd.addColorStop(1, 'rgba(196, 116, 74, 0)');
+    if (WIKI) {
+      grd.addColorStop(0, 'rgba(255, 236, 170, 1)');
+      grd.addColorStop(0.3, 'rgba(240, 160, 74, 0.55)');
+      grd.addColorStop(1, 'rgba(198, 96, 40, 0)');
+    } else {
+      grd.addColorStop(0, 'rgba(255, 244, 220, 1)');
+      grd.addColorStop(0.32, 'rgba(226, 168, 108, 0.5)');
+      grd.addColorStop(1, 'rgba(196, 116, 74, 0)');
+    }
     g2.fillStyle = grd;
     g2.fillRect(0, 0, 32, 32);
     return s;
@@ -279,7 +290,7 @@ html.tnt-down .tnt-cur__ring {
       if (k <= 0) continue;
       const dist = Math.hypot(b.x - a.x, b.y - a.y);
       if (dist < 0.4) continue;
-      const alpha = 0.36 * Math.pow(k, 1.15);
+      const alpha = TRAIL_ALPHA * Math.pow(k, 1.15);
       if (alpha < 0.006) continue;
       ctx.strokeStyle = `rgba(${b.c || ROSE},${alpha})`;
       ctx.lineWidth = (0.8 + 3.6 * k) * (dist > 26 ? 0.55 : 1);
@@ -295,7 +306,7 @@ html.tnt-down .tnt-cur__ring {
     if (idle >= 1) return;
     const r = 72;
     const g = ctx.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, r);
-    const a = 0.11 * (1 - idle);
+    const a = HEAD_ALPHA * (1 - idle);
     g.addColorStop(0, `rgba(${ROSE_LIGHT},${a})`);
     g.addColorStop(0.5, `rgba(${GOLD},${a * 0.45})`);
     g.addColorStop(1, `rgba(${ROSE_LIGHT},0)`);
