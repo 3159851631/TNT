@@ -45,7 +45,17 @@ const posts = [...journal.posts].sort((a, b) => {
             <div class="journal-item__body">
               {post.pinned && <span class="journal-item__pin">置顶</span>}
               {post.title && <h2 class="journal-item__title">{post.title}</h2>}
-              {(post.body || '').split('\n').filter(Boolean).map((line) => <p>{line}</p>)}
+              {(post.body || '').split('\n').filter(Boolean).map((line) => (
+                <p>
+                  {line.split(/(https?:\/\/[^\s\u3000]+)/g).map((seg, i) =>
+                    i % 2 === 1 ? (
+                      <a href={seg} target="_blank" rel="noopener noreferrer">{seg}</a>
+                    ) : (
+                      seg
+                    )
+                  )}
+                </p>
+              ))}
               {post.images && post.images.length > 0 && (
                 <div class="journal-item__images">
                   {post.images.map((img) => (

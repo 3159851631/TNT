@@ -3650,3 +3650,15 @@ html { scroll-behavior: smooth; }
   color: var(--gold);
 }
 .journal-year:first-child { margin-top: 6px; }
+
+.journal-item__body a {
+  color: var(--rose-bright);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(224, 164, 156, 0.35);
+  word-break: break-all;
+  transition: color .2s, border-color .2s;
+}
+.journal-item__body a:hover {
+  color: var(--gold);
+  border-color: rgba(198, 164, 104, 0.6);
+}
