@@ -10,6 +10,7 @@ interface Video {
   localSrc?: string;
   provider?: 'bilibili' | 'youtube' | 'local';
   account?: string;
+  tag?: string;
   featured?: boolean;
   cover: string;
   description?: string;
@@ -22,12 +23,32 @@ interface Props {
 const { video } = Astro.props;
 const hasVideo = Boolean(video.bvid || video.youtubeId || video.localSrc);
 const provider = video.provider || (video.youtubeId ? 'youtube' : video.localSrc ? 'local' : 'bilibili');
-const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' ? '游戏实机' : 'BILIBILI';
+const tag = video.tag || (video.account === '游戏实机' ? '实机' : '视频');
+const canPreview = Boolean(video.localSrc);
 ---
 
-<article class="video-card" data-reveal>
+<article class="video-card">
   <div class="video-card__cover">
-    <img src={video.cover} alt={video.title} loading="lazy" decoding="async" />
+    <img class="video-card__img" src={video.cover} alt={video.title} loading="lazy" decoding="async" />
+    {canPreview && (
+      <video
+        class="video-card__preview"
+        data-preview={video.localSrc}
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster={video.cover}
+        aria-hidden="true"
+        tabindex="-1"
+      />
+    )}
+
+    <span class="video-card__line" aria-hidden="true"></span>
+
+    {video.duration && <span class="video-card__dur">{video.duration}</span>}
+    <span class="video-card__tag">{tag}</span>
+
     {hasVideo ? (
       <button
         class="video-card__play"
@@ -44,29 +65,57 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' 
     ) : (
       <span class="video-card__hint-badge">视频待接入</span>
     )}
-  </div>
-  <div class="video-card__body">
-    <div class="video-card__meta">
-      <span class="video-card__provider">{providerLabel}</span>
-      {video.account && <span class="video-card__account">{video.account}</span>}
-      {video.featured && <span class="video-card__featured">首页推荐</span>}
+
+    <div class="video-card__cap">
+      <span class="video-card__cap-main">
+        <b>{video.title}</b>
+        {video.en && <i>{video.en}</i>}
+      </span>
+      <span class="video-card__cap-year">{video.year}</span>
     </div>
-    <h3 class="video-card__title">{video.title}</h3>
-    {video.en && <p class="video-card__en">{video.en} · {video.year}</p>}
-    {video.description && <p class="video-card__desc">{video.description}</p>}
-    <p class="video-card__hint">
-      {hasVideo ? `点击播放 · ${providerLabel}` : '在后台填入 B 站 BV 号或 YouTube ID 后出现播放器'}
-    </p>
   </div>
 </article>
 
 <script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 悬停自动预览（仅本地视频，src 在第一次悬停时才加载）
+  document.querySelectorAll<HTMLElement>('.video-card').forEach((card) => {
+    if (card.dataset.previewBound === '1') return;
+    card.dataset.previewBound = '1';
+    const prev = card.querySelector<HTMLVideoElement>('[data-preview]');
+    if (!prev) return;
+
+    const stop = () => {
+      prev.pause();
+      try {
+        prev.currentTime = 0;
+      } catch (e) {
+        /* ignore */
+      }
+      card.classList.remove('is-previewing');
+    };
+
+    card.addEventListener('pointerenter', () => {
+      if (reduceMotion || card.classList.contains('is-playing')) return;
+      if (!prev.src) prev.src = prev.dataset.preview || '';
+      const p = prev.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+      card.classList.add('is-previewing');
+    });
+    card.addEventListener('pointerleave', stop);
+    card.addEventListener('pointercancel', stop);
+  });
+
+  // 点击后把播放器插进封面，盖住封面文字
   document.querySelectorAll<HTMLButtonElement>('.video-card__play').forEach((button) => {
     if (button.dataset.bound === '1') return;
     button.dataset.bound = '1';
     button.addEventListener('click', () => {
       const cover = button.closest<HTMLElement>('.video-card__cover');
-      if (!cover) return;
+      const card = button.closest<HTMLElement>('.video-card');
+      if (!cover || !card || card.classList.contains('is-playing')) return;
+
       const provider = button.dataset.provider || 'bilibili';
       const bvid = button.dataset.bvid || '';
       const youtubeId = button.dataset.youtube || '';
@@ -74,6 +123,14 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' 
       if (provider === 'bilibili' && !bvid) return;
       if (provider === 'youtube' && !youtubeId) return;
       if (provider === 'local' && !localSrc) return;
+
+      card.classList.add('is-playing');
+
+      const preview = cover.querySelector<HTMLVideoElement>('[data-preview]');
+      if (preview) {
+        preview.pause();
+        preview.removeAttribute('src');
+      }
 
       if (provider === 'local') {
         const localVideo = document.createElement('video');
@@ -83,7 +140,6 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' 
         localVideo.playsInline = true;
         localVideo.preload = 'metadata';
         localVideo.src = localSrc;
-        cover.innerHTML = '';
         cover.appendChild(localVideo);
         return;
       }
@@ -100,7 +156,6 @@ const providerLabel = provider === 'youtube' ? 'YOUTUBE' : provider === 'local' 
         provider === 'youtube'
           ? `https://www.youtube-nocookie.com/embed/${encodeURIComponent(youtubeId)}?autoplay=1&rel=0`
           : `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bvid)}&page=1&high_quality=1&danmaku=0&autoplay=1`;
-      cover.innerHTML = '';
       cover.appendChild(iframe);
     });
   });

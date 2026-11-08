@@ -11,7 +11,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1uiGNz7ERG.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1jsrmycebl",
@@ -24,7 +25,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1jsRMYcEbL.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "过程"
     },
     {
       "slug": "bv1eq1cbienh",
@@ -37,7 +39,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1EQ1CBiEnh.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1teqsysevi",
@@ -50,7 +53,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1TeQSYsEvi.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "过程"
     },
     {
       "slug": "bv1q3rzygecn",
@@ -63,7 +67,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1Q3RzYgEcn.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1begxzae7i",
@@ -76,7 +81,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1bEgxzaE7i.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1syovy4ew9",
@@ -89,7 +95,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1sYovY4EW9.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "过程"
     },
     {
       "slug": "bv1z9xebzedv",
@@ -102,7 +109,8 @@
       "account": "B站主号",
       "cover": "/uploads/videos/BV1Z9XeBZEDV.jpg",
       "description": "B站 · B站主号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv189t76mec3",
@@ -115,7 +123,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV189t76MEc3.jpg",
       "description": "B站 · B站小号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1tkyd6pehh",
@@ -128,7 +137,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV1tKYd6pEhh.jpg",
       "description": "B站 · B站小号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1ympu6ue72",
@@ -141,7 +151,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV1YMpu6uE72.jpg",
       "description": "B站 · B站小号",
-      "featured": true
+      "featured": true,
+      "tag": "短片"
     },
     {
       "slug": "bv1xrwf6me3u",
@@ -154,7 +165,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV1XrWF6mE3u.jpg",
       "description": "B站 · B站小号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1temqz8ey8",
@@ -167,7 +179,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV1teMQz8Ey8.jpg",
       "description": "B站 · B站小号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1s4yi6ker1",
@@ -180,7 +193,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV1S4Yi6KER1.jpg",
       "description": "B站 · B站小号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "bv1y5gxznegf",
@@ -193,7 +207,8 @@
       "account": "B站小号",
       "cover": "/uploads/videos/BV1Y5gxzNEgF.jpg",
       "description": "B站 · B站小号",
-      "featured": false
+      "featured": false,
+      "tag": "短片"
     },
     {
       "slug": "game-01",
@@ -206,7 +221,8 @@
       "localSrc": "/uploads/videos/local/game-01.mp4",
       "cover": "/uploads/videos/local/game-01.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-02",
@@ -219,7 +235,8 @@
       "localSrc": "/uploads/videos/local/game-02.mp4",
       "cover": "/uploads/videos/local/game-02.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-03",
@@ -232,7 +249,8 @@
       "localSrc": "/uploads/videos/local/game-03.mp4",
       "cover": "/uploads/videos/local/game-03.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-04",
@@ -245,7 +263,8 @@
       "localSrc": "/uploads/videos/local/game-04.mp4",
       "cover": "/uploads/videos/local/game-04.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-05",
@@ -258,7 +277,8 @@
       "localSrc": "/uploads/videos/local/game-05.mp4",
       "cover": "/uploads/videos/local/game-05.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-06",
@@ -271,7 +291,8 @@
       "localSrc": "/uploads/videos/local/game-06.mp4",
       "cover": "/uploads/videos/local/game-06.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-07",
@@ -284,7 +305,8 @@
       "localSrc": "/uploads/videos/local/game-07.mp4",
       "cover": "/uploads/videos/local/game-07.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-08",
@@ -297,7 +319,8 @@
       "localSrc": "/uploads/videos/local/game-08.mp4",
       "cover": "/uploads/videos/local/game-08.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-10",
@@ -310,7 +333,8 @@
       "localSrc": "/uploads/videos/local/game-10.mp4",
       "cover": "/uploads/videos/local/game-10.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-11",
@@ -323,7 +347,8 @@
       "localSrc": "/uploads/videos/local/game-11.mp4",
       "cover": "/uploads/videos/local/game-11.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-12",
@@ -336,7 +361,8 @@
       "localSrc": "/uploads/videos/local/game-12.mp4",
       "cover": "/uploads/videos/local/game-12.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-13",
@@ -349,7 +375,8 @@
       "localSrc": "/uploads/videos/local/game-13.mp4",
       "cover": "/uploads/videos/local/game-13.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-14",
@@ -362,7 +389,8 @@
       "localSrc": "/uploads/videos/local/game-14.mp4",
       "cover": "/uploads/videos/local/game-14.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-15",
@@ -375,7 +403,8 @@
       "localSrc": "/uploads/videos/local/game-15.mp4",
       "cover": "/uploads/videos/local/game-15.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-16",
@@ -388,7 +417,8 @@
       "localSrc": "/uploads/videos/local/game-16.mp4",
       "cover": "/uploads/videos/local/game-16.jpg",
       "description": "游戏实机 · 项目视频",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     },
     {
       "slug": "game-17",
@@ -401,7 +431,8 @@
       "localSrc": "/uploads/videos/local/game-17.mp4",
       "cover": "/uploads/videos/local/game-17.jpg",
       "description": "动画序列 · 游戏制作",
-      "featured": false
+      "featured": false,
+      "tag": "实机"
     }
   ]
 }
