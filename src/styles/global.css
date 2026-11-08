@@ -3638,3 +3638,15 @@ html { scroll-behavior: smooth; }
 }
 .journal-bar__btn:hover { color: var(--ink); border-color: rgba(198,164,104,.45); }
 .journal-bar__btn.is-active { color: var(--gold); border-color: rgba(198,164,104,.55); background: rgba(198,164,104,.1); }
+
+.journal-year {
+  margin: 30px 0 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  color: var(--gold);
+}
+.journal-year:first-child { margin-top: 6px; }

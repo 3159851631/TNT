@@ -92,6 +92,22 @@ const posts = [...journal.posts].sort((a, b) => {
     if (!bar || !list) return;
     const items = Array.from(list.querySelectorAll('.journal-item'));
 
+    // 年份分组标题
+    const drawYears = () => {
+      list.querySelectorAll('.journal-year').forEach((n) => n.remove());
+      let last = null;
+      Array.from(list.querySelectorAll('.journal-item')).forEach((item) => {
+        const y = (item.getAttribute('data-journal-date') || '').slice(0, 4);
+        if (!y || y === last) return;
+        last = y;
+        const h = document.createElement('h2');
+        h.className = 'journal-year';
+        h.textContent = y;
+        list.insertBefore(h, item);
+      });
+    };
+    drawYears();
+
     bar.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-journal-sort]');
       if (!btn) return;
@@ -104,6 +120,7 @@ const posts = [...journal.posts].sort((a, b) => {
           return dir === 'asc' ? x.localeCompare(y) : y.localeCompare(x);
         })
         .forEach((el) => list.appendChild(el));
+      drawYears();
       bar.querySelectorAll('[data-journal-sort]').forEach((b) => b.classList.toggle('is-active', b === btn));
     });
   })();
