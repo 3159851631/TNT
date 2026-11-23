@@ -3,6 +3,7 @@ import WikiLayout from '../../../layouts/WikiLayout.astro';
 import data from '../../../data/wiki/stories.json';
 import charactersData from '../../../data/wiki/characters.json';
 import regionsData from '../../../data/wiki/regions.json';
+import dialogueData from '../../../data/wiki/story-dialogue.json';
 
 export function getStaticPaths() {
   return data.stories.map((story, index) => ({ params: { slug: story.slug }, props: { story, index } }));
@@ -13,6 +14,7 @@ const prev = index > 0 ? data.stories[index - 1] : null;
 const next = index < data.stories.length - 1 ? data.stories[index + 1] : null;
 const relatedCharacters = charactersData.characters.filter((c) => story.characters.includes(c.name)).slice(0, 12);
 const region = regionsData.regions.find((r) => r.name === story.region);
+const dialogue = (dialogueData as Record<string, { title: string; scenes: number; chars: number; html: string }>)[story.slug] || null;
 ---
 
 <WikiLayout
@@ -33,6 +35,22 @@ const region = regionsData.regions.find((r) => r.name === story.region);
     </header>
 
     <div class="wiki-prose" set:html={story.html} />
+
+    {dialogue && (
+      <details class="wiki-dialogue">
+        <summary class="wiki-dialogue__summary">
+          <span class="wiki-dialogue__badge">剧本</span>
+          <span class="wiki-dialogue__label">剧情对话稿</span>
+          <span class="wiki-dialogue__hint">
+            {dialogue.scenes} 个场景 · {Math.round(dialogue.chars / 1000)}k 字 · 游戏内旁白与台词（点此展开）
+          </span>
+        </summary>
+        <div class="wiki-dialogue__body" set:html={dialogue.html} />
+        <div class="wiki-dialogue__foot">
+          <span>※ 本稿为游戏实际使用的旁白 / 对话文本，含剧透。</span>
+        </div>
+      </details>
+    )}
 
     {relatedCharacters.length > 0 && (
       <section class="wiki-story-characters">
