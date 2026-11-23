@@ -1,8 +1,11 @@
 ---
 import WikiLayout from '../../../layouts/WikiLayout.astro';
 import data from '../../../data/wiki/stories.json';
+import dialogueData from '../../../data/wiki/story-dialogue.json';
 const stories = data.stories;
 const chapters = Array.from(new Set(stories.map((s) => s.chapter)));
+const dlgMap = dialogueData as Record<string, { scenes: number; chars: number }>;
+const hasDialogue = (slug: string) => Boolean(dlgMap[slug]);
 ---
 
 <WikiLayout
@@ -52,6 +55,11 @@ const chapters = Array.from(new Set(stories.map((s) => s.chapter)));
             <div class="wiki-card__tags">
               <span class="wiki-tag wiki-tag--gold">{story.region || '区域待补'}</span>
               {story.characters.length > 0 && <span class="wiki-tag">{story.characters.length} 位角色</span>}
+              {hasDialogue(story.slug) && (
+                <span class="wiki-tag wiki-tag--script">
+                  剧本 · {dlgMap[story.slug].scenes} 场景
+                </span>
+              )}
             </div>
           </div>
         </a>

@@ -1376,3 +1376,10 @@ body.wiki-body { overflow-x: hidden; }
   .wiki-dialogue__body { padding: 6px 14px 18px; font-size: 13px; }
   .wiki-dialogue__hint { display: none; }
 }
+
+.wiki-tag--script {
+  color: #e6c07a;
+  border-color: rgba(230, 192, 122, 0.55);
+  background: rgba(198, 164, 104, 0.12);
+  letter-spacing: 0.04em;
+}
